@@ -1,21 +1,21 @@
 import { render } from 'react-dom';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
-import Main from './components/websiteLayout/Main.component';
-import CompanySettings from './pages/companySettings.page';
-import Users from './pages/users.page';
-import Permissions from './pages/permissions.page';
-import Bonus from './pages/bonus.page';
-import PaymentMethod from './pages/paymentMethod.page';
-import ApiIntegration from './pages/apiIntegration.page';
-import IbSettings from './pages/ibSettings.page';
-import MamSettings from './pages/mamSettings.page';
-import DynamicMargin from './pages/dynamicMargin.page';
-import Synchronize from './pages/synchronize.page';
-import Questionnaire from './pages/questionnaire.page';
-import EmailTemplates from './pages/emailTemplates.page';
-import WebHooks from './pages/webHooks.page';
-import Notifications from './pages/notifications.page';
-import SidebarLinks from './components/websiteLayout/SidebarLinks.component';
+import Main from './components/websiteLayout/mainComponent/Main.component';
+import CompanySettings from './pages/companySettingsPage/companySettings.page';
+import Users from './pages/usersPage/users.page';
+import Permissions from './pages/permissionsPage/permissions.page';
+import Bonus from './pages/bonusPage/bonus.page';
+import PaymentMethod from './pages/paymentMethodPage/paymentMethod.page';
+import ApiIntegration from './pages/apiIntegrationPage/apiIntegration.page';
+import IbSettings from './pages/ibSettingsPage/ibSettings.page';
+import MamSettings from './pages/mamSettingsPage/mamSettings.page';
+import DynamicMargin from './pages/dynamicMarginPage/dynamicMargin.page';
+import Synchronize from './pages/synchronizePage/synchronize.page';
+import Questionnaire from './pages/questionnairePage/questionnaire.page';
+import EmailTemplates from './pages/emailTemplatePage/emailTemplates.page';
+import WebHooks from './pages/webhooksPage/webhooks.page';
+import Notifications from './pages/notificationsPage/notifications.page';
+import SidebarLinks from './components/websiteLayout/sidebarLinksComponent/SidebarLinks.component';
 import './index.css';
 
 function App() {
