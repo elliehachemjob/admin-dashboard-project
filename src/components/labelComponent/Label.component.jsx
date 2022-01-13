@@ -1,7 +1,7 @@
 import React from 'react';
 
-function Label() {
-  return <div>Label Component</div>;
+function Label(props) {
+  return <div style={{ fontSize: props.size }}>{props.label}</div>;
 }
 
 export default Label;

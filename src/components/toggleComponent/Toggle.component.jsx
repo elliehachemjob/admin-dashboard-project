@@ -1,7 +1,10 @@
 import React from 'react';
+import './toggle.styles.css';
+import Switch from '@mui/material/Switch';
+import './toggle.styles.css';
 
 function Toggle() {
-  return <div>Toggle Component</div>;
+  return <Switch />;
 }
 
 export default Toggle;
