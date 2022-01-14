@@ -9,7 +9,7 @@ function Dropdown(props) {
     <>
       <FormControl sx={{ m: 1, minWidth: 160 }}>
         <InputLabel id='demo-simple-select-autowidth-label'>
-          Email Notification
+          {props.inputLabel}
         </InputLabel>
         <Select
           labelId='demo-simple-select-autowidth-label'

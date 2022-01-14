@@ -1,7 +1,11 @@
 import React from 'react';
 
 function Label(props) {
-  return <div style={{ fontSize: props.size }}>{props.label}</div>;
+  return (
+    <div onClick={props.onClick} style={{ fontSize: props.size }}>
+      {props.label}
+    </div>
+  );
 }
 
 export default Label;

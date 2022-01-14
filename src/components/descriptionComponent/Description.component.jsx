@@ -1,7 +1,7 @@
 import React from 'react';
 
-function Description() {
-  return <div>Description Component</div>;
+function Description(props) {
+  return <div style={props.style}>{props.description}</div>;
 }
 
 export default Description;

@@ -68,9 +68,10 @@ function Notifications() {
         <Label label='Notification Type' />
         <Dropdown
           items={menu}
-          label='Notification Type'
+          label={value}
           handleChange={handleChange}
           value={value}
+          inputLabel={value ? value : 'Email Notification'}
         />
       </div>
       {/* 3rd */}
