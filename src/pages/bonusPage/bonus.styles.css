@@ -1,0 +1,86 @@
+.toggle-list-parent-bonus {
+}
+
+.div1-toggle-list-parent-bonus {
+}
+.div2-toggle-list-parent-bonus {
+}
+
+.header-bonus {
+}
+
+.label-bonus {
+}
+
+.breakLine-bonus {
+}
+
+.input-bonus {
+}
+
+.searchInput-bonus {
+}
+
+.button-wrapper {
+}
+
+.button {
+}
+
+.radio-bonus {
+}
+
+.description-bonus {
+}
+
+.table-bonus {
+}
+
+.checkBox-bonus {
+}
+
+.smallLogo-bonus {
+}
+.largeLogo-bonus {
+}
+
+.bellIcon-bonus {
+}
+
+.deleteItemIcon-bonus {
+}
+
+.refreshIcon-bonus {
+}
+
+.copyItemIcon-bonus {
+}
+
+.addItemIcon-bonus {
+}
+
+.editItemIcon-bonus {
+}
+.statusIcon-bonus {
+}
+
+.specialLinkIcon-bonus {
+}
+
+.profileIcon-bonus {
+}
+
+/* .toggle-list-parent-bonus {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+  grid-column-gap: 0px;
+  grid-row-gap: 0px;
+}
+
+.div1-toggle-list-parent-bonus {
+  grid-area: 1 / 1 / 2 / 2;
+}
+.div2-toggle-list-parent-bonus {
+  grid-area: 1 / 3 / 2 / 4;
+} */

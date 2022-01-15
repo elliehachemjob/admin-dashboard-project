@@ -1,12 +1,78 @@
-.wrapper {
+.toggle-list-parent-notificationPage {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+  grid-column-gap: 0px;
+  grid-row-gap: 0px;
 }
 
-.section1 {
-  background-color: #ffffff;
-  margin-bottom: 10px;
+.div1-toggle-list-parent-notificationPage {
+  grid-area: 1 / 1 / 2 / 2;
+}
+.div2-toggle-list-parent-notificationPage {
+  grid-area: 1 / 3 / 2 / 4;
 }
 
-.section2 {
+.header-notificationPage {
+}
 
-  background-color: #ffffff;
+.label-notificationPage {
+}
+
+.breakLine-notificationPage {
+}
+
+.input-notificationPage {
+}
+
+.searchInput-notificationPage {
+}
+
+.button-wrapper {
+}
+
+.button {
+}
+
+.radio-notificationPage {
+}
+
+.description-notificationPage {
+}
+
+.table-notificationPage {
+}
+
+.checkBox-notificationPage {
+}
+
+.smallLogo-notificationPage {
+}
+.largeLogo-notificationPage {
+}
+
+.bellIcon-notificationPage {
+}
+
+.deleteItemIcon-notificationPage {
+}
+
+.refreshIcon-notificationPage {
+}
+
+.copyItemIcon-notificationPage {
+}
+
+.addItemIcon-notificationPage {
+}
+
+.editItemIcon-notificationPage {
+}
+.statusIcon-notificationPage {
+}
+
+.specialLinkIcon-notificationPage {
+}
+
+.profileIcon-notificationPage {
 }

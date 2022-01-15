@@ -3,6 +3,7 @@ import Label from '../../components/labelComponent/Label.component';
 import Button from '../../components/FlexibleButtonComponent/FlexibleButton.component';
 import SearchInput from '../../components/searchInputComponent/SearchInput.component';
 import Table from '../../components/tableComponent/Table.component';
+import './questionnaire.style.css';
 
 function Questionnaire() {
   const [questionnaire, setQuestionnaire] = useState([
@@ -37,10 +38,21 @@ function Questionnaire() {
       {/* 1st */}
       <Label label='Questionnaire' />
       {/* 2nd */}
-      <Button name='Add' />
-      <Button name='Edit' />
-      <Button name='Remove' />
-      <SearchInput options={questionnaire} label='Filter by Question' />
+      <div className='buttons-wrapper-questionnaire'>
+        <div className='button-wrapper-questionnaire'>
+          <Button className='button-questionnaire' name='Add' />
+        </div>
+        <div className='button-wrapper-questionnaire'>
+          <Button className='button-questionnaire' name='Edit' />
+        </div>
+        <div className='button-wrapper-questionnaire'>
+          <Button className='button-questionnaire' name='Remove' />
+        </div>
+        <div>
+          <SearchInput options={questionnaire} label='Filter by Question' />
+        </div>
+      </div>
+
       {/* 3rd */}
       <Table rows={rows} columns={columns} pageSize={7} />
     </>

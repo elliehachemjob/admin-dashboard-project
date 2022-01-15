@@ -60,53 +60,93 @@ function Notifications() {
   };
 
   return (
-    <div className='wrapper'>
-      <div className='section1'>
-        {/* 1st */}
-        <Label label='System Notifications' size={18.72} />
-        {/* 2nd */}
-        <Label label='Notification Type' />
-        <Dropdown
-          items={menu}
-          label={value}
-          handleChange={handleChange}
-          value={value}
-          inputLabel={value ? value : 'Email Notification'}
-        />
-      </div>
+    <>
+      {/* 1st */}
+      <Label label='System Notifications' size={18.72}
+      
+      />
+      {/* 2nd */}
+      <Label label='Notification Type' />
+      <Dropdown
+        items={menu}
+        label={value}
+        handleChange={handleChange}
+        value={value}
+        inputLabel={value ? value : 'Email Notification'}
+      />
       {/* 3rd */}
-      <div className='section2'>
-        <Label label='Clients' />
-        <ToggleList key={label1.id} list={label1} />
-        <BreakLine />
-        {/* 4th */}
-        <Label label='Trader' />
-        <ToggleList key={label2.id} list={label2} />
-        <BreakLine />
-        {/* 5th */}
-        <Label label='OnBoarding' />
-        <ToggleList key={label3.id} list={label3} />
-        <BreakLine />
-        {/* 6th */}
-        <Label label='Partners' />
-        <ToggleList key={label4.id} list={label4} />
-        <BreakLine />
-        {/* 7th */}
-        <Label label='MAM' />
-        <ToggleList key={label5.id} list={label5} />
-        <BreakLine />
-        {/* 8th */}
-        <Label label='Bonus' />
-        <ToggleList key={label6.id} list={label6} />
-        <BreakLine />
-        {/* 9th */}
-        <Label label='Tasks' />
-        <ToggleList key={label7.id} list={label7} />
-        <BreakLine />
-        {/* 10th */}
-      </div>
+      <Label label='Clients' />
+      <ToggleList
+        key={label1.id}
+        list={label1}
+        parent='toggle-list-parent-notificationPage'
+        div1='div1-toggle-list-parent-notificationPage'
+        div2='div2-toggle-list-parent-notificationPage'
+      />
+      <BreakLine />
+      {/* 4th */}
+      <Label label='Trader' />
+      <ToggleList
+        key={label2.id}
+        list={label2}
+        parent='toggle-list-parent-notificationPage'
+        div1='div1-toggle-list-parent-notificationPage'
+        div2='div2-toggle-list-parent-notificationPage'
+      />
+      <BreakLine />
+      {/* 5th */}
+      <Label label='OnBoarding' />
+      <ToggleList
+        key={label3.id}
+        list={label3}
+        parent='toggle-list-parent-notificationPage'
+        div1='div1-toggle-list-parent-notificationPage'
+        div2='div2-toggle-list-parent-notificationPage'
+      />
+      <BreakLine />
+      {/* 6th */}
+      <Label label='Partners' />
+      <ToggleList
+        key={label4.id}
+        list={label4}
+        parent='toggle-list-parent-notificationPage'
+        div1='div1-toggle-list-parent-notificationPage'
+        div2='div2-toggle-list-parent-notificationPage'
+      />
+      <BreakLine />
+      {/* 7th */}
+      <Label label='MAM' />
+      <ToggleList
+        key={label5.id}
+        list={label5}
+        parent='toggle-list-parent-notificationPage'
+        div1='div1-toggle-list-parent-notificationPage'
+        div2='div2-toggle-list-parent-notificationPage'
+      />
+      <BreakLine />
+      {/* 8th */}
+      <Label label='Bonus' />
+      <ToggleList
+        key={label6.id}
+        list={label6}
+        parent='toggle-list-parent-notificationPage'
+        div1='div1-toggle-list-parent-notificationPage'
+        div2='div2-toggle-list-parent-notificationPage'
+      />
+      <BreakLine />
+      {/* 9th */}
+      <Label label='Tasks' />
+      <ToggleList
+        key={label7.id}
+        list={label7}
+        parent='toggle-list-parent-notificationPage'
+        div1='div1-toggle-list-parent-notificationPage'
+        div2='div2-toggle-list-parent-notificationPage'
+      />
+      <BreakLine />
+      {/* 10th */}
       <Button name='Save Changes' />
-    </div>
+    </>
   );
 }
 

@@ -1,0 +1,95 @@
+.header-dynamicMargin {
+}
+
+.label-dynamicMargin {
+}
+
+.breakLine-dynamicMargin {
+}
+
+.input-dynamicMargin {
+}
+
+.searchInput-dynamicMargin {
+}
+
+.button-wrapper {
+}
+
+.button {
+}
+
+.radio-dynamicMargin {
+}
+
+.description-dynamicMargin {
+}
+
+.table-dynamicMargin {
+}
+
+.checkBox-dynamicMargin {
+}
+
+.smallLogo-dynamicMargin {
+}
+.largeLogo-dynamicMargin {
+}
+
+.bellIcon-dynamicMargin {
+}
+
+.deleteItemIcon-dynamicMargin {
+}
+
+.refreshIcon-dynamicMargin {
+}
+
+.copyItemIcon-dynamicMargin {
+}
+
+.addItemIcon-dynamicMargin {
+}
+
+.editItemIcon-dynamicMargin {
+}
+.statusIcon-dynamicMargin {
+}
+
+.specialLinkIcon-dynamicMargin {
+}
+
+.profileIcon-dynamicMargin {
+}
+
+
+
+/* .wrapper-dynamicMargin {
+  margin: 5px;
+  margin-left: 15px;
+}
+
+.label-dynamicMargin {
+  margin-left: 18px;
+}
+
+.header-dynamicMargin {
+  margin-top: 10px;
+  margin-bottom: 15px;
+}
+
+
+.toggle-list-parent-dynamicMargin {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+  grid-column-gap: 0px;
+  grid-row-gap: 0px;
+}
+
+.div1-toggle-list-parent-dynamicMargin {
+  grid-area: 1 / 1 / 2 / 2;
+}
+.div2-toggle-list-parent-dynamicMargin {
+  grid-area: 1 / 3 / 2 / 4;
+} */

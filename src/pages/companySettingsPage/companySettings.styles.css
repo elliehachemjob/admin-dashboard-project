@@ -1,0 +1,86 @@
+.toggle-list-parent-companySettings {
+}
+
+.div1-toggle-list-parent-companySettings {
+}
+.div2-toggle-list-parent-companySettings {
+}
+
+.header-companySettings {
+}
+
+.label-companySettings {
+}
+
+.breakLine-companySettings {
+}
+
+.input-companySettings {
+}
+
+.searchInput-companySettings {
+}
+
+.button-wrapper {
+}
+
+.button {
+}
+
+.radio-companySettings {
+}
+
+.description-companySettings {
+}
+
+.table-companySettings {
+}
+
+.checkBox-companySettings {
+}
+
+.smallLogo-companySettings {
+}
+.largeLogo-companySettings {
+}
+
+.bellIcon-companySettings {
+}
+
+.deleteItemIcon-companySettings {
+}
+
+.refreshIcon-companySettings {
+}
+
+.copyItemIcon-companySettings {
+}
+
+.addItemIcon-companySettings {
+}
+
+.editItemIcon-companySettings {
+}
+.statusIcon-companySettings {
+}
+
+.specialLinkIcon-companySettings {
+}
+
+.profileIcon-companySettings {
+}
+
+/* .toggle-list-parent-companySettings {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+  grid-column-gap: 0px;
+  grid-row-gap: 0px;
+}
+
+.div1-toggle-list-parent-companySettings {
+  grid-area: 1 / 1 / 2 / 2;
+}
+.div2-toggle-list-parent-companySettings {
+  grid-area: 1 / 3 / 2 / 4;
+} */

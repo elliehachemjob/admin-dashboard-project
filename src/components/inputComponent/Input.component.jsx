@@ -18,6 +18,7 @@ function Input(props) {
         value={props.name}
         name={props.formName}
         onChange={props.handleChange}
+        style={props.style}
       />
     </Box>
   );

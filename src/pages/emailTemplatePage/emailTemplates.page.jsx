@@ -3,6 +3,7 @@ import Label from '../../components/labelComponent/Label.component';
 import Button from '../../components/FlexibleButtonComponent/FlexibleButton.component';
 import Table from '../../components/tableComponent/Table.component';
 import SearchInput from '../../components/searchInputComponent/SearchInput.component';
+import './emailTemplate.styles.css';
 
 function EmailTemplates() {
   const [rows, setRows] = useState([
@@ -60,9 +61,19 @@ function EmailTemplates() {
       {/* 1st */}
       <Label label='Email Templates' size={18.72} />
       {/* 2nd */}
-      <Button name='Email Layout' />
-      <SearchInput options={hooksNames} label='Filter by Email Templates' />
+      <div class='parent-emailTemplate'>
+        <div class='div1-emailTemplate'>
+          <div className='button-wrapper-emailTemplate'>
+            <Button name='Email Layout' />
+          </div>{' '}
+        </div>
+        <div class='div2-emailTemplate'>
+          <SearchInput options={hooksNames} label='Filter by Email Templates' />
+        </div>
+      </div>
+
       {/* 3rd */}
+
       <Table rows={rows} columns={columns} pageSize={7} />
     </>
   );

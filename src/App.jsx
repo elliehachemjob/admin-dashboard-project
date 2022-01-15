@@ -16,6 +16,7 @@ import EmailTemplates from './pages/emailTemplatePage/emailTemplates.page';
 import WebHooks from './pages/webhooksPage/webhooks.page';
 import Notifications from './pages/notificationsPage/notifications.page';
 import SidebarLinks from './components/websiteLayout/sidebarLinksComponent/SidebarLinks.component';
+import Menu from './components/websiteLayout/menuComponent/Menu.component';
 import './index.css';
 
 function App() {
@@ -34,6 +35,7 @@ function App() {
               />
             }
           />
+          <Route path='/test' element={<Menu />} />
           <Route
             path='/companySettings'
             element={

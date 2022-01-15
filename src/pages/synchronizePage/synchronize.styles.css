@@ -1,0 +1,101 @@
+.toggle-list-parent-synchronize {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+  grid-column-gap: 0px;
+  grid-row-gap: 0px;
+}
+
+.div1-toggle-list-parent-synchronize {
+  grid-area: 1 / 1 / 2 / 2;
+}
+.div2-toggle-list-parent-synchronize {
+  grid-area: 1 / 3 / 2 / 4;
+}
+
+.header-synchronize {
+}
+
+.label-synchronize {
+}
+
+.breakLine-synchronize {
+}
+
+.input-synchronize {
+}
+
+.searchInput-synchronize {
+}
+
+.button-wrapper {
+}
+
+.button {
+}
+
+.radio-synchronize {
+}
+
+.description-synchronize {
+}
+
+.table-synchronize {
+}
+
+.checkBox-synchronize {
+}
+
+.smallLogo-synchronize {
+}
+.largeLogo-synchronize {
+}
+
+.bellIcon-synchronize {
+}
+
+.deleteItemIcon-synchronize {
+}
+
+.refreshIcon-synchronize {
+}
+
+.copyItemIcon-synchronize {
+}
+
+.addItemIcon-synchronize {
+}
+
+.editItemIcon-synchronize {
+}
+.statusIcon-synchronize {
+}
+
+.specialLinkIcon-synchronize {
+}
+
+.profileIcon-synchronize {
+}
+/* .list-parent-synchronize {
+  display: grid;
+  grid-template-columns: repeat(0, 1fr);
+  grid-template-rows: repeat(0, 1fr);
+  grid-column-gap: 0px;
+  grid-row-gap: 0px;
+}
+
+.div1-list-parent-synchronize {
+  grid-area: 1 / 1 / 2 / 2;
+}
+.div2-synchronize-list-parent-synchronize {
+  grid-area: 1 / 2 / 2 / 3;
+}
+
+.wrapper-synchronize {
+  margin: 5px;
+  margin-left: 15px;
+}
+
+.label-synchronize {
+  margin-left: 18px;
+} */

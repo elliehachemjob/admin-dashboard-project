@@ -1,0 +1,87 @@
+.toggle-list-parent-ibSettings {
+}
+
+.div1-toggle-list-parent-ibSettings {
+}
+.div2-toggle-list-parent-ibSettings {
+}
+
+.header-ibSettings {
+}
+
+.label-ibSettings {
+}
+
+.breakLine-ibSettings {
+}
+
+.input-ibSettings {
+}
+
+.searchInput-ibSettings {
+}
+
+.button-wrapper {
+}
+
+.button {
+}
+
+.radio-ibSettings {
+}
+
+.description-ibSettings {
+}
+
+.table-ibSettings {
+}
+
+.checkBox-ibSettings {
+}
+
+.smallLogo-ibSettings {
+}
+.largeLogo-ibSettings {
+}
+
+.bellIcon-ibSettings {
+}
+
+.deleteItemIcon-ibSettings {
+}
+
+.refreshIcon-ibSettings {
+}
+
+.copyItemIcon-ibSettings {
+}
+
+.addItemIcon-ibSettings {
+}
+
+.editItemIcon-ibSettings {
+}
+.statusIcon-ibSettings {
+}
+
+.specialLinkIcon-ibSettings {
+}
+
+.profileIcon-ibSettings {
+}
+
+/* 
+.toggle-list-parent-ibSettings {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+  grid-column-gap: 0px;
+  grid-row-gap: 0px;
+}
+
+.div1-toggle-list-parent-ibSettings {
+  grid-area: 1 / 1 / 2 / 2;
+}
+.div2-toggle-list-parent-ibSettings {
+  grid-area: 1 / 3 / 2 / 4;
+} */
