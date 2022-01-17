@@ -17,7 +17,7 @@ import DarkLogo from '../../assets/images/DarkLogo.png';
 import SecondaryLogo from '../../assets/images/DarkLogo.png';
 import SmallLogo from '../../assets/images/DarkLogo.png';
 import SecondarySmallLogo from '../../assets/images/DarkLogo.png';
-
+import './companySettings.styles.css';
 function CompanySettings() {
   const [registrationLinks, setRegistrationLinks] = useState();
   const [registrationLinks2, setRegistrationLinks2] = useState();
@@ -78,72 +78,98 @@ function CompanySettings() {
   return (
     <>
       {/* 1st */}
-      <Label label='Company Image' size={18.72} />
-      <div>
-        <ProfileIcon />
-        <Upload />
-        <CheckBox />
-        <Description description='Upload your logo with dimension: 320px * 160px, png format with transparent background.' />
-        <Label label='Light' />
-        <Image src={DarkLogo} style={{ width: 428, height: 105, margin: 10 }} />
-        <DeleteItemIcon />
-        <Label label='Secondary Icon In Tab: (Please Note It Should Be 40px x 40px.)' />
-        <Image
-          src={SecondaryLogo}
-          style={{ width: 428, height: 105, margin: 10 }}
-        />
-        <DeleteItemIcon />
-        <Label label='Dark Theme: (no dark colors)' />
-        <Image src={SmallLogo} style={{ width: 38, height: 35, margin: 10 }} />
-        <DeleteItemIcon />
-        <Label label='Tab Browser Icon: (Please note it should be tiny and .ico format.)' />
-        <Image
-          src={SecondarySmallLogo}
-          style={{ width: 38, height: 35, margin: 10 }}
-        />
-        <DeleteItemIcon />
-        <Button name='Save Changes' />
+      <div className='parent-companyImage'>
+        <div className='div1-companyImage'>
+          <Label label='Company Image' size={18.72} />
+          <ProfileIcon className='profileIcon-companySettings' />
+
+          <Upload />
+          <Description description='Upload your logo with dimension: 320px * 160px, png format with transparent background.'>
+            <CheckBox />
+          </Description>
+        </div>
+        <div className='div2-companyImage'>
+          <div className='parent-logoWrapper-companySettings'>
+            <div className='div1-logoWrapper-companySettings'>
+              <Label label='Light' />
+              <Image src={DarkLogo} style={{ width: 250, height: 250 }} />
+              <DeleteItemIcon />
+            </div>
+            <div className='div2-logoWrapper-companySettings'>
+              <Label label='Secondary Icon In Tab: (Please Note It Should Be 40px x 40px.)' />
+              <Image src={SecondaryLogo} style={{ width: 250, height: 250 }} />
+              <DeleteItemIcon />
+            </div>
+            <div className='div3-logoWrapper-companySettings'>
+              <Label label='Dark Theme: (no dark colors)' />
+              <Image src={SmallLogo} style={{ width: 250, height: 250 }} />
+              <DeleteItemIcon />
+            </div>
+            <div className='div4-logoWrapper-companySettings'>
+              <Label label='Tab Browser Icon: (Please note it should be tiny and .ico format.)' />
+              <Image
+                src={SecondarySmallLogo}
+                style={{ width: 250, height: 250 }}
+              />
+              <DeleteItemIcon />
+            </div>
+          </div>
+        </div>
+      </div>
+      <div className='button-wrapper-companySettings'>
+        <Button className='button-companySettings' name='Save Changes' />
       </div>
       {/* 2nd  */}
       <Label label='Company Details' size={18.72} />
-      <div>
-        <Label label='Company Name' />
-        <Input
-          value={mailServiceSettings.companyName}
-          onChange={handleEmailServiceSettingsChange}
-          label='PLUGIT LTD'
-          formName='companyName'
-        />
-        <Label label='YOONIT Portal URL Link' />
-        <Input
-          value={mailServiceSettings.YOONITPortalURLLink}
-          onChange={handleEmailServiceSettingsChange}
-          label='https://yoonit-webportal.azurewebsites.net/'
-          formName='YOONITPortalURLLink'
-        />
-        <Label label='Company Address' />
-        <Input
-          value={mailServiceSettings.companyAddress}
-          onChange={handleEmailServiceSettingsChange}
-          label='cyprus'
-          formName='companyAddress'
-        />
-        <Label label='Company Phone' />
-        <Input
-          value={mailServiceSettings.companyPhone}
-          onChange={handleEmailServiceSettingsChange}
-          label='+(357) 25 025026'
-          formName='companyPhone'
-        />
-        <Label label='Company Site' />
-        <Input
-          value={mailServiceSettings.companySite}
-          onChange={handleEmailServiceSettingsChange}
-          label='http://www.plugitapps.com/'
-          formName='companySite'
-        />
-        <Button name='Save Changes' />
+      <div className='parent-wrapper-companyDetails'>
+        <div className='div1-wrapper-companyDetails'>
+          <Label label='Company Name' />
+          <Input
+            value={mailServiceSettings.companyName}
+            onChange={handleEmailServiceSettingsChange}
+            label='PLUGIT LTD'
+            formName='companyName'
+          />
+        </div>
+        <div className='div2-wrapper-companyDetails'>
+          <Label label='YOONIT Portal URL Link' />
+          <Input
+            value={mailServiceSettings.YOONITPortalURLLink}
+            onChange={handleEmailServiceSettingsChange}
+            label='https://yoonit-webportal.azurewebsites.net/'
+            formName='YOONITPortalURLLink'
+          />
+        </div>
+        <div className='div3-wrapper-companyDetails'>
+          <Label label='Company Address' />
+          <Input
+            value={mailServiceSettings.companyAddress}
+            onChange={handleEmailServiceSettingsChange}
+            label='cyprus'
+            formName='companyAddress'
+          />
+        </div>
+        <div className='div4-wrapper-companyDetails'>
+          <Label label='Company Phone' />
+          <Input
+            value={mailServiceSettings.companyPhone}
+            onChange={handleEmailServiceSettingsChange}
+            label='+(357) 25 025026'
+            formName='companyPhone'
+          />
+        </div>
+        <div className='div5-wrapper-companyDetails'>
+          <Label label='Company Site' />
+          <Input
+            value={mailServiceSettings.companySite}
+            onChange={handleEmailServiceSettingsChange}
+            label='http://www.plugitapps.com/'
+            formName='companySite'
+          />
+        </div>
       </div>
+      <Button name='Save Changes' />
+
       {/* 3rd */}
       <Label label='Mail Service Settings' size={18.72} />
       <Button name='Test Mail' />

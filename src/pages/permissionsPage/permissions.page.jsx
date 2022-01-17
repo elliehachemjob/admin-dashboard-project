@@ -8,9 +8,12 @@ import {
 } from '../../components/iconsComponent/Icons.component';
 import SearchInput from '../../components/searchInputComponent/SearchInput.component';
 import Table from '../../components/tableComponent/Table.component';
+import './permissions.styles.css';
+import { useMediaQuerySize } from '../../hooks/hooks';
 
 function Permissions() {
-  const [tab, setTab] = useState(true);
+  const [roles, setRoles] = useState(true);
+  const [users, setUsers] = useState(false);
 
   const [rolesList, setRoleList] = useState([
     { label: 'Admin Role' },
@@ -79,8 +82,28 @@ function Permissions() {
     },
   ]);
 
-  const handleTabChange = () => {
-    setTab(!tab);
+  const handleRoleChange = () => {
+    setRoles(true);
+    setUsers(false);
+  };
+
+  const handleUsersChange = () => {
+    setUsers(true);
+    setRoles(false);
+  };
+
+  let mediumScreen = useMediaQuerySize('(max-width:755px)');
+  let smallScreen = useMediaQuerySize('(max-width:500px)');
+
+  const screenSizes = () => {
+    if (smallScreen) {
+      return 80;
+    }
+    if (mediumScreen) {
+      return 150;
+    } else {
+      return 300;
+    }
   };
 
   return (
@@ -88,26 +111,71 @@ function Permissions() {
       {/* 1st */}
       <Label label='Permissions' size={18.72} />
       {/* 2nd */}
-      <Label onClick={handleTabChange} label='Roles' />
-      <Label onClick={handleTabChange} label='Users' />
+      <div className='label-wrapper-permissions'>
+        <Label
+          onClick={handleRoleChange}
+          label='Roles'
+          className='label-permissions'
+        />
+        <Label
+          onClick={handleUsersChange}
+          label='Users'
+          className='label-permissions'
+        />
+      </div>
       {/* 3rd */}
-
       {/* 4th */}
-      {tab ? (
+      {roles && (
         <>
-          <Button name='Add' />
-          <Button name='Edit' />
-          <Button name='Remove' />
-          <AddItemIcon />
-          <EditItemIcon />
-          <DeleteItemIcon />
-          <SearchInput options={rolesList} label='Filter By Roles' />
-          <Table rows={userRow} columns={usersColumns} pageSize={7} />
+          <div className='parent-permissions'>
+            <div className='div1-buttons-permissions'>
+              <div className='button-list-webHook'>
+                <div className='button-wrapper-permissions'>
+                  <Button className='button-permissions' name='Add' />
+                </div>
+                <div className='button-wrapper-permissions'>
+                  <Button className='button-permissions' name='Edit' />
+                </div>
+                <div className='button-wrapper-permissions'>
+                  <Button className='button-permissions' name='Remove' />
+                </div>
+              </div>
+            </div>
+            <div className='div2-searchInput-permissions'>
+              <SearchInput
+                options={rolesList}
+                label='Filter By Roles'
+                className='searchInput-permissions'
+                sx={{ width: screenSizes }}
+              />
+            </div>
+          </div>
+          <Table
+            rows={userRow}
+            columns={usersColumns}
+            pageSize={7}
+            className='table-permissions'
+          />
         </>
-      ) : (
+      )}
+      {users && (
         <>
-          <SearchInput options={rolesList} label='Filter By Users' />
-          <Table rows={rolesRow} columns={rolesColumns} pageSize={7} />
+          <div className='parent-searchInput-permissions'>
+            <div className='div1-searchInput-permissions'>
+              <SearchInput
+                options={rolesList}
+                label='Filter By Users'
+                className='searchInput-permissions'
+              />
+            </div>
+          </div>
+
+          <Table
+            rows={rolesRow}
+            columns={rolesColumns}
+            pageSize={7}
+            className='table-permissions'
+          />
         </>
       )}
     </>

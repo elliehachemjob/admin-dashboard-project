@@ -4,6 +4,7 @@ import Button from '../../components/FlexibleButtonComponent/FlexibleButton.comp
 import SearchInput from '../../components/searchInputComponent/SearchInput.component';
 import Table from '../../components/tableComponent/Table.component';
 import './questionnaire.style.css';
+import { useMediaQuerySize } from '../../hooks/hooks';
 
 function Questionnaire() {
   const [questionnaire, setQuestionnaire] = useState([
@@ -33,28 +34,58 @@ function Questionnaire() {
     },
   ]);
 
+  let mediumScreen = useMediaQuerySize('(max-width:755px)');
+  let smallScreen = useMediaQuerySize('(max-width:500px)');
+
+  const screenSizes = () => {
+    if (smallScreen) {
+      return 80;
+    }
+    if (mediumScreen) {
+      return 150;
+    } else {
+      return 300;
+    }
+  };
+
   return (
     <>
       {/* 1st */}
-      <Label label='Questionnaire' />
+      <Label label='Questionnaire' className='header-Questionnaire' />
       {/* 2nd */}
-      <div className='buttons-wrapper-questionnaire'>
-        <div className='button-wrapper-questionnaire'>
-          <Button className='button-questionnaire' name='Add' />
+      <div className='parent-Questionnaire'>
+        <div className='div1-buttons-Questionnaire'>
+          <div className='button-list-Questionnaire'>
+            <div className='button-wrapper-Questionnaire'>
+              <Button className='button-Questionnaire' name='Add' />
+            </div>
+            <div className='button-wrapper-Questionnaire'>
+              <Button className='button-Questionnaire' name='Edit' />
+            </div>
+            <div className='button-wrapper-Questionnaire'>
+              <Button className='button-Questionnaire' name='Remove' />
+            </div>
+          </div>
         </div>
-        <div className='button-wrapper-questionnaire'>
-          <Button className='button-questionnaire' name='Edit' />
-        </div>
-        <div className='button-wrapper-questionnaire'>
-          <Button className='button-questionnaire' name='Remove' />
-        </div>
-        <div>
-          <SearchInput options={questionnaire} label='Filter by Question' />
+        <div className='div2-searchInput-Questionnaire'>
+          <SearchInput
+            options={questionnaire}
+            label='Filter by Question'
+            className='searchInput-Questionnaire'
+            sx={{ width: screenSizes }}
+            
+          />
         </div>
       </div>
 
       {/* 3rd */}
-      <Table rows={rows} columns={columns} pageSize={7} />
+      <Table
+        rows={rows}
+        columns={columns}
+        pageSize={7}
+        className='table-Questionnaire'
+        
+      />
     </>
   );
 }

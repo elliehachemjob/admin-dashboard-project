@@ -1,3 +1,72 @@
+.header-permissions {
+  margin-bottom: 20px;
+}
+
+.label-wrapper-permissions {
+  display: flex;
+}
+
+.label-permissions {
+  margin: 5px;
+}
+
+.table-permissions {
+}
+
+.searchInput-permissions {
+}
+
+.addItemIcon-permissions {
+}
+
+.editItemIcon-permissions {
+}
+
+.deleteItemIcon-permissions {
+}
+
+.parent-permissions {
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  grid-template-rows: repeat(1, 1fr);
+  grid-column-gap: 0px;
+  grid-row-gap: 0px;
+}
+
+.div1-buttons-permissions {
+  grid-area: 1 / 1 / 2 / 2;
+}
+.div2-searchInput-permissions {
+  grid-area: 1 / 5 / 2 / 6;
+}
+
+.button-list-permissions {
+  display: flex;
+}
+
+.button-wrapper-permissions {
+  margin-left: 15px;
+}
+
+.button-permissions {
+}
+
+.searchInput-permissions {
+  margin-bottom: 10px;
+}
+
+.parent-searchInput-permissions {
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  grid-template-rows: repeat(1, 1fr);
+  grid-column-gap: 0px;
+  grid-row-gap: 0px;
+}
+
+.div1-searchInput-permissions {
+  grid-area: 1 / 5 / 2 / 6;
+}
+
 .toggle-list-parent-permissions {
 }
 
@@ -6,34 +75,16 @@
 .div2-toggle-list-parent-permissions {
 }
 
-.header-permissions {
-}
-
-.label-permissions {
-}
-
 .breakLine-permissions {
 }
 
 .input-permissions {
 }
 
-.searchInput-permissions {
-}
-
-.button-wrapper {
-}
-
-.button {
-}
-
 .radio-permissions {
 }
 
 .description-permissions {
-}
-
-.table-permissions {
 }
 
 .checkBox-permissions {
@@ -47,20 +98,12 @@
 .bellIcon-permissions {
 }
 
-.deleteItemIcon-permissions {
-}
-
 .refreshIcon-permissions {
 }
 
 .copyItemIcon-permissions {
 }
 
-.addItemIcon-permissions {
-}
-
-.editItemIcon-permissions {
-}
 .statusIcon-permissions {
 }
 

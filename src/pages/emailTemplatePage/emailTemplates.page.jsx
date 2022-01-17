@@ -4,6 +4,7 @@ import Button from '../../components/FlexibleButtonComponent/FlexibleButton.comp
 import Table from '../../components/tableComponent/Table.component';
 import SearchInput from '../../components/searchInputComponent/SearchInput.component';
 import './emailTemplate.styles.css';
+import { useMediaQuerySize } from '../../hooks/hooks';
 
 function EmailTemplates() {
   const [rows, setRows] = useState([
@@ -56,25 +57,53 @@ function EmailTemplates() {
     { label: 'User Email Validation' },
   ]);
 
+  let mediumScreen = useMediaQuerySize('(max-width:650px)');
+  let smallScreen = useMediaQuerySize('(max-width:500px)');
+
+  const screenSizes = () => {
+    if (smallScreen) {
+      return 185;
+    }
+    if (mediumScreen) {
+      return 200;
+    } else {
+      return 300;
+    }
+  };
+
   return (
     <>
       {/* 1st */}
-      <Label label='Email Templates' size={18.72} />
+      <Label
+        label='Email Templates'
+        size={18.72}
+        className='header-emailTemplate'
+      />
       {/* 2nd */}
-      <div class='parent-emailTemplate'>
-        <div class='div1-emailTemplate'>
-          <div className='button-wrapper-emailTemplate'>
-            <Button name='Email Layout' />
-          </div>{' '}
+      <div className='parent-emailTemplate'>
+        <div className='div1-buttons-emailTemplate'>
+          <div className='button-list-emailTemplate'>
+            <div className='button-wrapper-emailTemplate'>
+              <Button className='button-emailTemplate' name='Email Layout' />
+            </div>
+          </div>
         </div>
-        <div class='div2-emailTemplate'>
-          <SearchInput options={hooksNames} label='Filter by Email Templates' />
+        <div className='div2-searchInput-emailTemplate'>
+          <SearchInput
+            options={hooksNames}
+            label='Filter by Email Templates'
+            className='searchInput-emailTemplate'
+            sx={{ width: screenSizes }}
+          />
         </div>
       </div>
-
       {/* 3rd */}
-
-      <Table rows={rows} columns={columns} pageSize={7} />
+      <Table
+        rows={rows}
+        columns={columns}
+        pageSize={7}
+        className='table-emailTemplate'
+      />
     </>
   );
 }

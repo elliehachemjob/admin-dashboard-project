@@ -1,3 +1,17 @@
+.header-mamSettings {
+  margin-bottom: 20px;
+  margin-top: 20px;
+}
+
+.label-mamSettings {
+  margin: 2.5px;
+  margin-left: 18px;
+  margin-top: 10px;
+}
+
+.dropdown-mamSettings {
+}
+
 .toggle-list-parent-mamSettings {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
@@ -13,25 +27,26 @@
   grid-area: 1 / 3 / 2 / 4;
 }
 
-.header-mamSettings {
+.input-mamSettings {
 }
 
-.label-mamSettings {
+.bellIcon-mamSettings {
+  
+}
+
+.button-list-mamSettings {
+}
+.button-wrapper-mamSettings {
+  margin-left: 15px;
+}
+
+.button-mamSettings {
 }
 
 .breakLine-mamSettings {
 }
 
-.input-mamSettings {
-}
-
 .searchInput-mamSettings {
-}
-
-.button-wrapper {
-}
-
-.button {
 }
 
 .radio-mamSettings {
@@ -49,9 +64,6 @@
 .smallLogo-mamSettings {
 }
 .largeLogo-mamSettings {
-}
-
-.bellIcon-mamSettings {
 }
 
 .deleteItemIcon-mamSettings {

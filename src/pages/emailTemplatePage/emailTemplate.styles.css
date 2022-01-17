@@ -1,12 +1,43 @@
+.header-emailTemplate {
+  margin-bottom: 20px;
+}
+
+.parent-emailTemplate {
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  grid-template-rows: repeat(1, 1fr);
+  grid-column-gap: 0px;
+  grid-row-gap: 0px;
+}
+
+.div1-buttons-emailTemplate {
+  grid-area: 1 / 1 / 2 / 2;
+}
+.div2-searchInput-emailTemplate {
+  grid-area: 1 / 5 / 2 / 6;
+}
+
+.button-list-emailTemplate {
+  display: flex;
+}
+
+.button-wrapper-emailTemplate {
+  margin: 5px;
+}
+
+.searchInput-emailTemplate {
+  margin-bottom: 10px;
+}
+
+.table-emailTemplate {
+}
+
 .toggle-list-parent-emailTemplate {
 }
 
 .div1-toggle-list-parent-emailTemplate {
 }
 .div2-toggle-list-parent-emailTemplate {
-}
-
-.header-emailTemplate {
 }
 
 .label-emailTemplate {
@@ -18,22 +49,13 @@
 .input-emailTemplate {
 }
 
-.searchInput-emailTemplate {
-}
-
-.button-wrapper {
-}
-
-.button {
+.button-emailTemplate {
 }
 
 .radio-emailTemplate {
 }
 
 .description-emailTemplate {
-}
-
-.table-emailTemplate {
 }
 
 .checkBox-emailTemplate {

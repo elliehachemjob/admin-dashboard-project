@@ -4,8 +4,6 @@ import ToggleList from '../../components/ListComponents/toggleListComponent/Togg
 import Dropdown from '../../components/dropdownComponent/Dropdown.component';
 import Button from '../../components/FlexibleButtonComponent/FlexibleButton.component';
 import './synchronize.styles.css';
-import './synchronize.styles.css';
-import './synchronize.styles.css';
 
 function Synchronize() {
   const [value, setValue] = useState();
@@ -46,14 +44,18 @@ function Synchronize() {
   return (
     <>
       {/* 1st */}
-      <Label label='Synchronize Settings' size={18.72} />
+      <Label
+        label='Synchronize Settings'
+        size={18.72}
+        className='header-synchronize'
+      />
 
       <ToggleList
         key={label1.id}
         list={label1}
-        parent='list-parent-synchronize'
-        div1='div1-list-parent-synchronize'
-        div2='div2-synchronize-list-parent-synchronize'
+        parent='toggle-list-parent-synchronize'
+        div1='div1-toggle-list-parent-synchronize'
+        div2='div2-toggle-list-parent-synchronize'
       />
 
       <Label label='Synchronization Time Frame' className='label-synchronize' />
@@ -65,8 +67,8 @@ function Synchronize() {
         value={value}
         inputLabel={value ? value : 'Per Day'}
       />
-      <div className='wrapper-synchronize'>
-        <Button className='button' name='Save Changes' />
+      <div className='button-wrapper-synchronize'>
+        <Button className='button-synchronize' name='Save Changes' />
       </div>
       {/* 2nd */}
       <Label label='Server' className='label-synchronize' />
@@ -85,12 +87,16 @@ function Synchronize() {
         value={value3}
         inputLabel={value3 ? value3 : 'Groups'}
       />
-      <div className='wrapper-synchronize'>
-        <Button className='button' name='Save Changes' />
+      <div className='button-wrapper-synchronize'>
+        <Button className='button-synchronize' name='Save Changes' />
       </div>
 
       {/* 3rd */}
-      <Label label='Synchronize Settings' size={18.72} />
+      <Label
+        label='Synchronize Settings'
+        size={18.72}
+        className='header-synchronize'
+      />
       <Label label='Promotions' className='label-synchronize' />
       <Dropdown
         items={menu4}
@@ -99,8 +105,8 @@ function Synchronize() {
         value={value4}
         inputLabel={value4 ? value4 : 'Irina Test'}
       />
-      <div className='wrapper-synchronize'>
-        <Button name='Synchronize' />
+      <div className='button-wrapper-synchronize'>
+        <Button className='button-synchronize' name='Synchronize' />
       </div>
     </>
   );

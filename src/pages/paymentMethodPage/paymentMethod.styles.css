@@ -1,3 +1,35 @@
+.header-paymentMethod {
+  margin-bottom: 20px;
+}
+
+.parent-paymentMethod {
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  grid-template-rows: repeat(1, 1fr);
+  grid-column-gap: 0px;
+  grid-row-gap: 0px;
+}
+
+.div1-buttons-paymentMethod {
+  grid-area: 1 / 1 / 2 / 2;
+}
+.div2-searchInput-paymentMethod {
+  grid-area: 1 / 5 / 2 / 6;
+}
+
+.button-list-paymentMethod {
+  display: flex;
+}
+
+.button-wrapper-paymentMethod {
+  margin-left: 15px;
+}
+.table-paymentMethod {
+}
+
+.button-apiIntegration {
+}
+
 .toggle-list-parent-paymentMethod {
 }
 
@@ -31,9 +63,6 @@
 }
 
 .description-paymentMethod {
-}
-
-.table-paymentMethod {
 }
 
 .checkBox-paymentMethod {

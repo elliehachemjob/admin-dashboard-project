@@ -5,6 +5,8 @@ import SearchInput from '../../components/searchInputComponent/SearchInput.compo
 import Table from '../../components/tableComponent/Table.component';
 import Dropdown from '../../components/dropdownComponent/Dropdown.component';
 import DatePicker from '../../components/datePickerComponent/DatePicker.component';
+import { useMediaQuerySize } from '../../hooks/hooks';
+import './ibSettings.Styles.css';
 
 function IbSettings() {
   const [accLinkType, setAccLinkType] = useState([{ label: 'IDNumber' }]);
@@ -57,17 +59,51 @@ function IbSettings() {
     setValue2(event.target.value);
   };
 
+  let mediumScreen = useMediaQuerySize('(max-width:650px)');
+  let smallScreen = useMediaQuerySize('(max-width:500px)');
+
+  const screenSizes = () => {
+    if (smallScreen) {
+      return 185;
+    }
+    if (mediumScreen) {
+      return 200;
+    } else {
+      return 300;
+    }
+  };
   return (
     <>
       {/* 1st */}
-      <Label label='IB Settings' size={18.72} />
+      <Label label='IB Settings' size={18.72} className='header-ibSettings' />
       {/* 2nd */}
-      <Button name='Edit' />
-      <SearchInput options={accLinkType} label='Filter By Type ' />
+      <div className='parent-ibSettings'>
+        <div className='div1-buttons-ibSettings'>
+          <div className='button-list-ibSettings'>
+            <div className='button-wrapper-ibSettings'>
+              <Button className='button-ibSettings' name='Edit' />
+            </div>
+          </div>
+        </div>
+        <div className='div2-searchInput-ibSettings'>
+          <SearchInput
+            options={accLinkType}
+            label='Filter By Type '
+            className='searchInput-ibSettings'
+            sx={{ width: screenSizes }}
+          />
+        </div>
+      </div>
+
       {/* 3rd */}
-      <Table rows={rows} columns={columns} pageSize={7} />
+      <Table
+        rows={rows}
+        columns={columns}
+        pageSize={7}
+        className='table-ibSettings'
+      />
       {/* 4th */}
-      <Label label='Synchronize' />
+      <Label label='Synchronize' className='label-ibSettings' />
       <Dropdown
         items={menu}
         label={value}
@@ -75,7 +111,7 @@ function IbSettings() {
         value={value}
         inputLabel={value ? value : 'Trades'}
       />
-      <Label label='IB' />
+      <Label label='IB' className='label-ibSettings' />
       <Dropdown
         items={menu2}
         label={value2}
@@ -83,14 +119,26 @@ function IbSettings() {
         value={value2}
         inputLabel={value2 ? value2 : 'IB - 1000'}
       />
-      <Label label='Date Range' />
-      <DatePicker />
-      <Button name='Synchronize' />
+      <Label label='Date Range' className='label-ibSettings' />
+      <DatePicker
+        TextField1Styles='datePicker-textField1-ibSettings'
+        TextField2Styles='datePicker-textField2-ibSettings'
+        middleTextStyles='datePicker-middleText-ibSettings'
+        middleText='to'
+      />
+      <div className='button-wrapper-ibSettings'>
+        <Button className='button-ibSettings' name='Synchronize' />
+      </div>
       {/* 5th */}
-      <Label label='IB Registration Link' />
-      <SearchInput options={ibList} label='ref ' />
-
-      <Button name='Update Link' />
+      <Label label='IB Registration Link' className='label-ibSettings' />
+      <SearchInput
+        options={ibList}
+        label='ref '
+        className='searchInput-ibSettings'
+      />
+      <div className='button-wrapper-ibSettings'>
+        <Button className='button-ibSettings' name='Update Link' />
+      </div>
     </>
   );
 }

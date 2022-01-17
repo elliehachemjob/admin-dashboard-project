@@ -37,8 +37,8 @@ function DynamicMargin() {
         inputLabel={value ? value : 'Server - MT4'}
       />
 
-      <div className='wrapper-dynamicMargin'>
-        <Button name='Sync Profiles' />
+      <div className='button-wrapper-dynamicMargin'>
+        <Button className='button-dynamicMargin' name='Sync Profiles' />
       </div>
 
       {/* 2nd */}
@@ -58,8 +58,8 @@ function DynamicMargin() {
         label='Activation Logins'
         style={{ margin: '15px' }}
       />
-      <div className='wrapper-dynamicMargin'>
-        <Button name='Activate' />
+      <div className='button-wrapper-dynamicMargin'>
+        <Button className='button-dynamicMargin' name='Activate' />
       </div>
     </>
   );

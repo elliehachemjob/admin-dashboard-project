@@ -1,22 +1,35 @@
 .header-dynamicMargin {
+  margin-bottom: 20px;
+  margin-top: 20px;
 }
 
 .label-dynamicMargin {
+  margin: 2.5px;
+  margin-left: 18px;
+  margin-top: 10px;
 }
 
-.breakLine-dynamicMargin {
+.dropdown-dynamicMargin {
+}
+
+.button-list-label-dynamicMargin {
+  display: flex;
+}
+
+.button-wrapper-dynamicMargin {
+  margin-left: 15px;
+}
+
+.button-dynamicMargin {
 }
 
 .input-dynamicMargin {
 }
 
+.breakLine-dynamicMargin {
+}
+
 .searchInput-dynamicMargin {
-}
-
-.button-wrapper {
-}
-
-.button {
 }
 
 .radio-dynamicMargin {
@@ -62,34 +75,18 @@
 .profileIcon-dynamicMargin {
 }
 
-
-
-/* .wrapper-dynamicMargin {
-  margin: 5px;
-  margin-left: 15px;
-}
-
-.label-dynamicMargin {
-  margin-left: 18px;
-}
-
-.header-dynamicMargin {
-  margin-top: 10px;
-  margin-bottom: 15px;
-}
-
-
-.toggle-list-parent-dynamicMargin {
+/* .toggle-list-parent-synchronize {
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  grid-template-rows: repeat(2, 1fr);
+  grid-template-columns: repeat(1, 1fr);
+  grid-template-rows: repeat(1, 1fr);
   grid-column-gap: 0px;
   grid-row-gap: 0px;
 }
 
-.div1-toggle-list-parent-dynamicMargin {
+.div1-toggle-list-parent-synchronize {
   grid-area: 1 / 1 / 2 / 2;
+  margin-left: 8px;
 }
-.div2-toggle-list-parent-dynamicMargin {
+.div2-toggle-list-parent-synchronize {
   grid-area: 1 / 3 / 2 / 4;
 } */

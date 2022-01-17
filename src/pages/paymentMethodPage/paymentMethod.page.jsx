@@ -3,6 +3,8 @@ import Label from '../../components/labelComponent/Label.component';
 import Button from '../../components/FlexibleButtonComponent/FlexibleButton.component';
 import SearchInput from '../../components/searchInputComponent/SearchInput.component';
 import Table from '../../components/tableComponent/Table.component';
+import { useMediaQuerySize } from '../../hooks/hooks';
+import './paymentMethod.styles.css';
 
 function PaymentMethod() {
   const [paymentMethods, setPaymentMethods] = useState([
@@ -74,16 +76,53 @@ function PaymentMethod() {
     },
   ]);
 
+  let mediumScreen = useMediaQuerySize('(max-width:805px)');
+  let smallScreen = useMediaQuerySize('(max-width:610px)');
+
+  const screenSizes = () => {
+    if (smallScreen) {
+      return 60;
+    }
+    if (mediumScreen) {
+      return 150;
+    } else {
+      return 300;
+    }
+  };
+
   return (
     <>
       {/* 1st  */}
-      <Label label='Payment Method' size={18.72} />
+      <Label
+        label='Payment Method'
+        size={18.72}
+        className='header-paymentMethod'
+      />
       {/* 2nd */}
-      <Button name='Add' />
-      <Button name='Edit Payment Info' />
-      <SearchInput options={paymentMethods} label='Filter By Payment Name' />
+      <div className='parent-paymentMethod'>
+        <div className='div1-buttons-paymentMethod'>
+          <div className='button-list-paymentMethod'>
+            <div className='button-wrapper-paymentMethod'>
+              <Button className='button-paymentMethod' name='Add' />
+            </div>
+            <div className='button-wrapper-paymentMethod'>
+              <Button
+                className='button-paymentMethod'
+                name='Edit Payment Info'
+              />
+            </div>
+          </div>
+        </div>
+        <div className='div2-searchInput-paymentMethod'>
+          <SearchInput
+            options={paymentMethods}
+            label='Filter By Payment Name'
+            sx={{ width: screenSizes }}
+          />
+        </div>
+      </div>
       {/* 3rd */}
-      <Table rows={rows} columns={columns} pageSize={7} />
+      <Table rows={rows} columns={columns} pageSize={7} className='' />
     </>
   );
 }

@@ -1,3 +1,61 @@
+.header-ibSettings {
+  margin-bottom: 20px;
+  margin-top: 20px;
+}
+
+.parent-ibSettings {
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  grid-template-rows: repeat(1, 1fr);
+  grid-column-gap: 0px;
+  grid-row-gap: 0px;
+}
+
+.div1-buttons-ibSettings {
+  grid-area: 1 / 1 / 2 / 2;
+  margin-right: 5px;
+}
+.div2-searchInput-ibSettings {
+  grid-area: 1 / 5 / 2 / 6;
+  margin: 5px;
+}
+
+.button-list-ibSettings {
+  display: flex;
+}
+
+.button-wrapper-ibSettings {
+  margin: 10px;
+  margin-left: 15px;
+}
+
+.button-ibSettings {
+}
+
+.searchInput-ibSettings {
+  margin: 15px;
+}
+
+.table-ibSettings {
+}
+
+.label-ibSettings {
+  margin: 2.5px;
+  margin-left: 18px;
+  margin-top: 10px;
+}
+
+.dropdown-ibSettings {
+}
+
+.datePicker-textField1-ibSettings {
+  margin: 15px;
+}
+.datePicker-middleText-ibSettings {
+}
+.datePicker-textField2-ibSettings {
+}
+
 .toggle-list-parent-ibSettings {
 }
 
@@ -6,34 +64,16 @@
 .div2-toggle-list-parent-ibSettings {
 }
 
-.header-ibSettings {
-}
-
-.label-ibSettings {
-}
-
 .breakLine-ibSettings {
 }
 
 .input-ibSettings {
 }
 
-.searchInput-ibSettings {
-}
-
-.button-wrapper {
-}
-
-.button {
-}
-
 .radio-ibSettings {
 }
 
 .description-ibSettings {
-}
-
-.table-ibSettings {
 }
 
 .checkBox-ibSettings {

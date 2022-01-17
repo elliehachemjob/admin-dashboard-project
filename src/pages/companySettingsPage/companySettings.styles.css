@@ -1,3 +1,115 @@
+.parent-companyImage {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  grid-template-rows: repeat(1, 1fr);
+  grid-column-gap: 0px;
+  grid-row-gap: 0px;
+}
+
+.div1-companyImage {
+  grid-area: 1 / 1 / 2 / 2;
+}
+.div2-companyImage {
+  grid-area: 1 / 5 / 2 / 6;
+}
+
+.parent-logoWrapper-companySettings {
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  grid-template-rows: repeat(0, 1fr);
+  grid-column-gap: 0px;
+  grid-row-gap: 0px;
+}
+
+.div1-logoWrapper-companySettings {
+  grid-area: 1 / 1 / 2 / 2;
+}
+.div1-logoWrapper-companySettings {
+  grid-area: 1 / 2 / 2 / 3;
+}
+.div1-logoWrapper-companySettings {
+  grid-area: 2 / 1 / 3 / 2;
+}
+.div1-logoWrapper-companySettings {
+  grid-area: 2 / 2 / 3 / 3;
+}
+
+.parent-companyDetails-companyDetails {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  grid-template-rows: repeat(5, 1fr);
+  grid-column-gap: 0px;
+  grid-row-gap: 0px;
+}
+
+.div1-companyDetails-companyDetails {
+  grid-area: 1 / 1 / 2 / 2;
+}
+
+.parent-wrapper-companyDetails {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  grid-template-rows: repeat(5, 1fr);
+  grid-column-gap: 0px;
+  grid-row-gap: 0px;
+}
+
+.div1-wrapper-companyDetails {
+  grid-area: 1 / 1 / 2 / 2;
+}
+.div2-wrapper-companyDetails {
+  grid-area: 1 / 2 / 2 / 3;
+}
+.div3-wrapper-companyDetails {
+  grid-area: 2 / 1 / 3 / 2;
+}
+.div4-wrapper-companyDetails {
+  grid-area: 2 / 2 / 3 / 3;
+}
+.div5-wrapper-companyDetails {
+  grid-area: 3 / 1 / 4 / 2;
+}
+
+.header-companyDetails {
+}
+
+.button-wrapper-companySettings {
+  margin: 15px;
+}
+
+.profileIcon-companySettings {
+  display: inline-block;
+  color: red;
+}
+
+.checkBox-companySettings {
+}
+
+.description-companySettings {
+}
+
+.deleteItemIcon-companySettings {
+}
+
+.input-companySettings {
+}
+
+.button-wrapper-companySettings {
+}
+
+.button-comcompanySettingsp {
+}
+
+.specialLinkIcon-companySettings {
+}
+
+.editItemIcon-companySettings {
+}
+
+.addItemIcon-companySettings {
+  /* end here */
+}
+
 .toggle-list-parent-companySettings {
 }
 
@@ -21,22 +133,10 @@
 .searchInput-companySettings {
 }
 
-.button-wrapper {
-}
-
-.button {
-}
-
 .radio-companySettings {
 }
 
-.description-companySettings {
-}
-
 .table-companySettings {
-}
-
-.checkBox-companySettings {
 }
 
 .smallLogo-companySettings {
@@ -63,24 +163,3 @@
 }
 .statusIcon-companySettings {
 }
-
-.specialLinkIcon-companySettings {
-}
-
-.profileIcon-companySettings {
-}
-
-/* .toggle-list-parent-companySettings {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  grid-template-rows: repeat(2, 1fr);
-  grid-column-gap: 0px;
-  grid-row-gap: 0px;
-}
-
-.div1-toggle-list-parent-companySettings {
-  grid-area: 1 / 1 / 2 / 2;
-}
-.div2-toggle-list-parent-companySettings {
-  grid-area: 1 / 3 / 2 / 4;
-} */

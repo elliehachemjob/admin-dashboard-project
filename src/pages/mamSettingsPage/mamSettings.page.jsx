@@ -5,6 +5,7 @@ import Dropdown from '../../components/dropdownComponent/Dropdown.component';
 import Input from '../../components/inputComponent/Input.component';
 import Button from '../../components/FlexibleButtonComponent/FlexibleButton.component';
 import { BellIcon } from '../../components/iconsComponent/Icons.component';
+import './mamSettings.Styles.css';
 
 function MamSettings() {
   const [label, setLabel] = useState([{ id: 1, label: 'Is User Comment' }]);
@@ -42,7 +43,7 @@ function MamSettings() {
   const handleMamChange = (event) => {
     setMam(event.target.value);
   };
-  
+
   const handleSignalCommentChange = (event) => {
     setSignalComment(event.target.value);
   };
@@ -50,33 +51,58 @@ function MamSettings() {
   return (
     <>
       {/* 1st */}
-      <Label label='MAM Settings' size={18.72} />
+      <Label label='MAM Settings' size={18.72} className='header-mamSettings' />
       {/* 2nd */}
-      <Label label='server' />
+      <Label label='server' className='label-mamSettings' />
       <Dropdown
         items={menu}
         label={value}
         handleChange={handleChange}
         value={value}
         inputLabel={value ? value : 'Server - MT4'}
+        className='dropdown-mamSettings'
       />
-      <ToggleList key={label.id} list={label} />
-      <Label label='MAM Comment' />
-      <Input value={mam} onChange={handleMamChange} label='MAM' />
-      <BellIcon />
-      <Label label='Max of 10 Characters' />
-      <Label label='Signal Comment' />
+      <ToggleList
+        key={label.id}
+        list={label}
+        parent='toggle-list-parent-mamSettings'
+        div1='div1-toggle-list-parent-mamSettings'
+        div2='div2-toggle-list-parent-mamSettings'
+      />
+      <Label label='MAM Comment' className='label-mamSettings' />
+
+      <Input
+        value={mam}
+        onChange={handleMamChange}
+        label='MAM'
+        style={{ margin: 15 }}
+      />
+      <Label
+        label='Max of 10 Characters'
+        className='label-mamSettings'
+        icon={<BellIcon className='bellIcon-mamSettings' />}
+      />
+      <Label label='Signal Comment' className='label-mamSettings' />
       <Input
         value={signalComment}
         onChange={handleSignalCommentChange}
         label='Signal'
+        style={{ margin: 15 }}
+        className='input-mamSettings'
       />
-      <BellIcon />
-      <Label label='Max of 10 Characters' />
-      <Button name='Save Changes' />
+      <Label
+        label='Max of 10 Characters'
+        className='label-mamSettings'
+        icon={<BellIcon className='bellIcon-mamSettings' />}
+      />
+
+      <div className='button-wrapper-mamSettings'>
+        <Button className='button-mamSettings' name='Save Changes' />
+      </div>
+
       {/* 3rd */}
-      <Label label='PF Settings' size={18.72} />
-      <Label label='PF Calculation Methods' />
+      <Label label='PF Settings' size={18.72} className='header-mamSettings' />
+      <Label label='PF Calculation Methods' className='label-mamSettings' />
       <Dropdown
         items={menu2}
         label={value2}
@@ -84,10 +110,17 @@ function MamSettings() {
         value={value2}
         inputLabel={value2 ? value2 : 'Equity'}
       />
-      <Button name='Save Changes' />
+      <div className='button-wrapper-mamSettings'>
+        <Button className='button-mamSettings' name='Save Changes' />
+      </div>
+
       {/* 4th */}
-      <Label label='Synchronization' size={18.72} />
-      <Label label='Server' />
+      <Label
+        label='Synchronization'
+        size={18.72}
+        className='header-mamSettings'
+      />
+      <Label label='Server' className='label-mamSettings' />
       <Dropdown
         items={menu3}
         label={value3}
@@ -95,7 +128,7 @@ function MamSettings() {
         value={value3}
         inputLabel={value3 ? value3 : 'Server - MT4'}
       />
-      <Label label='Synchronize' />
+      <Label label='Synchronize' className='label-mamSettings' />
       <Dropdown
         items={menu4}
         label={value4}
@@ -103,7 +136,9 @@ function MamSettings() {
         value={value4}
         inputLabel={value4 ? value4 : 'Profiles'}
       />
-      <Button name='Synchronize' />
+      <div className='button-wrapper-mamSettings'>
+        <Button className='button-mamSettings' name='Synchronize' />
+      </div>
     </>
   );
 }

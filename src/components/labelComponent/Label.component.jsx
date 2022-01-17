@@ -7,7 +7,8 @@ function Label(props) {
       className={props.className}
       style={{ fontSize: props.size }}
     >
-      {props.label}
+      {props.icon} {props.label}
+      {props.children}
     </div>
   );
 }

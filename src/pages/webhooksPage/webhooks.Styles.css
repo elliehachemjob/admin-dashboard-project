@@ -1,3 +1,43 @@
+.header-webHooks {
+  margin-bottom: 20px;
+}
+
+.label-webHooks {
+}
+
+.parent-webHook {
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  grid-template-rows: repeat(1, 1fr);
+  grid-column-gap: 0px;
+  grid-row-gap: 0px;
+}
+
+.div1-buttons-webHook {
+  grid-area: 1 / 1 / 2 / 2;
+}
+.div2-searchInput-webHook {
+  grid-area: 1 / 5 / 2 / 6;
+}
+
+.button-list-webHook {
+  display: flex;
+}
+
+.button-wrapper-webHooks {
+  margin-left: 15px;
+}
+
+.button-webHooks {
+}
+
+.searchInput-webHooks {
+  margin-bottom: 10px;
+}
+
+.table-webHooks {
+}
+
 .toggle-list-parent-webHooks {
 }
 
@@ -6,34 +46,16 @@
 .div2-toggle-list-parent-webHooks {
 }
 
-.header-webHooks {
-}
-
-.label-webHooks {
-}
-
 .breakLine-webHooks {
 }
 
 .input-webHooks {
 }
 
-.searchInput-webHooks {
-}
-
-.button-wrapper {
-}
-
-.button {
-}
-
 .radio-webHooks {
 }
 
 .description-webHooks {
-}
-
-.table-webHooks {
 }
 
 .checkBox-webHooks {

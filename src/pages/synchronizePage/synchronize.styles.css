@@ -1,23 +1,48 @@
+.header-synchronize {
+  margin-bottom: 20px;
+  margin-top: 20px;
+}
+
 .toggle-list-parent-synchronize {
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  grid-template-rows: repeat(2, 1fr);
+  grid-template-columns: repeat(1, 1fr);
+  grid-template-rows: repeat(1, 1fr);
   grid-column-gap: 0px;
   grid-row-gap: 0px;
 }
 
 .div1-toggle-list-parent-synchronize {
   grid-area: 1 / 1 / 2 / 2;
+  margin-left: 8px;
 }
 .div2-toggle-list-parent-synchronize {
   grid-area: 1 / 3 / 2 / 4;
 }
 
-.header-synchronize {
+.label-synchronize {
+  margin: 2.5px;
+  margin-left: 18px;
+  margin-top: 10px;
 }
 
-.label-synchronize {
+.dropdown-synchronize {
 }
+
+.button-list-synchronize {
+  display: flex;
+}
+
+.button-wrapper-synchronize {
+  margin-left: 15px;
+}
+
+
+
+
+.button-synchronize {
+}
+
+
 
 .breakLine-synchronize {
 }
@@ -26,12 +51,6 @@
 }
 
 .searchInput-synchronize {
-}
-
-.button-wrapper {
-}
-
-.button {
 }
 
 .radio-synchronize {
@@ -76,26 +95,3 @@
 
 .profileIcon-synchronize {
 }
-/* .list-parent-synchronize {
-  display: grid;
-  grid-template-columns: repeat(0, 1fr);
-  grid-template-rows: repeat(0, 1fr);
-  grid-column-gap: 0px;
-  grid-row-gap: 0px;
-}
-
-.div1-list-parent-synchronize {
-  grid-area: 1 / 1 / 2 / 2;
-}
-.div2-synchronize-list-parent-synchronize {
-  grid-area: 1 / 2 / 2 / 3;
-}
-
-.wrapper-synchronize {
-  margin: 5px;
-  margin-left: 15px;
-}
-
-.label-synchronize {
-  margin-left: 18px;
-} */

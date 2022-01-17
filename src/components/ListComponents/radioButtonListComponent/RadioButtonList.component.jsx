@@ -15,6 +15,7 @@ function RadioButtonList(props) {
               value={item.value}
               label={item.label}
               control={<Radio />}
+              style={props.style}
             />
           );
         })}

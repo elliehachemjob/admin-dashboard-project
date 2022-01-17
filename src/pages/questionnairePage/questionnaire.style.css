@@ -1,12 +1,43 @@
+.header-Questionnaire {
+  margin-bottom: 20px;
+}
+
+.parent-Questionnaire {
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  grid-template-rows: repeat(1, 1fr);
+  grid-column-gap: 0px;
+  grid-row-gap: 0px;
+}
+
+.div1-buttons-Questionnaire {
+  grid-area: 1 / 1 / 2 / 2;
+}
+.div2-searchInput-Questionnaire {
+  grid-area: 1 / 5 / 2 / 6;
+}
+
+.button-list-Questionnaire {
+  display: flex;
+}
+
+.button-wrapper-Questionnaire {
+  margin: 5px;
+}
+
+.searchInput-Questionnaire {
+  margin-bottom: 10px;
+}
+
+.table-Questionnaire {
+}
+
 .toggle-list-parent-Questionnaire {
 }
 
 .div1-toggle-list-parent-Questionnaire {
 }
 .div2-toggle-list-parent-Questionnaire {
-}
-
-.header-Questionnaire {
 }
 
 .label-Questionnaire {
@@ -18,22 +49,13 @@
 .input-Questionnaire {
 }
 
-.searchInput-Questionnaire {
-}
-
-.button-wrapper {
-}
-
-.button {
+.button-Questionnaire {
 }
 
 .radio-Questionnaire {
 }
 
 .description-Questionnaire {
-}
-
-.table-Questionnaire {
 }
 
 .checkBox-Questionnaire {

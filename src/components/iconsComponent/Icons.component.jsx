@@ -9,16 +9,16 @@ import PowerIcon from '@mui/icons-material/Power';
 import LinkIcon from '@mui/icons-material/Link';
 import PersonIcon from '@mui/icons-material/Person';
 
-export function BellIcon() {
-  return <NotificationsActiveIcon />;
+export function BellIcon(props) {
+  return <NotificationsActiveIcon className={props.className} />;
 }
 
-export function DeleteItemIcon() {
-  return <DeleteIcon />;
+export function DeleteItemIcon(props) {
+  return <DeleteIcon className={props.className} />;
 }
 
-export function RefreshIcon() {
-  return <RefreshOutlinedIcon />;
+export function RefreshIcon(props) {
+  return <RefreshOutlinedIcon className={props.className} />;
 }
 
 export function CopyItemIcon() {
@@ -41,6 +41,6 @@ export function SpecialLinkIcon() {
   return <LinkIcon />;
 }
 
-export function ProfileIcon() {
-  return <PersonIcon />;
+export function ProfileIcon(props) {
+  return <PersonIcon sx={{ fontSize: 500 }} className={props.className} />;
 }

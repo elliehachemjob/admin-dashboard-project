@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import Label from '../../components/labelComponent/Label.component';
 import Description from '../../components/descriptionComponent/Description.component';
 import ToggleList from '../../components/ListComponents/toggleListComponent/ToggleList.component';
+import Toggle from '../../components/toggleComponent/Toggle.component';
 import Button from '../../components/FlexibleButtonComponent/FlexibleButton.component';
 import {
   DeleteItemIcon,
@@ -12,6 +13,7 @@ import Input from '../../components/inputComponent/Input.component';
 import RadioButton from '../../components/ListComponents/radioButtonListComponent/RadioButtonList.component';
 import SearchInput from '../../components/searchInputComponent/SearchInput.component';
 import ListItem from '../../components/ListComponents/listItemsComponents/ListItems.component';
+import './bonus.styles.css';
 
 function Bonus() {
   const [resetNegativeBalanceLabel, setResetNegativeBalanceLabel] = useState([
@@ -135,89 +137,164 @@ function Bonus() {
   return (
     <>
       {/* 1st */}
-      <Label label='Bonus Settings' size={18.72} />
+      <Label label='Bonus Settings' size={18.72} className='header-bonus' />
       {/* 2nd */}
-      <ToggleList
-        key={resetNegativeBalanceLabel.id}
-        list={resetNegativeBalanceLabel}
-      />
-      {/* -3th */}
-      <Description description={descriptions[0].value} style={temporaryStyle} />
-      {/* -2th */}
-      <Label label='Credit Comment On Bonus Removal' />
-      <Input
-        value={bonusRemovalCreditComment}
-        onChange={handleBonusRemovalCreditCommentChange}
-        label='Credit Comment On Bonus Removal'
-      />
-      {/* -1th */}
-      <Description description={descriptions[1].value} style={temporaryStyle} />
-      {/* 1th */}
-      <Label label='Stopout Account' />
-      <RadioButton list={stopoutAccountList} />
-      {/* 2th */}
-      <Description
-        description={
-          <>
-            <Description description={descriptions[2].value} />
-            <ListItem list={stopoutAccountDescriptionItems} />
-          </>
-        }
-        style={temporaryStyle}
-      />
+      <div className='parent-restNegativeBalance'>
+        <div className='div1-restNegativeBalance'>
+          <Label label='Reset Negative Balance' className='label-bonus'></Label>
+        </div>
+        <div className='div2-restNegativeBalance'>
+          <Toggle className='toggle-restNegativeBalance' />
+        </div>
+        <div className='div3-restNegativeBalance'>
+          <Description
+            description={descriptions[0].value}
+            className='description-bonus'
+          />
+        </div>
+      </div>
       {/* 3th */}
-      <Label label='Removal Credit on Withdrawal' />
-      <RadioButton list={removalCreditOnWithdrawalList} />
+      <div className='parent-bonus'>
+        <div className='div1-bonus'>
+          <Label
+            label='Credit Comment On Bonus Removal'
+            className='label-bonus'
+          />
+          <Input
+            value={bonusRemovalCreditComment}
+            onChange={handleBonusRemovalCreditCommentChange}
+            label='Credit Comment On Bonus Removal'
+            className='input-bonus'
+            style={{ margin: 1.8 }}
+          />
+        </div>
+        <div className='div2-bonus'>
+          <Description
+            description={descriptions[1].value}
+            className='description-bonus'
+          />
+        </div>
+      </div>
+
       {/* 4th */}
-      <Label label='Exclude comment' />
-      <Input
-        value={excludeComment3}
-        onChange={handleExcludeComment3Change3}
-        label='Withdraw'
-      />
-      <Input
-        value={excludeComment4}
-        onChange={handleExcludeComment3Change4}
-        label='Ad*'
-      />
-      <Input
-        value={excludeComment5}
-        onChange={handleExcludeComment3Change5}
-        label='test'
-      />
-      <DeleteItemIcon />
-      <DeleteItemIcon />
+      <div className='parent-bonus'>
+        <div className='div1-bonus'>
+          <Label label='Stopout Account' className='label-bonus' />
+          <RadioButton list={stopoutAccountList} style={{ marginLeft: 15 }} />
+        </div>
+        <div className='div2-bonus'>
+          <Description
+            className='description-bonus'
+            description={descriptions[2].value}
+          />
+          <ul>
+            <ListItem
+              className='list-bonus'
+              list={stopoutAccountDescriptionItems}
+            />
+          </ul>
+        </div>
+      </div>
+
       {/* 5th */}
-      <Description description={descriptions[3].value} style={temporaryStyle} />
-      <Label label='Bonus abuse validation with' />
-      <SearchInput
-        options={abuseValidation}
-        label='Bonus abuse validation with'
-      />
+      <div className='parent-bonus-exception'>
+        <div className='div1-bonus-exception'>
+          <Label label='Removal Credit on Withdrawal' className='label-bonus' />
+          <RadioButton
+            style={{ marginLeft: 15 }}
+            list={removalCreditOnWithdrawalList}
+            style={{ marginLeft: 15 }}
+          />
+        </div>
+        <div className='div2-bonus-exception'>
+          <Description
+            description={descriptions[3].value}
+            className='description-bonus'
+          />
+          <Label label='Exclude comment' className='label-bonus' />
+          <Input
+            value={excludeComment3}
+            onChange={handleExcludeComment3Change3}
+            label='Withdraw'
+            className='input-bonus'
+            style={{ margin: 2 }}
+          >
+            {/* <DeleteItemIcon className='deleteItemIcon-bonus' /> */}
+          </Input>
+          <Input
+            value={excludeComment4}
+            onChange={handleExcludeComment3Change4}
+            label='Ad*'
+            className='input-bonus'
+            style={{ margin: 2 }}
+          >
+            {/* <DeleteItemIcon className='deleteItemIcon-bonus' /> */}
+          </Input>
+
+          <Input
+            value={excludeComment5}
+            onChange={handleExcludeComment3Change5}
+            label='test'
+            className='input-bonus'
+            style={{ margin: 2 }}
+          >
+            {/* <DeleteItemIcon className='deleteItemIcon-bonus' /> */}
+          </Input>
+        </div>
+      </div>
+
       {/* 6th */}
-      <Label label='API KEY' />
-      <RefreshIcon />
-      <Input value={apiKey} onChange={handleApiKeyChange3} label='API KEY' />
-      <CopyItemIcon />
+      <div className='parent-bonus'>
+        <div className='div1-bonus'>
+          <Label label='Bonus abuse validation with' className='label-bonus' />
+          <SearchInput
+            options={abuseValidation}
+            label='Bonus abuse validation with'
+            sx={{ width: 300, margin: 2 }}
+          />
+        </div>
+        <div className='div2-bonus'>
+          <Label label='API KEY' className='label-bonus' />
+          {/* <RefreshIcon className='refreshIcon-bonus' /> */}
+          <Input
+            value={apiKey}
+            onChange={handleApiKeyChange3}
+            label='API KEY'
+            style={{ margin: 2 }}
+          />
+          {/* <CopyItemIcon className='copyItemIcon-bonus' /> */}
+        </div>
+      </div>
       {/* 7th */}
-      <Label label='Trigger API' />
-      <RadioButton list={triggerApiList} />
+      <div className='parent-bonus-lastItem'>
+        <div className='div1-bonus-lastItem'>
+          <Label label='Trigger API' className='label-bonus' />
+          <RadioButton style={{ marginLeft: 15 }} list={triggerApiList} />
+        </div>
+        <div className='div2-bonus-lastItem'>
+          <Label label='Exclude comment' className='label-bonus' />
+          <Input
+            value={excludeComment}
+            onChange={handleExcludeCommentChange}
+            label='TFR*'
+            className='input-bonus-lastItem'
+            style={{ margin: 2 }}
+          />
+          <Input
+            value={excludeComment2}
+            onChange={handleExcludeCommentChange2}
+            label='Exclude'
+            className='input-bonus'
+            style={{ margin: 2 }}
+          />
+          {/* <DeleteItemIcon className='deleteItemIcon-bonus' />
+          <DeleteItemIcon className='deleteItemIcon-bonus' /> */}
+        </div>
+      </div>
       {/* 8th */}
-      <Label label='Exclude comment' />
-      <Input
-        value={excludeComment}
-        onChange={handleExcludeCommentChange}
-        label='TFR*'
-      />
-      <Input
-        value={excludeComment2}
-        onChange={handleExcludeCommentChange2}
-        label='Exclude'
-      />
-      <DeleteItemIcon />
-      <DeleteItemIcon />
-      {/* 9th */}
-      <Button name='Save Changes' />
+      <div className='button-wrapper-bonus'>
+        <Button className='button-bonus' name='Save Changes' />
+      </div>
     </>
   );
 }

@@ -62,11 +62,13 @@ function Notifications() {
   return (
     <>
       {/* 1st */}
-      <Label label='System Notifications' size={18.72}
-      
+      <Label
+        label='System Notifications'
+        className='header-notificationPage'
+        size={18.72}
       />
       {/* 2nd */}
-      <Label label='Notification Type' />
+      <Label label='Notification Type' className='label-notificationPage' />
       <Dropdown
         items={menu}
         label={value}
@@ -75,7 +77,7 @@ function Notifications() {
         inputLabel={value ? value : 'Email Notification'}
       />
       {/* 3rd */}
-      <Label label='Clients' />
+      <Label className='label-notificationPage' label='Clients' />
       <ToggleList
         key={label1.id}
         list={label1}
@@ -83,9 +85,9 @@ function Notifications() {
         div1='div1-toggle-list-parent-notificationPage'
         div2='div2-toggle-list-parent-notificationPage'
       />
-      <BreakLine />
+      <BreakLine className='breakLine-notificationPage' />
       {/* 4th */}
-      <Label label='Trader' />
+      <Label className='label-notificationPage' label='Trader' />
       <ToggleList
         key={label2.id}
         list={label2}
@@ -93,9 +95,9 @@ function Notifications() {
         div1='div1-toggle-list-parent-notificationPage'
         div2='div2-toggle-list-parent-notificationPage'
       />
-      <BreakLine />
+      <BreakLine className='breakLine-notificationPage' />
       {/* 5th */}
-      <Label label='OnBoarding' />
+      <Label className='label-notificationPage' label='OnBoarding' />
       <ToggleList
         key={label3.id}
         list={label3}
@@ -103,9 +105,8 @@ function Notifications() {
         div1='div1-toggle-list-parent-notificationPage'
         div2='div2-toggle-list-parent-notificationPage'
       />
-      <BreakLine />
-      {/* 6th */}
-      <Label label='Partners' />
+      <BreakLine className='breakLine-notificationPage' /> {/* 6th */}
+      <Label className='label-notificationPage' label='Partners' />
       <ToggleList
         key={label4.id}
         list={label4}
@@ -113,9 +114,9 @@ function Notifications() {
         div1='div1-toggle-list-parent-notificationPage'
         div2='div2-toggle-list-parent-notificationPage'
       />
-      <BreakLine />
+      <BreakLine className='breakLine-notificationPage' />
       {/* 7th */}
-      <Label label='MAM' />
+      <Label className='label-notificationPage' label='MAM' />
       <ToggleList
         key={label5.id}
         list={label5}
@@ -123,9 +124,9 @@ function Notifications() {
         div1='div1-toggle-list-parent-notificationPage'
         div2='div2-toggle-list-parent-notificationPage'
       />
-      <BreakLine />
+      <BreakLine className='breakLine-notificationPage' />
       {/* 8th */}
-      <Label label='Bonus' />
+      <Label className='label-notificationPage' label='Bonus' />
       <ToggleList
         key={label6.id}
         list={label6}
@@ -133,9 +134,9 @@ function Notifications() {
         div1='div1-toggle-list-parent-notificationPage'
         div2='div2-toggle-list-parent-notificationPage'
       />
-      <BreakLine />
+      <BreakLine className='breakLine-notificationPage' />
       {/* 9th */}
-      <Label label='Tasks' />
+      <Label className='label-notificationPage' label='Tasks' />
       <ToggleList
         key={label7.id}
         list={label7}
@@ -143,7 +144,7 @@ function Notifications() {
         div1='div1-toggle-list-parent-notificationPage'
         div2='div2-toggle-list-parent-notificationPage'
       />
-      <BreakLine />
+      <BreakLine className='breakLine-notificationPage' />
       {/* 10th */}
       <Button name='Save Changes' />
     </>

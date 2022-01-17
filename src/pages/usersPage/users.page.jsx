@@ -8,9 +8,13 @@ import {
 } from '../../components/iconsComponent/Icons.component';
 import SearchInput from '../../components/searchInputComponent/SearchInput.component';
 import Table from '../../components/tableComponent/Table.component';
+import './users.styles.css';
+import { useMediaQuerySize } from '../../hooks/hooks';
 
 function Users() {
-  const [tab, setTab] = useState(true);
+  const [users, setUsers] = useState(true);
+  const [teams, setTeams] = useState(false);
+
   const [usersList, setUsersList] = useState([
     { label: 'Yulia Lea' },
     { label: 'Zack Gao' },
@@ -97,33 +101,97 @@ function Users() {
     },
   ]);
 
-  const handleTabChange = () => {
-    setTab(!tab);
+  const handleUsersChange = () => {
+    setUsers(true);
+    setTeams(false);
+  };
+
+  const handleTeamsChange = () => {
+    setTeams(true);
+    setUsers(false);
+  };
+
+  let mediumScreen = useMediaQuerySize('(max-width:755px)');
+  let smallScreen = useMediaQuerySize('(max-width:500px)');
+
+  const screenSizes = () => {
+    if (smallScreen) {
+      return 80;
+    }
+    if (mediumScreen) {
+      return 150;
+    } else {
+      return 300;
+    }
   };
 
   return (
     <>
       {/* 1st */}
-      <Label label='Users' size={18.72} />
+      <Label label='Users' size={18.72} className='header-users' />
       {/* 2nd */}
-      <Label onClick={handleTabChange} label='Users' />
-      <Label onClick={handleTabChange} label='Teams' />
 
-      {/* 3rd */}
-      <Button name='Add' />
-      <Button name='Remove' />
-      <AddItemIcon />
-      <DeleteItemIcon />
+      <div className='label-wrapper-users'>
+        <Label
+          className='label-users'
+          onClick={handleUsersChange}
+          label='Users'
+        />
+        <Label
+          className='label-users'
+          onClick={handleTeamsChange}
+          label='Teams'
+        />
+      </div>
       {/* 4th */}
-
-      {tab ? (
+      {users && (
         <>
-          <SearchInput options={usersList} label='Filter By Users' />
+          <div className='parent-permissions'>
+            <div className='div1-buttons-permissions'>
+              <div className='button-list-webHook'>
+                <div className='button-wrapper-permissions'>
+                  <Button className='button-permissions' name='Add' />
+                </div>
+                <div className='button-wrapper-permissions'>
+                  <Button className='button-permissions' name='Remove' />
+                </div>
+              </div>
+            </div>
+            <div className='div2-searchInput-permissions'>
+              <SearchInput
+                options={usersList}
+                label='Filter By Users'
+                className='searchInput-permissions'
+                sx={{ width: screenSizes }}
+              />
+            </div>
+          </div>
           <Table rows={usersRow} columns={usersColumns} pageSize={7} />
         </>
-      ) : (
+      )}
+
+      {teams && (
         <>
-          <SearchInput options={teamsList} label='Filter By Teams' />
+          <div className='parent-permissions'>
+            <div className='div1-buttons-permissions'>
+              <div className='button-list-webHook'>
+                <div className='button-wrapper-permissions'>
+                  <Button className='button-permissions' name='Add' />
+                </div>
+                <div className='button-wrapper-permissions'>
+                  <Button className='button-permissions' name='Remove' />
+                </div>
+              </div>
+            </div>
+            <div className='div2-searchInput-permissions'>
+              <SearchInput
+                options={teamsList}
+                label='Filter By Teams'
+                className='searchInput-permissions'
+                sx={{ width: screenSizes }}
+              />
+            </div>
+          </div>
           <Table rows={teamsRow} columns={teamsColumns} pageSize={7} />
         </>
       )}

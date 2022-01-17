@@ -4,7 +4,11 @@ function ListItems(props) {
   return (
     <>
       {props.list.map((item) => {
-        return <li key={item.id}>{item.value}</li>;
+        return (
+          <li className={props.className} key={item.id}>
+            {item.value}
+          </li>
+        );
       })}
     </>
   );

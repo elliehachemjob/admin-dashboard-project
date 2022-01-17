@@ -4,19 +4,14 @@ import Autocomplete from '@mui/material/Autocomplete';
 import './searchInput.styles.css';
 function SearchInput(props) {
   return (
-    <div className={props.parent}>
-      <div className={props.div1}>
-        <Autocomplete
-          disablePortal
-          id='combo-box-demo'
-          options={props.options}
-          sx={{ width: 300 }}
-          renderInput={(params) => (
-            <TextField {...params} label={props.label} />
-          )}
-        />
-      </div>
-    </div>
+    <Autocomplete
+      disablePortal
+      id='combo-box-demo'
+      options={props.options}
+      sx={props.sx ? props.sx : { width: 300 }}
+      className={props.className}
+      renderInput={(params) => <TextField {...params} label={props.label} />}
+    />
   );
 }
 
