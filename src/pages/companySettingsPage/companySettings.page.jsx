@@ -171,87 +171,148 @@ function CompanySettings() {
       <Button name='Save Changes' />
 
       {/* 3rd */}
-      <Label label='Mail Service Settings' size={18.72} />
-      <Button name='Test Mail' />
-      <Label label='Host Name' />
-      <Input
-        value={mailServiceSettings.hostName}
-        onChange={handleEmailServiceSettingsChange}
-        label='smtp.office365.com'
-        formName='hostName'
-      />
-      <Label label='Port' />
-      <Input
-        value={mailServiceSettings.port}
-        onChange={handleEmailServiceSettingsChange}
-        label='587'
-        formName='port'
-      />
-      <Label label='Username' />
-      <Input
-        value={mailServiceSettings.username}
-        onChange={handleEmailServiceSettingsChange}
-        label='noreply@plugitapps.com'
-        formName='Username'
-      />
-      <Label label='Back Office Email' />
-      <Input
-        value={mailServiceSettings.backOfficeEmail}
-        onChange={handleEmailServiceSettingsChange}
-        label='rita@plugitapps.com'
-        formName='backOfficeEmail'
-      />
-      <Label label='Enable SSL' />
-      <CheckBox />
-      <Label label='Username (optional)' />
-      <Input
-        value={mailServiceSettings.usernameOptional}
-        onChange={handleEmailServiceSettingsChange}
-        label=''
-        formName='usernameOptional'
-      />
-      <Label label='Display/Senders Name (optional)' />
-      <Input
-        value={mailServiceSettings.displaySendersNameOptional}
-        onChange={handleEmailServiceSettingsChange}
-        label='Yoonit PLG'
-        formName='companyName'
-      />
+      <div className='parent-mainServiceSettings'>
+        <div className='div1-mainServiceSettings'>
+          <Label label='Mail Service Settings' size={18.72} />
+        </div>
+        <div className='div2-mainServiceSettings'>
+          <Button name='Test Mail' />
+        </div>
+        <div className='div3-mainServiceSettings'>
+          <Label label='Host Name' />
+          <Input
+            value={mailServiceSettings.hostName}
+            onChange={handleEmailServiceSettingsChange}
+            label='smtp.office365.com'
+            formName='hostName'
+          />
+        </div>
+        <div className='div4-mainServiceSettings'>
+          <Label label='Port' />
+          <Input
+            value={mailServiceSettings.port}
+            onChange={handleEmailServiceSettingsChange}
+            label='587'
+            formName='port'
+          />
+        </div>
+        <div className='div5-mainServiceSettings'>
+          <Label label='Username' />
+          <Input
+            value={mailServiceSettings.username}
+            onChange={handleEmailServiceSettingsChange}
+            label='noreply@plugitapps.com'
+            formName='Username'
+          />
+        </div>
+        <div className='div6-mainServiceSettings'>
+          <Label label='Password' />
+          <Input
+            value={mailServiceSettings.password}
+            onChange={handleEmailServiceSettingsChange}
+            label='Password'
+            formName='password'
+          />
+        </div>
+        <div className='div7-mainServiceSettings'>
+          <Label label='Back Office Email' />
+          <Input
+            value={mailServiceSettings.backOfficeEmail}
+            onChange={handleEmailServiceSettingsChange}
+            label='rita@plugitapps.com'
+            formName='backOfficeEmail'
+          />
+        </div>
+        <div className='div8-mainServiceSettings'>
+          <Label label='Enable SSL' />
+          <CheckBox />
+        </div>
+        <div className='div9-mainServiceSettings'>
+          <Label label='Username (optional)' />
+          <Input
+            value={mailServiceSettings.usernameOptional}
+            onChange={handleEmailServiceSettingsChange}
+            label=''
+            formName='usernameOptional'
+          />
+        </div>
+        <div className='div10-mainServiceSettings'>
+          <Label label='Display/Senders Name (optional)' />
+          <Input
+            value={mailServiceSettings.displaySendersNameOptional}
+            onChange={handleEmailServiceSettingsChange}
+            label='Yoonit PLG'
+            formName='companyName'
+          />
+        </div>
+      </div>
       <Button name='Save Changes' />
       {/* 4th */}
       <Label label='Platform Links' size={18.72} />
-      <Input
-        value={platformLinks}
-        onChange={handlePlatformLinksChange}
-        label='Live MT4'
-      />
-      <SpecialLinkIcon />
-      <EditItemIcon />
-      <Input
-        value={platformLinks2}
-        onChange={handlePlatformLinks2Change}
-        label='LinkMT5'
-      />
-      <SpecialLinkIcon />
-      <EditItemIcon />
-      <AddItemIcon />
+      <div className='parent-platformLinks'>
+        <div className='div1-platformLinks'>
+          <SpecialLinkIcon />
+          <AddItemIcon />
+          <Input
+            value={platformLinks}
+            onChange={handlePlatformLinksChange}
+            label='Live MT4'
+          />
+        </div>
+        <div className='div2-platformLinks'>
+          <SpecialLinkIcon />
+          <AddItemIcon />
+          <Input
+            value={platformLinks2}
+            onChange={handlePlatformLinks2Change}
+            label='LinkMT5'
+          />
+        </div>
+        <div className='div3-platformLinks'>
+          <Label label='Live MT4' />
+          <DeleteItemIcon />
+          <EditItemIcon />
+        </div>
+        <div className='div4-platformLinks'>
+          <Label label='LinkMT5' />
+          <DeleteItemIcon />
+          <EditItemIcon />
+        </div>
+      </div>
+
       {/* 5th */}
       <Label label='Registration Links' size={18.72} />
-      <Input
-        value={registrationLinks}
-        onChange={handleRegistrationLinksChange}
-        label='Test'
-      />
-      <SpecialLinkIcon />
-      <EditItemIcon />
-      <Input
-        value={registrationLinks2}
-        onChange={handleRegistrationLinks2Change}
-        label='Google'
-      />
-      <SpecialLinkIcon />
-      <EditItemIcon />
-      <AddItemIcon />
+
+      <div className='parent-registrationLinks'>
+        <div className='div1-registrationLinks'>
+          <SpecialLinkIcon />
+          <AddItemIcon />
+          <Input
+            value={registrationLinks}
+            onChange={handleRegistrationLinksChange}
+            label='Test'
+          />
+        </div>
+        <div className='div2-registrationLinks'>
+          <SpecialLinkIcon />
+          <AddItemIcon />
+          <Input
+            value={registrationLinks2}
+            onChange={handleRegistrationLinks2Change}
+            label='Google'
+          />
+        </div>
+        <div className='div3-registrationLinks'>
+          <Label label='Test' />
+          <DeleteItemIcon />
+          <EditItemIcon />
+        </div>
+        <div className='div4-registrationLinks'>
+          <Label label='Google' />
+          <DeleteItemIcon />
+          <EditItemIcon />
+        </div>
+      </div>
     </>
   );
 }

@@ -56,7 +56,7 @@ function DynamicMargin() {
         value={activationLogins}
         onChange={handleActivationLoginsChange}
         label='Activation Logins'
-        style={{ margin: '15px' }}
+        style={{ margin: 2 }}
       />
       <div className='button-wrapper-dynamicMargin'>
         <Button className='button-dynamicMargin' name='Activate' />

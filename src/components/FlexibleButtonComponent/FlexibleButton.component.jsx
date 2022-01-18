@@ -5,7 +5,7 @@ import './flexibleButton.css';
 function FlexibleButton(props) {
   return (
     <div>
-      <Button className={props.className} variant='outlined'>
+      <Button className={props.className} sx={props.sx} variant='outlined'>
         {props.name}
       </Button>
     </div>

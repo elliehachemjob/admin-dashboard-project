@@ -59,94 +59,138 @@ function Notifications() {
     setValue(event.target.value);
   };
 
+  const button = {
+    backgroundColor: '#44c767',
+    borderRadius: '28px',
+    border: '1px solid #18ab29',
+    display: 'inline-block',
+    cursor: 'pointer',
+    color: ' #ffffff',
+    fontFamily: 'Aria',
+    fontSize: '17px',
+    padding: '8px 38px',
+    textDecoration: 'none',
+    extShadow: '0px 1px 0px #2f6627',
+  };
+
   return (
     <>
       {/* 1st */}
-      <Label
+      {/* <Label
         label='System Notifications'
         className='header-notificationPage'
         size={18.72}
-      />
+      /> */}
+
       {/* 2nd */}
-      <Label label='Notification Type' className='label-notificationPage' />
-      <Dropdown
-        items={menu}
-        label={value}
-        handleChange={handleChange}
-        value={value}
-        inputLabel={value ? value : 'Email Notification'}
-      />
+
+      <div className='container1-notificationPage'>
+        <Label label='Notification Type' className='label-notificationPage' />
+        <Dropdown
+          items={menu}
+          label={value}
+          handleChange={handleChange}
+          value={value}
+          inputLabel={value ? value : 'Email Notification'}
+          sx={{ m: 2, minWidth: 160, marginLeft: 1, marginBottom: 3 }}
+        />
+      </div>
+
+      {/* <BreakLine className='breakLine-notificationPage' /> */}
       {/* 3rd */}
-      <Label className='label-notificationPage' label='Clients' />
-      <ToggleList
-        key={label1.id}
-        list={label1}
-        parent='toggle-list-parent-notificationPage'
-        div1='div1-toggle-list-parent-notificationPage'
-        div2='div2-toggle-list-parent-notificationPage'
-      />
-      <BreakLine className='breakLine-notificationPage' />
+      <div className='container1-notificationPage'>
+        <Label className='label-notificationPage' label='Clients' />
+        <ToggleList
+          key={label1.id}
+          list={label1}
+          parent='toggle-list-parent-notificationPage'
+          div1='div1-toggle-list-parent-notificationPage'
+          div2='div2-toggle-list-parent-notificationPage'
+        />
+      </div>
+      {/* <BreakLine className='breakLine-notificationPage' /> */}
       {/* 4th */}
-      <Label className='label-notificationPage' label='Trader' />
-      <ToggleList
-        key={label2.id}
-        list={label2}
-        parent='toggle-list-parent-notificationPage'
-        div1='div1-toggle-list-parent-notificationPage'
-        div2='div2-toggle-list-parent-notificationPage'
-      />
-      <BreakLine className='breakLine-notificationPage' />
+      <div className='container1-notificationPage'>
+        <Label className='label-notificationPage' label='Trader' />
+        <ToggleList
+          key={label2.id}
+          list={label2}
+          parent='toggle-list-parent-notificationPage'
+          div1='div1-toggle-list-parent-notificationPage'
+          div2='div2-toggle-list-parent-notificationPage'
+        />
+      </div>
+      {/* <BreakLine className='breakLine-notificationPage' /> */}
       {/* 5th */}
-      <Label className='label-notificationPage' label='OnBoarding' />
-      <ToggleList
-        key={label3.id}
-        list={label3}
-        parent='toggle-list-parent-notificationPage'
-        div1='div1-toggle-list-parent-notificationPage'
-        div2='div2-toggle-list-parent-notificationPage'
-      />
-      <BreakLine className='breakLine-notificationPage' /> {/* 6th */}
-      <Label className='label-notificationPage' label='Partners' />
-      <ToggleList
-        key={label4.id}
-        list={label4}
-        parent='toggle-list-parent-notificationPage'
-        div1='div1-toggle-list-parent-notificationPage'
-        div2='div2-toggle-list-parent-notificationPage'
-      />
-      <BreakLine className='breakLine-notificationPage' />
+      <div className='container1-notificationPage'>
+        <Label className='label-notificationPage' label='OnBoarding' />
+        <ToggleList
+          key={label3.id}
+          list={label3}
+          parent='toggle-list-parent-notificationPage'
+          div1='div1-toggle-list-parent-notificationPage'
+          div2='div2-toggle-list-parent-notificationPage'
+        />
+      </div>
+
+      {/* <BreakLine className='breakLine-notificationPage' />  */}
+      {/* 6th */}
+      <div className='container1-notificationPage'>
+        <Label className='label-notificationPage' label='Partners' />
+        <ToggleList
+          key={label4.id}
+          list={label4}
+          parent='toggle-list-parent-notificationPage'
+          div1='div1-toggle-list-parent-notificationPage'
+          div2='div2-toggle-list-parent-notificationPage'
+        />
+      </div>
+
+      {/* <BreakLine className='breakLine-notificationPage' /> */}
       {/* 7th */}
-      <Label className='label-notificationPage' label='MAM' />
-      <ToggleList
-        key={label5.id}
-        list={label5}
-        parent='toggle-list-parent-notificationPage'
-        div1='div1-toggle-list-parent-notificationPage'
-        div2='div2-toggle-list-parent-notificationPage'
-      />
-      <BreakLine className='breakLine-notificationPage' />
+
+      <div className='container1-notificationPage'>
+        <Label className='label-notificationPage' label='MAM' />
+        <ToggleList
+          key={label5.id}
+          list={label5}
+          parent='toggle-list-parent-notificationPage'
+          div1='div1-toggle-list-parent-notificationPage'
+          div2='div2-toggle-list-parent-notificationPage'
+        />
+      </div>
+
+      {/* <BreakLine className='breakLine-notificationPage' /> */}
       {/* 8th */}
-      <Label className='label-notificationPage' label='Bonus' />
-      <ToggleList
-        key={label6.id}
-        list={label6}
-        parent='toggle-list-parent-notificationPage'
-        div1='div1-toggle-list-parent-notificationPage'
-        div2='div2-toggle-list-parent-notificationPage'
-      />
-      <BreakLine className='breakLine-notificationPage' />
+      <div className='container1-notificationPage'>
+        <Label className='label-notificationPage' label='Bonus' />
+        <ToggleList
+          key={label6.id}
+          list={label6}
+          parent='toggle-list-parent-notificationPage'
+          div1='div1-toggle-list-parent-notificationPage'
+          div2='div2-toggle-list-parent-notificationPage'
+        />
+      </div>
+
+      {/* <BreakLine className='breakLine-notificationPage' /> */}
       {/* 9th */}
-      <Label className='label-notificationPage' label='Tasks' />
-      <ToggleList
-        key={label7.id}
-        list={label7}
-        parent='toggle-list-parent-notificationPage'
-        div1='div1-toggle-list-parent-notificationPage'
-        div2='div2-toggle-list-parent-notificationPage'
-      />
-      <BreakLine className='breakLine-notificationPage' />
+      <div className='container1-notificationPage'>
+        <Label className='label-notificationPage' label='Tasks' />
+        <ToggleList
+          key={label7.id}
+          list={label7}
+          parent='toggle-list-parent-notificationPage'
+          div1='div1-toggle-list-parent-notificationPage'
+          div2='div2-toggle-list-parent-notificationPage'
+        />
+      </div>
+
+      {/* <BreakLine className='breakLine-notificationPage' /> */}
       {/* 10th */}
-      <Button name='Save Changes' />
+      <div className='button-wrapper-notificationPage'>
+        <Button className='button-notificationPage' name='Save Changes' />
+      </div>
     </>
   );
 }

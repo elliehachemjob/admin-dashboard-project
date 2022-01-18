@@ -7,7 +7,7 @@ import Select from '@mui/material/Select';
 function Dropdown(props) {
   return (
     <>
-      <FormControl sx={{ m: 2, minWidth: 160 }}>
+      <FormControl sx={props.sx ? props.sx : { m: 2, minWidth: 160 }}>
         <InputLabel id='demo-simple-select-autowidth-label'>
           {props.inputLabel}
         </InputLabel>

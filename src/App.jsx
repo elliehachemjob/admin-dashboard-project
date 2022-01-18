@@ -29,9 +29,9 @@ function App() {
             element={
               <Main
                 menuTitle='Menu'
-                pageTitle='My Page'
+                pageTitle='Notifications'
                 leftSideChildren={<SidebarLinks />}
-                rightSideChildren='Home Page'
+                rightSideChildren={<Notifications />}
               />
             }
           />
@@ -41,7 +41,7 @@ function App() {
             element={
               <Main
                 menuTitle='Menu'
-                pageTitle='My Page'
+                pageTitle='Company Settings'
                 leftSideChildren={<SidebarLinks />}
                 rightSideChildren={<CompanySettings />}
               />
@@ -52,7 +52,7 @@ function App() {
             element={
               <Main
                 menuTitle='Menu'
-                pageTitle='My Page'
+                pageTitle='Users'
                 leftSideChildren={<SidebarLinks />}
                 rightSideChildren={<Users />}
               />
@@ -63,7 +63,7 @@ function App() {
             element={
               <Main
                 menuTitle='Menu'
-                pageTitle='My Page'
+                pageTitle='Permissions'
                 leftSideChildren={<SidebarLinks />}
                 rightSideChildren={<Permissions />}
               />
@@ -74,7 +74,7 @@ function App() {
             element={
               <Main
                 menuTitle='Menu'
-                pageTitle='My Page'
+                pageTitle='Bonus'
                 leftSideChildren={<SidebarLinks />}
                 rightSideChildren={<Bonus />}
               />
@@ -85,7 +85,7 @@ function App() {
             element={
               <Main
                 menuTitle='Menu'
-                pageTitle='My Page'
+                pageTitle='PaymentMethod'
                 leftSideChildren={<SidebarLinks />}
                 rightSideChildren={<PaymentMethod />}
               />
@@ -96,7 +96,7 @@ function App() {
             element={
               <Main
                 menuTitle='Menu'
-                pageTitle='My Page'
+                pageTitle='Api Integration'
                 leftSideChildren={<SidebarLinks />}
                 rightSideChildren={<ApiIntegration />}
               />
@@ -107,7 +107,7 @@ function App() {
             element={
               <Main
                 menuTitle='Menu'
-                pageTitle='My Page'
+                pageTitle='Ib Settings'
                 leftSideChildren={<SidebarLinks />}
                 rightSideChildren={<IbSettings />}
               />
@@ -118,7 +118,7 @@ function App() {
             element={
               <Main
                 menuTitle='Menu'
-                pageTitle='My Page'
+                pageTitle='Mam Settings'
                 leftSideChildren={<SidebarLinks />}
                 rightSideChildren={<MamSettings />}
               />
@@ -129,7 +129,7 @@ function App() {
             element={
               <Main
                 menuTitle='Menu'
-                pageTitle='My Page'
+                pageTitle='Dynamic Margin'
                 leftSideChildren={<SidebarLinks />}
                 rightSideChildren={<DynamicMargin />}
               />
@@ -140,7 +140,7 @@ function App() {
             element={
               <Main
                 menuTitle='Menu'
-                pageTitle='My Page'
+                pageTitle='Synchronize'
                 leftSideChildren={<SidebarLinks />}
                 rightSideChildren={<Synchronize />}
               />
@@ -151,7 +151,7 @@ function App() {
             element={
               <Main
                 menuTitle='Menu'
-                pageTitle='My Page'
+                pageTitle='Questionnaire'
                 leftSideChildren={<SidebarLinks />}
                 rightSideChildren={<Questionnaire />}
               />
@@ -162,7 +162,7 @@ function App() {
             element={
               <Main
                 menuTitle='Menu'
-                pageTitle='My Page'
+                pageTitle='Email Templates'
                 leftSideChildren={<SidebarLinks />}
                 rightSideChildren={<EmailTemplates />}
               />
@@ -173,7 +173,7 @@ function App() {
             element={
               <Main
                 menuTitle='Menu'
-                pageTitle='My Page'
+                pageTitle='WebHooks'
                 leftSideChildren={<SidebarLinks />}
                 rightSideChildren={<WebHooks />}
               />
@@ -184,7 +184,7 @@ function App() {
             element={
               <Main
                 menuTitle='Menu'
-                pageTitle='My Page'
+                pageTitle='Notifications'
                 leftSideChildren={<SidebarLinks />}
                 rightSideChildren={<Notifications />}
               />

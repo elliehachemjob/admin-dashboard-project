@@ -75,7 +75,7 @@ function MamSettings() {
         value={mam}
         onChange={handleMamChange}
         label='MAM'
-        style={{ margin: 15 }}
+        style={{ margin: 2 }}
       />
       <Label
         label='Max of 10 Characters'
@@ -87,7 +87,7 @@ function MamSettings() {
         value={signalComment}
         onChange={handleSignalCommentChange}
         label='Signal'
-        style={{ margin: 15 }}
+        style={{ margin: 2 }}
         className='input-mamSettings'
       />
       <Label
