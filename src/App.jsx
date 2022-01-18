@@ -18,11 +18,75 @@ import Notifications from './pages/notificationsPage/notifications.page';
 import SidebarLinks from './components/websiteLayout/sidebarLinksComponent/SidebarLinks.component';
 import Menu from './components/websiteLayout/menuComponent/Menu.component';
 import './index.css';
+import Dashboard from './components/NewDashboardComponent/DashboardComponent/Dashboard.component';
 
 function App() {
   return (
     <>
       <BrowserRouter>
+        <Routes>
+          <Route
+            path='/'
+            element={<Dashboard rightSide={<Notifications />} />}
+          />
+          <Route
+            path='/companySettings'
+            element={<Dashboard rightSide={<CompanySettings />} />}
+          />
+          <Route path='/users' element={<Dashboard rightSide={<Users />} />} />
+          <Route
+            path='/permissions'
+            element={<Dashboard rightSide={<Permissions />} />}
+          />
+          <Route path='/bonus' element={<Dashboard rightSide={<Bonus />} />} />
+          <Route
+            path='/paymentMethod'
+            element={<Dashboard rightSide={<PaymentMethod />} />}
+          />
+          <Route
+            path='/apiIntegration'
+            element={<Dashboard rightSide={<ApiIntegration />} />}
+          />
+          <Route
+            path='/ibSettings'
+            element={<Dashboard rightSide={<IbSettings />} />}
+          />
+          <Route
+            path='/mamSettings'
+            element={<Dashboard rightSide={<MamSettings />} />}
+          />
+          <Route
+            path='/dynamicMargin'
+            element={<Dashboard rightSide={<DynamicMargin />} />}
+          />
+          <Route
+            path='/synchronize'
+            element={<Dashboard rightSide={<Synchronize />} />}
+          />
+          <Route
+            path='/notifications'
+            element={<Dashboard rightSide={<Notifications />} />}
+          />
+          <Route
+            path='/questionnaire'
+            element={<Dashboard rightSide={<Questionnaire />} />}
+          />
+          <Route
+            path='/emailTemplates'
+            element={<Dashboard rightSide={<EmailTemplates />} />}
+          />
+          <Route
+            path='/webHooks'
+            element={<Dashboard rightSide={<WebHooks />} />}
+          />
+          <Route
+            path='/notifications'
+            element={<Dashboard rightSide={<Notifications />} />}
+          />
+        </Routes>
+      </BrowserRouter>
+      ,
+      {/* <BrowserRouter>
         <Routes>
           <Route
             path='/'
@@ -191,7 +255,7 @@ function App() {
             }
           />
         </Routes>
-      </BrowserRouter>
+      </BrowserRouter> */}
     </>
   );
 }

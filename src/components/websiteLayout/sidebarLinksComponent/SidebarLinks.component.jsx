@@ -5,9 +5,9 @@ import './sidebarLinks.styles.css';
 function SidebarLinks(props) {
   const links = [
     { id: 1, path: 'companySettings', name: 'Company Settings' },
-    { id: 2, path: 'users', name: 'users' },
+    { id: 2, path: 'users', name: 'Users' },
     { id: 3, path: 'permissions', name: 'Permissions' },
-    { id: 4, path: 'bonus', name: 'bonus' },
+    { id: 4, path: 'bonus', name: 'Bonus' },
     { id: 5, path: 'paymentMethod', name: 'Payment Method' },
     { id: 6, path: 'apiIntegration', name: 'Api Integration' },
     { id: 7, path: 'ibSettings', name: 'Ib Settings' },
