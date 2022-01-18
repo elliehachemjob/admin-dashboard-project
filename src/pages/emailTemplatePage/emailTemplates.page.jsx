@@ -74,12 +74,6 @@ function EmailTemplates() {
   return (
     <>
       {/* 1st */}
-      <Label
-        label='Email Templates'
-        size={18.72}
-        className='header-emailTemplate'
-      />
-      {/* 2nd */}
       <div className='parent-emailTemplate'>
         <div className='div1-buttons-emailTemplate'>
           <div className='button-list-emailTemplate'>

@@ -64,7 +64,7 @@ const Drawer = styled(MuiDrawer, {
 const mdTheme = createTheme();
 
 function DashboardContent(props) {
-  const [open, setOpen] = React.useState(true);
+  const [open, setOpen] = React.useState(false);
   const toggleDrawer = () => {
     setOpen(!open);
   };
@@ -91,7 +91,7 @@ function DashboardContent(props) {
             >
               <MenuIcon />
             </IconButton>
-            <Label label='Notifications' />
+            <Label label={props.label} />
           </Toolbar>
         </AppBar>
         <Drawer variant='permanent' open={open}>
@@ -115,7 +115,7 @@ function DashboardContent(props) {
 
         {/* right side */}
         <>
-          <Container maxWidth='lg' sx={{ mt: 4, mb: 4 }}>
+          <Container maxWidth='lg' sx={{ mt: 20, mb: 20 }}>
             {props.rightSide}
           </Container>
         </>
@@ -125,5 +125,5 @@ function DashboardContent(props) {
 }
 
 export default function Dashboard(props) {
-  return <DashboardContent rightSide={props.rightSide} />;
+  return <DashboardContent rightSide={props.rightSide} label={props.label} />;
 }

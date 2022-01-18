@@ -1,9 +1,9 @@
-/* * {
-  overflow: hidden;
-} */
+.wrapper-webHooks {
+}
 
 .header-webHooks {
   margin-bottom: 20px;
+  margin-right: 40px;
 }
 
 .label-webHooks {
@@ -15,12 +15,6 @@
   grid-template-rows: repeat(1, 1fr);
   grid-column-gap: 0px;
   grid-row-gap: 0px;
-
-  /* border: 2px solid #1c6ea410;
-  border-radius: 10px 10px 10px 10px;
-  padding: 20px;
-  margin-bottom: 10px;
-  background-color: #94b3fd15; */
 }
 
 .div1-buttons-webHook {

@@ -44,12 +44,6 @@ function Synchronize() {
   return (
     <>
       {/* 1st */}
-      <Label
-        label='Synchronize Settings'
-        size={18.72}
-        className='header-synchronize'
-      />
-
       <ToggleList
         key={label1.id}
         list={label1}

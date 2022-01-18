@@ -92,13 +92,7 @@ function PaymentMethod() {
 
   return (
     <>
-      {/* 1st  */}
-      <Label
-        label='Payment Method'
-        size={18.72}
-        className='header-paymentMethod'
-      />
-      {/* 2nd */}
+      {/* 1st */}
       <div className='parent-paymentMethod'>
         <div className='div1-buttons-paymentMethod'>
           <div className='button-list-paymentMethod'>

@@ -51,8 +51,6 @@ function Questionnaire() {
   return (
     <>
       {/* 1st */}
-      <Label label='Questionnaire' className='header-Questionnaire' />
-      {/* 2nd */}
       <div className='parent-Questionnaire'>
         <div className='div1-buttons-Questionnaire'>
           <div className='button-list-Questionnaire'>
@@ -73,7 +71,6 @@ function Questionnaire() {
             label='Filter by Question'
             className='searchInput-Questionnaire'
             sx={{ width: screenSizes }}
-            
           />
         </div>
       </div>
@@ -84,7 +81,6 @@ function Questionnaire() {
         columns={columns}
         pageSize={7}
         className='table-Questionnaire'
-        
       />
     </>
   );

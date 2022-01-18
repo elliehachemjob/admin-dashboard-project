@@ -128,9 +128,6 @@ function Users() {
   return (
     <>
       {/* 1st */}
-      <Label label='Users' size={18.72} className='header-users' />
-      {/* 2nd */}
-
       <div className='label-wrapper-users'>
         <Label
           className='label-users'

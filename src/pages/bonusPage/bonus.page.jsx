@@ -137,8 +137,6 @@ function Bonus() {
   return (
     <>
       {/* 1st */}
-      <Label label='Bonus Settings' size={18.72} className='header-bonus' />
-      {/* 2nd */}
       <div className='parent-restNegativeBalance'>
         <div className='div1-restNegativeBalance'>
           <Label label='Reset Negative Balance' className='label-bonus'></Label>

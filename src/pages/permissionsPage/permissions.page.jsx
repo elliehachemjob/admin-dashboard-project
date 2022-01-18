@@ -109,8 +109,6 @@ function Permissions() {
   return (
     <>
       {/* 1st */}
-      <Label label='Permissions' size={18.72} />
-      {/* 2nd */}
       <div className='label-wrapper-permissions'>
         <Label
           onClick={handleRoleChange}

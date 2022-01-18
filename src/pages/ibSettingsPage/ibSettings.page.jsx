@@ -75,8 +75,6 @@ function IbSettings() {
   return (
     <>
       {/* 1st */}
-      <Label label='IB Settings' size={18.72} className='header-ibSettings' />
-      {/* 2nd */}
       <div className='parent-ibSettings'>
         <div className='div1-buttons-ibSettings'>
           <div className='button-list-ibSettings'>

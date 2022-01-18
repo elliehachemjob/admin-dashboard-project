@@ -75,14 +75,10 @@ function Notifications() {
 
   return (
     <>
-      {/* 1st */}
-      {/* <Label
-        label='System Notifications'
-        className='header-notificationPage'
-        size={18.72}
-      /> */}
+    
+    
 
-      {/* 2nd */}
+      {/* 1st */}
 
       <div className='container1-notificationPage'>
         <Label label='Notification Type' className='label-notificationPage' />

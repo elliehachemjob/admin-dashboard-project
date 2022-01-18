@@ -51,8 +51,6 @@ function MamSettings() {
   return (
     <>
       {/* 1st */}
-      <Label label='MAM Settings' size={18.72} className='header-mamSettings' />
-      {/* 2nd */}
       <Label label='server' className='label-mamSettings' />
       <Dropdown
         items={menu}

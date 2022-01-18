@@ -48,9 +48,6 @@ function WebHooks() {
   return (
     <>
       {/* 1st */}
-      <Label className='header-webHooks' label='Web Hooks' size={18.72} />
-      {/* 2nd */}
-
       <div className='parent-webHook'>
         <div className='div1-buttons-webHook'>
           <div className='button-list-webHook'>
@@ -75,13 +72,13 @@ function WebHooks() {
         </div>
       </div>
 
-      {/* 3rd */}
       <Table
         rows={rows}
         columns={columns}
         pageSize={7}
         className='table-webHooks'
       />
+      {/* 3rd */}
     </>
   );
 }

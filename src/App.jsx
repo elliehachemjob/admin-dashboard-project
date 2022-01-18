@@ -19,6 +19,7 @@ import SidebarLinks from './components/websiteLayout/sidebarLinksComponent/Sideb
 import Menu from './components/websiteLayout/menuComponent/Menu.component';
 import './index.css';
 import Dashboard from './components/NewDashboardComponent/DashboardComponent/Dashboard.component';
+import ModalUsage from './components/modalUsageComponent/ModalUsage.component';
 
 function App() {
   return (
@@ -126,179 +127,15 @@ function App() {
               <Dashboard rightSide={<Notifications />} label='Notifications' />
             }
           />
+          <Route
+            path='/modalUsage'
+            element={
+              <Dashboard rightSide={<ModalUsage />} label='ModalUsage' />
+            }
+          />
         </Routes>
       </BrowserRouter>
       ,
-      {/* <BrowserRouter>
-        <Routes>
-          <Route
-            path='/'
-            element={
-              <Main
-                menuTitle='Menu'
-                pageTitle='Notifications'
-                leftSideChildren={<SidebarLinks />}
-                rightSideChildren={<Notifications />}
-              />
-            }
-          />
-          <Route path='/test' element={<Menu />} />
-          <Route
-            path='/companySettings'
-            element={
-              <Main
-                menuTitle='Menu'
-                pageTitle='Company Settings'
-                leftSideChildren={<SidebarLinks />}
-                rightSideChildren={<CompanySettings />}
-              />
-            }
-          />
-          <Route
-            path='/users'
-            element={
-              <Main
-                menuTitle='Menu'
-                pageTitle='Users'
-                leftSideChildren={<SidebarLinks />}
-                rightSideChildren={<Users />}
-              />
-            }
-          />
-          <Route
-            path='/permissions'
-            element={
-              <Main
-                menuTitle='Menu'
-                pageTitle='Permissions'
-                leftSideChildren={<SidebarLinks />}
-                rightSideChildren={<Permissions />}
-              />
-            }
-          />
-          <Route
-            path='/bonus'
-            element={
-              <Main
-                menuTitle='Menu'
-                pageTitle='Bonus'
-                leftSideChildren={<SidebarLinks />}
-                rightSideChildren={<Bonus />}
-              />
-            }
-          />
-          <Route
-            path='/paymentMethod'
-            element={
-              <Main
-                menuTitle='Menu'
-                pageTitle='PaymentMethod'
-                leftSideChildren={<SidebarLinks />}
-                rightSideChildren={<PaymentMethod />}
-              />
-            }
-          />
-          <Route
-            path='/apiIntegration'
-            element={
-              <Main
-                menuTitle='Menu'
-                pageTitle='Api Integration'
-                leftSideChildren={<SidebarLinks />}
-                rightSideChildren={<ApiIntegration />}
-              />
-            }
-          />
-          <Route
-            path='/ibSettings'
-            element={
-              <Main
-                menuTitle='Menu'
-                pageTitle='Ib Settings'
-                leftSideChildren={<SidebarLinks />}
-                rightSideChildren={<IbSettings />}
-              />
-            }
-          />
-          <Route
-            path='/mamSettings'
-            element={
-              <Main
-                menuTitle='Menu'
-                pageTitle='Mam Settings'
-                leftSideChildren={<SidebarLinks />}
-                rightSideChildren={<MamSettings />}
-              />
-            }
-          />
-          <Route
-            path='/dynamicMargin'
-            element={
-              <Main
-                menuTitle='Menu'
-                pageTitle='Dynamic Margin'
-                leftSideChildren={<SidebarLinks />}
-                rightSideChildren={<DynamicMargin />}
-              />
-            }
-          />
-          <Route
-            path='/synchronize'
-            element={
-              <Main
-                menuTitle='Menu'
-                pageTitle='Synchronize'
-                leftSideChildren={<SidebarLinks />}
-                rightSideChildren={<Synchronize />}
-              />
-            }
-          />
-          <Route
-            path='/questionnaire'
-            element={
-              <Main
-                menuTitle='Menu'
-                pageTitle='Questionnaire'
-                leftSideChildren={<SidebarLinks />}
-                rightSideChildren={<Questionnaire />}
-              />
-            }
-          />
-          <Route
-            path='/emailTemplates'
-            element={
-              <Main
-                menuTitle='Menu'
-                pageTitle='Email Templates'
-                leftSideChildren={<SidebarLinks />}
-                rightSideChildren={<EmailTemplates />}
-              />
-            }
-          />
-          <Route
-            path='/webHooks'
-            element={
-              <Main
-                menuTitle='Menu'
-                pageTitle='WebHooks'
-                leftSideChildren={<SidebarLinks />}
-                rightSideChildren={<WebHooks />}
-              />
-            }
-          />
-          <Route
-            path='/notifications'
-            element={
-              <Main
-                menuTitle='Menu'
-                pageTitle='Notifications'
-                leftSideChildren={<SidebarLinks />}
-                rightSideChildren={<Notifications />}
-              />
-            }
-          />
-        </Routes>
-      </BrowserRouter> */}
     </>
   );
 }

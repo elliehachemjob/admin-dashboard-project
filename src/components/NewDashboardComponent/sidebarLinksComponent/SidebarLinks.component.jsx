@@ -98,6 +98,12 @@ function SidebarLinks(props) {
       name: 'Notifications',
       icon: <NotificationsActiveIcon />,
     },
+    {
+      id: 15,
+      path: '/modalUsage',
+      name: 'modal',
+      icon: <NotificationsActiveIcon />,
+    },
   ];
 
   return (
