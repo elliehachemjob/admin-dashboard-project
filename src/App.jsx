@@ -27,61 +27,104 @@ function App() {
         <Routes>
           <Route
             path='/'
-            element={<Dashboard rightSide={<Notifications />} />}
+            element={
+              <Dashboard rightSide={<Notifications />} label='Notifications' />
+            }
           />
           <Route
             path='/companySettings'
-            element={<Dashboard rightSide={<CompanySettings />} />}
+            element={
+              <Dashboard
+                rightSide={<CompanySettings />}
+                label='Company Settings'
+              />
+            }
           />
-          <Route path='/users' element={<Dashboard rightSide={<Users />} />} />
+          <Route
+            path='/users'
+            element={<Dashboard rightSide={<Users />} />}
+            label='Users'
+          />
           <Route
             path='/permissions'
-            element={<Dashboard rightSide={<Permissions />} />}
+            element={
+              <Dashboard rightSide={<Permissions />} label='Permissions' />
+            }
           />
-          <Route path='/bonus' element={<Dashboard rightSide={<Bonus />} />} />
+
+          <Route
+            path='/bonus'
+            element={<Dashboard rightSide={<Bonus />} label='Bonus' />}
+          />
           <Route
             path='/paymentMethod'
-            element={<Dashboard rightSide={<PaymentMethod />} />}
+            element={
+              <Dashboard rightSide={<PaymentMethod />} label='Payment Method' />
+            }
           />
           <Route
             path='/apiIntegration'
-            element={<Dashboard rightSide={<ApiIntegration />} />}
+            element={
+              <Dashboard
+                rightSide={<ApiIntegration />}
+                label='Api Integration'
+              />
+            }
           />
           <Route
             path='/ibSettings'
-            element={<Dashboard rightSide={<IbSettings />} />}
+            element={
+              <Dashboard rightSide={<IbSettings />} label='Ib Settings' />
+            }
           />
           <Route
             path='/mamSettings'
-            element={<Dashboard rightSide={<MamSettings />} />}
+            element={
+              <Dashboard rightSide={<MamSettings />} label='Mam Settings' />
+            }
           />
           <Route
             path='/dynamicMargin'
-            element={<Dashboard rightSide={<DynamicMargin />} />}
+            element={
+              <Dashboard rightSide={<DynamicMargin />} label='Dynamic Margin' />
+            }
           />
           <Route
             path='/synchronize'
-            element={<Dashboard rightSide={<Synchronize />} />}
+            element={
+              <Dashboard rightSide={<Synchronize />} label='Synchronize' />
+            }
           />
           <Route
             path='/notifications'
-            element={<Dashboard rightSide={<Notifications />} />}
+            element={
+              <Dashboard rightSide={<Notifications />} label='Notifications' />
+            }
           />
           <Route
             path='/questionnaire'
-            element={<Dashboard rightSide={<Questionnaire />} />}
+            element={
+              <Dashboard rightSide={<Questionnaire />} label='Questionnaire' />
+            }
           />
           <Route
             path='/emailTemplates'
-            element={<Dashboard rightSide={<EmailTemplates />} />}
+            element={
+              <Dashboard
+                rightSide={<EmailTemplates />}
+                label='EmailTemplates'
+              />
+            }
           />
           <Route
             path='/webHooks'
-            element={<Dashboard rightSide={<WebHooks />} />}
+            element={<Dashboard rightSide={<WebHooks />} label='Web Hooks' />}
           />
           <Route
             path='/notifications'
-            element={<Dashboard rightSide={<Notifications />} />}
+            element={
+              <Dashboard rightSide={<Notifications />} label='Notifications' />
+            }
           />
         </Routes>
       </BrowserRouter>

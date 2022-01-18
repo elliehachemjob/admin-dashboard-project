@@ -3,7 +3,7 @@ import { DataGrid, GridToolbar } from '@mui/x-data-grid';
 
 function Table(props) {
   return (
-    <div style={{ height: 400, width: '100%' }}>
+    <div style={{ height: 600, width: '100%' }} className={props.className}>
       <DataGrid
         rows={props.rows}
         columns={props.columns}
