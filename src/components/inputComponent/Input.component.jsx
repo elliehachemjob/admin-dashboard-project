@@ -14,6 +14,9 @@ function Input(props) {
         autoComplete='off'
       >
         <TextField
+          multiline={props.multiline}
+          rows={props.rows}
+          maxRows={props.maxRows}
           id='outlined-name'
           label={props.label}
           value={props.name}

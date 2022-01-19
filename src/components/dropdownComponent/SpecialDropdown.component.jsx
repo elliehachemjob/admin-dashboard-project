@@ -29,7 +29,7 @@ function Dropdown(props) {
             '&:hover,&:focus': {
               border: '2px solid #94b3fd20',
               backgroundColor: '#94b3fd20',
-              opacity: 0.5,
+              opacity: 1,
             },
           }}
         >

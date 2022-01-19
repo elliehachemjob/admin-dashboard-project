@@ -7,10 +7,10 @@ import {
   EditItemIcon,
   DeleteItemIcon,
 } from '../../../components/iconsComponent/Icons.component';
-import ToggleList from '../../../components/ListComponents/toggleListComponent/ToggleList.component';
 import SpecialDropdown from '../../../components/dropdownComponent/SpecialDropdown.component';
 import { makeStyles } from '@material-ui/core/styles';
-
+import RadioButton from '../../../components/ListComponents/radioButtonListComponent/RadioButtonList.component';
+import ToggleList from '../../../components/ListComponents/toggleListComponent/ToggleList.component';
 // drop down case
 
 function QuestionnaireAddModal(props) {
@@ -19,6 +19,13 @@ function QuestionnaireAddModal(props) {
   const [label1, setLabel1] = useState();
   const [label2, setLabel2] = useState();
   const [value, setValue] = useState();
+  const [questionLabelText, setQuestionLabelText] = useState('Question Label');
+  const [questionLabelShow, setQuestionLabelShow] = useState(true);
+
+  const [dropdownLabel, setDropdownLabel] = useState([
+    { id: 1, label: 'MultiSelect' },
+    { id: 2, label: 'Searchable' },
+  ]);
 
   const [list, setList] = useState([
     { id: 1, label: 'MultiSelect' },
@@ -44,7 +51,7 @@ function QuestionnaireAddModal(props) {
       '&:hover,&:focus': {
         border: '1px solid #94b3fd20',
         backgroundColor: '#94b3fd20',
-        opacity: 0.5,
+        opacity: 1,
       },
       button: {
         backgroundColor: '#11468F',
@@ -72,6 +79,16 @@ function QuestionnaireAddModal(props) {
   const classes = useStyles();
 
   const handleChange = (event) => {
+    setQuestionLabelShow(true);
+
+    if (event.target.value === 'Title') {
+      setQuestionLabelText('Title');
+    }
+
+    if (event.target.value === 'Declaration') {
+      setQuestionLabelText('Content');
+      setQuestionLabelShow(false);
+    }
     setValue(event.target.value);
   };
   const handleQuestionNameChange = (event) => {
@@ -90,9 +107,18 @@ function QuestionnaireAddModal(props) {
     setLabel2(event.target.value);
   };
 
-  const SpecialFont = () => {
-    return <h1></h1>;
-  };
+  const booleanList = [
+    {
+      id: 1,
+      value: 'Yes / No Question',
+      label: 'Yes / No Question',
+    },
+    {
+      id: 2,
+      value: 'True / False Question',
+      label: 'True / False Question',
+    },
+  ];
 
   return (
     <>
@@ -111,33 +137,59 @@ function QuestionnaireAddModal(props) {
               textFieldStyles={classes.textField}
             />
           </div>
-          <div className='div2-questionnaireModal'>
-            <Label
-              label='Question Label'
-              className='label-questionnaireModal'
-            />
-            <div>
-              <Input
-                value={questionLabel}
-                onChange={handleQuestionLabelChange}
-                label='Question Label'
-                className='input-questionnaireModal'
-                style={{ margin: 1.8 }}
-                textFieldStyles={classes.textField}
+          {questionLabelShow ? (
+            <div className='div2-questionnaireModal'>
+              <Label
+                label={questionLabelText}
+                className='label-questionnaireModal'
+              />
+              <div>
+                <Input
+                  value={questionLabel}
+                  onChange={handleQuestionLabelChange}
+                  label={questionLabelText}
+                  className='input-questionnaireModal'
+                  style={{ margin: 1.8 }}
+                  textFieldStyles={classes.textField}
+                />
+              </div>
+            </div>
+          ) : (
+            <div className='div2-questionnaireModal'>
+              <Label
+                label='Question Type'
+                className='label-questionnaireModal'
+              />
+              <SpecialDropdown
+                items={menu}
+                label={value}
+                handleChange={handleChange}
+                value={value}
+                inputLabel={value ? value : 'TextBox'}
+                sx={{ m: 1.9, width: 189.3 }}
               />
             </div>
-          </div>
-          <div className='div3-questionnaireModal'>
-            <Label label='Question Type' className='label-questionnaireModal' />
-            <SpecialDropdown
-              items={menu}
-              label={value}
-              handleChange={handleChange}
-              value={value}
-              inputLabel={value ? value : 'TextBox'}
-              sx={{ m: 1.9, width: 189.3 }}
-            />
-          </div>
+          )}
+
+          {questionLabelShow ? (
+            <div className='div3-questionnaireModal'>
+              <Label
+                label='Question Type'
+                className='label-questionnaireModal'
+              />
+              <SpecialDropdown
+                items={menu}
+                label={value}
+                handleChange={handleChange}
+                value={value}
+                inputLabel={value ? value : 'TextBox'}
+                sx={{ m: 1.9, width: 189.3 }}
+              />
+            </div>
+          ) : (
+            ''
+          )}
+
           <div className='div4-questionnaireModal'>
             <Button
               // className='button-questionnaireModal'
@@ -154,6 +206,40 @@ function QuestionnaireAddModal(props) {
             />
           </div>
           <div className='div5-children-questionnaireModal'>
+            {value === 'DropDown' && (
+              <ToggleList
+                key={dropdownLabel.id}
+                list={dropdownLabel}
+                parent='toggle-list-parent-questionnaireModal'
+                div1='div1-toggle-list-parent-questionnaireModal'
+                div2='div2-toggle-list-parent-questionnaireModal'
+              />
+            )}
+
+            {value === 'Boolean' && (
+              <>
+                <Label
+                  label='Choose Your Own Values'
+                  className='label-questionnaireModal'
+                />
+
+                <RadioButton list={booleanList} style={{ marginLeft: 15 }} />
+              </>
+            )}
+
+            {value === 'Declaration' && (
+              <Input
+                value={label2}
+                onChange={handleLabel2Change}
+                label='Type Contents Here...'
+                className='input-questionnaireModal'
+                style={{ margin: 1.8, width: 200 }}
+                multiline={true}
+                rows={2}
+                maxRows={2}
+                textFieldStyles={classes.textField}
+              />
+            )}
             {props.children}
           </div>
         </div>
