@@ -1,7 +1,11 @@
 import React from 'react';
-
+import QuestionnaireModal from '../miniPages/questionnaireModalPage/questionnaireModal.component';
 function OnBoarding() {
-  return <div>onBoarding</div>;
+  return (
+    <>
+      <QuestionnaireModal />
+    </>
+  );
 }
 
 export default OnBoarding;
