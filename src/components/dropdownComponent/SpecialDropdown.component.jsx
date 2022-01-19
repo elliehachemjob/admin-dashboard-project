@@ -18,6 +18,20 @@ function Dropdown(props) {
           onChange={props.handleChange}
           autoWidth
           label={props.label}
+          sx={{
+            border: '2px solid #94b3fd20',
+            backgroundColor: '#94b3fd15',
+            minWidth: 189.3,
+            borderRadius: '10px',
+            opacity: 0.3,
+            fontColor: 'black',
+            fontWeight: 500,
+            '&:hover,&:focus': {
+              border: '2px solid #94b3fd20',
+              backgroundColor: '#94b3fd20',
+              opacity: 0.5,
+            },
+          }}
         >
           {props.items.map((item) => {
             return (

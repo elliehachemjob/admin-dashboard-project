@@ -1,7 +1,9 @@
 import React, { useState } from 'react';
 import TextField from '@mui/material/TextField';
 import Box from '@mui/material/Box';
+
 import './input.styles.css';
+
 function Input(props) {
   return (
     <div>
@@ -18,6 +20,7 @@ function Input(props) {
           name={props.formName}
           onChange={props.handleChange}
           style={props.style}
+          InputProps={{ className: props.textFieldStyles }}
         ></TextField>
       </Box>
     </div>

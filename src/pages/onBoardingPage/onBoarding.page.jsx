@@ -1,9 +1,9 @@
 import React from 'react';
-import QuestionnaireModal from '../miniPages/questionnaireModalPage/questionnaireModal.component';
+import QuestionnaireAddModal from '../miniPages/questionnaireModalPage/questionnaireAddModal.component';
 function OnBoarding() {
   return (
     <>
-      <QuestionnaireModal />
+      <QuestionnaireAddModal />
     </>
   );
 }
