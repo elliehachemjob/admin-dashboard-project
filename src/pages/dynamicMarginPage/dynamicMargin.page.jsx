@@ -27,40 +27,58 @@ function DynamicMargin() {
   return (
     <>
       {/* 1st */}
-      <Label label='Profiles' size={18.72} className='header-dynamicMargin' />
-      <Label label='Server' className='label-dynamicMargin' />
-      <Dropdown
-        items={menu}
-        label={value}
-        handleChange={handleChange}
-        value={value}
-        inputLabel={value ? value : 'Server - MT4'}
-      />
 
-      <div className='button-wrapper-dynamicMargin'>
-        <Button className='button-dynamicMargin' name='Sync Profiles' />
+      <div className='container1-dynamicMargin'>
+        <div className='grid'>
+          <div>
+            <Label
+              label='Profiles'
+              size={18.72}
+              className='header-dynamicMargin'
+            />
+            <Label label='Server' className='label-dynamicMargin' />
+            <Dropdown
+              items={menu}
+              label={value}
+              handleChange={handleChange}
+              value={value}
+              inputLabel={value ? value : 'Server - MT4'}
+            />
+
+            <div className='button-wrapper-dynamicMargin'>
+              <Button className='button-dynamicMargin' name='Sync Profiles' />
+            </div>
+          </div>
+          {/* 2nd */}
+          <div>
+            <Label
+              label='Activation'
+              size={18.72}
+              className='header-dynamicMargin'
+            />
+            <Label label='Server' className='label-dynamicMargin' />
+            <Dropdown
+              items={menu2}
+              label={value2}
+              handleChange={handleChange2}
+              value={value2}
+              inputLabel={value2 ? value2 : 'Server - MT4'}
+            />
+            <Label label='Activation Logins' className='label-dynamicMargin' />
+            <Input
+              value={activationLogins}
+              onChange={handleActivationLoginsChange}
+              label='Activation Logins'
+              style={{ margin: 2 }}
+            />
+            <div className='button-wrapper-dynamicMargin'>
+              <Button className='button-dynamicMargin' name='Activate' />
+            </div>
+          </div>
+        </div>
       </div>
 
       {/* 2nd */}
-      <Label label='Activation' size={18.72} className='header-dynamicMargin' />
-      <Label label='Server' className='label-dynamicMargin' />
-      <Dropdown
-        items={menu2}
-        label={value2}
-        handleChange={handleChange2}
-        value={value2}
-        inputLabel={value2 ? value2 : 'Server - MT4'}
-      />
-      <Label label='Activation Logins' className='label-dynamicMargin' />
-      <Input
-        value={activationLogins}
-        onChange={handleActivationLoginsChange}
-        label='Activation Logins'
-        style={{ margin: 2 }}
-      />
-      <div className='button-wrapper-dynamicMargin'>
-        <Button className='button-dynamicMargin' name='Activate' />
-      </div>
     </>
   );
 }

@@ -9,6 +9,7 @@ function SearchInput(props) {
       id='combo-box-demo'
       options={props.options}
       sx={props.sx ? props.sx : { width: 300 }}
+      size={props.size ? props.size : ''}
       className={props.className}
       renderInput={(params) => <TextField {...params} label={props.label} />}
     />

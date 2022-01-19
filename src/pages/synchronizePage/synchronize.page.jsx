@@ -44,63 +44,70 @@ function Synchronize() {
   return (
     <>
       {/* 1st */}
-      <ToggleList
-        key={label1.id}
-        list={label1}
-        parent='toggle-list-parent-synchronize'
-        div1='div1-toggle-list-parent-synchronize'
-        div2='div2-toggle-list-parent-synchronize'
-      />
 
-      <Label label='Synchronization Time Frame' className='label-synchronize' />
+      <div className='container1-synchronize'>
+        <div className='grid'>
+          <div>
+            <ToggleList
+              key={label1.id}
+              list={label1}
+              parent='toggle-list-parent-synchronize'
+              div1='div1-toggle-list-parent-synchronize'
+              div2='div2-toggle-list-parent-synchronize'
+            />
+            <Label
+              label='Synchronization Time Frame'
+              className='label-synchronize'
+            />
+            <Dropdown
+              items={menu}
+              label={value}
+              handleChange={handleChange}
+              value={value}
+              inputLabel={value ? value : 'Per Day'}
+            />
+            <div className='button-wrapper-synchronize'>
+              <Button className='button-synchronize' name='Save Changes' />
+            </div>
+          </div>
+          <div>
+            <Label label='Server' className='label-synchronize' />
+            <Dropdown
+              items={menu2}
+              label={value2}
+              handleChange={handleChange2}
+              value={value2}
+              inputLabel={value2 ? value2 : 'Server - MT4'}
+            />
+            <Label label='Synchronize' className='label-synchronize' />
+            <Dropdown
+              items={menu3}
+              label={value3}
+              handleChange={handleChange3}
+              value={value3}
+              inputLabel={value3 ? value3 : 'Groups'}
+            />
+            <div className='button-wrapper-synchronize'>
+              <Button className='button-synchronize' name='Save Changes' />
+            </div>
+          </div>
+          <div>
+            {' '}
+            <Label label='Synchronize ' className='label-synchronize' />
+            <Dropdown
+              items={menu4}
+              label={value4}
+              handleChange={handleChange4}
+              value={value4}
+              inputLabel={value4 ? value4 : 'Irina Test'}
+            />
+            <div className='button-wrapper-synchronize'>
+              <Button className='button-synchronize' name='Synchronize' />
+            </div>
+          </div>
+        </div>
 
-      <Dropdown
-        items={menu}
-        label={value}
-        handleChange={handleChange}
-        value={value}
-        inputLabel={value ? value : 'Per Day'}
-      />
-      <div className='button-wrapper-synchronize'>
-        <Button className='button-synchronize' name='Save Changes' />
-      </div>
-      {/* 2nd */}
-      <Label label='Server' className='label-synchronize' />
-      <Dropdown
-        items={menu2}
-        label={value2}
-        handleChange={handleChange2}
-        value={value2}
-        inputLabel={value2 ? value2 : 'Server - MT4'}
-      />
-      <Label label='Synchronize' className='label-synchronize' />
-      <Dropdown
-        items={menu3}
-        label={value3}
-        handleChange={handleChange3}
-        value={value3}
-        inputLabel={value3 ? value3 : 'Groups'}
-      />
-      <div className='button-wrapper-synchronize'>
-        <Button className='button-synchronize' name='Save Changes' />
-      </div>
-
-      {/* 3rd */}
-      <Label
-        label='Synchronize Settings'
-        size={18.72}
-        className='header-synchronize'
-      />
-      <Label label='Promotions' className='label-synchronize' />
-      <Dropdown
-        items={menu4}
-        label={value4}
-        handleChange={handleChange4}
-        value={value4}
-        inputLabel={value4 ? value4 : 'Irina Test'}
-      />
-      <div className='button-wrapper-synchronize'>
-        <Button className='button-synchronize' name='Synchronize' />
+        {/* <div className='parent-synchronize'></div> */}
       </div>
     </>
   );

@@ -2,8 +2,8 @@
 }
 
 .header-webHooks {
-  margin-bottom: 20px;
-  margin-right: 40px;
+  /* margin-bottom: 20px;
+  margin-right: 40px; */
 }
 
 .label-webHooks {
@@ -22,6 +22,7 @@
 }
 .div2-searchInput-webHook {
   grid-area: 1 / 5 / 2 / 6;
+  margin-top: 12px;
 }
 
 .button-list-webHook {

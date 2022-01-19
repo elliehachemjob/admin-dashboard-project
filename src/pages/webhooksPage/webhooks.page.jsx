@@ -3,8 +3,8 @@ import Label from '../../components/labelComponent/Label.component';
 import Button from '../../components/FlexibleButtonComponent/FlexibleButton.component';
 import SearchInput from '../../components/searchInputComponent/SearchInput.component';
 import Table from '../../components/tableComponent/Table.component';
-import './webhooks.Styles.css';
 import { useMediaQuerySize } from '../../hooks/hooks';
+import './webhooks.Styles.css';
 
 function WebHooks() {
   const [hooksNames, setHooksName] = useState([
@@ -52,33 +52,44 @@ function WebHooks() {
         <div className='div1-buttons-webHook'>
           <div className='button-list-webHook'>
             <div className='button-wrapper-webHooks'>
-              <Button className='button-webHooks' name='Add' />
+              <Button
+                // sx={{ width: 120, height: 40 }}
+                className='button-webHooks'
+                name='Add'
+              />
             </div>
             <div className='button-wrapper-webHooks'>
-              <Button className='button-webHooks' name='Edit' />
+              <Button
+                // sx={{ width: 120, height: 40 }}
+                className='button-webHooks'
+                name='Edit'
+              />
             </div>
             <div className='button-wrapper-webHooks'>
-              <Button className='button-webHooks' name='Remove' />
+              <Button
+                // sx={{ marginBottom: 3 }}
+                className='button-webHooks'
+                name='Remove'
+              />
             </div>
           </div>
         </div>
         <div className='div2-searchInput-webHook'>
           <SearchInput
             options={hooksNames}
-            label='Filter By Hook Integration'
+            label={<Label label='Filter By Hook Integration' size={15} />}
             className='searchInput-webHooks'
             sx={{ width: screenSizes }}
+            size='small'
           />
         </div>
       </div>
-
       <Table
         rows={rows}
         columns={columns}
         pageSize={7}
         className='table-webHooks'
       />
-      {/* 3rd */}
     </>
   );
 }

@@ -1,6 +1,5 @@
 import { render } from 'react-dom';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
-import Main from './components/websiteLayout/mainComponent/Main.component';
 import CompanySettings from './pages/companySettingsPage/companySettings.page';
 import Users from './pages/usersPage/users.page';
 import Permissions from './pages/permissionsPage/permissions.page';
@@ -15,11 +14,10 @@ import Questionnaire from './pages/questionnairePage/questionnaire.page';
 import EmailTemplates from './pages/emailTemplatePage/emailTemplates.page';
 import WebHooks from './pages/webhooksPage/webhooks.page';
 import Notifications from './pages/notificationsPage/notifications.page';
-import SidebarLinks from './components/websiteLayout/sidebarLinksComponent/SidebarLinks.component';
-import Menu from './components/websiteLayout/menuComponent/Menu.component';
+import Test from './pages/testPage/Test.page';
+import OnBoarding from './pages/onBoardingPage/onBoarding.page';
 import './index.css';
 import Dashboard from './components/NewDashboardComponent/DashboardComponent/Dashboard.component';
-import ModalUsage from './components/modalUsageComponent/ModalUsage.component';
 
 function App() {
   return (
@@ -113,7 +111,7 @@ function App() {
             element={
               <Dashboard
                 rightSide={<EmailTemplates />}
-                label='EmailTemplates'
+                label='Email Templates'
               />
             }
           />
@@ -128,9 +126,13 @@ function App() {
             }
           />
           <Route
-            path='/modalUsage'
+            path='/test'
+            element={<Dashboard rightSide={<Test />} label='Test Page' />}
+          />
+          <Route
+            path='/onBoarding'
             element={
-              <Dashboard rightSide={<ModalUsage />} label='ModalUsage' />
+              <Dashboard rightSide={<OnBoarding />} label='OnBoarding' />
             }
           />
         </Routes>

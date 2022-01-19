@@ -78,16 +78,19 @@ function EmailTemplates() {
         <div className='div1-buttons-emailTemplate'>
           <div className='button-list-emailTemplate'>
             <div className='button-wrapper-emailTemplate'>
-              <Button className='button-emailTemplate' name='Email Layout' />
+              <Button 
+              
+              className='button-emailTemplate' name='Email Layout' />
             </div>
           </div>
         </div>
         <div className='div2-searchInput-emailTemplate'>
           <SearchInput
             options={hooksNames}
-            label='Filter by Email Templates'
+            label={<Label label='Filter by Email Templates' size={15} />}
             className='searchInput-emailTemplate'
             sx={{ width: screenSizes }}
+            size='small'
           />
         </div>
       </div>

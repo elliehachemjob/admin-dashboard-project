@@ -1,6 +1,19 @@
-.header-synchronize {
-  margin-bottom: 20px;
-  margin-top: 20px;
+.grid {
+  display: grid;
+  grid-gap: 40px;
+
+  grid-template-columns: repeat(auto-fit, 186px);
+}
+
+.grid > * {
+}
+
+.container1-synchronize {
+  border: 2px solid #1c6ea410;
+  border-radius: 10px 10px 10px 10px;
+  padding: 150px;
+  margin-bottom: 10px;
+  background-color: #94b3fd15;
 }
 
 .toggle-list-parent-synchronize {
@@ -20,9 +33,7 @@
 }
 
 .label-synchronize {
-  margin: 2.5px;
-  margin-left: 18px;
-  margin-top: 10px;
+  margin-left: 15px;
 }
 
 .dropdown-synchronize {
@@ -36,13 +47,8 @@
   margin-left: 15px;
 }
 
-
-
-
 .button-synchronize {
 }
-
-
 
 .breakLine-synchronize {
 }

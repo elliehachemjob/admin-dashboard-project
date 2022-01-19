@@ -1,14 +1,4 @@
-import * as React from 'react';
-import ListItem from '@mui/material/ListItem';
-import ListItemIcon from '@mui/material/ListItemIcon';
-import ListItemText from '@mui/material/ListItemText';
-import ListSubheader from '@mui/material/ListSubheader';
-import DashboardIcon from '@mui/icons-material/Dashboard';
-import ShoppingCartIcon from '@mui/icons-material/ShoppingCart';
-import PeopleIcon from '@mui/icons-material/People';
-import BarChartIcon from '@mui/icons-material/BarChart';
-import LayersIcon from '@mui/icons-material/Layers';
-import AssignmentIcon from '@mui/icons-material/Assignment';
+import React from 'react';
 import ApartmentIcon from '@mui/icons-material/Apartment';
 import GroupIcon from '@mui/icons-material/Group';
 import SecurityIcon from '@mui/icons-material/Security';
@@ -23,9 +13,10 @@ import QuestionAnswerIcon from '@mui/icons-material/QuestionAnswer';
 import MarkEmailReadIcon from '@mui/icons-material/MarkEmailRead';
 import WebhookIcon from '@mui/icons-material/Webhook';
 import NotificationsActiveIcon from '@mui/icons-material/NotificationsActive';
-import { Link } from 'react-router-dom';
 import SidebarLink from '../sidebarLinkComponent/SidebarLink.component';
 import './sidebarLinks.styles.css';
+import BugReportIcon from '@mui/icons-material/BugReport';
+import AirplaneTicketIcon from '@mui/icons-material/AirplaneTicket';
 
 function SidebarLinks(props) {
   const links = [
@@ -100,9 +91,15 @@ function SidebarLinks(props) {
     },
     {
       id: 15,
-      path: '/modalUsage',
-      name: 'modal',
-      icon: <NotificationsActiveIcon />,
+      path: '/test',
+      name: 'Test Page',
+      icon: <BugReportIcon />,
+    },
+    {
+      id: 16,
+      path: '/onBoarding',
+      name: 'OnBoarding',
+      icon: <AirplaneTicketIcon />,
     },
   ];
 

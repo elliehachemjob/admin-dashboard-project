@@ -10,8 +10,15 @@ typography
 divider
 eachSection divider
 color
-
+middle aspect 
 colors white(black which is the text and not founded)
+
+qquestion modal  = onoarding => questioner  => pool 
+
+pool => 
+
+applcation flow/flow congiguration/questioner modal  onboarding 
+
 
 Light blue/
 background color : light pink
@@ -37,3 +44,9 @@ black
 grey + blue and white gooes well 
 
 
+testpage + fixed modal + aligent items 
++ fixed lat page 
+
+add icons as many 
+
+proper media query 

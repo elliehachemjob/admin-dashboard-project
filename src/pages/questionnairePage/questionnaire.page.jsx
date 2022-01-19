@@ -3,8 +3,8 @@ import Label from '../../components/labelComponent/Label.component';
 import Button from '../../components/FlexibleButtonComponent/FlexibleButton.component';
 import SearchInput from '../../components/searchInputComponent/SearchInput.component';
 import Table from '../../components/tableComponent/Table.component';
-import './questionnaire.style.css';
 import { useMediaQuerySize } from '../../hooks/hooks';
+import './questionnaire.style.css';
 
 function Questionnaire() {
   const [questionnaire, setQuestionnaire] = useState([
@@ -68,19 +68,20 @@ function Questionnaire() {
         <div className='div2-searchInput-Questionnaire'>
           <SearchInput
             options={questionnaire}
+            label={<Label label='searchInput-Questionnaire' size={15} />}
             label='Filter by Question'
-            className='searchInput-Questionnaire'
             sx={{ width: screenSizes }}
+            size='small'
           />
         </div>
       </div>
-
       {/* 3rd */}
       <Table
         rows={rows}
         columns={columns}
         pageSize={7}
         className='table-Questionnaire'
+        style={{ height: 600, width: '99.3%', marginLeft: 5.5, marginTop: 12 }}
       />
     </>
   );
