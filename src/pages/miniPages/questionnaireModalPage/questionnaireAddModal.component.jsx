@@ -32,6 +32,8 @@ function QuestionnaireAddModal(props) {
     { id: 2, label: 'Searchable' },
   ]);
 
+  // const [list2, setList2] = useState([{ id: 1, label: 'WithCheckbox' }]);
+
   const menu = [
     { value: 'TextBox' },
     { value: 'DropDown' },
@@ -120,6 +122,30 @@ function QuestionnaireAddModal(props) {
     },
   ];
 
+  const handleOnPressAdd = () => {
+    if (value === 'TextBox') {
+      alert('TextBox Added');
+    }
+    if (value === 'DropDown') {
+      alert('DropDown Added');
+    }
+    if (value === 'Boolean') {
+      alert('Boolean Added');
+    }
+    if (value === 'CheckBox') {
+      alert('CheckBox Added');
+    }
+    if (value === 'Declaration') {
+      alert('Declaration Added');
+    }
+    if (value === 'Date Selector') {
+      alert('Date Selector Added');
+    }
+    if (value === 'Title') {
+      alert('Title Added');
+    }
+  };
+
   return (
     <>
       {/* 1st */}
@@ -193,6 +219,7 @@ function QuestionnaireAddModal(props) {
           <div className='div4-questionnaireModal'>
             <Button
               // className='button-questionnaireModal'
+              onClick={handleOnPressAdd}
               name='Add'
               variant='contained'
               sx={{
@@ -228,17 +255,26 @@ function QuestionnaireAddModal(props) {
             )}
 
             {value === 'Declaration' && (
-              <Input
-                value={label2}
-                onChange={handleLabel2Change}
-                label='Type Contents Here...'
-                className='input-questionnaireModal'
-                style={{ margin: 1.8, width: 200 }}
-                multiline={true}
-                rows={2}
-                maxRows={2}
-                textFieldStyles={classes.textField}
-              />
+              <div className='wrapper-questionnaireModal'>
+                <Input
+                  value={label2}
+                  onChange={handleLabel2Change}
+                  label='Type Contents Here...'
+                  className='input-questionnaireModal'
+                  style={{ margin: 1.8, width: 200 }}
+                  multiline={true}
+                  rows={2}
+                  maxRows={2}
+                  textFieldStyles={classes.textField}
+                />
+                {/* <ToggleList
+                  key={list2.id}
+                  list={list2}
+                  parent='toggle-list-parent-questionnaireModal'
+                  div1='div1-toggle-list-parent-questionnaireModal'
+                  div2='div2-toggle-list-parent-questionnaireModal'
+                /> */}
+              </div>
             )}
             {props.children}
           </div>
