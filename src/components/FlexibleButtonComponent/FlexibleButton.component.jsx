@@ -9,7 +9,7 @@ function FlexibleButton(props) {
         onClick={props.onClick}
         className={props.className}
         sx={props.sx}
-        variant={props.variant}
+        variant={props.variant ? props.variant : 'outlined'}
       >
         {props.name}
       </Button>

@@ -1,11 +1,7 @@
 import React from 'react';
 import './applicationFlowPage.mini.styles.css';
 
-// 1st components to finish
-// expandable accordion
 // fields add component
-//Input Tag
-//colorful checkbox
 
 function ApplicationFlowPage() {
   return (
@@ -61,7 +57,7 @@ function ApplicationFlowPage() {
       <div>Drop down </div>
       <div>Input</div>
 
-      <div> Colorful Checkbox / + Input Tag </div>
+      <div> dropdown Tag </div>
       {/* 14th */}
       <div>Save Button</div>
     </>
