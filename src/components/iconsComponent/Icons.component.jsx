@@ -8,6 +8,7 @@ import ModeEditIcon from '@mui/icons-material/ModeEdit';
 import PowerIcon from '@mui/icons-material/Power';
 import LinkIcon from '@mui/icons-material/Link';
 import PersonIcon from '@mui/icons-material/Person';
+import CancelIcon from '@mui/icons-material/Cancel';
 
 export function BellIcon(props) {
   return <NotificationsActiveIcon className={props.className} />;
@@ -43,4 +44,8 @@ export function SpecialLinkIcon() {
 
 export function ProfileIcon(props) {
   return <PersonIcon sx={{ fontSize: 500 }} className={props.className} />;
+}
+
+export function CancellationIcon(props) {
+  return <CancelIcon className={props.className} onClick={props.onClick} />;
 }

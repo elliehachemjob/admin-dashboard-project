@@ -9,6 +9,8 @@ import Input from '../../../components/inputComponent/Input.component';
 import AddFields from '../../../components/fieldsAddComponent/FieldsAdd.component';
 import './applicationFlowPage.mini.page';
 import ScrollableTab from '../../../components/scrollableTabComponent/ScrollableTab.component';
+import MenuList from '../../../components/menuListComponent/MenuList.component';
+import { CancellationIcon } from '../../../components/iconsComponent/Icons.component';
 
 function ApplicationFlowPage() {
   const [value, setValue] = useState();
@@ -20,17 +22,48 @@ function ApplicationFlowPage() {
     setValue(event.target.value);
   };
 
-  const [tabList, setTabList] = useState([{ id: 1, label: 'Primary' }]);
+  const [tabList, setTabList] = useState([
+    { id: 1, label: <div>Primary</div> },
+  ]);
 
   const handleTabChange = (event, newValue) => {
     setTabValue(newValue);
+    console.log('hey');
+  };
+
+  const cancelClick = (id) => {
+    setTabList((tabValue) => {
+      return tabValue.filter((item) => {
+        return item.id !== 4;
+      });
+    });
   };
 
   const handleSecondaryFlow = () => {
-    setTabList([...tabList, { id: 4, label: 'Secondary' }]);
+    setTabValue((tabValue) => tabValue + 1);
 
-    console.log('value is', tabList);
+    setTabList([
+      ...tabList,
+      {
+        id: 4,
+        label: (
+          <div>
+            Secondary
+            <CancellationIcon
+              className='cancellationIcon-applicationFlowPage'
+              onClick={cancelClick}
+            />
+          </div>
+        ),
+      },
+    ]);
+    console.log(tabList);
   };
+
+  const menuItemsList = [
+    { id: 1, label: 'IB' },
+    { id: 2, label: 'Trader' },
+  ];
 
   return (
     <>
@@ -81,22 +114,26 @@ function ApplicationFlowPage() {
             }}
           />
         </div>
+        <div className='div4-applicationFlow'>
+          <MenuList
+            name='Server'
+            sx={{
+              backgroundColor: '#11468F',
+              borderRadius: '20px',
+              '&:hover': {
+                backgroundColor: '#11468F50',
+                borderRadius: '20px',
+              },
+            }}
+            menuItemsList={menuItemsList}
+          />
+        </div>
       </div>
-      <Dropdown
-        items={menu}
-        label={value}
-        handleChange={handleChange}
-        value={value}
-        inputLabel={value ? value : 'Server - MT4'}
-        sx={{ marginTop: 2, marginBottom: 2, minWidth: 160 }}
-      />
-
       <ScrollableTab
         tabList={tabList}
         handleChange={handleTabChange}
         value={tabValue}
       />
-
       <ExpandableAccordion
         section1='SMS Verification'
         section2={
@@ -137,7 +174,10 @@ function ApplicationFlowPage() {
               inputLabel={value ? value : 'Server - MT4'}
               sx={{ m: 0, minWidth: 160 }}
             />
-            <Input label='Activation Logins' style={{ margin: 2 }} />
+            <Input
+              label='Activation Logins'
+              style={{ marginTop: 2, marginBottom: 2 }}
+            />
           </>
         }
       />
@@ -164,7 +204,10 @@ function ApplicationFlowPage() {
               inputLabel={value ? value : 'Server - MT4'}
               sx={{ m: 0, minWidth: 160 }}
             />
-            <Input label='Activation Logins' style={{ margin: 2 }} />
+            <Input
+              label='Activation Logins'
+              style={{ marginTop: 2, marginBottom: 2 }}
+            />
             <AddFields items={menu} label={value} value={value} />
           </>
         }
@@ -184,7 +227,10 @@ function ApplicationFlowPage() {
               inputLabel={value ? value : 'Server - MT4'}
               sx={{ m: 0, minWidth: 160 }}
             />
-            <Input label='Activation Logins' style={{ margin: 2 }} />
+            <Input
+              label='Activation Logins'
+              style={{ marginTop: 2, marginBottom: 2 }}
+            />
             <AddFields items={menu} label={value} value={value} />
           </>
         }
@@ -202,8 +248,14 @@ function ApplicationFlowPage() {
               inputLabel={value ? value : 'Server - MT4'}
               sx={{ m: 0, minWidth: 160 }}
             />
-            <Input label='Activation Logins' style={{ margin: 2 }} />
-            <DropdownTagSelector />
+            <Input
+             
+              
+           
+              label='Activation Logins'
+              style={{ marginTop: 2, marginBottom: 2 }}
+            />
+            <DropdownTagSelector  />
           </>
         }
       />

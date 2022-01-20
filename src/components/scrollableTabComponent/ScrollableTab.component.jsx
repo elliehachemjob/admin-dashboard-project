@@ -5,7 +5,7 @@ import Box from '@mui/material/Box';
 import './scrollableTab.styles.css';
 
 function ScrollableTab(props) {
-  const [value, setValue] = useState(0);
+  // const [value, setValue] = useState(0);
 
   // const handleChange = (event, newValue) => {
   //   setValue(newValue);
