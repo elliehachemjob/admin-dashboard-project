@@ -7,70 +7,96 @@ import ExpandableAccordion from '../../../components/expandableAccordionComponen
 import DropdownTagSelector from '../../../components/dropdownTagSelectorComponent/DropdownTagSelector.component';
 import Input from '../../../components/inputComponent/Input.component';
 import AddFields from '../../../components/fieldsAddComponent/FieldsAdd.component';
+import './applicationFlowPage.mini.page';
+import ScrollableTab from '../../../components/scrollableTabComponent/ScrollableTab.component';
 
 function ApplicationFlowPage() {
   const [value, setValue] = useState();
+  const [tabValue, setTabValue] = useState(0);
+
   const menu = [{ value: 'Server - MT4' }, { value: 'Demo - MT5' }];
+
   const handleChange = (event) => {
     setValue(event.target.value);
   };
 
+  const [tabList, setTabList] = useState([{ id: 1, label: 'Primary' }]);
+
+  const handleTabChange = (event, newValue) => {
+    setTabValue(newValue);
+  };
+
+  const handleSecondaryFlow = () => {
+    setTabList([...tabList, { id: 4, label: 'Secondary' }]);
+
+    console.log('value is', tabList);
+  };
+
   return (
     <>
-      {/* 1st */}
-      <Button
-        className='button-fieldsAdd'
-        name='Customize Flow'
-        variant='contained'
-        sx={{
-          backgroundColor: '#11468F',
-          borderRadius: '20px',
-          '&:hover': {
-            backgroundColor: '#11468F50',
-            borderRadius: '20px',
-          },
-        }}
-      />
-      <Button
-        className='button-fieldsAdd'
-        name='Secondary Flow'
-        variant='contained'
-        sx={{
-          backgroundColor: '#11468F',
-          borderRadius: '20px',
-          '&:hover': {
-            backgroundColor: '#11468F50',
-            borderRadius: '20px',
-          },
-        }}
-      />
-      {/* 2nd */}
-      <Label className='label-notificationPage' label='Primary' />
-      {/* 3nd */}
-      <Button
-        className='button-fieldsAdd'
-        name='Add Step'
-        variant='contained'
-        sx={{
-          backgroundColor: '#11468F',
-          borderRadius: '20px',
-          '&:hover': {
-            backgroundColor: '#11468F50',
-            borderRadius: '20px',
-          },
-        }}
-      />
+      <div className='parent-applicationFlow'>
+        <div className='div1-applicationFlow'>
+          <Button
+            className='button-fieldsAdd'
+            name='Customize Flow'
+            variant='contained'
+            sx={{
+              backgroundColor: '#11468F',
+              borderRadius: '20px',
+              '&:hover': {
+                backgroundColor: '#11468F50',
+                borderRadius: '20px',
+              },
+            }}
+          />
+        </div>
+        <div className='div2-applicationFlow'>
+          <Button
+            onClick={handleSecondaryFlow}
+            className='button-fieldsAdd'
+            name='Secondary Flow'
+            variant='contained'
+            sx={{
+              backgroundColor: '#11468F',
+              borderRadius: '20px',
+              '&:hover': {
+                backgroundColor: '#11468F50',
+                borderRadius: '20px',
+              },
+            }}
+          />
+        </div>
+        <div className='div3-applicationFlow'>
+          <Button
+            className='button-fieldsAdd'
+            name='Add Step'
+            variant='contained'
+            sx={{
+              backgroundColor: '#11468F',
+              borderRadius: '20px',
+              '&:hover': {
+                backgroundColor: '#11468F50',
+                borderRadius: '20px',
+              },
+            }}
+          />
+        </div>
+      </div>
       <Dropdown
         items={menu}
         label={value}
         handleChange={handleChange}
         value={value}
         inputLabel={value ? value : 'Server - MT4'}
-        sx={{ m: 0, minWidth: 160 }}
+        sx={{ marginTop: 2, marginBottom: 2, minWidth: 160 }}
       />
-      {/* 4th */}
-      {/* <div>Modal</div> */}
-      {/* 5th */}
+
+      <ScrollableTab
+        tabList={tabList}
+        handleChange={handleTabChange}
+        value={tabValue}
+      />
+
       <ExpandableAccordion
         section1='SMS Verification'
         section2={

@@ -1,3 +1,25 @@
+.specialLabel-applicationFlow {
+  text-decoration: underline;
+}
+
+.parent-applicationFlow {
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  grid-template-rows: repeat(1, 1fr);
+  grid-column-gap: 20px;
+  grid-row-gap: 0px;
+}
+
+.div1-applicationFlow {
+  grid-area: 1 / 5 / 2 / 6;
+}
+.div2-applicationFlow {
+  grid-area: 1 / 4 / 2 / 5;
+}
+.div3-applicationFlow {
+  grid-area: 1 / 3 / 2 / 4;
+}
+
 .header-applicationFlow {
   margin-bottom: 20px;
   padding-bottom: 20px;

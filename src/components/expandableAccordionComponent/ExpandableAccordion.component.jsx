@@ -16,7 +16,7 @@ function ExpandableAccordion(props) {
               backgroundColor: '#11468F05',
               border: '1px solid #11468F10',
               '&:hover': {
-                backgroundColor: '#11468F10',
+                backgroundColor: '#11468F09',
                 border: '1px solid #11468F30',
               },
             }
