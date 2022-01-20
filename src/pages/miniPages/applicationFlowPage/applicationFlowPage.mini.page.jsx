@@ -1,65 +1,200 @@
-import React from 'react';
+import React, { useState } from 'react';
 import './applicationFlowPage.mini.styles.css';
-
-// fields add component
+import Button from '../../../components/FlexibleButtonComponent/FlexibleButton.component';
+import Label from '../../../components/labelComponent/Label.component';
+import Dropdown from '../../../components/dropdownComponent/SpecialDropdown.component';
+import ExpandableAccordion from '../../../components/expandableAccordionComponent/ExpandableAccordion.component';
+import DropdownTagSelector from '../../../components/dropdownTagSelectorComponent/DropdownTagSelector.component';
+import Input from '../../../components/inputComponent/Input.component';
+import AddFields from '../../../components/fieldsAddComponent/FieldsAdd.component';
 
 function ApplicationFlowPage() {
+  const [value, setValue] = useState();
+  const menu = [{ value: 'Server - MT4' }, { value: 'Demo - MT5' }];
+  const handleChange = (event) => {
+    setValue(event.target.value);
+  };
+
   return (
     <>
       {/* 1st */}
-      <div>Customize Flow Button</div>
-      <div>Add Secondary Flow button</div>
+      <Button
+        className='button-fieldsAdd'
+        name='Customize Flow'
+        variant='contained'
+        sx={{
+          backgroundColor: '#11468F',
+          borderRadius: '20px',
+          '&:hover': {
+            backgroundColor: '#11468F50',
+            borderRadius: '20px',
+          },
+        }}
+      />
+      <Button
+        className='button-fieldsAdd'
+        name='Secondary Flow'
+        variant='contained'
+        sx={{
+          backgroundColor: '#11468F',
+          borderRadius: '20px',
+          '&:hover': {
+            backgroundColor: '#11468F50',
+            borderRadius: '20px',
+          },
+        }}
+      />
       {/* 2nd */}
-      <div>Label list flex</div>
+      <Label className='label-notificationPage' label='Primary' />
       {/* 3nd */}
-      <div>Button</div>
-      <div>dropdown</div>
+      <Button
+        className='button-fieldsAdd'
+        name='Add Step'
+        variant='contained'
+        sx={{
+          backgroundColor: '#11468F',
+          borderRadius: '20px',
+          '&:hover': {
+            backgroundColor: '#11468F50',
+            borderRadius: '20px',
+          },
+        }}
+      />
+      <Dropdown
+        items={menu}
+        label={value}
+        handleChange={handleChange}
+        value={value}
+        inputLabel={value ? value : 'Server - MT4'}
+        sx={{ m: 0, minWidth: 160 }}
+      />
       {/* 4th */}
-      <div>Modal</div>
+      {/* <div>Modal</div> */}
       {/* 5th */}
-      <div>Expandable Accordion </div>
-      <div>SMS Verification Label</div>
-      <div>Drop down</div>
+      <ExpandableAccordion
+        section1='SMS Verification'
+        section2={
+          <Dropdown
+            items={menu}
+            label={value}
+            handleChange={handleChange}
+            value={value}
+            inputLabel={value ? value : 'Server - MT4'}
+            sx={{ m: 0, minWidth: 160 }}
+          />
+        }
+      />
       {/* 6th */}
-      <div>E-mail Verification Label</div>
-      <div>Expandable Accordion </div>
+      <ExpandableAccordion
+        section1='E-mail Verification'
+        section2={
+          <Dropdown
+            items={menu}
+            label={value}
+            handleChange={handleChange}
+            value={value}
+            inputLabel={value ? value : 'Server - MT4'}
+            sx={{ m: 0, minWidth: 160 }}
+          />
+        }
+      />
       {/* 7th */}
-      <div>Expandable Accordion </div>
-      <div>Selfie Verification Label </div>
-      <div>Drop down </div>
-      <div>Input</div>
+      <ExpandableAccordion
+        section1='Selfie Verification'
+        section2={
+          <>
+            <Dropdown
+              items={menu}
+              label={value}
+              handleChange={handleChange}
+              value={value}
+              inputLabel={value ? value : 'Server - MT4'}
+              sx={{ m: 0, minWidth: 160 }}
+            />
+            <Input label='Activation Logins' style={{ margin: 2 }} />
+          </>
+        }
+      />
       {/* 8th */}
-      <div>Expandable Accordion </div>
-      <div>Create Account Label </div>
-      <div>Add fields component </div>
+      <ExpandableAccordion
+        section1='Create Account'
+        section2={<AddFields items={menu} label={value} value={value} />}
+      />
       {/* 9th */}
-      <div>Expandable Accordion </div>
-      <div>Questionnaire Label </div>
-      <div>Add fields component </div>
+      <ExpandableAccordion
+        section1='Questionnaire'
+        section2={<AddFields items={menu} label={value} value={value} />}
+      />
       {/* 10 */}
-      <div>Expandable Accordion </div>
-      <div>Address Verification Label</div>
-      <div>Drop down</div>
-      <div>Input</div>
-      <div>Add fields component </div>
+      <ExpandableAccordion
+        section1='Address Verification'
+        section2={
+          <>
+            <Dropdown
+              items={menu}
+              label={value}
+              handleChange={handleChange}
+              value={value}
+              inputLabel={value ? value : 'Server - MT4'}
+              sx={{ m: 0, minWidth: 160 }}
+            />
+            <Input label='Activation Logins' style={{ margin: 2 }} />
+            <AddFields items={menu} label={value} value={value} />
+          </>
+        }
+      />
       {/* 11 */}
-      <div>Expandable Accordion </div>
-      <div>Deposit Money Label </div>
+      <ExpandableAccordion section1='Deposit Money' section2='' />
       {/* 12 */}
-      <div>Expandable Accordion </div>
-      <div>Applicant Data Label </div>
-      <div>drop down</div>
-      <div>Input</div>
-      <div>Add fields component </div>
+      <ExpandableAccordion
+        section1='Applicant Data'
+        section2={
+          <>
+            <Dropdown
+              items={menu}
+              label={value}
+              handleChange={handleChange}
+              value={value}
+              inputLabel={value ? value : 'Server - MT4'}
+              sx={{ m: 0, minWidth: 160 }}
+            />
+            <Input label='Activation Logins' style={{ margin: 2 }} />
+            <AddFields items={menu} label={value} value={value} />
+          </>
+        }
+      />
       {/* 13 */}
-      <div>Expandable Accordion </div>
-      <div>Upload Documents Label </div>
-      <div>Drop down </div>
-      <div>Input</div>
-
-      <div> dropdown Tag </div>
+      <ExpandableAccordion
+        section1='Upload Documents'
+        section2={
+          <>
+            <Dropdown
+              items={menu}
+              label={value}
+              handleChange={handleChange}
+              value={value}
+              inputLabel={value ? value : 'Server - MT4'}
+              sx={{ m: 0, minWidth: 160 }}
+            />
+            <Input label='Activation Logins' style={{ margin: 2 }} />
+            <DropdownTagSelector />
+          </>
+        }
+      />
       {/* 14th */}
-      <div>Save Button</div>
+      <Button
+        className='button-fieldsAdd'
+        name='Save'
+        variant='contained'
+        sx={{
+          backgroundColor: '#11468F',
+          borderRadius: '20px',
+          '&:hover': {
+            backgroundColor: '#11468F50',
+            borderRadius: '20px',
+          },
+        }}
+      />
     </>
   );
 }

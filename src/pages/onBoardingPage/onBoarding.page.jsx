@@ -8,8 +8,7 @@ function OnBoarding() {
       {/* 1st */}
       {/* <QuestionnaireAddModal /> */}
       {/* 2nd */}
-      {/* <ApplicationFlowPage /> */}
-      {/* 3rd  components tests*/}
+      <ApplicationFlowPage />
     </>
   );
 }
