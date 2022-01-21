@@ -122,7 +122,9 @@ function ApplicationFlowPage() {
       </div>
       {/* 4th */}
       <ExpandableAccordion
-        section1='Applicant Data'
+        section1={
+          <Label label='Applicant Data' className='label-applicationFlow' />
+        }
         section2={
           <>
             <Dropdown
@@ -157,7 +159,12 @@ function ApplicationFlowPage() {
       />
       {/* 5th */}
       <ExpandableAccordion
-        section1='SMS Verification'
+        section1={
+          <Label
+            label='SMS Verification Data'
+            className='label-applicationFlow'
+          />
+        }
         section2={
           <Dropdown
             items={menu}
@@ -170,7 +177,12 @@ function ApplicationFlowPage() {
       />
       {/* 6th */}
       <ExpandableAccordion
-        section1='E-mail Verification'
+        section1={
+          <Label
+            label='E-mail Verification'
+            className='label-applicationFlow'
+          />
+        }
         section2={
           <Dropdown
             items={menu}
@@ -183,7 +195,12 @@ function ApplicationFlowPage() {
       />
       {/* 7th */}
       <ExpandableAccordion
-        section1='Selfie Verification'
+        section1={
+          <Label
+            label='Selfie Verification'
+            className='label-applicationFlow'
+          />
+        }
         section2={
           <>
             <Dropdown
@@ -203,7 +220,12 @@ function ApplicationFlowPage() {
       />
       {/* 8th */}
       <ExpandableAccordion
-        section1='Address Verification'
+        section1={
+          <Label
+            label='Address Verification'
+            className='label-applicationFlow'
+          />
+        }
         section2={
           <>
             <Dropdown
@@ -237,7 +259,9 @@ function ApplicationFlowPage() {
       />
       {/* 9th */}
       <ExpandableAccordion
-        section1='Upload Documents'
+        section1={
+          <Label label='Upload Documents' className='label-applicationFlow' />
+        }
         section2={
           <>
             <Dropdown
@@ -258,7 +282,9 @@ function ApplicationFlowPage() {
       />
       {/* 10th */}
       <ExpandableAccordion
-        section1='Questionnaire'
+        section1={
+          <Label label='Questionnaire' className='label-applicationFlow' />
+        }
         section2={
           <AddFields
             sx={{
@@ -279,7 +305,9 @@ function ApplicationFlowPage() {
       />
       {/* 11th */}
       <ExpandableAccordion
-        section1='Create Account'
+        section1={
+          <Label label='Create Account' className='label-applicationFlow' />
+        }
         section2={
           <AddFields
             sx={{
@@ -299,7 +327,12 @@ function ApplicationFlowPage() {
         }
       />
       {/* 12th */}
-      <ExpandableAccordion section1='Deposit Money' section2='' />
+      <ExpandableAccordion
+        section1={
+          <Label label='Deposit Money ' className='label-applicationFlow' />
+        }
+        section2=''
+      />
       {/* 13th */}
       <Button
         className='button-fieldsAdd'

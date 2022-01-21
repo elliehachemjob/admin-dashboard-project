@@ -33,7 +33,7 @@ function ServerChooseModal() {
     >
       <div className='parent-toggle-serverChooseModal'>
         <div className='div1-toggle-serverChooseModal'>
-          <Label label='IB' />
+          <Label label='IB' className='label-serverChooseModal' />
         </div>
         <div className='div2-toggle-serverChooseModal'>
           <Toggle checked={isIb} onClick={handleIbDisabled} />
@@ -42,7 +42,7 @@ function ServerChooseModal() {
 
       <div className='parent-toggle-serverChooseModal'>
         <div className='div1-toggle-serverChooseModal'>
-          <Label label='Trader' />
+          <Label label='Trader' className='label-serverChooseModal' />
         </div>
         <div className='div2-toggle-serverChooseModal'>
           <Toggle checked={isTrader} onClick={handleTraderDisabled} />

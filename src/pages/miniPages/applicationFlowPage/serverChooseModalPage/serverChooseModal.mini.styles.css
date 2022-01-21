@@ -12,3 +12,7 @@
 .div2-toggle-serverChooseModal {
   grid-area: 1 / 5 / 2 / 6;
 }
+
+.label-serverChooseModal {
+  font-weight: 1000;
+}

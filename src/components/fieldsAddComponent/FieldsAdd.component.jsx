@@ -6,6 +6,9 @@ import Button from '../FlexibleButtonComponent/FlexibleButton.component';
 import { DeleteItemIcon } from '../iconsComponent/Icons.component';
 import Dropdown from '../dropdownComponent/SpecialDropdown.component';
 import CheckBox from '../checkboxComponent/CheckBox.component';
+import SearchInput from '../searchInputComponent/SearchInput.component';
+import ListFieldsAddComponent from '../../components/ListComponents/ListFieldsAddComponent/ListFieldsAddComponent.component';
+
 function FieldsAdd(props) {
   const [addedField, setAddedField] = useState(true);
   const [value, setValue] = useState();
@@ -18,6 +21,16 @@ function FieldsAdd(props) {
 
   const handleOnPressAdd = () => {
     setAddedField(!addedField);
+  };
+
+  const [abuseValidation, setAbuseValidation] = useState([
+    { label: 'All Bonus abuse validation with' },
+    { label: 'Email' },
+    { label: 'State' },
+  ]);
+
+  const handleAddField = () => {
+    const array = [...abuseValidation];
   };
 
   return (
@@ -42,6 +55,7 @@ function FieldsAdd(props) {
               <BreakLine className='breakLine-fieldsAdd' />
             </div>
           </div>
+          {/* <ListFieldsAddComponent /> */}
           <div className='parentButton-fieldsAdd'>
             <div className='div1-Button-fieldsAdd'>
               <div className='button-wrapper-fieldsAdd'>
@@ -115,16 +129,46 @@ function FieldsAdd(props) {
           </div>
           <div className='parentButton-fieldsAdd'>
             <div className='div1-Button-fieldsAdd'>
-              <Dropdown
-                items={props.items}
-                label={props.label}
-                handleChange={handleChange}
-                value={props.value}
-                inputLabel={props.value ? props.value : 'Server - MT4'}
+              <ListFieldsAddComponent />
+
+              <Button
+                className='button-fieldsAdd'
+                name='Add Custom Field'
+                variant='contained'
+                sx={
+                  props.sx
+                    ? props.sx
+                    : {
+                        backgroundColor: '#11468F',
+                        borderRadius: '20px',
+                        fontWeight: 600,
+                        '&:hover': {
+                          backgroundColor: '#11468F50',
+                          borderRadius: '20px',
+                        },
+                      }
+                }
               />
             </div>
             <div className='div2-Button-fieldsAdd'>
-              <CheckBox className='checkBox-fieldsAdd' />
+              <Button
+                className='button-fieldsAdd'
+                name='Add Custom Field'
+                variant='contained'
+                sx={
+                  props.sx
+                    ? props.sx
+                    : {
+                        backgroundColor: '#11468F',
+                        borderRadius: '20px',
+                        fontWeight: 600,
+                        '&:hover': {
+                          backgroundColor: '#11468F50',
+                          borderRadius: '20px',
+                        },
+                      }
+                }
+              />
             </div>
             <div className='div3-Button-fieldsAdd'>
               <DeleteItemIcon className='deleteItemIcon-fieldsAdd' />
