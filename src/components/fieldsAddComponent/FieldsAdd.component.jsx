@@ -50,14 +50,18 @@ function FieldsAdd(props) {
                   className='button-fieldsAdd'
                   name='Add Field'
                   variant='contained'
-                  sx={{
-                    backgroundColor: '#11468F',
-                    borderRadius: '20px',
-                    '&:hover': {
-                      backgroundColor: '#11468F50',
-                      borderRadius: '20px',
-                    },
-                  }}
+                  sx={
+                    props.sx
+                      ? props.sx
+                      : {
+                          backgroundColor: '#11468F',
+                          borderRadius: '20px',
+                          '&:hover': {
+                            backgroundColor: '#11468F50',
+                            borderRadius: '20px',
+                          },
+                        }
+                  }
                 />
               </div>
             </div>
@@ -68,14 +72,18 @@ function FieldsAdd(props) {
                   className='button-fieldsAdd'
                   name='Add Custom Field'
                   variant='contained'
-                  sx={{
-                    backgroundColor: '#11468F',
-                    borderRadius: '20px',
-                    '&:hover': {
-                      backgroundColor: '#11468F50',
-                      borderRadius: '20px',
-                    },
-                  }}
+                  sx={
+                    props.sx
+                      ? props.sx
+                      : {
+                          backgroundColor: '#11468F',
+                          borderRadius: '20px',
+                          '&:hover': {
+                            backgroundColor: '#11468F50',
+                            borderRadius: '20px',
+                          },
+                        }
+                  }
                 />
               </div>
             </div>
@@ -115,7 +123,7 @@ function FieldsAdd(props) {
               />
             </div>
             <div className='div2-Button-fieldsAdd'>
-              <CheckBox />
+              <CheckBox className='checkBox-fieldsAdd' />
             </div>
             <div className='div3-Button-fieldsAdd'>
               <DeleteItemIcon className='deleteItemIcon-fieldsAdd' />

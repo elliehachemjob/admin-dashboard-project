@@ -1,28 +1,24 @@
 import React from 'react';
-import ModalUsage from '../../../components/modalUsageComponent/ModalUsage.component';
+import ModalUsage from '../../../../components/modalUsageComponent/ModalUsage.component';
 import './flowStepsModal.mini.styles.css';
-import Description from '../../../components/descriptionComponent/Description.component';
-import Button from '../../../components/FlexibleButtonComponent/FlexibleButton.component';
+import Description from '../../../../components/descriptionComponent/Description.component';
+import Button from '../../../../components/FlexibleButtonComponent/FlexibleButton.component';
 
 function FlowStepsModal() {
   return (
-    <ModalUsage popupButtonName='Steps Modal Name' modalBackground='#C1E0F7'>
-      <div>Choose A Flow</div>
-      <div>Bottom for Primary flow</div>
-      <div>Bottom for Secondary flow</div>
+    <ModalUsage
+      popupButtonName='Edit Flow Steps'
+      sx={{
+        backgroundColor: '#2B3A67',
+        borderRadius: '10px',
+        '&:hover': {
+          backgroundColor: '#5E807F',
+          borderRadius: '10px',
+        },
+      }}
+      modalBackground='#C1E0F7'
+    >
       <div className='parent-flowStepsModal'>
-        <div className='div1-flowStepsModal'>
-          <Description className='Header-flowStepsModal'>
-            Primary Flow : Is A Series of steps That the user must follow, in
-            order to complete the registration process
-          </Description>
-        </div>
-        <div className='div2-flowStepsModal'>
-          <Description className='Header-flowStepsModal'>
-            Secondary Flow: Need more than one registration process? Perhaps
-            different registration for different country?
-          </Description>
-        </div>
         <div className='div3-flowStepsModal'>
           <Button
             className='button-fieldsAdd'
@@ -215,7 +211,6 @@ function FlowStepsModal() {
           </Description>
         </div>
       </div>
-      <div>Tab Menu Down</div>
     </ModalUsage>
   );
 }

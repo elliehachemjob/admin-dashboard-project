@@ -1,8 +1,6 @@
 import React, { useState } from 'react';
 import QuestionnaireAddModal from '../miniPages/questionnaireModalPage/questionnaireAddModal.component';
-import ApplicationFlowPage from '../miniPages/applicationFlowPage/applicationFlowPage.mini.page';
-import FlowStepsModal from '../miniPages/flowStepsModalPage/flowStepsModal.mini.page';
-
+import ApplicationFlowPage from '../miniPages/applicationFlowPage/applicationFlow.mini.page';
 function OnBoarding() {
   return (
     <>
@@ -11,7 +9,6 @@ function OnBoarding() {
       {/* 2nd */}
       <ApplicationFlowPage />
       {/* 3rd */}
-      <FlowStepsModal />
     </>
   );
 }

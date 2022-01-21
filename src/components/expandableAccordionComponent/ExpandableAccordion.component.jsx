@@ -13,11 +13,12 @@ function ExpandableAccordion(props) {
           : {
               marginTop: '10px',
               marginBottom: '10px',
-              backgroundColor: '#11468F05',
-              border: '1px solid #11468F10',
+              backgroundColor: '#EEF2FF50',
+              border: '1px solid #C1E0F780',
+              borderRadius: '10px',
               '&:hover': {
-                backgroundColor: '#11468F09',
-                border: '1px solid #11468F30',
+                backgroundColor: '#EEF2FF50',
+                border: '1px solid #C1E0F7',
               },
             }
       }

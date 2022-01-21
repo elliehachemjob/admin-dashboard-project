@@ -24,7 +24,13 @@ export default function ModalUsage(props) {
 
   return (
     <div className={props.className}>
-      <Button onClick={handleOpen}>{props.popupButtonName}</Button>
+      <Button
+        variant={props.variant ? props.variant : 'contained'}
+        sx={props.sx}
+        onClick={handleOpen}
+      >
+        {props.popupButtonName}
+      </Button>
       <Modal
         open={open}
         onClose={handleClose}

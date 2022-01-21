@@ -1,5 +1,4 @@
 import React, { useState } from 'react';
-import './applicationFlowPage.mini.styles.css';
 import Button from '../../../components/FlexibleButtonComponent/FlexibleButton.component';
 import Label from '../../../components/labelComponent/Label.component';
 import Dropdown from '../../../components/dropdownComponent/SpecialDropdown.component';
@@ -7,31 +6,67 @@ import ExpandableAccordion from '../../../components/expandableAccordionComponen
 import DropdownTagSelector from '../../../components/dropdownTagSelectorComponent/DropdownTagSelector.component';
 import Input from '../../../components/inputComponent/Input.component';
 import AddFields from '../../../components/fieldsAddComponent/FieldsAdd.component';
-import './applicationFlowPage.mini.page';
+import './applicationFlow.mini.page';
 import ScrollableTab from '../../../components/scrollableTabComponent/ScrollableTab.component';
 import MenuList from '../../../components/menuListComponent/MenuList.component';
 import { CancellationIcon } from '../../../components/iconsComponent/Icons.component';
-import FlowStepsModal from '../flowStepsModalPage/flowStepsModal.mini.page';
+import FlowStepsModal from './flowStepsModalPage/flowStepsModal.mini.page';
+import FlowListModal from './flowListModalPage/flowListModal.mini.page';
+import ServerChooseModal from './serverChooseModalPage/serverChooseModal.mini.page';
+import { makeStyles } from '@material-ui/core/styles';
+
+import './applicationFlow.mini.styles.css';
 
 function ApplicationFlowPage() {
+  const useStyles = makeStyles((theme) => ({
+    textField: {
+      border: '1px solid #94b3fd20',
+      backgroundColor: '#94b3fd15',
+      borderRadius: '10px',
+      opacity: 0.3,
+      '&:hover,&:focus': {
+        border: '1px solid #94b3fd20',
+        backgroundColor: '#94b3fd20',
+        opacity: 1,
+      },
+      button: {
+        backgroundColor: '#11468F',
+        borderRadius: '20px',
+        '&:hover': {
+          backgroundColor: '#11468F50',
+          borderRadius: '20px',
+        },
+      },
+      dropdown: {
+        border: '2px solid #94b3fd20',
+        backgroundColor: '#94b3fd15',
+        minWidth: 189.3,
+        borderRadius: '10px',
+        opacity: 0.3,
+        '&:hover,&:focus': {
+          border: '2px solid #94b3fd20',
+          backgroundColor: '#94b3fd20',
+          opacity: 0.3,
+        },
+      },
+    },
+  }));
+
+  const classes = useStyles();
+
   const [value, setValue] = useState();
   const [tabValue, setTabValue] = useState(0);
-
   const menu = [{ value: 'Server - MT4' }, { value: 'Demo - MT5' }];
-
   const handleChange = (event) => {
     setValue(event.target.value);
   };
-
   const [tabList, setTabList] = useState([
     { id: 1, label: <div>Primary</div> },
   ]);
-
   const handleTabChange = (event, newValue) => {
     setTabValue(newValue);
     console.log('hey');
   };
-
   const cancelClick = (id) => {
     setTabList((tabValue) => {
       return tabValue.filter((item) => {
@@ -39,7 +74,6 @@ function ApplicationFlowPage() {
       });
     });
   };
-
   const handleSecondaryFlow = () => {
     setTabValue((tabValue) => tabValue + 1);
 
@@ -60,12 +94,10 @@ function ApplicationFlowPage() {
     ]);
     console.log(tabList);
   };
-
   const menuItemsList = [
     { id: 1, label: 'IB' },
     { id: 2, label: 'Trader' },
   ];
-
   const HandleAddStep = () => {
     alert('clicked');
   };
@@ -73,65 +105,20 @@ function ApplicationFlowPage() {
   return (
     <>
       <div className='parent-applicationFlow'>
-        {/* 1st */}
-
+        <div className='div1-applicationFlow'>
+          {/* 1st */}
+          <FlowListModal />
+        </div>
         <div className='div2-applicationFlow'>
           {/* 2nd */}
-          <Button
-            onClick={handleSecondaryFlow}
-            className='button-fieldsAdd'
-            name='Secondary Flow'
-            variant='contained'
-            sx={{
-              backgroundColor: '#11468F',
-              borderRadius: '20px',
-              '&:hover': {
-                backgroundColor: '#11468F50',
-                borderRadius: '20px',
-              },
-            }}
-          />
+          <FlowStepsModal />
         </div>
         <div className='div3-applicationFlow'>
           {/* 3rd */}
-
-          <Button
-            onClick={HandleAddStep}
-            className='button-fieldsAdd'
-            name='Add Step'
-            variant='contained'
-            sx={{
-              backgroundColor: '#11468F',
-              borderRadius: '20px',
-              '&:hover': {
-                backgroundColor: '#11468F50',
-                borderRadius: '20px',
-              },
-            }}
-          />
+          <ServerChooseModal />
         </div>
-        {/* <div className='div4-applicationFlow'>
-           4th
-          <MenuList
-            name='Server'
-            sx={{
-              backgroundColor: '#11468F',
-              borderRadius: '20px',
-              '&:hover': {
-                backgroundColor: '#11468F50',
-                borderRadius: '20px',
-              },
-            }}
-            menuItemsList={menuItemsList}
-          />
-        </div> */}
       </div>
-      <ScrollableTab
-        tabList={tabList}
-        handleChange={handleTabChange}
-        value={tabValue}
-      />
-      {/* 5th */}
+      {/* 4th */}
       <ExpandableAccordion
         section1='Applicant Data'
         section2={
@@ -142,17 +129,29 @@ function ApplicationFlowPage() {
               handleChange={handleChange}
               value={value}
               inputLabel={value ? value : 'Server - MT4'}
-              sx={{ m: 0, minWidth: 160 }}
             />
             <Input
               label='Activation Logins'
               style={{ marginTop: 2, marginBottom: 2 }}
+              textFieldStyles={classes.textField}
             />
-            <AddFields items={menu} label={value} value={value} />
+            <AddFields
+              sx={{
+                backgroundColor: '#2B3A67',
+                borderRadius: '10px',
+                '&:hover': {
+                  backgroundColor: '#2B3A67',
+                  borderRadius: '10px',
+                },
+              }}
+              items={menu}
+              label={value}
+              value={value}
+            />
           </>
         }
       />
-      {/* 6th */}
+      {/* 5th */}
       <ExpandableAccordion
         section1='SMS Verification'
         section2={
@@ -162,11 +161,10 @@ function ApplicationFlowPage() {
             handleChange={handleChange}
             value={value}
             inputLabel={value ? value : 'Server - MT4'}
-            sx={{ m: 0, minWidth: 160 }}
           />
         }
       />
-      {/* 7th */}
+      {/* 6th */}
       <ExpandableAccordion
         section1='E-mail Verification'
         section2={
@@ -176,11 +174,10 @@ function ApplicationFlowPage() {
             handleChange={handleChange}
             value={value}
             inputLabel={value ? value : 'Server - MT4'}
-            sx={{ m: 0, minWidth: 160 }}
           />
         }
       />
-      {/* 8th */}
+      {/* 7th */}
       <ExpandableAccordion
         section1='Selfie Verification'
         section2={
@@ -191,17 +188,16 @@ function ApplicationFlowPage() {
               handleChange={handleChange}
               value={value}
               inputLabel={value ? value : 'Server - MT4'}
-              sx={{ m: 0, minWidth: 160 }}
             />
             <Input
               label='Activation Logins'
               style={{ marginTop: 2, marginBottom: 2 }}
+              textFieldStyles={classes.textField}
             />
           </>
         }
       />
-
-      {/* 9th */}
+      {/* 8th */}
       <ExpandableAccordion
         section1='Address Verification'
         section2={
@@ -212,18 +208,29 @@ function ApplicationFlowPage() {
               handleChange={handleChange}
               value={value}
               inputLabel={value ? value : 'Server - MT4'}
-              sx={{ m: 0, minWidth: 160 }}
             />
             <Input
               label='Activation Logins'
               style={{ marginTop: 2, marginBottom: 2 }}
+              textFieldStyles={classes.textField}
             />
-            <AddFields items={menu} label={value} value={value} />
+            <AddFields
+              sx={{
+                backgroundColor: '#2B3A67',
+                borderRadius: '10px',
+                '&:hover': {
+                  backgroundColor: '#2B3A67',
+                  borderRadius: '10px',
+                },
+              }}
+              items={menu}
+              label={value}
+              value={value}
+            />
           </>
         }
       />
-
-      {/* 10th */}
+      {/* 9th */}
       <ExpandableAccordion
         section1='Upload Documents'
         section2={
@@ -234,39 +241,67 @@ function ApplicationFlowPage() {
               handleChange={handleChange}
               value={value}
               inputLabel={value ? value : 'Server - MT4'}
-              sx={{ m: 0, minWidth: 160 }}
             />
             <Input
               label='Activation Logins'
               style={{ marginTop: 2, marginBottom: 2 }}
+              textFieldStyles={classes.textField}
             />
             <DropdownTagSelector />
           </>
         }
       />
-      {/* 11th */}
+      {/* 10th */}
       <ExpandableAccordion
         section1='Questionnaire'
-        section2={<AddFields items={menu} label={value} value={value} />}
+        section2={
+          <AddFields
+            sx={{
+              backgroundColor: '#2B3A67',
+              borderRadius: '10px',
+              '&:hover': {
+                backgroundColor: '#2B3A67',
+                borderRadius: '10px',
+              },
+            }}
+            items={menu}
+            label={value}
+            value={value}
+          />
+        }
       />
-      {/* 12th */}
+      {/* 11th */}
       <ExpandableAccordion
         section1='Create Account'
-        section2={<AddFields items={menu} label={value} value={value} />}
+        section2={
+          <AddFields
+            sx={{
+              backgroundColor: '#2B3A67',
+              borderRadius: '10px',
+              '&:hover': {
+                backgroundColor: '#2B3A67',
+                borderRadius: '10px',
+              },
+            }}
+            items={menu}
+            label={value}
+            value={value}
+          />
+        }
       />
-      {/* 13th */}
+      {/* 12th */}
       <ExpandableAccordion section1='Deposit Money' section2='' />
-      {/* 14th */}
+      {/* 13th */}
       <Button
         className='button-fieldsAdd'
         name='Save'
         variant='contained'
         sx={{
-          backgroundColor: '#11468F',
-          borderRadius: '20px',
+          backgroundColor: '#2B3A67',
+          borderRadius: '10px',
           '&:hover': {
-            backgroundColor: '#11468F50',
-            borderRadius: '20px',
+            backgroundColor: '#5E807F',
+            borderRadius: '10px',
           },
         }}
       />
