@@ -56,6 +56,7 @@ function FieldsAdd(props) {
                       : {
                           backgroundColor: '#11468F',
                           borderRadius: '20px',
+                          fontWeight: 600,
                           '&:hover': {
                             backgroundColor: '#11468F50',
                             borderRadius: '20px',
@@ -78,6 +79,7 @@ function FieldsAdd(props) {
                       : {
                           backgroundColor: '#11468F',
                           borderRadius: '20px',
+                          fontWeight: 600,
                           '&:hover': {
                             backgroundColor: '#11468F50',
                             borderRadius: '20px',
@@ -119,7 +121,6 @@ function FieldsAdd(props) {
                 handleChange={handleChange}
                 value={props.value}
                 inputLabel={props.value ? props.value : 'Server - MT4'}
-                sx={{ m: 0, minWidth: 160 }}
               />
             </div>
             <div className='div2-Button-fieldsAdd'>

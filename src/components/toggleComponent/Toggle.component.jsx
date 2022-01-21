@@ -4,7 +4,14 @@ import Switch from '@mui/material/Switch';
 import './toggle.styles.css';
 
 function Toggle(props) {
-  return <Switch className={props.className} />;
+  return (
+    <Switch
+      checked={props.checked}
+      className={props.className}
+      disabled={props.disabled}
+      onClick={props.onClick}
+    />
+  );
 }
 
 export default Toggle;

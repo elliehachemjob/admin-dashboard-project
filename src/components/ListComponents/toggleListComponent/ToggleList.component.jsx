@@ -16,7 +16,7 @@ function ToggleList(props) {
                 <Label label={list1.label} />
               </div>
               <div className={props.div2}>
-                <Toggle />
+                <Toggle disabled={list1.disabled} onClick={props.onClick} />
               </div>
             </div>
           </div>

@@ -7,7 +7,7 @@ import Select from '@mui/material/Select';
 function Dropdown(props) {
   return (
     <>
-      <FormControl sx={props.sx ? props.sx : { m: 0, minWidth: 215 }}>
+      <FormControl sx={props.sx ? props.sx : { m: 0, minWidth: 160 }}>
         <InputLabel id='demo-simple-select-autowidth-label'>
           {props.inputLabel}
         </InputLabel>
@@ -22,17 +22,16 @@ function Dropdown(props) {
             props.sx
               ? props.sx
               : {
-                  border: '2px solid #94b3fd20',
-                  backgroundColor: '#94b3fd15',
+                  border: '1px solid #94b3fd20',
+                  backgroundColor: '#2B3A6720',
                   minWidth: 189.3,
                   borderRadius: '10px',
-                  opacity: 0.3,
-                  fontColor: 'black',
-                  fontWeight: 500,
+                  opacity: 0.5,
+
                   '&:hover,&:focus': {
                     border: '2px solid #94b3fd20',
-                    backgroundColor: '#94b3fd20',
-                    opacity: 1,
+                    backgroundColor: '#FDF0D520',
+                    opacity: 0.6,
                   },
                 }
           }

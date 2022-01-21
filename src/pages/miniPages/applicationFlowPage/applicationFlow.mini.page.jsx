@@ -21,13 +21,15 @@ function ApplicationFlowPage() {
   const useStyles = makeStyles((theme) => ({
     textField: {
       border: '1px solid #94b3fd20',
-      backgroundColor: '#94b3fd15',
+      backgroundColor: '#2B3A6720',
+      minWidth: 189.3,
       borderRadius: '10px',
-      opacity: 0.3,
+      opacity: 0.5,
+
       '&:hover,&:focus': {
-        border: '1px solid #94b3fd20',
-        backgroundColor: '#94b3fd20',
-        opacity: 1,
+        border: '2px solid #94b3fd20',
+        backgroundColor: '#FDF0D520',
+        opacity: 0.6,
       },
       button: {
         backgroundColor: '#11468F',
@@ -139,8 +141,10 @@ function ApplicationFlowPage() {
               sx={{
                 backgroundColor: '#2B3A67',
                 borderRadius: '10px',
+                fontWeight: 600,
+
                 '&:hover': {
-                  backgroundColor: '#2B3A67',
+                  backgroundColor: '#5E807F',
                   borderRadius: '10px',
                 },
               }}
@@ -218,8 +222,9 @@ function ApplicationFlowPage() {
               sx={{
                 backgroundColor: '#2B3A67',
                 borderRadius: '10px',
+                fontWeight: 600,
                 '&:hover': {
-                  backgroundColor: '#2B3A67',
+                  backgroundColor: '#5E807F',
                   borderRadius: '10px',
                 },
               }}
@@ -259,8 +264,10 @@ function ApplicationFlowPage() {
             sx={{
               backgroundColor: '#2B3A67',
               borderRadius: '10px',
+              fontWeight: 600,
+
               '&:hover': {
-                backgroundColor: '#2B3A67',
+                backgroundColor: '#5E807F',
                 borderRadius: '10px',
               },
             }}
@@ -278,8 +285,10 @@ function ApplicationFlowPage() {
             sx={{
               backgroundColor: '#2B3A67',
               borderRadius: '10px',
+              fontWeight: 600,
+
               '&:hover': {
-                backgroundColor: '#2B3A67',
+                backgroundColor: '#5E807F',
                 borderRadius: '10px',
               },
             }}
@@ -299,6 +308,7 @@ function ApplicationFlowPage() {
         sx={{
           backgroundColor: '#2B3A67',
           borderRadius: '10px',
+          fontWeight: 600,
           '&:hover': {
             backgroundColor: '#5E807F',
             borderRadius: '10px',

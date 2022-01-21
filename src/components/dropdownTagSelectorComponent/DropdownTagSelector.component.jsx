@@ -51,11 +51,47 @@ function DropdownTagSelector() {
         multiple
         value={personName}
         onChange={handleChange}
-        input={<OutlinedInput id='select-multiple-chip' label='Chip' />}
+        input={
+          <OutlinedInput
+            sx={{
+              border: '1px solid #94b3fd20',
+              backgroundColor: '#2B3A6720',
+              minWidth: 189.3,
+              borderRadius: '10px',
+              opacity: 0.5,
+              '&:hover,&:focus': {
+                border: '2px solid #94b3fd20',
+                backgroundColor: '#FDF0D520',
+                opacity: 0.6,
+              },
+            }}
+            id='select-multiple-chip'
+            label='Chip'
+          />
+        }
         renderValue={(selected) => (
-          <Box sx={{ display: 'flex', flexWrap: 'wrap', gap: 0.5 }}>
+          <Box
+            sx={{
+              display: 'flex',
+              flexWrap: 'wrap',
+              gap: 0.5,
+            }}
+          >
             {selected.map((value) => (
-              <Chip key={value} label={value} />
+              <Chip
+                sx={{
+                  backgroundColor: '#2B3A67',
+                  borderRadius: '10px',
+                  fontWeight: 1000,
+                  color: 'white',
+                  '&:hover': {
+                    backgroundColor: '#5E807F',
+                    borderRadius: '10px',
+                  },
+                }}
+                key={value}
+                label={value}
+              />
             ))}
           </Box>
         )}
