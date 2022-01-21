@@ -19,10 +19,11 @@ export default function ModalUsage(props) {
     border: '2px solid #000',
     boxShadow: 24,
     p: 4,
+    backgroundColor: props.modalBackground,
   };
 
   return (
-    <div>
+    <div className={props.className}>
       <Button onClick={handleOpen}>{props.popupButtonName}</Button>
       <Modal
         open={open}
