@@ -9,7 +9,10 @@ import AddFields from '../../../components/fieldsAddComponent/FieldsAdd.componen
 import './applicationFlow.mini.page';
 import ScrollableTab from '../../../components/scrollableTabComponent/ScrollableTab.component';
 import MenuList from '../../../components/menuListComponent/MenuList.component';
-import { CancellationIcon } from '../../../components/iconsComponent/Icons.component';
+import {
+  CancellationIcon,
+  AddItemIcon,
+} from '../../../components/iconsComponent/Icons.component';
 import FlowStepsModal from './flowStepsModalPage/flowStepsModal.mini.page';
 import FlowListModal from './flowListModalPage/flowListModal.mini.page';
 import ServerChooseModal from './serverChooseModalPage/serverChooseModal.mini.page';
@@ -336,7 +339,13 @@ function ApplicationFlowPage() {
       {/* 13th */}
       <Button
         className='button-fieldsAdd'
-        name='Save'
+        name={
+          <div className='wrapper-addIcon-applicationFlow'>
+            <AddItemIcon className='addItemIcon-applicationFlow' />
+
+            <Label label='Save ' className='label-addIcon-applicationFlow' />
+          </div>
+        }
         variant='contained'
         sx={{
           backgroundColor: '#2B3A67',

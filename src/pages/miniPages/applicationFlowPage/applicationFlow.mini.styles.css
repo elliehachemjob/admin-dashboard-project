@@ -1,3 +1,13 @@
+.wrapper-addIcon-applicationFlow {
+  display: flex;
+}
+
+.label-addIcon-applicationFlow {
+}
+
+.addItemIcon-applicationFlow {
+}
+
 .parent-applicationFlow {
   display: flex;
   justify-content: flex-start;

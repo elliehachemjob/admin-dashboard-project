@@ -3,6 +3,8 @@ import ModalUsage from '../../../../components/modalUsageComponent/ModalUsage.co
 import './flowStepsModal.mini.styles.css';
 import Description from '../../../../components/descriptionComponent/Description.component';
 import Button from '../../../../components/FlexibleButtonComponent/FlexibleButton.component';
+import Label from '../../../../components/labelComponent/Label.component';
+import { AddItemIcon } from '../../../../components/iconsComponent/Icons.component';
 
 function FlowStepsModal() {
   const [smsVerificationDisplay, setSmsVerificationDisplay] = useState('');
@@ -47,7 +49,16 @@ function FlowStepsModal() {
 
   return (
     <ModalUsage
-      popupButtonName='Edit Flow Steps'
+      popupButtonName={
+        <div className='wrapper-addIcon-applicationFlow'>
+          <AddItemIcon className='addItemIcon-applicationFlow' />
+
+          <Label
+            label='Edit Flow Steps '
+            className='label-addIcon-applicationFlow'
+          />
+        </div>
+      }
       sx={{
         backgroundColor: '#2B3A67',
         borderRadius: '10px',

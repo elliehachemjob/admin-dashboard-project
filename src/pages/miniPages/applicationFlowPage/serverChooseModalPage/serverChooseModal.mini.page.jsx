@@ -3,6 +3,7 @@ import './serverChooseModal.mini.styles.css';
 import ModalUsage from '../../../../components/modalUsageComponent/ModalUsage.component';
 import Toggle from '../../../../components/toggleComponent/Toggle.component';
 import Label from '../../../../components/labelComponent/Label.component';
+import { AddItemIcon } from '../../../../components/iconsComponent/Icons.component';
 
 function ServerChooseModal() {
   const [isIb, setIsIb] = useState(false);
@@ -19,7 +20,16 @@ function ServerChooseModal() {
 
   return (
     <ModalUsage
-      popupButtonName='Choose Server'
+      popupButtonName={
+        <div className='wrapper-addIcon-applicationFlow'>
+          <AddItemIcon className='addItemIcon-applicationFlow' />
+
+          <Label
+            label='Choose Server '
+            className='label-addIcon-applicationFlow'
+          />
+        </div>
+      }
       sx={{
         backgroundColor: '#2B3A67',
         borderRadius: '10px',

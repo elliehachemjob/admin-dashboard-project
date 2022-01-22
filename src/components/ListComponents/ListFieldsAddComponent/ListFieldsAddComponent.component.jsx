@@ -1,11 +1,11 @@
 import React, { useState } from 'react';
 import SearchInput from '../../searchInputComponent/SearchInput.component';
 import { DeleteItemIcon } from '../../iconsComponent/Icons.component';
-function ListFieldsAddComponent(props) {
-  
+import Button from '../../FlexibleButtonComponent/FlexibleButton.component';
 
+function ListFieldsAddComponent(props) {
   return (
-    <>
+    <div>
       {props.fieldsList.map((item) => {
         return (
           <div className={props.parent}>
@@ -16,7 +16,7 @@ function ListFieldsAddComponent(props) {
           </div>
         );
       })}
-    </>
+    </div>
   );
 }
 
