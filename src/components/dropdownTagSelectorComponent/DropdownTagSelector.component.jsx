@@ -54,14 +54,14 @@ function DropdownTagSelector() {
         input={
           <OutlinedInput
             sx={{
-              border: '1px solid #94b3fd20',
-              backgroundColor: '#2B3A6720',
+              border: '',
+              backgroundColor: '',
               minWidth: 189.3,
               borderRadius: '10px',
-              opacity: 0.5,
+              opacity: 1,
               '&:hover,&:focus': {
-                border: '2px solid #94b3fd20',
-                backgroundColor: '#FDF0D520',
+                border: '',
+                backgroundColor: '',
                 opacity: 0.6,
               },
             }}
@@ -80,7 +80,7 @@ function DropdownTagSelector() {
             {selected.map((value) => (
               <Chip
                 sx={{
-                  backgroundColor: '#2B3A67',
+                  backgroundColor: '#04724D',
                   borderRadius: '10px',
                   fontWeight: 1000,
                   color: 'white',

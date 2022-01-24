@@ -5,19 +5,21 @@ import Button from '../../../../components/FlexibleButtonComponent/FlexibleButto
 import Label from '../../../../components/labelComponent/Label.component';
 import { AddItemIcon } from '../../../../components/iconsComponent/Icons.component';
 
-function FlowListModal() {
+function FlowListModal(props) {
   const [createFlows, setCreatedFlows] = useState([
     { id: 1, flowName: 'Main Registration  Flow' },
     { id: 2, flowName: 'USA  Registration flow' },
     { id: 3, flowName: 'UK  Registration Flow' },
   ]);
 
+  const handleChangeServer = () => {
+    props.setFlowName(createFlows[2].flowName);
+  };
+
   return (
     <ModalUsage
       popupButtonName={
         <div className='wrapper-addIcon-applicationFlow'>
-          <AddItemIcon className='addItemIcon-applicationFlow' />
-
           <Label
             label='Choose Flow '
             className='label-addIcon-applicationFlow'
@@ -40,6 +42,7 @@ function FlowListModal() {
           <div className='wrapper-flowListModal'>
             <div key={item.key}>
               <Button
+                onClick={handleChangeServer}
                 className='button-fieldsAdd'
                 name={item.flowName}
                 variant='contained'

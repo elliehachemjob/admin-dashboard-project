@@ -52,6 +52,13 @@
   padding-bottom: 20px;
 }
 
+.main-header-applicationFlow {
+  margin-bottom: 20px;
+  padding-bottom: 20px;
+  font-weight: 1000;
+  
+}
+
 .label-applicationFlow {
 }
 
@@ -101,6 +108,14 @@
 .button-applicationFlow:hover {
   border: 2px solid #94b3fd20;
   background-color: #94b3fd20;
+}
+
+.parent-saveButton-applicationFlow {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.div1-saveButton-applicationFlow {
 }
 
 .input-applicationFlow {

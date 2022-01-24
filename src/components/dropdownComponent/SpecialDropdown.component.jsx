@@ -22,23 +22,23 @@ function Dropdown(props) {
             props.sx
               ? props.sx
               : {
-                  border: '1px solid #94b3fd20',
-                  backgroundColor: '#2B3A6720',
-                  minWidth: 189.3,
+                  border: '',
+                  backgroundColor: '',
+                  minWidth: 300,
                   borderRadius: '10px',
-                  opacity: 0.5,
+                  opacity: 1,
 
                   '&:hover,&:focus': {
-                    border: '2px solid #94b3fd20',
-                    backgroundColor: '#FDF0D520',
-                    opacity: 0.6,
+                    border: '1',
+                    backgroundColor: '',
+                    opacity: 1,
                   },
                 }
           }
         >
           {props.items.map((item) => {
             return (
-              <MenuItem style={{ width: 185 }} value={item.value}>
+              <MenuItem style={{ width: 300 }} value={item.value}>
                 {item.value}
               </MenuItem>
             );

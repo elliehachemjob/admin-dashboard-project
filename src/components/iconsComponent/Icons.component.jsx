@@ -9,6 +9,16 @@ import PowerIcon from '@mui/icons-material/Power';
 import LinkIcon from '@mui/icons-material/Link';
 import PersonIcon from '@mui/icons-material/Person';
 import CancelIcon from '@mui/icons-material/Cancel';
+import FiberManualRecordIcon from '@mui/icons-material/FiberManualRecord';
+import CheckIcon from '@mui/icons-material/Check';
+
+export function CorrectIcon(props) {
+  return <CheckIcon className={props.className} />;
+}
+
+export function BlackCircleIcon(props) {
+  return <FiberManualRecordIcon className={props.className} />;
+}
 
 export function BellIcon(props) {
   return <NotificationsActiveIcon className={props.className} />;

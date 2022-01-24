@@ -22,8 +22,6 @@ function ServerChooseModal() {
     <ModalUsage
       popupButtonName={
         <div className='wrapper-addIcon-applicationFlow'>
-          <AddItemIcon className='addItemIcon-applicationFlow' />
-
           <Label
             label='Choose Server '
             className='label-addIcon-applicationFlow'

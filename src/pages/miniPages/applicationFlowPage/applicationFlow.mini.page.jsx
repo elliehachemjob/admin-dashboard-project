@@ -23,16 +23,16 @@ import './applicationFlow.mini.styles.css';
 function ApplicationFlowPage() {
   const useStyles = makeStyles((theme) => ({
     textField: {
-      border: '1px solid #94b3fd20',
-      backgroundColor: '#2B3A6720',
+      border: '',
+      backgroundColor: '',
       minWidth: 189.3,
       borderRadius: '10px',
-      opacity: 0.5,
+      opacity: 1,
 
       '&:hover,&:focus': {
-        border: '2px solid #94b3fd20',
-        backgroundColor: '#FDF0D520',
-        opacity: 0.6,
+        border: ' ',
+        backgroundColor: '',
+        opacity: 1,
       },
       button: {
         backgroundColor: '#11468F',
@@ -58,6 +58,8 @@ function ApplicationFlowPage() {
   }));
 
   const classes = useStyles();
+
+  const [flowName, setFlowName] = useState('USA Registration Flow');
 
   const [value, setValue] = useState();
   const [tabValue, setTabValue] = useState(0);
@@ -109,10 +111,15 @@ function ApplicationFlowPage() {
 
   return (
     <>
+      <Label
+        label={flowName}
+        className='main-header-applicationFlow'
+        size={18.72}
+      />
       <div className='parent-applicationFlow'>
         <div className='div1-applicationFlow'>
           {/* 1st */}
-          <FlowListModal />
+          <FlowListModal flowName={flowName} setFlowName={setFlowName} />
         </div>
         <div className='div2-applicationFlow'>
           {/* 2nd */}
@@ -139,15 +146,25 @@ function ApplicationFlowPage() {
             />
             <Input
               label='Activation Logins'
-              style={{ marginTop: 2, marginBottom: 2 }}
+              style={{ marginTop: 2, marginBottom: 2, width: 300 }}
               textFieldStyles={classes.textField}
             />
             <AddFields
               sx={{
-                backgroundColor: '#2B3A67',
+                backgroundColor: '#04724D',
                 borderRadius: '10px',
                 fontWeight: 600,
 
+                '&:hover': {
+                  backgroundColor: '#5E807F',
+                  borderRadius: '10px',
+                },
+              }}
+              sx2={{
+                backgroundColor: '#04724D',
+                borderRadius: '10px',
+                fontWeight: 600,
+                marginTop: 2.5,
                 '&:hover': {
                   backgroundColor: '#5E807F',
                   borderRadius: '10px',
@@ -215,7 +232,7 @@ function ApplicationFlowPage() {
             />
             <Input
               label='Activation Logins'
-              style={{ marginTop: 2, marginBottom: 2 }}
+              style={{ marginTop: 2, marginBottom: 2, width: 300 }}
               textFieldStyles={classes.textField}
             />
           </>
@@ -240,14 +257,24 @@ function ApplicationFlowPage() {
             />
             <Input
               label='Activation Logins'
-              style={{ marginTop: 2, marginBottom: 2 }}
+              style={{ marginTop: 2, marginBottom: 2, width: 300 }}
               textFieldStyles={classes.textField}
             />
             <AddFields
               sx={{
-                backgroundColor: '#2B3A67',
+                backgroundColor: '#04724D',
                 borderRadius: '10px',
                 fontWeight: 600,
+                '&:hover': {
+                  backgroundColor: '#5E807F',
+                  borderRadius: '10px',
+                },
+              }}
+              sx2={{
+                backgroundColor: '#04724D',
+                borderRadius: '10px',
+                fontWeight: 600,
+                marginTop: 2.5,
                 '&:hover': {
                   backgroundColor: '#5E807F',
                   borderRadius: '10px',
@@ -276,7 +303,7 @@ function ApplicationFlowPage() {
             />
             <Input
               label='Activation Logins'
-              style={{ marginTop: 2, marginBottom: 2 }}
+              style={{ marginTop: 2, marginBottom: 2, width: 300 }}
               textFieldStyles={classes.textField}
             />
             <DropdownTagSelector />
@@ -291,10 +318,19 @@ function ApplicationFlowPage() {
         section2={
           <AddFields
             sx={{
-              backgroundColor: '#2B3A67',
+              backgroundColor: '#04724D',
               borderRadius: '10px',
               fontWeight: 600,
-
+              '&:hover': {
+                backgroundColor: '#5E807F',
+                borderRadius: '10px',
+              },
+            }}
+            sx2={{
+              backgroundColor: '#04724D',
+              borderRadius: '10px',
+              fontWeight: 600,
+              marginTop: 2.5,
               '&:hover': {
                 backgroundColor: '#5E807F',
                 borderRadius: '10px',
@@ -314,10 +350,20 @@ function ApplicationFlowPage() {
         section2={
           <AddFields
             sx={{
-              backgroundColor: '#2B3A67',
+              backgroundColor: '#04724D',
               borderRadius: '10px',
               fontWeight: 600,
 
+              '&:hover': {
+                backgroundColor: '#5E807F',
+                borderRadius: '10px',
+              },
+            }}
+            sx2={{
+              backgroundColor: '#04724D',
+              borderRadius: '10px',
+              fontWeight: 600,
+              marginTop: 2.5,
               '&:hover': {
                 backgroundColor: '#5E807F',
                 borderRadius: '10px',
@@ -336,27 +382,32 @@ function ApplicationFlowPage() {
         }
         section2=''
       />
+      <div className='parent-saveButton-applicationFlow'>
+        <div className='div1-saveButton-applicationFlow'>
+          <Button
+            className='button-fieldsAdd'
+            name={
+              <div className='wrapper-addIcon-applicationFlow'>
+                <Label
+                  label='Save '
+                  className='label-addIcon-applicationFlow'
+                />
+              </div>
+            }
+            variant='contained'
+            sx={{
+              backgroundColor: '#2B3A67',
+              borderRadius: '10px',
+              fontWeight: 600,
+              '&:hover': {
+                backgroundColor: '#5E807F',
+                borderRadius: '10px',
+              },
+            }}
+          />
+        </div>
+      </div>
       {/* 13th */}
-      <Button
-        className='button-fieldsAdd'
-        name={
-          <div className='wrapper-addIcon-applicationFlow'>
-            <AddItemIcon className='addItemIcon-applicationFlow' />
-
-            <Label label='Save ' className='label-addIcon-applicationFlow' />
-          </div>
-        }
-        variant='contained'
-        sx={{
-          backgroundColor: '#2B3A67',
-          borderRadius: '10px',
-          fontWeight: 600,
-          '&:hover': {
-            backgroundColor: '#5E807F',
-            borderRadius: '10px',
-          },
-        }}
-      />
     </>
   );
 }

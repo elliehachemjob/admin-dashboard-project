@@ -12,16 +12,17 @@ function SearchInput(props) {
         props.sx
           ? props.sx
           : {
-              border: '1px solid #94b3fd20',
-              backgroundColor: '#2B3A6720',
-              minWidth: 189.3,
+              border: '',
+              backgroundColor: '',
+              width: 175,
               borderRadius: '10px',
-              opacity: 0.5,
-              margin: 1,
+              opacity: 1,
+              margin: 2,
+              marginBottom: '20px',
               '&:hover,&:focus': {
-                border: '2px solid #94b3fd20',
-                backgroundColor: '#FDF0D520',
-                opacity: 0.6,
+                border: '',
+                backgroundColor: '',
+                opacity: 1,
               },
             }
       }

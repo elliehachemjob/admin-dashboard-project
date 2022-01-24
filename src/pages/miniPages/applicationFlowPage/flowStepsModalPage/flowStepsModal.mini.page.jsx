@@ -51,8 +51,6 @@ function FlowStepsModal() {
     <ModalUsage
       popupButtonName={
         <div className='wrapper-addIcon-applicationFlow'>
-          <AddItemIcon className='addItemIcon-applicationFlow' />
-
           <Label
             label='Edit Flow Steps '
             className='label-addIcon-applicationFlow'

@@ -9,6 +9,7 @@ function CheckBox(props) {
       className={props.className}
       {...label}
       className={props.className}
+      color='success'
     />
   );
 }

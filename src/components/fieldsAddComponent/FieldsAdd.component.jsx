@@ -29,7 +29,7 @@ function FieldsAdd(props) {
   };
 
   const [abuseValidation, setAbuseValidation] = useState([
-    { label: 'All Bonus abuse validation with' },
+    { label: 'Add Fields' },
     { label: 'Email' },
     { label: 'State' },
   ]);
@@ -66,7 +66,7 @@ function FieldsAdd(props) {
           searchInput={
             <SearchInput
               options={abuseValidation}
-              label='Bonus abuse validation with'
+              label='Add Fields'
               // sx={{ width: 180, margin: 2 }}
             />
           }
@@ -97,8 +97,8 @@ function FieldsAdd(props) {
             }
             variant='contained'
             sx={
-              props.sx
-                ? props.sx
+              props.sx2
+                ? props.sx2
                 : {
                     backgroundColor: '#11468F',
                     borderRadius: '20px',
@@ -119,7 +119,7 @@ function FieldsAdd(props) {
                   <AddItemIcon className='addItemIcon-applicationFlow' />
 
                   <Label
-                    label='Add Custom Fields '
+                    label='Custom Fields'
                     className='label-addIcon-applicationFlow'
                   />
                 </div>
