@@ -20,14 +20,12 @@ import './flowConfiguration.mini.styles.css';
 function FlowConfiguration() {
   const [basicsIcon, setBasicsIcon] = useState('default');
   const [rightSide, setRightSide] = useState('basics');
-
   const [walletConfigurationIcon, setWalletConfigurationIcon] =
     useState('default');
   const [conditionsConfigurationIcon, setConditionsConfigurationIcon] =
     useState('default');
   const [conditionsIcon, setConditionsIcon] = useState('default');
   const [registrationIcon, setRegistrationIcon] = useState('default');
-
   const BasicIcon = () => {
     if (basicsIcon === 'default') {
       return <BlackCircleIcon />;
@@ -83,7 +81,6 @@ function FlowConfiguration() {
       return <CancelCircleIcon />;
     }
   };
-
   const handleBasicsIcon = (e) => {
     setRightSide('basics');
     setBasicsIcon(true);
@@ -101,7 +98,6 @@ function FlowConfiguration() {
       setWalletConfigurationIcon(false);
     }
   };
-
   const handleConditionsConfigurationIcon = (e) => {
     setRightSide('Conditions Configuration');
 
@@ -125,7 +121,6 @@ function FlowConfiguration() {
       setRegistrationIcon(false);
     }
   };
-
   const RightSideBasics = () => {
     if (rightSide === 'basics') {
       return <Basics />;
@@ -226,24 +221,11 @@ function FlowConfiguration() {
           </div>
         </div>
       </div>
-
+      {/* 2nd */}
       <div className='div2-wholeContainer'>
         <RightSideBasics />
       </div>
-      {/* 2th right side */}
-      {/* 1st */}
-      {/* <Basics /> */}
-      {/* 2nd */}
-      {/* <WalletConfiguration /> */}
-      {/* 3rd */}
-      {/* <ConditionsConfiguration /> */}
-      {/* 4rd */}
-      {/* <Conditions /> */}
-      {/* 5th */}
-      {/* <Registration /> */}
-
       {/* 3rd last part  */}
-
       <div className='div3-wholeContainer'>
         <div className='parent-1Button-flowConfiguration'>
           <div className='div1-1Button-flowConfiguration'>

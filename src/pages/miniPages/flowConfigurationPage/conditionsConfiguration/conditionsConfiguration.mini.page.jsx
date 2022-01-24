@@ -21,93 +21,114 @@ function ConditionsConfiguration() {
         className='main-header-applicationFlow'
       />
       <DropdownTagSelector />
+
+      <div className='div1-conditionsConfiguration'>
+        <Label
+          label='Condition Types'
+          className='main-header-applicationFlow'
+        />
+      </div>
+      <div className='div2-conditionsConfiguration'>
+        <Label
+          label='Select One Condition Type Or More'
+          className='main-header-applicationFlow'
+        />
+      </div>
+      <div className='parent-conditionsConfiguration'>
+        <div class='div3-conditionsConfiguration'>
+          <Button
+            className='button-fieldsAdd'
+            name={
+              <div className='wrapper-addIcon-applicationFlow'>
+                <Label
+                  label='Nationality '
+                  className='label-addIcon-applicationFlow'
+                />
+              </div>
+            }
+            variant='contained'
+            sx={{
+              backgroundColor: '#2B3A67',
+              borderRadius: '10px',
+              fontWeight: 600,
+              '&:hover': {
+                backgroundColor: '#5E807F',
+                borderRadius: '10px',
+              },
+            }}
+          />
+        </div>
+        <div className='div4-conditionsConfiguration'>
+          <Button
+            className='button-fieldsAdd'
+            name={
+              <div className='wrapper-addIcon-applicationFlow'>
+                <Label
+                  label='Country of residence '
+                  className='label-addIcon-applicationFlow'
+                />
+              </div>
+            }
+            variant='contained'
+            sx={{
+              backgroundColor: '#2B3A67',
+              borderRadius: '10px',
+              fontWeight: 600,
+              '&:hover': {
+                backgroundColor: '#5E807F',
+                borderRadius: '10px',
+              },
+            }}
+          />
+        </div>
+        <div className='div5-conditionsConfiguration'>
+          <Button
+            className='button-fieldsAdd'
+            name={
+              <div className='wrapper-addIcon-applicationFlow'>
+                <Label
+                  label='Reject U.S citizens'
+                  className='label-addIcon-applicationFlow'
+                />
+              </div>
+            }
+            variant='contained'
+            sx={{
+              backgroundColor: '#2B3A67',
+              borderRadius: '10px',
+              fontWeight: 600,
+              '&:hover': {
+                backgroundColor: '#5E807F',
+                borderRadius: '10px',
+              },
+            }}
+          />
+        </div>
+        <div className='div6-conditionsConfiguration'>
+          <Button
+            className='button-fieldsAdd'
+            name={
+              <div className='wrapper-addIcon-applicationFlow'>
+                <Label
+                  label='Apply '
+                  className='label-addIcon-applicationFlow'
+                />
+              </div>
+            }
+            variant='contained'
+            sx={{
+              backgroundColor: '#2B3A67',
+              borderRadius: '10px',
+              fontWeight: 600,
+              '&:hover': {
+                backgroundColor: '#5E807F',
+                borderRadius: '10px',
+              },
+            }}
+          />
+        </div>
+      </div>
       {/* 2nd */}
-      <Label label='Condition Types' className='main-header-applicationFlow' />
-      <Label
-        label='Select One Condition Type Or More'
-        className='main-header-applicationFlow'
-      />
-      <Button
-        className='button-fieldsAdd'
-        name={
-          <div className='wrapper-addIcon-applicationFlow'>
-            <Label
-              label='Nationality '
-              className='label-addIcon-applicationFlow'
-            />
-          </div>
-        }
-        variant='contained'
-        sx={{
-          backgroundColor: '#2B3A67',
-          borderRadius: '10px',
-          fontWeight: 600,
-          '&:hover': {
-            backgroundColor: '#5E807F',
-            borderRadius: '10px',
-          },
-        }}
-      />
-      <Button
-        className='button-fieldsAdd'
-        name={
-          <div className='wrapper-addIcon-applicationFlow'>
-            <Label
-              label='Country of residence '
-              className='label-addIcon-applicationFlow'
-            />
-          </div>
-        }
-        variant='contained'
-        sx={{
-          backgroundColor: '#2B3A67',
-          borderRadius: '10px',
-          fontWeight: 600,
-          '&:hover': {
-            backgroundColor: '#5E807F',
-            borderRadius: '10px',
-          },
-        }}
-      />
-      <Button
-        className='button-fieldsAdd'
-        name={
-          <div className='wrapper-addIcon-applicationFlow'>
-            <Label
-              label='Reject U.S citizens'
-              className='label-addIcon-applicationFlow'
-            />
-          </div>
-        }
-        variant='contained'
-        sx={{
-          backgroundColor: '#2B3A67',
-          borderRadius: '10px',
-          fontWeight: 600,
-          '&:hover': {
-            backgroundColor: '#5E807F',
-            borderRadius: '10px',
-          },
-        }}
-      />
-      <Button
-        className='button-fieldsAdd'
-        name={
-          <div className='wrapper-addIcon-applicationFlow'>
-            <Label label='Apply ' className='label-addIcon-applicationFlow' />
-          </div>
-        }
-        variant='contained'
-        sx={{
-          backgroundColor: '#2B3A67',
-          borderRadius: '10px',
-          fontWeight: 600,
-          '&:hover': {
-            backgroundColor: '#5E807F',
-            borderRadius: '10px',
-          },
-        }}
-      />
 
       {/* 3rd */}
       <ToggleList

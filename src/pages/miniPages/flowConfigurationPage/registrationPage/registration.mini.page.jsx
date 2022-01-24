@@ -3,6 +3,7 @@ import Label from '../../../../components/labelComponent/Label.component';
 import Button from '../../../../components/FlexibleButtonComponent/FlexibleButton.component';
 import FlowStepsModal from '../../applicationFlowPage/flowStepsModalPage/flowStepsModal.mini.page';
 import ToggleList from '../../../../components/ListComponents/toggleListComponent/ToggleList.component';
+import BuildForm from '../../../../components/buildFormComponent/BuildForm.component';
 
 import './registration.mini.styles.css';
 
@@ -31,27 +32,8 @@ function Registration() {
       <Label label='Form' className='main-header-applicationFlow' />
       <Label label='Build The Form' className='main-header-applicationFlow' />
 
-      <Button
-        className='button-fieldsAdd'
-        name={
-          <div className='wrapper-addIcon-applicationFlow'>
-            <Label
-              label='Customize Fields '
-              className='label-addIcon-applicationFlow'
-            />
-          </div>
-        }
-        variant='contained'
-        sx={{
-          backgroundColor: '#2B3A67',
-          borderRadius: '10px',
-          fontWeight: 600,
-          '&:hover': {
-            backgroundColor: '#5E807F',
-            borderRadius: '10px',
-          },
-        }}
-      />
+      <FlowStepsModal />
+      <BuildForm />
       <Button
         className='button-fieldsAdd'
         name={
@@ -73,7 +55,6 @@ function Registration() {
           },
         }}
       />
-      <FlowStepsModal />
     </>
   );
 }

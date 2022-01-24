@@ -165,3 +165,23 @@
 
 .profileIcon-flowConfiguration {
 }
+
+.parent-conditionsConfiguration {
+  display: flex;
+  flex-direction: column;
+}
+
+.div3-conditionsConfiguration {
+  padding: 5px;
+}
+
+.div4-conditionsConfiguration {
+  padding: 5px;
+}
+.div5-conditionsConfiguration {
+  padding: 5px;
+}
+
+.div6-conditionsConfiguration {
+  padding: 5px;
+}
