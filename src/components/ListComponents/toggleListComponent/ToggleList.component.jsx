@@ -13,7 +13,11 @@ function ToggleList(props) {
           <div style={{ margin: '10px' }} key={list1.id}>
             <div className={props.parent}>
               <div className={props.div1}>
-                <Label label={list1.label} />
+                {props.testComponent1 ? (
+                  props.testComponent1
+                ) : (
+                  <Label label={list1.label} />
+                )}
               </div>
               <div className={props.div2}>
                 <Toggle disabled={list1.disabled} onClick={props.onClick} />

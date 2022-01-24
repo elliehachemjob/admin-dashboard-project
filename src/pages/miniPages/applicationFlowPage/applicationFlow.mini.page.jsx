@@ -23,7 +23,7 @@ import './applicationFlow.mini.styles.css';
 function ApplicationFlowPage() {
   const useStyles = makeStyles((theme) => ({
     textField: {
-      border: '',
+    border: '',
       backgroundColor: '',
       minWidth: 189.3,
       borderRadius: '10px',

@@ -69,3 +69,16 @@
 .div18-flowStepsModal {
   grid-area: 9 / 2 / 10 / 3;
 }
+
+.div19-flowStepsModal {
+  grid-area: 10 / 1 / 11 / 2;
+  padding-bottom: 10px;
+}
+.div20-flowStepsModal {
+  grid-area: 10 / 2 / 11 / 3;
+
+  padding-top: 20px;
+}
+
+.button-wrapper-flowStepsModal {
+}

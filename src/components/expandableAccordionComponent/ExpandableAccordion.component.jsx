@@ -7,6 +7,7 @@ import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
 function ExpandableAccordion(props) {
   return (
     <Accordion
+      expanded={props.expanded && props.expanded}
       sx={
         props.sx
           ? props.sx
@@ -24,13 +25,12 @@ function ExpandableAccordion(props) {
       }
     >
       <AccordionSummary
-        expandIcon={<ExpandMoreIcon />}
+        expandIcon={props.hideExpandIcon ? null : <ExpandMoreIcon />}
         aria-controls='panel1a-content'
         id='panel1a-header'
       >
         {props.section1}
       </AccordionSummary>
-
       <AccordionDetails>{props.section2}</AccordionDetails>
     </Accordion>
   );

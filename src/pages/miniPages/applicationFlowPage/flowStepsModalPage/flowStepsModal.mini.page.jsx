@@ -6,7 +6,7 @@ import Button from '../../../../components/FlexibleButtonComponent/FlexibleButto
 import Label from '../../../../components/labelComponent/Label.component';
 import { AddItemIcon } from '../../../../components/iconsComponent/Icons.component';
 
-function FlowStepsModal() {
+function FlowStepsModal(props) {
   const [smsVerificationDisplay, setSmsVerificationDisplay] = useState('');
   const [emailVerificationDisplay, setEmailVerificationDisplay] = useState('');
   const [selfieVerificationDisplay, setSelfieVerificationDisplay] =
@@ -18,6 +18,7 @@ function FlowStepsModal() {
   const [depositMoneyDisplay, setDepositMoneyDisplay] = useState('');
   const [applicantDataDisplay, setApplicantDataDisplay] = useState('');
   const [uploadDocumentsDisplay, setUploadDocumentsDisplay] = useState('');
+  const [addedDataDisplay, setAddedDataDisplay] = useState('');
 
   const handleSmsVerificationDisplay = () => {
     setSmsVerificationDisplay('none');
@@ -46,13 +47,18 @@ function FlowStepsModal() {
   const handleUploadDocumentsDisplay = () => {
     setUploadDocumentsDisplay('none');
   };
+  const handleAddedDataDisplay = () => {
+    setAddedDataDisplay('none');
+  };
 
   return (
     <ModalUsage
       popupButtonName={
         <div className='wrapper-addIcon-applicationFlow'>
           <Label
-            label='Edit Flow Steps '
+            label={
+              props.modalButtonName ? props.modalButtonName : 'Edit Flow Steps'
+            }
             className='label-addIcon-applicationFlow'
           />
         </div>
@@ -74,7 +80,7 @@ function FlowStepsModal() {
           <Button
             onClick={handleSmsVerificationDisplay}
             className='button-fieldsAdd'
-            name='SMS Verification'
+            name={props.field1 ? props.field1 : 'SMS Verification'}
             variant='contained'
             sx={{
               backgroundColor: '#2B3A67',
@@ -94,15 +100,21 @@ function FlowStepsModal() {
             style={{ display: smsVerificationDisplay }}
             className='description-flowStepsModal'
           >
-            In SMS authentication, the user provides a code that has been sent
-            to their phone via SMS as proof of their identity.
+            {props.field1Description ? (
+              props.field1Description
+            ) : (
+              <div>
+                In SMS authentication, the user provides a code that has been
+                sent to their phone via SMS as proof of their identity.
+              </div>
+            )}
           </Description>
         </div>
         <div className='div3-flowStepsModal'>
           <Button
             onClick={handleEmailVerificationDisplay}
             className='button-fieldsAdd'
-            name='Email Verification'
+            name={props.field2 ? props.field2 : 'Email Verification'}
             variant='contained'
             sx={{
               backgroundColor: '#2B3A67',
@@ -121,15 +133,21 @@ function FlowStepsModal() {
             style={{ display: emailVerificationDisplay }}
             className='description-flowStepsModal'
           >
-            Email address validation is often accomplished by sending an email
-            to the user-provided email address.
+            {props.field2Description ? (
+              props.field2Description
+            ) : (
+              <div>
+                Email address validation is often accomplished by sending an
+                email to the user-provided email address.
+              </div>
+            )}
           </Description>
         </div>
         <div className='div5-flowStepsModal'>
           <Button
             onClick={handleSelfieVerificationDisplay}
             className='button-fieldsAdd'
-            name='Selfie Verification'
+            name={props.field3 ? props.field3 : 'Selfie Verification'}
             variant='contained'
             sx={{
               backgroundColor: '#2B3A67',
@@ -148,16 +166,23 @@ function FlowStepsModal() {
             style={{ display: selfieVerificationDisplay }}
             className='description-flowStepsModal'
           >
-            Detects your face in your selfie to generate a unique number.When
-            your selfie template matches the unique number from your profile
-            pictures, we know you're the same person as your profile photos.
+            {props.field3Description ? (
+              props.field3Description
+            ) : (
+              <div>
+                Detects your face in your selfie to generate a unique
+                number.When your selfie template matches the unique number from
+                your profile pictures, we know you're the same person as your
+                profile photos.
+              </div>
+            )}
           </Description>
         </div>
         <div className='div7-flowStepsModal'>
           <Button
             onClick={handleAddressVerificationDisplay}
             className='button-fieldsAdd'
-            name='Address Verification'
+            name={props.field4 ? props.field4 : 'Address Verification'}
             variant='contained'
             sx={{
               backgroundColor: '#2B3A67',
@@ -176,15 +201,21 @@ function FlowStepsModal() {
             style={{ display: addressVerificationDisplay }}
             className='description-flowStepsModal'
           >
-            Address validation helps verify the accuracy of address numbers,
-            street names postal codes.
+            {props.field4Description ? (
+              props.field4Description
+            ) : (
+              <div>
+                Address validation helps verify the accuracy of address numbers,
+                street names postal codes.
+              </div>
+            )}
           </Description>
         </div>
         <div className='div9-flowStepsModal'>
           <Button
             onClick={handleCreateAccountDisplay}
             className='button-fieldsAdd'
-            name='Create Account'
+            name={props.field5 ? props.field5 : 'Create Account'}
             variant='contained'
             sx={{
               backgroundColor: '#2B3A67',
@@ -203,16 +234,22 @@ function FlowStepsModal() {
             style={{ display: createAccountDisplay }}
             className='description-flowStepsModal'
           >
-            Generates the Email and password provided by the user in
-            server.Having an account also gives you extra abilities and features
-            to which unregistered users do not have access.
+            {props.field5Description ? (
+              props.field5Description
+            ) : (
+              <div>
+                Generates the Email and password provided by the user in
+                server.Having an account also gives you extra abilities and
+                features to which unregistered users do not have access.
+              </div>
+            )}
           </Description>
         </div>
         <div className='div11-flowStepsModal'>
           <Button
             onClick={handleQuestionnaireDisplay}
             className='button-fieldsAdd'
-            name='Questionnaire'
+            name={props.field6 ? props.field6 : 'Questionnaire'}
             variant='contained'
             sx={{
               backgroundColor: '#2B3A67',
@@ -232,15 +269,21 @@ function FlowStepsModal() {
             style={{ display: questionnaireDisplay }}
             className='description-flowStepsModal'
           >
-            Series of questions used to collect useful information from the
-            Clients
+            {props.field6Description ? (
+              props.field6Description
+            ) : (
+              <div>
+                Series of questions used to collect useful information from the
+                Clients
+              </div>
+            )}
           </Description>
         </div>
         <div className='div13-flowStepsModal'>
           <Button
             onClick={handleDepositMoneyDisplay}
             className='button-fieldsAdd'
-            name='Deposit Money'
+            name={props.field7 ? props.field7 : 'Deposit Money'}
             variant='contained'
             sx={{
               backgroundColor: '#2B3A67',
@@ -259,14 +302,20 @@ function FlowStepsModal() {
             style={{ display: depositMoneyDisplay }}
             className='description-flowStepsModal'
           >
-            Deposit is the act of placing money with a party such as a bank
+            {props.field7Description ? (
+              props.field7Description
+            ) : (
+              <div>
+                Deposit is the act of placing money with a party such as a bank
+              </div>
+            )}
           </Description>
         </div>
         <div className='div15-flowStepsModal'>
           <Button
             onClick={handleApplicantDataDisplay}
             className='button-fieldsAdd'
-            name='Applicant Data'
+            name={props.field8 ? props.field8 : 'Applicant Data'}
             variant='contained'
             sx={{
               backgroundColor: '#2B3A67',
@@ -285,15 +334,22 @@ function FlowStepsModal() {
             style={{ display: applicantDataDisplay }}
             className='description-flowStepsModal'
           >
-            Applicant Data Data related to the Client such as
-            Nationality,Country,First Name and Last Name
+            {/* {props.field2Description?  props.field2Description : <div></div>} */}
+            {props.field8Description ? (
+              props.field8Description
+            ) : (
+              <div>
+                Applicant Data Data related to the Client such as
+                Nationality,Country,First Name and Last Name
+              </div>
+            )}
           </Description>
         </div>
         <div className='div17-flowStepsModal'>
           <Button
             onClick={handleUploadDocumentsDisplay}
             className='button-fieldsAdd'
-            name='Upload Documents'
+            name={props.field9 ? props.field9 : 'Upload Documents'}
             variant='contained'
             sx={{
               backgroundColor: '#2B3A67',
@@ -313,25 +369,68 @@ function FlowStepsModal() {
             style={{ display: uploadDocumentsDisplay }}
             className='description-flowStepsModal'
           >
-            Uploading is the transmission of a file from your computer to the
-            server.
+            {props.field9Description ? (
+              props.field9Description
+            ) : (
+              <div>
+                Uploading is the transmission of a file from your computer to
+                the server.
+              </div>
+            )}
           </Description>
         </div>
+        {/* {props.allowExtraFields ? (
+          <>
+            <div className='div19-flowStepsModal'>
+              <Button
+                onClick={handleUploadDocumentsDisplay}
+                className='button-fieldsAdd'
+                name={props.field10 ? props.field10 : 'Upload Documents'}
+                variant='contained'
+                sx={{
+                  backgroundColor: '#2B3A67',
+                  borderRadius: '20px',
+                  fontWeight: 600,
+                  display: uploadDocumentsDisplay,
+
+                  '&:hover': {
+                    backgroundColor: '#5E807F',
+                    borderRadius: '20px',
+                  },
+                }}
+              />
+            </div>
+            <div className='div20-flowStepsModal'>
+              <Description
+                style={{ display: uploadDocumentsDisplay }}
+                className='description-flowStepsModal'
+              >
+                {props.field10Description ? (
+                  props.field10Description
+                ) : (
+                  <div>Test </div>
+                )}
+              </Description>
+            </div>
+          </>
+        ) : null} */}
         <div>
-          <Button
-            className='button-fieldsAdd'
-            name='Continue'
-            variant='contained'
-            sx={{
-              backgroundColor: '#2B3A67',
-              borderRadius: '20px',
-              fontWeight: 600,
-              '&:hover': {
-                backgroundColor: '#5E807F',
+          <div className='button-wrapper-flowStepsModal'>
+            <Button
+              className='button-fieldsAdd'
+              name='Continue'
+              variant='contained'
+              sx={{
+                backgroundColor: '#2B3A67',
                 borderRadius: '20px',
-              },
-            }}
-          />
+                fontWeight: 600,
+                '&:hover': {
+                  backgroundColor: '#5E807F',
+                  borderRadius: '20px',
+                },
+              }}
+            />
+          </div>
         </div>
       </div>
     </ModalUsage>
