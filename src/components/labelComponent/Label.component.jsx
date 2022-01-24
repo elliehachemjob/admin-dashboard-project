@@ -4,6 +4,7 @@ function Label(props) {
   return (
     <div
       onClick={props.onClick}
+      dblclick={props.dblclick}
       className={props.className}
       style={{ fontSize: props.size }}
     >

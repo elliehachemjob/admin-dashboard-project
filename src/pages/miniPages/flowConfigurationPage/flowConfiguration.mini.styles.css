@@ -1,0 +1,211 @@
+.wrapper-FlowConfiguration {
+  display: flex;
+  flex-direction: column;
+}
+
+.wrapper-FlowConfiguration-buttons {
+}
+
+.breakLine-flowConfiguration {
+  border-bottom: 0px;
+  border-left: 6px solid #000;
+  height: 50px;
+}
+
+.wrapper-addIcon-applicationFlow {
+  display: flex;
+}
+
+.label-flowConfiguration {
+}
+
+.inner-label-flowConfiguration {
+  padding-left: 5px;
+}
+
+.inner-iconWrapper-flowConfiguration {
+  display: flex;
+  padding-left: 2px;
+}
+
+.button-wrapper-flowConfiguration {
+}
+
+.parent-buttons-flowConfiguration {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  grid-template-rows: repeat(1, 1fr);
+  grid-column-gap: 0px;
+  grid-row-gap: 0px;
+}
+
+.div1-buttons-flowConfiguration {
+  grid-area: 1 / 2 / 2 / 3;
+}
+.div2-buttons-flowConfiguration {
+  grid-area: 1 / 4 / 2 / 5;
+}
+
+.parent-1Button-flowConfiguration {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  grid-template-rows: repeat(5, 1fr);
+  grid-column-gap: 0px;
+  grid-row-gap: 0px;
+}
+
+.div1-1Button-flowConfiguration {
+  grid-area: 1 / 5 / 2 / 6;
+}
+
+.parent-wholeContainer {
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  grid-template-rows: repeat(1, 1fr);
+  grid-column-gap: 0px;
+  grid-row-gap: 0px;
+}
+
+.div1-wholeContainer {
+  grid-area: 1 / 1 / 2 / 2;
+}
+.div2-wholeContainer {
+  grid-area: 1 / 2 / 2 / 3;
+}
+
+.div3-wholeContainer {
+  grid-area: 5 / 5 / 6 / 6;
+}
+
+.wrapper-buttons-FlowConfiguration {
+}
+
+.innerWrapper-buttons-flowConfiguration {
+  /* display: flex; */
+}
+
+.inner-breakLineWrapper-flowConfiguration {
+}
+
+.label-addIcon-flowConfiguration {
+}
+
+.addItemIcon-flowConfiguration {
+}
+
+.parent-flowConfiguration {
+}
+
+.div1-flowConfiguration {
+}
+
+.div2-flowConfiguration {
+}
+
+.div3-flowConfiguration {
+}
+
+.div4-flowConfiguration {
+}
+
+.cancelCircleIcon-flowConfigurationPage {
+}
+
+.specialLabel-flowConfiguration {
+}
+
+.header-flowConfiguration {
+}
+
+.main-header-flowConfiguration {
+}
+
+.label-flowConfiguration {
+}
+
+.dropdown-flowConfiguration {
+}
+
+.toggle-list-parent-flowConfiguration {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(1, 1fr);
+  grid-column-gap: 0px;
+  grid-row-gap: 0px;
+}
+
+.div1-toggle-list-parent-flowConfiguration {
+  grid-area: 1 / 1 / 2 / 2;
+}
+.div2-toggle-list-parent-flowConfiguration {
+  grid-area: 1 / 3 / 2 / 4;
+}
+
+.button-wrapper-flowConfiguration {
+  /* display: flex;
+  justify-content: space-between; */
+}
+
+.container1-flowConfiguration {
+}
+
+.button-flowConfiguration {
+}
+
+.button-flowConfiguration:hover {
+}
+
+.parent-saveButton-flowConfiguration {
+}
+
+.div1-saveButton-flowConfiguration {
+}
+
+.input-flowConfiguration {
+}
+
+.searchInput-flowConfiguration {
+}
+
+.radio-flowConfiguration {
+}
+
+.description-flowConfiguration {
+}
+
+.table-flowConfiguration {
+}
+
+.checkBox-flowConfiguration {
+}
+
+.smallLogo-flowConfiguration {
+}
+.largeLogo-flowConfiguration {
+}
+
+.bellIcon-flowConfiguration {
+}
+
+.deleteItemIcon-flowConfiguration {
+}
+
+.refreshIcon-applicationFlow {
+}
+
+.copyItemIcon-applicationFlow {
+}
+
+.addItemIcon-applicationFlow {
+}
+
+.editItemIcon-applicationFlow {
+}
+.statusIcon-applicationFlow {
+}
+
+.specialLinkIcon-applicationFlow {
+}
+
+.profileIcon-applicationFlow {
+}
