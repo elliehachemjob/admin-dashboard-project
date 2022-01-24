@@ -10,7 +10,7 @@ import './applicationFlow.mini.page';
 import ScrollableTab from '../../../components/scrollableTabComponent/ScrollableTab.component';
 import MenuList from '../../../components/menuListComponent/MenuList.component';
 import {
-  CancellationIcon,
+  CancelCircleIcon,
   AddItemIcon,
 } from '../../../components/iconsComponent/Icons.component';
 import FlowStepsModal from './flowStepsModalPage/flowStepsModal.mini.page';
@@ -91,8 +91,8 @@ function ApplicationFlowPage() {
         label: (
           <div>
             Secondary
-            <CancellationIcon
-              className='cancellationIcon-applicationFlowPage'
+            <CancelCircleIcon
+              className='cancelCircleIcon-applicationFlowPage'
               onClick={cancelClick}
             />
           </div>

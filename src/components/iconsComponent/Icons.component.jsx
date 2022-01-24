@@ -11,6 +11,16 @@ import PersonIcon from '@mui/icons-material/Person';
 import CancelIcon from '@mui/icons-material/Cancel';
 import FiberManualRecordIcon from '@mui/icons-material/FiberManualRecord';
 import CheckIcon from '@mui/icons-material/Check';
+import ClearIcon from '@mui/icons-material/Clear';
+import CheckCircleIcon from '@mui/icons-material/CheckCircle';
+
+export function CorrectCircleIcon(props) {
+  return <CheckCircleIcon className={props.className} />;
+}
+
+export function ClearIconTransparent(props) {
+  return <ClearIcon className={props.className} />;
+}
 
 export function CorrectIcon(props) {
   return <CheckIcon className={props.className} />;
@@ -56,6 +66,6 @@ export function ProfileIcon(props) {
   return <PersonIcon sx={{ fontSize: 500 }} className={props.className} />;
 }
 
-export function CancellationIcon(props) {
+export function CancelCircleIcon(props) {
   return <CancelIcon className={props.className} onClick={props.onClick} />;
 }
