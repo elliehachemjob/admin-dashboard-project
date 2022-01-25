@@ -30,7 +30,12 @@ function WalletConfiguration() {
           handleChange={handleChange}
           value={value}
           inputLabel={value ? value : 'Server - MT4'}
-          sx={{ marginLeft: 0.2, minWidth: 190, borderRadius: 4 }}
+          sx={{
+            marginLeft: 0.2,
+            minWidth: 190,
+            borderRadius: 4,
+            background: 'linear-gradient(21deg, #10abff, #1beabd)',
+          }}
         />
       </div>
 
@@ -42,7 +47,12 @@ function WalletConfiguration() {
           handleChange={handleChange}
           value={value}
           inputLabel={value ? value : 'Server - MT4'}
-          sx={{ marginLeft: 0.2, minWidth: 190, borderRadius: 4 }}
+          sx={{
+            marginLeft: 0.2,
+            minWidth: 190,
+            borderRadius: 4,
+            background: 'linear-gradient(21deg, #10abff, #1beabd)',
+          }}
         />
       </div>
       <div className='div3-walletConfiguration'>
@@ -53,7 +63,12 @@ function WalletConfiguration() {
           handleChange={handleChange}
           value={value}
           inputLabel={value ? value : 'Server - MT4'}
-          sx={{ marginLeft: 0.2, minWidth: 190, borderRadius: 4 }}
+          sx={{
+            marginLeft: 0.2,
+            minWidth: 190,
+            borderRadius: 4,
+            background: 'linear-gradient(21deg, #10abff, #1beabd)',
+          }}
         />
       </div>
     </div>

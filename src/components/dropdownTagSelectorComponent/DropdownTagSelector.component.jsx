@@ -56,10 +56,10 @@ function DropdownTagSelector(props) {
         input={
           <OutlinedInput
             sx={{
-              border: '',
-              backgroundColor: '',
+              background: 'linear-gradient(21deg, #10abff, #1beabd)',
+              borderRadius: 4,
               minWidth: 189.3,
-              borderRadius: '10px',
+
               opacity: 1,
               '&:hover,&:focus': {
                 border: '',
@@ -103,7 +103,7 @@ function DropdownTagSelector(props) {
           <MenuItem
             key={name}
             value={name}
-            style={getStyles(name, personName, theme)}
+            // style={getStyles(name, personName, theme)}
           >
             {name}
           </MenuItem>

@@ -17,8 +17,8 @@ function Conditions() {
 
   const useStyles = makeStyles((theme) => ({
     textField: {
-      border: '',
-      backgroundColor: '',
+      background: 'linear-gradient(21deg, #10abff, #1beabd)',
+
       minWidth: 189.3,
       borderRadius: '10px',
       opacity: 1,
@@ -70,19 +70,27 @@ function Conditions() {
         testComponent1={
           <Input
             label='Activation Logins'
-            style={{ width: 189.3 }}
+            style={{
+              width: 189.3,
+            }}
             textFieldStyles={classes.textField}
           />
         }
         testComponent2={
           <DropdownTagSelector
-            sx={{ width: 189.3 }}
+            sx={{
+              width: 189.3,
+              background: 'linear-gradient(21deg, #10abff, #1beabd)',
+              borderRadius: 4,
+            }}
             widthTagSelectorOpened={100}
           />
         }
         testComponent3={
           <DropdownTagSelector
-            sx={{ width: 189.3 }}
+            sx={{
+              width: 189.3,
+            }}
             widthTagSelectorOpened={100}
           />
         }
@@ -93,7 +101,11 @@ function Conditions() {
             handleChange={handleChange}
             value={value}
             inputLabel={value ? value : 'Server - MT4'}
-            sx={{ width: 189.3 }}
+            sx={{
+              width: 189.3,
+              background: 'linear-gradient(21deg, #10abff, #1beabd)',
+              borderRadius: 4,
+            }}
           />
         }
       />

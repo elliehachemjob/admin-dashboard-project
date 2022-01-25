@@ -23,6 +23,7 @@ function Basics() {
       border: '',
       backgroundColor: '',
       borderRadius: '10px',
+      background: 'linear-gradient(21deg, #10abff, #1beabd)',
       opacity: 1,
       '&:hover,&:focus': {
         border: ' ',
@@ -68,7 +69,12 @@ function Basics() {
           handleChange={handleChange}
           value={value}
           inputLabel={value ? value : 'Server - MT4'}
-          sx={{ marginLeft: 0.2, minWidth: 190, borderRadius: 4 }}
+          sx={{
+            marginLeft: 0.2,
+            minWidth: 190,
+            borderRadius: 4,
+            background: 'linear-gradient(21deg, #10abff, #1beabd)',
+          }}
         />
       </div>
     </div>

@@ -43,7 +43,12 @@ function ConditionsConfiguration() {
           label='Select Countries You Want to Reject'
           className='header-conditionsConfiguration'
         /> */}
-        <DropdownTagSelector sx={{ width: 189.3, marginLeft: 0.7 }} />
+        <DropdownTagSelector
+          sx={{
+            width: 189.3,
+            marginLeft: 0.7,
+          }}
+        />
       </div>
       <div className='div2-layout-walletConfiguration'>
         {/* <div className=''>

@@ -11,50 +11,28 @@ function BuildForm() {
   const [array, setArray] = useState();
   const useStyles = makeStyles((theme) => ({
     textField: {
-      border: '',
-      backgroundColor: '',
+      border: `1px solid  linear-gradient(21deg, #10abff, #1beabd)`,
       minWidth: 189.3,
+      background: 'linear-gradient(21deg, #10abff, #1beabd)',
       borderRadius: '10px',
-      opacity: 1,
-
+      opacity: 0.6,
       '&:hover,&:focus': {
         border: ' ',
         backgroundColor: '',
-        opacity: 1,
-      },
-      button: {
-        backgroundColor: '#11468F',
-        borderRadius: '20px',
-        '&:hover': {
-          backgroundColor: '#11468F50',
-          borderRadius: '20px',
-        },
-      },
-      dropdown: {
-        border: '2px solid #94b3fd20',
-        backgroundColor: '#94b3fd15',
-        minWidth: 189.3,
-        borderRadius: '10px',
-        opacity: 0.3,
-        '&:hover,&:focus': {
-          border: '2px solid #94b3fd20',
-          backgroundColor: '#94b3fd20',
-          opacity: 0.3,
-        },
       },
     },
   }));
+  const classes = useStyles();
 
   const [label1, setLabel1] = useState([
     { id: 1, label: 'Turn on/off notifications' },
   ]);
 
-  const classes = useStyles();
-
   return (
     <>
       {/* 1st  */}
       <ExpandableAccordion
+        className='expandableAccordionTest-buildForm'
         expanded={false}
         hideExpandIcon={true}
         section1={
@@ -68,6 +46,7 @@ function BuildForm() {
               <Input
                 label='Email'
                 style={{ width: 300 }}
+                sx={{ borderColor: 'red' }}
                 textFieldStyles={classes.textField}
               />
             }
