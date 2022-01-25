@@ -13,6 +13,23 @@ import FiberManualRecordIcon from '@mui/icons-material/FiberManualRecord';
 import CheckIcon from '@mui/icons-material/Check';
 import ClearIcon from '@mui/icons-material/Clear';
 import CheckCircleIcon from '@mui/icons-material/CheckCircle';
+import AutoAwesomeMotionIcon from '@mui/icons-material/AutoAwesomeMotion';
+import AutoAwesomeIcon from '@mui/icons-material/AutoAwesome';
+
+export function SpecialEditIcon(props) {
+  return (
+    <AutoAwesomeIcon className={props.className} onClick={props.onClick} />
+  );
+}
+
+export function StackIcon(props) {
+  return (
+    <AutoAwesomeMotionIcon
+      className={props.className}
+      onClick={props.onClick}
+    />
+  );
+}
 
 export function CorrectCircleIcon(props) {
   return <CheckCircleIcon className={props.className} />;
@@ -35,7 +52,7 @@ export function BellIcon(props) {
 }
 
 export function DeleteItemIcon(props) {
-  return <DeleteIcon className={props.className} />;
+  return <DeleteIcon className={props.className} onClick={props.onClick} />;
 }
 
 export function RefreshIcon(props) {

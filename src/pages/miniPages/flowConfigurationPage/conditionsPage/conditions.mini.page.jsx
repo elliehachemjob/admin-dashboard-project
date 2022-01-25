@@ -5,6 +5,13 @@ import Input from '../../../../components/inputComponent/Input.component';
 import { makeStyles } from '@material-ui/core/styles';
 import Dropdown from '../../../../components/dropdownComponent/SpecialDropdown.component';
 import DropdownTagSelector from '../../../../components/dropdownTagSelectorComponent/DropdownTagSelector.component';
+import {
+  SpecialEditIcon,
+  StackIcon,
+  DeleteItemIcon,
+} from '../../../../components/iconsComponent/Icons.component';
+import SeeGroups from '../seeGroupsPage/seeGroups.mini.page';
+import EditSubConditions from '../editSubConditionsPage/editSubConditions.mini.page';
 
 import './conditions.mini.styles.css';
 function Conditions() {
@@ -33,10 +40,15 @@ function Conditions() {
 
   const classes = useStyles();
 
+  const handleEditSubProfileIcon = () => {
+    alert('handleEditSubProfileIcon');
+  };
+
   return (
     <>
       {/* <Label label='Conditions' className='header-conditions' /> */}
       <Label label='Set Custom Conditions' className='header-conditions' />
+
       <AddFields
         sx={{
           backgroundColor: '#04724D',
@@ -95,18 +107,23 @@ function Conditions() {
           />
         }
         testComponent4={
-          <Dropdown
-            items={menu}
-            label={value}
-            handleChange={handleChange}
-            value={value}
-            inputLabel={value ? value : 'Server - MT4'}
-            sx={{
-              width: 189.3,
-              background: 'linear-gradient(21deg, #10abff, #1beabd)',
-              borderRadius: 4,
-            }}
-          />
+          <>
+            <Dropdown
+              items={menu}
+              label={value}
+              handleChange={handleChange}
+              value={value}
+              inputLabel={value ? value : 'Server - MT4'}
+              sx={{
+                width: 189.3,
+                background: 'linear-gradient(21deg, #10abff, #1beabd)',
+                borderRadius: 4,
+              }}
+            />
+            <SeeGroups />
+            <EditSubConditions />
+            <DeleteItemIcon onClick={handleEditSubProfileIcon} />
+          </>
         }
       />
     </>

@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import Box from '@mui/material/Box';
 import Button from '@mui/material/Button';
 import Modal from '@mui/material/Modal';
+import { CancelCircleIcon } from '../iconsComponent/Icons.component';
 import './modalUsage.styles.css';
 
 export default function ModalUsage(props) {
@@ -24,16 +25,21 @@ export default function ModalUsage(props) {
 
   return (
     <div className={props.className}>
-      <Button
-        variant={props.variant ? props.variant : 'contained'}
-        sx={props.sx}
-        onClick={handleOpen}
-      >
-        {props.popupButtonName}
-      </Button>
+      {props.icon ? (
+        props.icon
+      ) : (
+        <Button
+          variant={props.variant ? props.variant : 'contained'}
+          sx={props.sx}
+          onClick={handleOpen}
+        >
+          {props.popupButtonName}
+        </Button>
+      )}
+
       <Modal
-        open={open}
-        onClose={handleClose}
+        open={props.open ? props.open : open}
+        onClose={props.handleClose ? props.handleClose : handleClose}
         aria-labelledby='modal-modal-title'
         aria-describedby='modal-modal-description'
       >
