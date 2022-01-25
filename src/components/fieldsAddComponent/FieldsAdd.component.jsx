@@ -42,25 +42,25 @@ function FieldsAdd(props) {
     <div className='new-main-fieldsAdd container1-fieldsAdd'>
       <div className='div1-main-fieldsAdd'>
         <div className='parentButton-fieldsAdd'>
-          <div className='div1-Button-fieldsAdd'>
+          <div className=''>
             <Label
               label={props.field1 ? props.field1 : 'FieldName'}
               className='label-fieldsAdd'
             />
           </div>
-          <div className='div2-Button-fieldsAdd'>
+          <div className='label1-wrapper-addFields'>
             <Label
               label={props.field2 ? props.field2 : 'IsRequired'}
               className='label-fieldsAdd'
             />
           </div>
-          <div className='div3-Button-fieldsAdd'>
+          <div className='label2-wrapper-addFields'>
             <Label
               label={props.field3 ? props.field3 : 'Remove'}
               className='label-fieldsAdd'
             />
           </div>
-          <div className='div4-Button-fieldsAdd'>
+          <div className='label3-wrapper-addFields'>
             <Label
               label={props.field4 ? props.field4 : 'Type'}
               className='label-fieldsAdd'
@@ -71,7 +71,7 @@ function FieldsAdd(props) {
       {/* <div className='parentButton-fieldsAdd'> */}
 
       <div className='div2-main-fieldsAdd'>
-        <BreakLine />
+        <BreakLine className='breakLine-fieldsAdd' />
       </div>
 
       <div className='div3-main-fieldsAdd'>

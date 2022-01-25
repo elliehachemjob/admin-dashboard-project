@@ -28,26 +28,6 @@ function Conditions() {
         backgroundColor: '',
         opacity: 1,
       },
-      button: {
-        backgroundColor: '#11468F',
-        borderRadius: '20px',
-        '&:hover': {
-          backgroundColor: '#11468F50',
-          borderRadius: '20px',
-        },
-      },
-      dropdown: {
-        border: '2px solid #94b3fd20',
-        backgroundColor: '#94b3fd15',
-        minWidth: 189.3,
-        borderRadius: '10px',
-        opacity: 0.3,
-        '&:hover,&:focus': {
-          border: '2px solid #94b3fd20',
-          backgroundColor: '#94b3fd20',
-          opacity: 0.3,
-        },
-      },
     },
   }));
 
@@ -55,11 +35,8 @@ function Conditions() {
 
   return (
     <>
-      <Label label='Conditions' className='main-header-applicationFlow' />
-      <Label
-        label='Set Custom Conditions'
-        className='main-header-applicationFlow'
-      />
+      {/* <Label label='Conditions' className='header-conditions' /> */}
+      <Label label='Set Custom Conditions' className='header-conditions' />
       <AddFields
         sx={{
           backgroundColor: '#04724D',
@@ -87,7 +64,7 @@ function Conditions() {
         field1='Name'
         field2='Nationality'
         field3='Country '
-        field4='KYC Profile'
+        field4='Profile'
         field5='Add Condition'
         isField6={true}
         testComponent1={

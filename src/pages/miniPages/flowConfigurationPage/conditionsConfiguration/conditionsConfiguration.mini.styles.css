@@ -1,14 +1,14 @@
-.wrapper-addIcon-flowConfiguration {
+.wrapper-addIcon-conditionsConfiguration {
   display: flex;
 }
 
-.label-addIcon-flowConfiguration {
+.label-addIcon-conditionsConfiguration {
 }
 
-.addItemIcon-flowConfiguration {
+.addItemIcon-conditionsConfiguration {
 }
 
-.parent-flowConfiguration {
+.parent-conditionsConfiguration {
   display: flex;
   justify-content: flex-start;
   align-items: flex-start;
@@ -16,55 +16,54 @@
   margin-left: 2px;
 }
 
-.div1-flowConfiguration {
+.div1-conditionsConfiguration {
   padding-right: 5px;
   margin-left: -2px;
 }
 
-.div2-flowConfiguration {
+.div2-conditionsConfiguration {
   padding-left: 5px;
   padding-right: 5px;
   margin-left: -2px;
 }
 
-.div3-flowConfiguration {
+.div3-conditionsConfiguration {
   padding-left: 5px;
   padding-right: 5px;
   margin-left: -2px;
 }
 
-.div4-flowConfiguration {
+.div4-conditionsConfiguration {
   padding-left: 5px;
   padding-right: 5px;
   margin-left: -2px;
 }
 
-.cancelCircleIcon-flowConfigurationPage {
+.cancelCircleIcon-conditionsConfigurationPage {
   color: #11468f;
 }
 
-.specialLabel-flowConfiguration {
+.specialLabel-conditionsConfiguration {
   text-decoration: underline;
 }
 
-.header-flowConfiguration {
-  margin-bottom: 20px;
+.header-conditionsConfiguration {
   padding-bottom: 20px;
-}
-
-.main-header-flowConfiguration {
-  margin-bottom: 20px;
-  padding-bottom: 20px;
+  padding-top: 20px;
+  padding-left: 9px;
   font-weight: 1000;
 }
 
-.label-flowConfiguration {
+.label-conditionsConfiguration {
+  padding-left: 9px;
+  padding-bottom: 10px;
+  font-weight: 1000;
 }
 
-.dropdown-flowConfiguration {
+.dropdown-conditionsConfiguration {
 }
 
-.toggle-list-parent-flowConfiguration {
+.toggle-list-parent-conditionsConfiguration {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   grid-template-rows: repeat(1, 1fr);
@@ -72,25 +71,25 @@
   grid-row-gap: 0px;
 }
 
-.div1-toggle-list-parent-flowConfiguration {
+.div1-toggle-list-parent-conditionsConfiguration {
   grid-area: 1 / 1 / 2 / 2;
 }
-.div2-toggle-list-parent-flowConfiguration {
+.div2-toggle-list-parent-conditionsConfiguration {
   grid-area: 1 / 3 / 2 / 4;
 }
 
-.button-wrapper-flowConfiguration {
+.button-wrapper-conditionsConfiguration {
   margin-top: 15px;
   margin-bottom: 15px;
 }
 
-.breakLine-flowConfiguration {
+.breakLine-conditionsConfiguration {
   margin-left: 10px;
   margin-right: 22px;
   opacity: 0.2;
 }
 
-.container1-flowConfiguration {
+.container1-conditionsConfiguration {
   border: 2px solid #1c6ea410;
   border-radius: 10px 10px 10px 10px;
   padding: 20px;
@@ -98,72 +97,65 @@
   background-color: #94b3fd15;
 }
 
-.button-flowConfiguration {
-  border: 2px solid;
-  background-color: #94b3fd15;
-  border-radius: 10px;
+.button-conditionsConfiguration {
+  padding: 5px;
 }
 
-.button-flowConfiguration:hover {
-  border: 2px solid #94b3fd20;
-  background-color: #94b3fd20;
-}
-
-.parent-saveButton-flowConfiguration {
+.parent-saveButton-conditionsConfiguration {
   display: flex;
   justify-content: flex-end;
 }
 
-.div1-saveButton-flowConfiguration {
+.div1-saveButton-conditionsConfiguration {
 }
 
-.input-flowConfiguration {
+.input-conditionsConfiguration {
 }
 
-.searchInput-flowConfiguration {
+.searchInput-conditionsConfiguration {
 }
 
-.radio-flowConfiguration {
+.radio-conditionsConfiguration {
 }
 
-.description-flowConfiguration {
+.description-conditionsConfiguration {
 }
 
-.table-flowConfiguration {
+.table-conditionsConfiguration {
 }
 
-.checkBox-flowConfiguration {
+.checkBox-conditionsConfiguration {
 }
 
-.smallLogo-flowConfiguration {
+.smallLogo-conditionsConfiguration {
 }
-.largeLogo-flowConfiguration {
-}
-
-.bellIcon-flowConfiguration {
+.largeLogo-conditionsConfiguration {
 }
 
-.deleteItemIcon-flowConfiguration {
+.bellIcon-conditionsConfiguration {
 }
 
-.refreshIcon-flowConfiguration {
+.deleteItemIcon-conditionsConfiguration {
 }
 
-.copyItemIcon-flowConfiguration {
+.refreshIcon-conditionsConfiguration {
 }
 
-.addItemIcon-flowConfiguration {
+.copyItemIcon-conditionsConfiguration {
 }
 
-.editItemIcon-flowConfiguration {
-}
-.statusIcon-flowConfiguration {
+.addItemIcon-conditionsConfiguration {
 }
 
-.specialLinkIcon-flowConfiguration {
+.editItemIcon-conditionsConfiguration {
+}
+.statusIcon-conditionsConfiguration {
 }
 
-.profileIcon-flowConfiguration {
+.specialLinkIcon-conditionsConfiguration {
+}
+
+.profileIcon-conditionsConfiguration {
 }
 
 .parent-conditionsConfiguration {
@@ -184,4 +176,22 @@
 
 .div6-conditionsConfiguration {
   padding: 5px;
+}
+
+.parent-conditionsConfiguration {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: 1fr;
+  grid-column-gap: 100px;
+  grid-row-gap: 0px;
+}
+
+.div1-conditionsConfiguration {
+  grid-area: 1 / 1 / 2 / 2;
+}
+.div2-conditionsConfiguration {
+  grid-area: 1 / 2 / 2 / 3;
+}
+.div3-parent-conditionsConfiguration {
+  grid-area: 1 / 3 / 2 / 4;
 }

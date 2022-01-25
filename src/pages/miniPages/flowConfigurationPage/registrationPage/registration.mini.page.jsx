@@ -9,28 +9,34 @@ import './registration.mini.styles.css';
 
 function Registration() {
   const [label1, setLabel1] = useState([
-    { id: 1, label: 'Auto Login' },
-    { id: 2, label: 'Green Theme' },
-    { id: 3, label: 'Is Enabled' },
+    {
+      id: 1,
+      label: <Label label='Auto Login' className='label-registration' />,
+    },
+    {
+      id: 2,
+      label: <Label label='Green Theme' className='label-registration' />,
+    },
+    {
+      id: 3,
+      label: <Label label='Is Enabled' className='label-registration' />,
+    },
   ]);
   return (
     <>
       {/* 1st */}
-      <Label label='Configuration' className='main-header-applicationFlow' />
-      <Label
-        label='Set Up Configuration'
-        className='main-header-applicationFlow'
-      />
+      {/* <Label label='Configuration' className='main-header-applicationFlow' /> */}
+      <Label label='Set Up Configuration' className='header-registration' />
       <ToggleList
         key={label1.id}
         list={label1}
-        parent='toggle-list-parent-notificationPage'
-        div1='div1-toggle-list-parent-notificationPage'
-        div2='div2-toggle-list-parent-notificationPage'
+        parent='toggle-list-parent-registration'
+        div1='div1-toggle-list-parent-registration'
+        div2='div2-toggle-list-parent-registration'
       />
       {/* 2nd */}
-      <Label label='Form' className='main-header-applicationFlow' />
-      <Label label='Build The Form' className='main-header-applicationFlow' />
+      {/* <Label label='Form' className='header-applicationFlow' /> */}
+      <Label label='Build The Form' className='header-registration' />
 
       <FlowStepsModal
         modalButtonName={'Customize Fields'}
@@ -56,14 +62,16 @@ function Registration() {
         field10Description='Allows you to allow user to GetCode'
         allowExtraFields
       />
-      <BuildForm />
+      <div className='buildForm-wrapper-registration'>
+        <BuildForm />
+      </div>
       <Button
         className='button-fieldsAdd'
         name={
-          <div className='wrapper-addIcon-applicationFlow'>
+          <div className='wrapper-addIcon-registration'>
             <Label
               label='Apply Changes'
-              className='label-addIcon-applicationFlow'
+              className='label-addIcon-registration'
             />
           </div>
         }

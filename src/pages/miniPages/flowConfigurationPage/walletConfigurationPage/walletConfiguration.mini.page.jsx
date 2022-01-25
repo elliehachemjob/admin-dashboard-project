@@ -10,42 +10,53 @@ function WalletConfiguration() {
     setValue(event.target.value);
   };
 
+  //  <Label
+  //           label='Wallet Configuration'
+  //           className='header-walletConfiguration'
+  //         />
+  //         <Label
+  //           label='Set Default Wallet Type and Currency '
+  //           className='header-walletConfiguration'
+  //         />
+
   return (
-    <>
+    <div className='parent-walletConfiguration'>
       {/* 1st */}
-      <Label
-        label='Wallet Configuration'
-        className='main-header-applicationFlow'
-      />
-      <Label
-        label='Set Default Wallet Type and Currency '
-        className='main-header-applicationFlow'
-      />
-      <Label label='Type' className='main-header-applicationFlow' />
-      <Dropdown
-        items={menu}
-        label={value}
-        handleChange={handleChange}
-        value={value}
-        inputLabel={value ? value : 'Server - MT4'}
-      />
-      <Label label='Wallet Type' className='main-header-applicationFlow' />
-      <Dropdown
-        items={menu}
-        label={value}
-        handleChange={handleChange}
-        value={value}
-        inputLabel={value ? value : 'Server - MT4'}
-      />
-      <Label label='Currency' className='main-header-applicationFlow' />
-      <Dropdown
-        items={menu}
-        label={value}
-        handleChange={handleChange}
-        value={value}
-        inputLabel={value ? value : 'Server - MT4'}
-      />
-    </>
+      <div className='div1-walletConfiguration'>
+        <Label label='Type' className='header-walletConfiguration' />
+        <Dropdown
+          items={menu}
+          label={value}
+          handleChange={handleChange}
+          value={value}
+          inputLabel={value ? value : 'Server - MT4'}
+          sx={{ marginLeft: 0.2, minWidth: 190, borderRadius: 4 }}
+        />
+      </div>
+
+      <div className='div2-walletConfiguration'>
+        <Label label='Wallet Type' className='header-walletConfiguration' />
+        <Dropdown
+          items={menu}
+          label={value}
+          handleChange={handleChange}
+          value={value}
+          inputLabel={value ? value : 'Server - MT4'}
+          sx={{ marginLeft: 0.2, minWidth: 190, borderRadius: 4 }}
+        />
+      </div>
+      <div className='div3-walletConfiguration'>
+        <Label label='Currency' className='header-walletConfiguration' />
+        <Dropdown
+          items={menu}
+          label={value}
+          handleChange={handleChange}
+          value={value}
+          inputLabel={value ? value : 'Server - MT4'}
+          sx={{ marginLeft: 0.2, minWidth: 190, borderRadius: 4 }}
+        />
+      </div>
+    </div>
   );
 }
 

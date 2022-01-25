@@ -35,38 +35,43 @@ function Basics() {
   const classes = useStyles();
 
   return (
-    <>
+    <div className='parent-basics'>
       {/* 1st */}
-      <Label label='Configuration' className='header-basics' />
-      <ToggleList
-        key={label1.id}
-        list={label1}
-        parent='toggle-list-parent-basics'
-        div1='div1-toggle-list-parent-basics'
-        div2='div2-toggle-list-parent-basics'
-      />
-      <Label label='Title' className='header-basics' />
-      <Input
-        label='Activation Logins'
-        style={{
-          marginBottom: 2.5,
-          marginLeft: 0.8,
-          width: 190,
-        }}
-        textFieldStyles={classes.textField}
-      />
-      {/* 2nd */}
-      <Label label='Type' className='header-basics' />
-      <Label label='Select Permission' className='label-basics' />
-      <Dropdown
-        items={menu}
-        label={value}
-        handleChange={handleChange}
-        value={value}
-        inputLabel={value ? value : 'Server - MT4'}
-        sx={{ marginLeft: 0.2, minWidth: 190, borderRadius: 4 }}
-      />
-    </>
+      <div className='div1-parent-basics'>
+        <Label label='Configuration' className='header-basics' />
+        <ToggleList
+          key={label1.id}
+          list={label1}
+          parent='toggle-list-parent-basics'
+          div1='div1-toggle-list-parent-basics'
+          div2='div2-toggle-list-parent-basics'
+        />
+      </div>
+      <div className='div2-parent-basics'>
+        <Label label='Title' className='header-basics' />
+        <Input
+          label='Activation Logins'
+          style={{
+            // marginBottom: 2.5,
+            marginLeft: 0.8,
+            width: 190,
+          }}
+          textFieldStyles={classes.textField}
+        />
+      </div>
+
+      <div className='div3-parent-basics'>
+        <Label label='Select Permission' className='header-basics' />
+        <Dropdown
+          items={menu}
+          label={value}
+          handleChange={handleChange}
+          value={value}
+          inputLabel={value ? value : 'Server - MT4'}
+          sx={{ marginLeft: 0.2, minWidth: 190, borderRadius: 4 }}
+        />
+      </div>
+    </div>
   );
 }
 
