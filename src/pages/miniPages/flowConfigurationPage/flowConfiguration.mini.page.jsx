@@ -26,62 +26,100 @@ function FlowConfiguration() {
     useState('default');
   const [conditionsIcon, setConditionsIcon] = useState('default');
   const [registrationIcon, setRegistrationIcon] = useState('default');
+  const [basicBreakLine, setBasicBreakLine] = useState(true);
+  const [WalletConfigurationBreakLine, setWalletConfiguration] = useState(true);
+  const [ConditionsConfigurationBreakLine, setConditionsConfiguration] =
+    useState(true);
+  const [ConditionsBreakLine, setConditionsBreakLine] = useState(true);
+
   const BasicIcon = () => {
     if (basicsIcon === 'default') {
-      return <BlackCircleIcon />;
+      return <BlackCircleIcon className='icon-flowConfiguration-default' />;
     }
     if (basicsIcon) {
-      return <CorrectCircleIcon />;
+      return <CorrectCircleIcon className='icon-flowConfiguration-default' />;
     }
     if (!basicsIcon) {
-      return <CancelCircleIcon />;
+      return (
+        <CancelCircleIcon className='icon-flowConfiguration-notComplete' />
+      );
     }
   };
   const WalletConfigurationIcon = () => {
     if (walletConfigurationIcon === 'default') {
-      return <BlackCircleIcon />;
+      return (
+        <BlackCircleIcon
+          className='icon-flowConfiguration-defaultsExceptBasics'
+          sx={{ width: '15px', height: '15px' }}
+        />
+      );
     }
     if (walletConfigurationIcon) {
-      return <CorrectCircleIcon />;
+      return <CorrectCircleIcon className='icon-flowConfiguration-default' />;
     }
     if (!walletConfigurationIcon) {
-      return <CancelCircleIcon />;
+      return (
+        <CancelCircleIcon className='icon-flowConfiguration-notComplete' />
+      );
     }
   };
   const ConditionsConfigurationIcon = () => {
     if (conditionsConfigurationIcon === 'default') {
-      return <BlackCircleIcon />;
+      return (
+        <BlackCircleIcon
+          className='icon-flowConfiguration-defaultsExceptBasics'
+          sx={{ width: '15px', height: '15px' }}
+        />
+      );
     }
     if (conditionsConfigurationIcon) {
-      return <CorrectCircleIcon />;
+      return <CorrectCircleIcon className='icon-flowConfiguration-default' />;
     }
     if (!conditionsConfigurationIcon) {
-      return <CancelCircleIcon />;
+      return (
+        <CancelCircleIcon className='icon-flowConfiguration-notComplete' />
+      );
     }
   };
   const ConditionsIcon = () => {
     if (conditionsIcon === 'default') {
-      return <BlackCircleIcon />;
+      return (
+        <BlackCircleIcon
+          className='icon-flowConfiguration-defaultsExceptBasics'
+          sx={{ width: '15px', height: '15px' }}
+        />
+      );
     }
     if (conditionsIcon) {
-      return <CorrectCircleIcon />;
+      return <CorrectCircleIcon className='icon-flowConfiguration-default' />;
     }
     if (!conditionsIcon) {
-      return <CancelCircleIcon />;
+      return (
+        <CancelCircleIcon className='icon-flowConfiguration-notComplete' />
+      );
     }
   };
   const RegistrationIcon = () => {
     if (registrationIcon === 'default') {
-      return <BlackCircleIcon />;
+      return (
+        <BlackCircleIcon
+          className='icon-flowConfiguration-defaultsExceptBasics'
+          sx={{ width: '15px', height: '15px' }}
+        />
+      );
     }
     if (registrationIcon) {
-      return <CorrectCircleIcon />;
+      return <CorrectCircleIcon className='icon-flowConfiguration-default' />;
     }
     if (!registrationIcon) {
-      return <CancelCircleIcon />;
+      return (
+        <CancelCircleIcon className='icon-flowConfiguration-notComplete' />
+      );
     }
   };
   const handleBasicsIcon = (e) => {
+    setBasicBreakLine(false);
+
     setRightSide('basics');
     setBasicsIcon(true);
 
@@ -89,7 +127,10 @@ function FlowConfiguration() {
       setBasicsIcon(false);
     }
   };
+
   const handleWalletConfigurationIcon = (e) => {
+    setWalletConfiguration(false);
+
     setRightSide('Wallet Configuration');
 
     setWalletConfigurationIcon(true);
@@ -99,6 +140,7 @@ function FlowConfiguration() {
     }
   };
   const handleConditionsConfigurationIcon = (e) => {
+    setConditionsConfiguration(false);
     setRightSide('Conditions Configuration');
 
     setConditionsConfigurationIcon(true);
@@ -107,6 +149,7 @@ function FlowConfiguration() {
     }
   };
   const handleConditionsIcon = (e) => {
+    setConditionsBreakLine(false);
     setRightSide('Conditions');
 
     setConditionsIcon(true);
@@ -140,119 +183,113 @@ function FlowConfiguration() {
   };
 
   return (
-    <div className='parent-wholeContainer'>
-      {/* 1st 
-      1-5 parts leftSide */}
-      <div className='div1-wholeContainer'>
-        <div className='wrapper-FlowConfiguration'>
-          <div className='inner-iconWrapper-flowConfiguration'>
-            <BasicIcon />
-            <div className='inner-label-flowConfiguration'>
-              <Label
-                label='Basics'
-                className='label-FlowConfiguration'
-                size={18.72}
-                onClick={handleBasicsIcon}
+    <div className='newWrapper-flowConfiguration'>
+      <div style={{ minWidth: 300 }} id='mySidebar'>
+        <div className='div1-wholeContainer'>
+          <div className='wrapper-FlowConfiguration'>
+            <div className='inner-iconWrapper-flowConfiguration'>
+              <BasicIcon />
+              <div className='inner-label-flowConfiguration'>
+                <Label
+                  label='Basics'
+                  className='label-FlowConfiguration'
+                  size={18.72}
+                  onClick={handleBasicsIcon}
+                />
+              </div>
+            </div>
+            <div className='inner-breakLineWrapper-flowConfiguration'>
+              <BreakLine
+                className={
+                  basicBreakLine
+                    ? 'breakLine-flowConfiguration'
+                    : 'breakLine-flowConfiguration breakLine-flowConfiguration-checked '
+                }
               />
             </div>
-          </div>
-          <div className='inner-breakLineWrapper-flowConfiguration'>
-            <BreakLine className='breakLine-flowConfiguration' />
-          </div>
-          {/* 2nd */}
+            {/* 2nd */}
 
-          <div className='inner-iconWrapper-flowConfiguration'>
-            <WalletConfigurationIcon />
-            <div className='inner-label-flowConfiguration'>
-              <Label
-                label='Wallet Configuration'
-                className='label-FlowConfiguration'
-                size={18.72}
-                onClick={handleWalletConfigurationIcon}
+            <div className='inner-iconWrapper-flowConfiguration'>
+              <WalletConfigurationIcon />
+              <div className='inner-label-flowConfiguration'>
+                <Label
+                  label='Wallet Configuration'
+                  className='label-FlowConfiguration'
+                  size={18.72}
+                  onClick={handleWalletConfigurationIcon}
+                />
+              </div>
+            </div>
+            <div className='inner-breakLineWrapper-flowConfiguration'>
+              <BreakLine
+                className={
+                  WalletConfigurationBreakLine
+                    ? 'breakLine-flowConfiguration'
+                    : 'breakLine-flowConfiguration breakLine-flowConfiguration-checked'
+                }
               />
             </div>
-          </div>
-          <div className='inner-breakLineWrapper-flowConfiguration'>
-            <BreakLine className='breakLine-flowConfiguration' />
-          </div>
-          {/* 3rd */}
-          <div className='inner-iconWrapper-flowConfiguration'>
-            <ConditionsConfigurationIcon />
-            <div className='inner-label-flowConfiguration'>
-              <Label
-                label='Conditions Configuration'
-                className='label-FlowConfiguration'
-                size={18.72}
-                onClick={handleConditionsConfigurationIcon}
-              />
+            {/* 3rd */}
+            <div className='inner-iconWrapper-flowConfiguration'>
+              <ConditionsConfigurationIcon />
+              <div className='inner-label-flowConfiguration'>
+                <Label
+                  label='Conditions Configuration'
+                  className='label-FlowConfiguration'
+                  size={18.72}
+                  onClick={handleConditionsConfigurationIcon}
+                />
+              </div>
             </div>
-          </div>
 
-          <div className='inner-breakLineWrapper-flowConfiguration'>
-            <BreakLine className='breakLine-flowConfiguration' />
-          </div>
-
-          {/* 4th */}
-          <div className='inner-iconWrapper-flowConfiguration'>
-            <ConditionsIcon />
-            <div className='inner-label-flowConfiguration'>
-              <Label
-                label='Conditions'
-                className='label-FlowConfiguration'
-                size={18.72}
-                onClick={handleConditionsIcon}
+            <div className='inner-breakLineWrapper-flowConfiguration'>
+              <BreakLine
+                className={
+                  ConditionsConfigurationBreakLine
+                    ? 'breakLine-flowConfiguration'
+                    : 'breakLine-flowConfiguration breakLine-flowConfiguration-checked '
+                }
               />
             </div>
-          </div>
-          <div className='inner-breakLineWrapper-flowConfiguration'>
-            <BreakLine className='breakLine-flowConfiguration' />
-          </div>
-          {/* 5th */}
-          <div className='inner-iconWrapper-flowConfiguration'>
-            <RegistrationIcon />
-            <div className='inner-label-flowConfiguration'>
-              <Label
-                label='Registration'
-                className='label-FlowConfiguration'
-                size={18.72}
-                onClick={handleRegistrationIcon}
+
+            {/* 4th */}
+            <div className='inner-iconWrapper-flowConfiguration'>
+              <ConditionsIcon />
+              <div className='inner-label-flowConfiguration'>
+                <Label
+                  label='Conditions'
+                  className='label-FlowConfiguration'
+                  size={18.72}
+                  onClick={handleConditionsIcon}
+                />
+              </div>
+            </div>
+            <div className='inner-breakLineWrapper-flowConfiguration'>
+              <BreakLine
+                className={
+                  ConditionsBreakLine
+                    ? 'breakLine-flowConfiguration'
+                    : 'breakLine-flowConfiguration breakLine-flowConfiguration-checked'
+                }
               />
+            </div>
+            {/* 5th */}
+            <div className='inner-iconWrapper-flowConfiguration'>
+              <RegistrationIcon />
+              <div className='inner-label-flowConfiguration'>
+                <Label
+                  label='Registration'
+                  className='label-FlowConfiguration'
+                  size={18.72}
+                  onClick={handleRegistrationIcon}
+                />
+              </div>
             </div>
           </div>
         </div>
       </div>
-      {/* 2nd */}
       <div className='div2-wholeContainer'>
         <RightSideBasics />
-      </div>
-      {/* 3rd last part  */}
-      <div className='div3-wholeContainer'>
-        <div className='parent-1Button-flowConfiguration'>
-          <div className='div1-1Button-flowConfiguration'>
-            <Button
-              className='button-fieldsAdd'
-              name={
-                <div className=''>
-                  <Label
-                    label='Save'
-                    className='label-addIcon-applicationFlow'
-                  />
-                </div>
-              }
-              variant='contained'
-              sx={{
-                backgroundColor: '#2B3A67',
-                borderRadius: '10px',
-                fontWeight: 600,
-                marginRight: 3,
-                '&:hover': {
-                  backgroundColor: '#5E807F',
-                  borderRadius: '10px',
-                },
-              }}
-            />
-          </div>
-        </div>
       </div>
     </div>
   );

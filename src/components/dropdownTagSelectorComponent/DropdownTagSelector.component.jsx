@@ -8,7 +8,7 @@ import FormControl from '@mui/material/FormControl';
 import Select from '@mui/material/Select';
 import Chip from '@mui/material/Chip';
 
-function DropdownTagSelector() {
+function DropdownTagSelector(props) {
   const theme = useTheme();
   const [personName, setPersonName] = useState([]);
   const ITEM_HEIGHT = 48;
@@ -17,7 +17,9 @@ function DropdownTagSelector() {
     PaperProps: {
       style: {
         maxHeight: ITEM_HEIGHT * 4.5 + ITEM_PADDING_TOP,
-        width: 250,
+        width: props.widthTagSelectorOpened
+          ? props.widthTagSelectorOpened
+          : 250,
       },
     },
   };
@@ -43,7 +45,7 @@ function DropdownTagSelector() {
   };
 
   return (
-    <FormControl sx={{ margin: 0, width: 300 }}>
+    <FormControl sx={props.sx ? props.sx : { margin: 0, width: 300 }}>
       <InputLabel id='demo-multiple-chip-label'> Chip </InputLabel>
       <Select
         labelId='demo-multiple-chip-label'

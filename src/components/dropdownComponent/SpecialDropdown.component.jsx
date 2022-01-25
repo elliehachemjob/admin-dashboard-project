@@ -24,7 +24,7 @@ function Dropdown(props) {
               : {
                   border: '',
                   backgroundColor: '',
-                  minWidth: 300,
+                  minWidth: 189.3,
                   borderRadius: '10px',
                   opacity: 1,
 
@@ -38,7 +38,12 @@ function Dropdown(props) {
         >
           {props.items.map((item) => {
             return (
-              <MenuItem style={{ width: 300 }} value={item.value}>
+              <MenuItem
+                style={{
+                  width: props.menuItemWidth ? props.menuItemWidth : 189.3,
+                }}
+                value={item.value}
+              >
                 {item.value}
               </MenuItem>
             );

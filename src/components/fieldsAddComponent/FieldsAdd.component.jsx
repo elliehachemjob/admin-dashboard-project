@@ -9,9 +9,6 @@ import CheckBox from '../checkboxComponent/CheckBox.component';
 import SearchInput from '../searchInputComponent/SearchInput.component';
 import ListFieldsAddComponent from '../../components/ListComponents/ListFieldsAddComponent/ListFieldsAddComponent.component';
 
-
-
-
 function FieldsAdd(props) {
   const [addedField, setAddedField] = useState(true);
   const [value, setValue] = useState();
@@ -42,40 +39,42 @@ function FieldsAdd(props) {
   };
 
   return (
-    <div className='container1-fieldsAdd'>
-      <>
-        <div className='parentLabel-fieldsAdd'>
-          <div className='div1-label-fieldsAdd'>
+    <div className='new-main-fieldsAdd container1-fieldsAdd'>
+      <div className='div1-main-fieldsAdd'>
+        <div className='parentButton-fieldsAdd'>
+          <div className='div1-Button-fieldsAdd'>
             <Label
               label={props.field1 ? props.field1 : 'FieldName'}
               className='label-fieldsAdd'
             />
-            <BreakLine className='breakLine-fieldsAdd' />
           </div>
-          <div className='div2-label-fieldsAdd'>
+          <div className='div2-Button-fieldsAdd'>
             <Label
               label={props.field2 ? props.field2 : 'IsRequired'}
               className='label-fieldsAdd'
             />
-            <BreakLine className='breakLine-fieldsAdd' />
           </div>
-          <div className='div3-label-fieldsAdd'>
+          <div className='div3-Button-fieldsAdd'>
             <Label
               label={props.field3 ? props.field3 : 'Remove'}
               className='label-fieldsAdd'
             />
-            <BreakLine className='breakLine-fieldsAdd' />
           </div>
-          <div className='div4-label-fieldsAdd'>
+          <div className='div4-Button-fieldsAdd'>
             <Label
               label={props.field4 ? props.field4 : 'Type'}
               className='label-fieldsAdd'
             />
-            <BreakLine className='breakLine-fieldsAdd' />
           </div>
         </div>
-        {/* <div className='parentButton-fieldsAdd'> */}
+      </div>
+      {/* <div className='parentButton-fieldsAdd'> */}
 
+      <div className='div2-main-fieldsAdd'>
+        <BreakLine />
+      </div>
+
+      <div className='div3-main-fieldsAdd'>
         <ListFieldsAddComponent
           parent='parentButton-fieldsAdd'
           searchInput={
@@ -174,7 +173,7 @@ function FieldsAdd(props) {
             )}
           </div>
         </div>
-      </>
+      </div>
     </div>
   );
 }

@@ -93,12 +93,22 @@ function Conditions() {
         testComponent1={
           <Input
             label='Activation Logins'
-            style={{ marginTop: 2, marginBottom: 2, width: 300 }}
+            style={{ width: 189.3 }}
             textFieldStyles={classes.textField}
           />
         }
-        testComponent2={<DropdownTagSelector />}
-        testComponent3={<DropdownTagSelector />}
+        testComponent2={
+          <DropdownTagSelector
+            sx={{ width: 189.3 }}
+            widthTagSelectorOpened={100}
+          />
+        }
+        testComponent3={
+          <DropdownTagSelector
+            sx={{ width: 189.3 }}
+            widthTagSelectorOpened={100}
+          />
+        }
         testComponent4={
           <Dropdown
             items={menu}
@@ -106,6 +116,7 @@ function Conditions() {
             handleChange={handleChange}
             value={value}
             inputLabel={value ? value : 'Server - MT4'}
+            sx={{ width: 189.3 }}
           />
         }
       />

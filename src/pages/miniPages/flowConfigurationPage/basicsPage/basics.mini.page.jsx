@@ -22,34 +22,12 @@ function Basics() {
     textField: {
       border: '',
       backgroundColor: '',
-      minWidth: 189.3,
       borderRadius: '10px',
       opacity: 1,
-
       '&:hover,&:focus': {
         border: ' ',
         backgroundColor: '',
         opacity: 1,
-      },
-      button: {
-        backgroundColor: '#11468F',
-        borderRadius: '20px',
-        '&:hover': {
-          backgroundColor: '#11468F50',
-          borderRadius: '20px',
-        },
-      },
-      dropdown: {
-        border: '2px solid #94b3fd20',
-        backgroundColor: '#94b3fd15',
-        minWidth: 189.3,
-        borderRadius: '10px',
-        opacity: 0.3,
-        '&:hover,&:focus': {
-          border: '2px solid #94b3fd20',
-          backgroundColor: '#94b3fd20',
-          opacity: 0.3,
-        },
       },
     },
   }));
@@ -59,32 +37,34 @@ function Basics() {
   return (
     <>
       {/* 1st */}
-      <Label label='Configuration' className='main-header-applicationFlow' />
+      <Label label='Configuration' className='header-basics' />
       <ToggleList
         key={label1.id}
         list={label1}
-        parent='toggle-list-parent-notificationPage'
-        div1='div1-toggle-list-parent-notificationPage'
-        div2='div2-toggle-list-parent-notificationPage'
+        parent='toggle-list-parent-basics'
+        div1='div1-toggle-list-parent-basics'
+        div2='div2-toggle-list-parent-basics'
       />
-      <Label label='Title' className='main-header-applicationFlow' />
+      <Label label='Title' className='header-basics' />
       <Input
         label='Activation Logins'
-        style={{ marginTop: 2, marginBottom: 2, width: 300 }}
+        style={{
+          marginBottom: 2.5,
+          marginLeft: 0.8,
+          width: 190,
+        }}
         textFieldStyles={classes.textField}
       />
       {/* 2nd */}
-      <Label label='Type' className='main-header-applicationFlow' />
-      <Label
-        label='Select Permission'
-        className='main-header-applicationFlow'
-      />
+      <Label label='Type' className='header-basics' />
+      <Label label='Select Permission' className='label-basics' />
       <Dropdown
         items={menu}
         label={value}
         handleChange={handleChange}
         value={value}
         inputLabel={value ? value : 'Server - MT4'}
+        sx={{ marginLeft: 0.2, minWidth: 190, borderRadius: 4 }}
       />
     </>
   );

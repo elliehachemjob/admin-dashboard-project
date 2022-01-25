@@ -27,7 +27,7 @@ export function CorrectIcon(props) {
 }
 
 export function BlackCircleIcon(props) {
-  return <FiberManualRecordIcon className={props.className} />;
+  return <FiberManualRecordIcon className={props.className} sx={props.sx} />;
 }
 
 export function BellIcon(props) {
