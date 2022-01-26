@@ -36,6 +36,9 @@ function WalletConfiguration() {
             borderRadius: 4,
             background: 'linear-gradient(21deg, #10abff, #1beabd)',
           }}
+          menuSx={{
+            width: 165,
+          }}
         />
       </div>
 
@@ -53,6 +56,9 @@ function WalletConfiguration() {
             borderRadius: 4,
             background: 'linear-gradient(21deg, #10abff, #1beabd)',
           }}
+          menuSx={{
+            width: 165,
+          }}
         />
       </div>
       <div className='div3-walletConfiguration'>
@@ -68,6 +74,9 @@ function WalletConfiguration() {
             minWidth: 165,
             borderRadius: 4,
             background: 'linear-gradient(21deg, #10abff, #1beabd)',
+          }}
+          menuSx={{
+            width: 165,
           }}
         />
       </div>

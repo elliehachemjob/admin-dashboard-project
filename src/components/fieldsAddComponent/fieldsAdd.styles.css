@@ -98,3 +98,7 @@
 .button-wrapper-fieldsAdd {
   width: 200px;
 }
+
+.button-wrapper-fieldsAdd-fixed {
+  padding-top: 20px;
+}

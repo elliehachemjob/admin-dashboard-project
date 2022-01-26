@@ -52,6 +52,7 @@ function ConditionsConfiguration() {
             marginLeft: 0.7,
             width: 165,
           }}
+          widthTagSelectorOpened={165}
         />
       </div>
       <div className='div2-layout-walletConfiguration'>

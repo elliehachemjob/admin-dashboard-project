@@ -144,34 +144,36 @@ function FieldsAdd(props) {
           </div>
           <div className='div2-Button-fieldsAdd'>
             {props.isField6 ? null : (
-              <Button
-                onClick={handleOnPressAdd}
-                className='button-fieldsAdd'
-                name={
-                  <div className='wrapper-addIcon-applicationFlow'>
-                    <AddItemIcon className='addItemIcon-applicationFlow' />
+              <div className='button-wrapper-fieldsAdd-fixed'>
+                <Button
+                  onClick={handleOnPressAdd}
+                  className='button-fieldsAdd'
+                  name={
+                    <div className='wrapper-addIcon-applicationFlow'>
+                      <AddItemIcon className='addItemIcon-applicationFlow' />
 
-                    <Label
-                      label={props.field6 ? props.field6 : 'Custom field'}
-                      className='label-addIcon-applicationFlow'
-                    />
-                  </div>
-                }
-                variant='contained'
-                sx={
-                  props.sx
-                    ? props.sx
-                    : {
-                        backgroundColor: '#11468F',
-                        borderRadius: '20px',
-                        fontWeight: 600,
-                        '&:hover': {
-                          backgroundColor: '#11468F50',
+                      <Label
+                        label={props.field6 ? props.field6 : 'Custom field'}
+                        className='label-addIcon-applicationFlow'
+                      />
+                    </div>
+                  }
+                  variant='contained'
+                  sx={
+                    props.sx
+                      ? props.sx
+                      : {
+                          backgroundColor: '#11468F',
                           borderRadius: '20px',
-                        },
-                      }
-                }
-              />
+                          fontWeight: 600,
+                          '&:hover': {
+                            backgroundColor: '#11468F50',
+                            borderRadius: '20px',
+                          },
+                        }
+                  }
+                />
+              </div>
             )}
           </div>
         </div>

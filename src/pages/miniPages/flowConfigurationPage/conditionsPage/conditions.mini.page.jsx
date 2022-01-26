@@ -114,6 +114,7 @@ function Conditions() {
                 background: 'linear-gradient(21deg, #10abff, #1beabd)',
                 borderRadius: 4,
               }}
+              menuSx={{ width: 165 }}
             />
             <div className='icons-wrapper-conditions'>
               <SeeGroups />

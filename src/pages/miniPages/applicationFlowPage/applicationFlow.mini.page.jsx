@@ -11,12 +11,14 @@ import ScrollableTab from '../../../components/scrollableTabComponent/Scrollable
 import MenuList from '../../../components/menuListComponent/MenuList.component';
 import {
   CancelCircleIcon,
-  AddItemIcon,
+  DeleteItemIcon,
 } from '../../../components/iconsComponent/Icons.component';
 import FlowStepsModal from './flowStepsModalPage/flowStepsModal.mini.page';
 import FlowListModal from './flowListModalPage/flowListModal.mini.page';
 import ServerChooseModal from './serverChooseModalPage/serverChooseModal.mini.page';
 import { makeStyles } from '@material-ui/core/styles';
+import CheckBox from '../../../components/checkboxComponent/CheckBox.component';
+import SearchInput from '../../../components/searchInputComponent/SearchInput.component';
 
 import './applicationFlow.mini.styles.css';
 
@@ -25,38 +27,26 @@ function ApplicationFlowPage() {
     textField: {
       border: '',
       backgroundColor: '',
-      minWidth: 189.3,
-      borderRadius: '10px',
+      borderRadius: '15px',
+      background: 'linear-gradient(21deg, #10abff, #1beabd)',
       opacity: 1,
-
       '&:hover,&:focus': {
         border: ' ',
         backgroundColor: '',
         opacity: 1,
       },
-      button: {
-        backgroundColor: '#11468F',
-        borderRadius: '20px',
-        '&:hover': {
-          backgroundColor: '#11468F50',
-          borderRadius: '20px',
-        },
-      },
-      dropdown: {
-        border: '2px solid #94b3fd20',
-        backgroundColor: '#94b3fd15',
-        minWidth: 189.3,
-        borderRadius: '10px',
-        opacity: 0.3,
-        '&:hover,&:focus': {
-          border: '2px solid #94b3fd20',
-          backgroundColor: '#94b3fd20',
-          opacity: 0.3,
-        },
-      },
     },
   }));
 
+  const [searchList, setSearchList] = useState([
+    { label: 'none' },
+    { label: 'Applicant Data' },
+    { label: 'Default Account Conditions' },
+    { label: 'Identity Verification' },
+    { label: 'Address Verification' },
+    { label: 'Complete your profile' },
+    { label: 'Submit & Review' },
+  ]);
   const classes = useStyles();
 
   const [flowName, setFlowName] = useState('USA Registration Flow');
@@ -143,10 +133,19 @@ function ApplicationFlowPage() {
               handleChange={handleChange}
               value={value}
               inputLabel={value ? value : 'Server - MT4'}
+              sx={{
+                marginLeft: 0.2,
+                minWidth: 165,
+                borderRadius: 4,
+                background: 'linear-gradient(21deg, #10abff, #1beabd)',
+              }}
+              menuSx={{
+                width: 165,
+              }}
             />
             <Input
               label='Activation Logins'
-              style={{ marginTop: 2, marginBottom: 2, width: 300 }}
+              style={{ marginTop: 2, marginBottom: 2, width: 165 }}
               textFieldStyles={classes.textField}
             />
             <AddFields
@@ -192,6 +191,15 @@ function ApplicationFlowPage() {
             handleChange={handleChange}
             value={value}
             inputLabel={value ? value : 'Server - MT4'}
+            sx={{
+              marginLeft: 0.2,
+              minWidth: 165,
+              borderRadius: 4,
+              background: 'linear-gradient(21deg, #10abff, #1beabd)',
+            }}
+            menuSx={{
+              width: 165,
+            }}
           />
         }
       />
@@ -210,6 +218,15 @@ function ApplicationFlowPage() {
             handleChange={handleChange}
             value={value}
             inputLabel={value ? value : 'Server - MT4'}
+            sx={{
+              marginLeft: 0.2,
+              minWidth: 165,
+              borderRadius: 4,
+              background: 'linear-gradient(21deg, #10abff, #1beabd)',
+            }}
+            menuSx={{
+              width: 165,
+            }}
           />
         }
       />
@@ -229,10 +246,19 @@ function ApplicationFlowPage() {
               handleChange={handleChange}
               value={value}
               inputLabel={value ? value : 'Server - MT4'}
+              sx={{
+                marginLeft: 0.2,
+                minWidth: 165,
+                borderRadius: 4,
+                background: 'linear-gradient(21deg, #10abff, #1beabd)',
+              }}
+              menuSx={{
+                width: 165,
+              }}
             />
             <Input
               label='Activation Logins'
-              style={{ marginTop: 2, marginBottom: 2, width: 300 }}
+              style={{ marginTop: 2, marginBottom: 2, width: 165 }}
               textFieldStyles={classes.textField}
             />
           </>
@@ -254,10 +280,20 @@ function ApplicationFlowPage() {
               handleChange={handleChange}
               value={value}
               inputLabel={value ? value : 'Server - MT4'}
+              sx={{
+                marginLeft: 0.2,
+                minWidth: 165,
+                borderRadius: 4,
+                background: 'linear-gradient(21deg, #10abff, #1beabd)',
+              }}
+              menuSx={{
+                width: 165,
+              }}
             />
+
             <Input
               label='Activation Logins'
-              style={{ marginTop: 2, marginBottom: 2, width: 300 }}
+              style={{ marginTop: 2, marginBottom: 2, width: 165 }}
               textFieldStyles={classes.textField}
             />
             <AddFields
@@ -300,13 +336,27 @@ function ApplicationFlowPage() {
               handleChange={handleChange}
               value={value}
               inputLabel={value ? value : 'Server - MT4'}
+              sx={{
+                marginLeft: 0.2,
+                minWidth: 165,
+                borderRadius: 4,
+                background: 'linear-gradient(21deg, #10abff, #1beabd)',
+              }}
+              menuSx={{
+                width: 165,
+              }}
             />
             <Input
               label='Activation Logins'
-              style={{ marginTop: 2, marginBottom: 2, width: 300 }}
+              style={{ marginTop: 2, marginBottom: 2, width: 165 }}
               textFieldStyles={classes.textField}
             />
-            <DropdownTagSelector />
+            <DropdownTagSelector
+              sx={{
+                width: 165,
+              }}
+              widthTagSelectorOpened={165}
+            />
           </>
         }
       />
@@ -321,6 +371,7 @@ function ApplicationFlowPage() {
               backgroundColor: '#04724D',
               borderRadius: '10px',
               fontWeight: 600,
+
               '&:hover': {
                 backgroundColor: '#5E807F',
                 borderRadius: '10px',
@@ -339,6 +390,23 @@ function ApplicationFlowPage() {
             items={menu}
             label={value}
             value={value}
+            field1='FieldName'
+            field2='IsRequired'
+            field3='Remove '
+            field4='Type'
+            field5='Add Field'
+            testComponent1={
+              <SearchInput
+                options={searchList}
+                label={<Label label='Applicant Data' size={15} />}
+                className='searchInput-emailTemplate'
+                sx={{ marginLeft: 1, width: 190 }}
+                textFieldStyles={classes.textField}
+              />
+            }
+            testComponent2={<CheckBox />}
+            testComponent3={<DeleteItemIcon />}
+            testComponent4={<Label label='Type' className='' />}
           />
         }
       />

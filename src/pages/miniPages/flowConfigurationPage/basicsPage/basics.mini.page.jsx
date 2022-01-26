@@ -80,6 +80,9 @@ function Basics() {
             borderRadius: 4,
             background: 'linear-gradient(21deg, #10abff, #1beabd)',
           }}
+          menuSx={{
+            width: 165,
+          }}
         />
       </div>
     </div>
