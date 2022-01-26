@@ -8,27 +8,53 @@ function SearchInput(props) {
       disablePortal
       id='combo-box-demo'
       options={props.options}
+      classes={props.classes ? props.classes : ''}
       sx={
         props.sx
           ? props.sx
           : {
               border: '',
               backgroundColor: '',
-              width: 175,
-              borderRadius: '10px',
+              borderRadius: '5px',
+              width: 190,
+              marginLeft: 1,
+              background: 'linear-gradient(21deg, #10abff, #1beabd)',
               opacity: 1,
-              margin: 2,
-              marginBottom: '20px',
               '&:hover,&:focus': {
-                border: '',
+                border: ' ',
                 backgroundColor: '',
                 opacity: 1,
               },
             }
       }
-      size={props.size ? props.size : ''}
+      // size={props.size ? props.size : ''}
       className={props.className}
-      renderInput={(params) => <TextField {...params} label={props.label} />}
+      renderInput={(params) => {
+        console.log('params', params);
+        const {
+          InputLabelProps,
+          disabled,
+          fullWidth,
+          id,
+          inputProps,
+          InputProps,
+        } = params;
+
+        const newObject = { ...InputProps, className: props.textFieldStyles };
+
+        return (
+          <TextField
+            InputLabelProps={InputLabelProps}
+            disabled={disabled}
+            fullWidth={fullWidth}
+            id={id}
+            inputProps={inputProps}
+            InputProps={newObject}
+            // InputProps={{ className: props.textFieldStyles }}
+            label={props.label}
+          />
+        );
+      }}
     />
   );
 }

@@ -13,7 +13,7 @@ import { makeStyles } from '@material-ui/core/styles';
 import './editSubConditions.mini.styles.css';
 
 function EditSubConditions(props) {
-  const [open, setOpen] = useState(false);
+  const [open, setOpen] = useState(true);
   const handleClose = () => setOpen(false);
   const handleOpen = () => setOpen(true);
   const [label1, setLabel1] = useState([
@@ -115,8 +115,8 @@ function EditSubConditions(props) {
               options={searchList}
               label={<Label label='Applicant Data' size={15} />}
               className='searchInput-emailTemplate'
-              sx={{ width: 200, marginLeft: 1 }}
-              size='small'
+              sx={{ marginLeft: 1, width: 190 }}
+              textFieldStyles={classes.textField}
             />
           </>
         }
