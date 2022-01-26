@@ -15,7 +15,7 @@ export default function ModalUsage(props) {
     top: '50%',
     left: '50%',
     transform: 'translate(-50%, -50%)',
-    minWidth: 800,
+    minWidth: props.minWidth ? props.minWidth : 800,
     bgcolor: 'background.paper',
     border: '2px solid #000',
     boxShadow: 24,

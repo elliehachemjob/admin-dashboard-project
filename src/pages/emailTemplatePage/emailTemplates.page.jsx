@@ -78,9 +78,7 @@ function EmailTemplates() {
         <div className='div1-buttons-emailTemplate'>
           <div className='button-list-emailTemplate'>
             <div className='button-wrapper-emailTemplate'>
-              <Button 
-              
-              className='button-emailTemplate' name='Email Layout' />
+              <Button className='button-emailTemplate' name='Email Layout' />
             </div>
           </div>
         </div>

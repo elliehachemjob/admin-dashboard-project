@@ -1,5 +1,4 @@
 import React, { useState } from 'react';
-import BreakLine from '../../components/breakLineComponent/BreakLine.component';
 import Label from '../../components/labelComponent/Label.component';
 import Dropdown from '../../components/dropdownComponent/Dropdown.component';
 import Button from '../../components/FlexibleButtonComponent/FlexibleButton.component';
@@ -75,8 +74,6 @@ function Notifications() {
 
   return (
     <>
-    
-
       {/* 1st */}
 
       <div className='container1-notificationPage'>

@@ -4,109 +4,127 @@ import {
   SpecialEditIcon,
   BlackCircleIcon,
 } from '../../../../components/iconsComponent/Icons.component';
-
-
+import Label from '../../../../components/labelComponent/Label.component';
+import BreakLine from '../../../../components/breakLineComponent/BreakLine.component';
 import './seeGroups.mini.styles.css';
+import ToggleList from '../../../../components/ListComponents/toggleListComponent/ToggleList.component';
 
 function SeeGroups() {
   const [open, setOpen] = useState(false);
   const handleClose = () => setOpen(false);
   const handleOpen = () => setOpen(true);
+  const [labelCondition, setLabelCondition] = useState('Applicant Data');
+  const [label1, setLabel1] = useState([
+    {
+      id: 1,
+      label: <Label className='toggle-label-seeGroups' label='Skip Grouping' />,
+    },
+    {
+      id: 2,
+      label: <Label className='toggle-label-seeGroups' label='Platforms' />,
+    },
+  ]);
+
+  const handleApplicantData = () => {
+    setLabelCondition('Applicant Data');
+  };
+
+  const HandleDefaultAccountConditions = () => {
+    setLabelCondition('Default Account Conditions');
+  };
+  const HandleIdentityVerification = () => {
+    setLabelCondition('Identity Verification');
+  };
+
+  const HandleAddressVerification = () => {
+    setLabelCondition('Address Verification');
+  };
+
+  const HandleCompleteYourProfile = () => {
+    setLabelCondition('Complete your profile');
+  };
 
   return (
     <ModalUsage
       open={open}
       handleClose={handleClose}
       icon={<SpecialEditIcon onClick={handleOpen} />}
+      minWidth={1200}
     >
       {/* 1st */}
-      <div>Condition 1 Label</div>
+      <Label className='header-seeGroups' label='Condition 1' />
+      <div className='stepsWrapper-container-seeGroups'>
+        {/* 2nd */}
+        <div
+          className='steps-container-seeGroups'
+          onClick={handleApplicantData}
+        >
+          <div className='container-Icon-seeGroups'>
+            <BlackCircleIcon className='icon-defaults-seeGroup' />
+            <div className='icon-number-seeGroups'>1</div>
+          </div>
+          <Label className='label-seeGroups' label='Applicant Data' />
+          <BreakLine className='breakLine-seeGroups' />
+        </div>
 
-      {/* 2nd */}
-      <div>Applicant Data Label</div>
-      <div className='container-Icon'>
-        <BlackCircleIcon className='icon-flowConfiguration-defaults-seeGroup' />
         <div
-          className='icon-number-seeGroups'
-          style={{
-            fontSize: 13,
-            position: 'absolute',
-            top: '4%',
-            left: '1.5%',
-          }}
+          className='steps-container-seeGroups'
+          onClick={HandleDefaultAccountConditions}
         >
-          1
+          <div className='container-Icon-seeGroups'>
+            <BlackCircleIcon className='icon-defaults-seeGroup' />
+            <div className='icon-number-seeGroups'>2</div>
+          </div>
+          <Label
+            className='label-seeGroups'
+            label='Default Account Conditions'
+          />
+          <BreakLine className='breakLine-seeGroups' />
         </div>
-      </div>
-      <div>Divider</div>
-      <div>Default Account Conditions Label</div>
-      <div className='container-Icon'>
-        <BlackCircleIcon className='icon-flowConfiguration-defaults-seeGroup' />
-        <div
-          className='icon-number-seeGroups'
-          style={{
-            fontSize: 13,
-            position: 'absolute',
-            top: '4%',
-            left: '1.5%',
-          }}
-        >
-          2
-        </div>
-      </div>
 
-      <div>Divider</div>
-      <div>Identity Verification Label</div>
-      <div className='container-Icon'>
-        <BlackCircleIcon className='icon-flowConfiguration-defaults-seeGroup' />
         <div
-          className='icon-number-seeGroups'
-          style={{
-            fontSize: 13,
-            position: 'absolute',
-            top: '4%',
-            left: '1.5%',
-          }}
+          className='steps-container-seeGroups'
+          onClick={HandleIdentityVerification}
         >
-          3
+          <div className='container-Icon-seeGroups'>
+            <BlackCircleIcon className='icon-defaults-seeGroup' />
+            <div className='icon-number-seeGroups'>3</div>
+          </div>
+          <Label className='label-seeGroups' label='Identity Verification' />
+          <BreakLine className='breakLine-seeGroups' />
         </div>
-      </div>
-      <div>Divider</div>
-      <div>Address Verification Label</div>
-      <div className='container-Icon'>
-        <BlackCircleIcon className='icon-flowConfiguration-defaults-seeGroup' />
+
         <div
-          className='icon-number-seeGroups'
-          style={{
-            fontSize: 13,
-            position: 'absolute',
-            top: '4%',
-            left: '1.5%',
-          }}
+          className='steps-container-seeGroups'
+          onClick={HandleAddressVerification}
         >
-          4
+          <div className='container-Icon-seeGroups'>
+            <BlackCircleIcon className='icon-defaults-seeGroup' />
+            <div className='icon-number-seeGroups'>4</div>
+          </div>
+          <Label className='label-seeGroups' label='Address Verification' />
+          <BreakLine className='breakLine-seeGroups' />
         </div>
-      </div>
-      <div>Divider</div>
-      <div>Complete your profile Label</div>
-      <div className='container-Icon'>
-        <BlackCircleIcon className='icon-flowConfiguration-defaults-seeGroup' />
         <div
-          className='icon-number-seeGroups'
-          style={{
-            fontSize: 13,
-            position: 'absolute',
-            top: '4%',
-            left: '1.5%',
-          }}
+          className='steps-container-seeGroups'
+          onClick={HandleCompleteYourProfile}
         >
-          5
+          <div className='container-Icon-seeGroups'>
+            <BlackCircleIcon className='icon-defaults-seeGroup' />
+            <div className='icon-number-seeGroups'>5</div>
+          </div>
+          <Label className='label-seeGroups' label='Complete your profile' />
         </div>
       </div>
       {/* 3rd */}
-      <div>Default Account Conditions Label</div>
-      <div>Skip Grouping Toggle</div>
-      <div>Platforms Toggle</div>
+      <Label className='specialLabel-seeGroups' label={labelCondition} />
+      <ToggleList
+        key={label1.id}
+        list={label1}
+        parent='toggle-list-parent-seeGroups'
+        div1='div1-toggle-list-parent-seeGroups'
+        div2='div2-toggle-list-parent-seeGroups'
+      />
     </ModalUsage>
   );
 }
