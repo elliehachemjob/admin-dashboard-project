@@ -4,6 +4,8 @@ import {
   SpecialEditIcon,
   BlackCircleIcon,
 } from '../../../../components/iconsComponent/Icons.component';
+
+
 import './seeGroups.mini.styles.css';
 
 function SeeGroups() {
@@ -22,24 +24,85 @@ function SeeGroups() {
 
       {/* 2nd */}
       <div>Applicant Data Label</div>
-      <div>Circle Icon and 1 in it</div>
+      <div className='container-Icon'>
+        <BlackCircleIcon className='icon-flowConfiguration-defaults-seeGroup' />
+        <div
+          className='icon-number-seeGroups'
+          style={{
+            fontSize: 13,
+            position: 'absolute',
+            top: '4%',
+            left: '1.5%',
+          }}
+        >
+          1
+        </div>
+      </div>
       <div>Divider</div>
       <div>Default Account Conditions Label</div>
-      <div>Circle Icon and 2 in it</div>
-      <div>
-        <div className='icon-number-seeGroups'>Hi</div>
+      <div className='container-Icon'>
         <BlackCircleIcon className='icon-flowConfiguration-defaults-seeGroup' />
+        <div
+          className='icon-number-seeGroups'
+          style={{
+            fontSize: 13,
+            position: 'absolute',
+            top: '4%',
+            left: '1.5%',
+          }}
+        >
+          2
+        </div>
       </div>
 
       <div>Divider</div>
       <div>Identity Verification Label</div>
-      <div>Circle Icon and 3 in it</div>
+      <div className='container-Icon'>
+        <BlackCircleIcon className='icon-flowConfiguration-defaults-seeGroup' />
+        <div
+          className='icon-number-seeGroups'
+          style={{
+            fontSize: 13,
+            position: 'absolute',
+            top: '4%',
+            left: '1.5%',
+          }}
+        >
+          3
+        </div>
+      </div>
       <div>Divider</div>
       <div>Address Verification Label</div>
-      <div>Circle Icon and 4 in it</div>
+      <div className='container-Icon'>
+        <BlackCircleIcon className='icon-flowConfiguration-defaults-seeGroup' />
+        <div
+          className='icon-number-seeGroups'
+          style={{
+            fontSize: 13,
+            position: 'absolute',
+            top: '4%',
+            left: '1.5%',
+          }}
+        >
+          4
+        </div>
+      </div>
       <div>Divider</div>
       <div>Complete your profile Label</div>
-      <div>Circle Icon and 5 in it</div>
+      <div className='container-Icon'>
+        <BlackCircleIcon className='icon-flowConfiguration-defaults-seeGroup' />
+        <div
+          className='icon-number-seeGroups'
+          style={{
+            fontSize: 13,
+            position: 'absolute',
+            top: '4%',
+            left: '1.5%',
+          }}
+        >
+          5
+        </div>
+      </div>
       {/* 3rd */}
       <div>Default Account Conditions Label</div>
       <div>Skip Grouping Toggle</div>
