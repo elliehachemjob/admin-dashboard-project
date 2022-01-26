@@ -44,7 +44,11 @@ export function CorrectIcon(props) {
 }
 
 export function BlackCircleIcon(props) {
-  return <FiberManualRecordIcon className={props.className} sx={props.sx} />;
+  return (
+    <FiberManualRecordIcon className={props.className} sx={props.sx}>
+      {props.children}
+    </FiberManualRecordIcon>
+  );
 }
 
 export function BellIcon(props) {

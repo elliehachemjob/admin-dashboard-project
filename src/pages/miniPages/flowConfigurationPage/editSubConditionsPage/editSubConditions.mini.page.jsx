@@ -25,16 +25,25 @@ function EditSubConditions(props) {
       {/* onExpand */}
       <div>Restriction Toggle</div>
       <div>Divider</div>
-      <div>Label</div>
-      <div>Input</div>
+      <div> Set How Many Days Client Have To Complete Profile Label</div>
+      <div>Input with holder 0</div>
       {/* 4th */}
-      
       <div>Expandable Accordion</div>
       <div>SumSub Label</div>
-
+      {/* onExpand */}
+      <div>Divider</div>
+      <div>
+        Select After Which Step you want to Verify data with SumSub Label
+      </div>
+      <div>Search Input </div>
       {/* 5th */}
       <div>Expandable Accordion</div>
       <div>Phone OTP Label</div>
+      {/* onExpand */}
+      <div>Restrict phone to the domain of Country of residence Label</div>
+      <div>Restriction Toggle </div>
+      <div>Check if phone exist Label</div>
+      <div>Check If Exist Toggle</div>
     </ModalUsage>
   );
 }
