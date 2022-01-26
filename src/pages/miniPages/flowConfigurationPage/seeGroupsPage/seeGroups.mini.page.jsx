@@ -3,6 +3,7 @@ import ModalUsage from '../../../../components/modalUsageComponent/ModalUsage.co
 import {
   SpecialEditIcon,
   BlackCircleIcon,
+  CorrectIcon,
 } from '../../../../components/iconsComponent/Icons.component';
 import Label from '../../../../components/labelComponent/Label.component';
 import BreakLine from '../../../../components/breakLineComponent/BreakLine.component';
@@ -24,23 +25,46 @@ function SeeGroups() {
       label: <Label className='toggle-label-seeGroups' label='Platforms' />,
     },
   ]);
+  const [applicantDataChecked, setApplicantDataChecked] = useState(false);
+  const [defaultAccountConditions, setDefaultAccountConditions] =
+    useState(false);
+  const [identityVerification, setIdentityVerification] = useState(false);
+  const [addressVerification, setAddressVerification] = useState(false);
+  const [completeYourProfile, setCompleteYourProfile] = useState(false);
 
   const handleApplicantData = () => {
+    setApplicantDataChecked(false);
     setLabelCondition('Applicant Data');
   };
 
   const HandleDefaultAccountConditions = () => {
+    setApplicantDataChecked(true);
+    setDefaultAccountConditions(false);
+
     setLabelCondition('Default Account Conditions');
   };
   const HandleIdentityVerification = () => {
+    setApplicantDataChecked(true);
+    setDefaultAccountConditions(true);
+    setIdentityVerification(false);
     setLabelCondition('Identity Verification');
   };
 
   const HandleAddressVerification = () => {
+    setApplicantDataChecked(true);
+    setDefaultAccountConditions(true);
+    setIdentityVerification(true);
+    setAddressVerification(false);
+
     setLabelCondition('Address Verification');
   };
 
   const HandleCompleteYourProfile = () => {
+    setApplicantDataChecked(true);
+    setDefaultAccountConditions(true);
+    setIdentityVerification(true);
+    setAddressVerification(true);
+    setCompleteYourProfile(false);
     setLabelCondition('Complete your profile');
   };
 
@@ -48,8 +72,14 @@ function SeeGroups() {
     <ModalUsage
       open={open}
       handleClose={handleClose}
-      icon={<SpecialEditIcon onClick={handleOpen} />}
+      icon={
+        <SpecialEditIcon
+          className='specialEditIcon-seeGroups'
+          onClick={handleOpen}
+        />
+      }
       minWidth={1200}
+      modalBackground='#C1E0F7'
     >
       {/* 1st */}
       <Label className='header-seeGroups' label='Condition 1' />
@@ -60,8 +90,17 @@ function SeeGroups() {
           onClick={handleApplicantData}
         >
           <div className='container-Icon-seeGroups'>
-            <BlackCircleIcon className='icon-defaults-seeGroup' />
-            <div className='icon-number-seeGroups'>1</div>
+            <BlackCircleIcon
+              className='icon-defaults-seeGroup'
+              sx={{ fontSize: 35 }}
+            />
+            <div className='icon-number-seeGroups'>
+              {applicantDataChecked ? (
+                <CorrectIcon className='correctIcon-seeGroup' />
+              ) : (
+                <Label className='' label='1' />
+              )}
+            </div>
           </div>
           <Label className='label-seeGroups' label='Applicant Data' />
           <BreakLine className='breakLine-seeGroups' />
@@ -72,8 +111,17 @@ function SeeGroups() {
           onClick={HandleDefaultAccountConditions}
         >
           <div className='container-Icon-seeGroups'>
-            <BlackCircleIcon className='icon-defaults-seeGroup' />
-            <div className='icon-number-seeGroups'>2</div>
+            <BlackCircleIcon
+              className='icon-defaults-seeGroup'
+              sx={{ fontSize: 35 }}
+            />
+            <div className='icon-number-seeGroups'>
+              {defaultAccountConditions ? (
+                <CorrectIcon className='correctIcon-seeGroup' />
+              ) : (
+                <Label className='' label='2' />
+              )}
+            </div>
           </div>
           <Label
             className='label-seeGroups'
@@ -87,8 +135,17 @@ function SeeGroups() {
           onClick={HandleIdentityVerification}
         >
           <div className='container-Icon-seeGroups'>
-            <BlackCircleIcon className='icon-defaults-seeGroup' />
-            <div className='icon-number-seeGroups'>3</div>
+            <BlackCircleIcon
+              className='icon-defaults-seeGroup'
+              sx={{ fontSize: 35 }}
+            />
+            <div className='icon-number-seeGroups'>
+              {identityVerification ? (
+                <CorrectIcon className='correctIcon-seeGroup' />
+              ) : (
+                <Label className='' label='3' />
+              )}
+            </div>
           </div>
           <Label className='label-seeGroups' label='Identity Verification' />
           <BreakLine className='breakLine-seeGroups' />
@@ -99,8 +156,17 @@ function SeeGroups() {
           onClick={HandleAddressVerification}
         >
           <div className='container-Icon-seeGroups'>
-            <BlackCircleIcon className='icon-defaults-seeGroup' />
-            <div className='icon-number-seeGroups'>4</div>
+            <BlackCircleIcon
+              className='icon-defaults-seeGroup'
+              sx={{ fontSize: 35 }}
+            />
+            <div className='icon-number-seeGroups'>
+              {addressVerification ? (
+                <CorrectIcon className='correctIcon-seeGroup' />
+              ) : (
+                <Label className='' label='4' />
+              )}
+            </div>
           </div>
           <Label className='label-seeGroups' label='Address Verification' />
           <BreakLine className='breakLine-seeGroups' />
@@ -110,8 +176,17 @@ function SeeGroups() {
           onClick={HandleCompleteYourProfile}
         >
           <div className='container-Icon-seeGroups'>
-            <BlackCircleIcon className='icon-defaults-seeGroup' />
-            <div className='icon-number-seeGroups'>5</div>
+            <BlackCircleIcon
+              className='icon-defaults-seeGroup'
+              sx={{ fontSize: 35 }}
+            />
+            <div className='icon-number-seeGroups'>
+              {completeYourProfile ? (
+                <CorrectIcon className='correctIcon-seeGroup' />
+              ) : (
+                <Label className='' label='5' />
+              )}
+            </div>
           </div>
           <Label className='label-seeGroups' label='Complete your profile' />
         </div>

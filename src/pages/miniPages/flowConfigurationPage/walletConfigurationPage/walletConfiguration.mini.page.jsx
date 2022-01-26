@@ -32,7 +32,7 @@ function WalletConfiguration() {
           inputLabel={value ? value : 'Server - MT4'}
           sx={{
             marginLeft: 0.2,
-            minWidth: 190,
+            minWidth: 165,
             borderRadius: 4,
             background: 'linear-gradient(21deg, #10abff, #1beabd)',
           }}
@@ -49,7 +49,7 @@ function WalletConfiguration() {
           inputLabel={value ? value : 'Server - MT4'}
           sx={{
             marginLeft: 0.2,
-            minWidth: 190,
+            minWidth: 165,
             borderRadius: 4,
             background: 'linear-gradient(21deg, #10abff, #1beabd)',
           }}
@@ -65,7 +65,7 @@ function WalletConfiguration() {
           inputLabel={value ? value : 'Server - MT4'}
           sx={{
             marginLeft: 0.2,
-            minWidth: 190,
+            minWidth: 165,
             borderRadius: 4,
             background: 'linear-gradient(21deg, #10abff, #1beabd)',
           }}

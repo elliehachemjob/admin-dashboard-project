@@ -58,7 +58,7 @@ function DropdownTagSelector(props) {
             sx={{
               background: 'linear-gradient(21deg, #10abff, #1beabd)',
               borderRadius: 4,
-              minWidth: 189.3,
+              minWidth: 165,
 
               opacity: 1,
               '&:hover,&:focus': {

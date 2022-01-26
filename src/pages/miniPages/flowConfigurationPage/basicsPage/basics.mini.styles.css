@@ -183,3 +183,7 @@
 .div3-parent-basics {
   grid-area: 1 / 3 / 2 / 4;
 }
+
+.toggle-label-basics {
+  font-weight: 1000;
+}

@@ -184,3 +184,16 @@
 .div3-parent-conditions {
   grid-area: 1 / 3 / 2 / 4;
 }
+
+.icons-component-wrapper-conditions {
+  display: flex;
+}
+
+.icons-wrapper-conditions {
+  display: flex;
+  padding: 13px;
+}
+
+.deleteIcon-conditions {
+  color: #ff331f;
+}

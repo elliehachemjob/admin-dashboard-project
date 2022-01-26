@@ -5,8 +5,8 @@ function Label(props) {
     <div
       onClick={props.onClick}
       dblclick={props.dblclick}
-      className={props.className}
-      style={{ fontSize: props.size }}
+      className={`${props.className}`}
+      style={{ size: props.size, fontWeight: props.fontWeight }}
     >
       {props.icon} {props.label}
       {props.children}

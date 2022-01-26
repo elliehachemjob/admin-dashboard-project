@@ -5,11 +5,7 @@ import Input from '../../../../components/inputComponent/Input.component';
 import { makeStyles } from '@material-ui/core/styles';
 import Dropdown from '../../../../components/dropdownComponent/SpecialDropdown.component';
 import DropdownTagSelector from '../../../../components/dropdownTagSelectorComponent/DropdownTagSelector.component';
-import {
-  SpecialEditIcon,
-  StackIcon,
-  DeleteItemIcon,
-} from '../../../../components/iconsComponent/Icons.component';
+import { DeleteItemIcon } from '../../../../components/iconsComponent/Icons.component';
 import SeeGroups from '../seeGroupsPage/seeGroups.mini.page';
 import EditSubConditions from '../editSubConditionsPage/editSubConditions.mini.page';
 
@@ -25,9 +21,8 @@ function Conditions() {
   const useStyles = makeStyles((theme) => ({
     textField: {
       background: 'linear-gradient(21deg, #10abff, #1beabd)',
-
-      minWidth: 189.3,
-      borderRadius: '10px',
+      minWidth: 165,
+      borderRadius: '15px',
       opacity: 1,
 
       '&:hover,&:focus': {
@@ -41,7 +36,7 @@ function Conditions() {
   const classes = useStyles();
 
   const handleEditSubProfileIcon = () => {
-    alert('handleEditSubProfileIcon');
+    alert('Handle Delete');
   };
 
   return (
@@ -83,7 +78,7 @@ function Conditions() {
           <Input
             label='Activation Logins'
             style={{
-              width: 189.3,
+              width: 165,
             }}
             textFieldStyles={classes.textField}
           />
@@ -91,7 +86,7 @@ function Conditions() {
         testComponent2={
           <DropdownTagSelector
             sx={{
-              width: 189.3,
+              width: 165,
               background: 'linear-gradient(21deg, #10abff, #1beabd)',
               borderRadius: 4,
             }}
@@ -101,13 +96,13 @@ function Conditions() {
         testComponent3={
           <DropdownTagSelector
             sx={{
-              width: 189.3,
+              width: 165,
             }}
             widthTagSelectorOpened={100}
           />
         }
         testComponent4={
-          <>
+          <div className='icons-component-wrapper-conditions'>
             <Dropdown
               items={menu}
               label={value}
@@ -115,15 +110,20 @@ function Conditions() {
               value={value}
               inputLabel={value ? value : 'Server - MT4'}
               sx={{
-                width: 189.3,
+                width: 165,
                 background: 'linear-gradient(21deg, #10abff, #1beabd)',
                 borderRadius: 4,
               }}
             />
-            <SeeGroups />
-            <EditSubConditions />
-            <DeleteItemIcon onClick={handleEditSubProfileIcon} />
-          </>
+            <div className='icons-wrapper-conditions'>
+              <SeeGroups />
+              <EditSubConditions />
+              <DeleteItemIcon
+                className='deleteIcon-conditions'
+                onClick={handleEditSubProfileIcon}
+              />
+            </div>
+          </div>
         }
       />
     </>

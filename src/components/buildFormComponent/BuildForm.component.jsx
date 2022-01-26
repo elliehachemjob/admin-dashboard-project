@@ -39,13 +39,13 @@ function BuildForm() {
           <ToggleList
             key={label1.id}
             list={label1}
-            parent='toggle-list-parent-notificationPage'
-            div1='div1-toggle-list-parent-notificationPage'
-            div2='div2-toggle-list-parent-notificationPage-exception-here-two'
+            parent='toggle-list-parent-buildForm'
+            div1='div1-toggle-list-parent-buildForm'
+            div2='div2-toggle-list-parent-buildForm'
             testComponent1={
               <Input
                 label='Email'
-                style={{ width: 300 }}
+                style={{ width: 165 }}
                 sx={{ borderColor: 'red' }}
                 textFieldStyles={classes.textField}
               />
@@ -58,13 +58,13 @@ function BuildForm() {
           <ToggleList
             key={label1.id}
             list={label1}
-            parent='toggle-list-parent-notificationPage'
-            div1='div1-toggle-list-parent-notificationPage'
-            div2='div2-toggle-list-parent-notificationPage-exception-here'
+            parent='toggle-list-parent-buildForm'
+            div1='div1-toggle-list-parent-buildForm'
+            div2='div2-toggle-list-parent-buildForm-exception'
             testComponent1={
               <Input
                 label='Password'
-                style={{ width: 300 }}
+                style={{ width: 165 }}
                 textFieldStyles={classes.textField}
               />
             }
@@ -79,13 +79,13 @@ function BuildForm() {
           <ToggleList
             key={label1.id}
             list={label1}
-            parent='toggle-list-parent-notificationPage'
-            div1='div1-toggle-list-parent-notificationPage'
-            div2='div2-toggle-list-parent-notificationPage-exception-here-two'
+            parent='toggle-list-parent-buildForm'
+            div1='div1-toggle-list-parent-buildForm'
+            div2='div2-toggle-list-parent-buildForm'
             testComponent1={
               <Input
                 label='Full Name'
-                style={{ width: 300 }}
+                style={{ width: 165 }}
                 textFieldStyles={classes.textField}
               />
             }
@@ -99,13 +99,13 @@ function BuildForm() {
           <ToggleList
             key={label1.id}
             list={label1}
-            parent='toggle-list-parent-notificationPage'
-            div1='div1-toggle-list-parent-notificationPage'
-            div2='div2-toggle-list-parent-notificationPage-exception-here-two'
+            parent='toggle-list-parent-buildForm'
+            div1='div1-toggle-list-parent-buildForm'
+            div2='div2-toggle-list-parent-buildForm'
             testComponent1={
               <Input
                 label='First Name'
-                style={{ width: 300 }}
+                style={{ width: 165 }}
                 textFieldStyles={classes.textField}
               />
             }
@@ -119,13 +119,13 @@ function BuildForm() {
           <ToggleList
             key={label1.id}
             list={label1}
-            parent='toggle-list-parent-notificationPage'
-            div1='div1-toggle-list-parent-notificationPage'
-            div2='div2-toggle-list-parent-notificationPage-exception-here-two'
+            parent='toggle-list-parent-buildForm'
+            div1='div1-toggle-list-parent-buildForm'
+            div2='div2-toggle-list-parent-buildForm'
             testComponent1={
               <Input
                 label='Last Name'
-                style={{ width: 300 }}
+                style={{ width: 165 }}
                 textFieldStyles={classes.textField}
               />
             }
@@ -139,13 +139,13 @@ function BuildForm() {
           <ToggleList
             key={label1.id}
             list={label1}
-            parent='toggle-list-parent-notificationPage'
-            div1='div1-toggle-list-parent-notificationPage'
-            div2='div2-toggle-list-parent-notificationPage-exception-here-two'
+            parent='toggle-list-parent-buildForm'
+            div1='div1-toggle-list-parent-buildForm'
+            div2='div2-toggle-list-parent-buildForm'
             testComponent1={
               <Input
                 label='Confirm Password'
-                style={{ width: 300 }}
+                style={{ width: 165 }}
                 textFieldStyles={classes.textField}
               />
             }
@@ -159,13 +159,13 @@ function BuildForm() {
           <ToggleList
             key={label1.id}
             list={label1}
-            parent='toggle-list-parent-notificationPage'
-            div1='div1-toggle-list-parent-notificationPage'
-            div2='div2-toggle-list-parent-notificationPage-exception-here-two'
+            parent='toggle-list-parent-buildForm'
+            div1='div1-toggle-list-parent-buildForm'
+            div2='div2-toggle-list-parent-buildForm'
             testComponent1={
               <Input
                 label='Country'
-                style={{ width: 300 }}
+                style={{ width: 165 }}
                 textFieldStyles={classes.textField}
               />
             }
@@ -179,13 +179,13 @@ function BuildForm() {
           <ToggleList
             key={label1.id}
             list={label1}
-            parent='toggle-list-parent-notificationPage'
-            div1='div1-toggle-list-parent-notificationPage'
-            div2='div2-toggle-list-parent-notificationPage-exception-here-two'
+            parent='toggle-list-parent-buildForm'
+            div1='div1-toggle-list-parent-buildForm'
+            div2='div2-toggle-list-parent-buildForm'
             testComponent1={
               <Input
                 label='Phone Number'
-                style={{ width: 300 }}
+                style={{ width: 165 }}
                 textFieldStyles={classes.textField}
               />
             }
@@ -197,13 +197,13 @@ function BuildForm() {
           <ToggleList
             key={label1.id}
             list={label1}
-            parent='toggle-list-parent-notificationPage'
-            div1='div1-toggle-list-parent-notificationPage'
-            div2='div2-toggle-list-parent-notificationPage-exception-here'
+            parent='toggle-list-parent-buildForm'
+            div1='div1-toggle-list-parent-buildForm'
+            div2='div2-toggle-list-parent-buildForm-exception'
             testComponent1={
               <Input
                 label='Legal Disclaimer'
-                style={{ width: 300 }}
+                style={{ width: 165 }}
                 textFieldStyles={classes.textField}
               />
             }
@@ -218,13 +218,13 @@ function BuildForm() {
           <ToggleList
             key={label1.id}
             list={label1}
-            parent='toggle-list-parent-notificationPage'
-            div1='div1-toggle-list-parent-notificationPage'
-            div2='div2-toggle-list-parent-notificationPage-exception-here-two'
+            parent='toggle-list-parent-buildForm'
+            div1='div1-toggle-list-parent-buildForm'
+            div2='div2-toggle-list-parent-buildForm'
             testComponent1={
               <Input
                 label='GETCode'
-                style={{ width: 300 }}
+                style={{ width: 165 }}
                 textFieldStyles={classes.textField}
               />
             }

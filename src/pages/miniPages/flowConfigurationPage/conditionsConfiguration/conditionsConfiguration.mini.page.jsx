@@ -11,7 +11,10 @@ function ConditionsConfiguration() {
     {
       id: 1,
       label: (
-        <Label label='Leader Board' className='label-conditionsConfiguration' />
+        <Label
+          label='LeaderBoard'
+          className='toggle-label-conditionsConfiguration'
+        />
       ),
     },
   ]);
@@ -47,6 +50,7 @@ function ConditionsConfiguration() {
           sx={{
             width: 189.3,
             marginLeft: 0.7,
+            width: 165,
           }}
         />
       </div>
@@ -59,7 +63,7 @@ function ConditionsConfiguration() {
         </div> */}
         <div className=''>
           <Label
-            label='Select One Condition Type Or More'
+            label='Select Condition Type'
             className='header-conditionsConfiguration'
           />
         </div>

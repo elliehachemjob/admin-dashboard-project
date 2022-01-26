@@ -67,27 +67,30 @@ function Registration() {
       <div className='buildForm-wrapper-registration'>
         <BuildForm />
       </div>
-      <Button
-        className='button-fieldsAdd'
-        name={
-          <div className='wrapper-addIcon-registration'>
-            <Label
-              label='Apply Changes'
-              className='label-addIcon-registration'
-            />
-          </div>
-        }
-        variant='contained'
-        sx={{
-          backgroundColor: '#2B3A67',
-          borderRadius: '10px',
-          fontWeight: 600,
-          '&:hover': {
-            backgroundColor: '#5E807F',
+
+      <div className='button-wrapper-registration'>
+        <Button
+          className='button-fieldsAdd'
+          name={
+            <div className='wrapper-addIcon-registration'>
+              <Label
+                label='Apply Changes'
+                className='label-addIcon-registration'
+              />
+            </div>
+          }
+          variant='contained'
+          sx={{
+            backgroundColor: '#2B3A67',
             borderRadius: '10px',
-          },
-        }}
-      />
+            fontWeight: 600,
+            '&:hover': {
+              backgroundColor: '#5E807F',
+              borderRadius: '10px',
+            },
+          }}
+        />
+      </div>
     </>
   );
 }

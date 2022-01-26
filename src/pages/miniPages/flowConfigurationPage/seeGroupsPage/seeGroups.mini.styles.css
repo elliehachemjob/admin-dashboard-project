@@ -1,8 +1,5 @@
 .icon-defaults-seeGroup {
-  color: white;
-  border: 1px solid #2b3a67;
-  border-radius: 20px;
-  margin-left: 8px;
+  color: #04724d;
 }
 
 .container-Icon-seeGroups {
@@ -11,10 +8,10 @@
 }
 
 .breakLine-seeGroups {
-  width: 25px;
+  width: 10px;
   margin-left: 10px;
   margin-right: 10px;
-  margin-bottom: 15px;
+  margin-bottom: 21px;
 }
 
 .stepsWrapper-container-seeGroups {
@@ -26,10 +23,10 @@
 }
 
 .icon-number-seeGroups {
-  font-size: 13;
+  color: white;
   position: absolute;
-  top: 4%;
-  right: 33%;
+  top: 11%;
+  right: 45%;
 }
 
 .toggle-list-parent-seeGroups {
@@ -54,11 +51,13 @@
   padding-left: 12px;
 }
 
+.icon-edit-seeGroups {
+}
+
 .label-seeGroups {
   font-size: 13px;
   font-weight: 1000;
-  padding-left: 5px;
-  padding-top: 3px;
+  padding-top: 8px;
 }
 
 .specialLabel-seeGroups {
@@ -70,4 +69,12 @@
 
 .toggle-label-seeGroups {
   font-weight: 1000;
+}
+
+.specialEditIcon-seeGroups {
+  color: #edae49;
+}
+
+.correctIcon-seeGroup {
+  margin-right: -7px;
 }

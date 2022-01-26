@@ -11,8 +11,14 @@ function Basics() {
   const [value, setValue] = useState();
   const menu = [{ value: 'Server - MT4' }, { value: 'Demo - MT5' }];
   const [label1, setLabel1] = useState([
-    { id: 1, label: 'Is Enabled' },
-    { id: 2, label: 'Is Default' },
+    {
+      id: 1,
+      label: <Label label='Is Enabled' className='toggle-label-basics' />,
+    },
+    {
+      id: 2,
+      label: <Label label='Is Default' className='toggle-label-basics' />,
+    },
   ]);
   const handleChange = (event) => {
     setValue(event.target.value);
@@ -21,7 +27,7 @@ function Basics() {
     textField: {
       border: '',
       backgroundColor: '',
-      borderRadius: '10px',
+      borderRadius: '15px',
       background: 'linear-gradient(21deg, #10abff, #1beabd)',
       opacity: 1,
       '&:hover,&:focus': {
@@ -54,7 +60,7 @@ function Basics() {
           style={{
             // marginBottom: 2.5,
             marginLeft: 0.8,
-            width: 190,
+            width: 165,
           }}
           textFieldStyles={classes.textField}
         />
@@ -70,7 +76,7 @@ function Basics() {
           inputLabel={value ? value : 'Server - MT4'}
           sx={{
             marginLeft: 0.2,
-            minWidth: 190,
+            minWidth: 165,
             borderRadius: 4,
             background: 'linear-gradient(21deg, #10abff, #1beabd)',
           }}

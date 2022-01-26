@@ -39,28 +39,28 @@ function FieldsAdd(props) {
   };
 
   return (
-    <div className='new-main-fieldsAdd container1-fieldsAdd'>
-      <div className='div1-main-fieldsAdd'>
-        <div className='parentButton-fieldsAdd'>
-          <div className=''>
+    <div className='container1-fieldsAdd'>
+      <div className=''>
+        <div className='parentLabel-fieldsAdd'>
+          <div className='div1-label-fieldsAdd'>
             <Label
               label={props.field1 ? props.field1 : 'FieldName'}
               className='label-fieldsAdd'
             />
           </div>
-          <div className='label1-wrapper-addFields'>
+          <div className='div2-label-fieldsAdd'>
             <Label
               label={props.field2 ? props.field2 : 'IsRequired'}
               className='label-fieldsAdd'
             />
           </div>
-          <div className='label2-wrapper-addFields'>
+          <div className='div3-label-fieldsAdd'>
             <Label
               label={props.field3 ? props.field3 : 'Remove'}
               className='label-fieldsAdd'
             />
           </div>
-          <div className='label3-wrapper-addFields'>
+          <div className='div4-label-fieldsAdd'>
             <Label
               label={props.field4 ? props.field4 : 'Type'}
               className='label-fieldsAdd'
@@ -112,34 +112,36 @@ function FieldsAdd(props) {
 
         <div className='parentButton-fieldsAdd'>
           <div className='div3-Button-fieldsAdd'></div>
-          <Button
-            onClick={handleOnPressAdd}
-            className='button-fieldsAdd'
-            name={
-              <div className='wrapper-addIcon-applicationFlow'>
-                <AddItemIcon className='addItemIcon-applicationFlow' />
+          <div className='button-wrapper-fieldsAdd'>
+            <Button
+              onClick={handleOnPressAdd}
+              className='button-fieldsAdd'
+              name={
+                <div className='wrapper-addIcon-addFields'>
+                  <AddItemIcon className='addItemIcon-applicationFlow' />
 
-                <Label
-                  label={props.field5 ? props.field5 : 'Add field'}
-                  className='label-addIcon-applicationFlow'
-                />
-              </div>
-            }
-            variant='contained'
-            sx={
-              props.sx2
-                ? props.sx2
-                : {
-                    backgroundColor: '#11468F',
-                    borderRadius: '20px',
-                    fontWeight: 600,
-                    '&:hover': {
-                      backgroundColor: '#11468F50',
+                  <Label
+                    label={props.field5 ? props.field5 : 'Add field'}
+                    className='label-addIcon-applicationFlow'
+                  />
+                </div>
+              }
+              variant='contained'
+              sx={
+                props.sx2
+                  ? props.sx2
+                  : {
+                      backgroundColor: '#11468F',
                       borderRadius: '20px',
-                    },
-                  }
-            }
-          />
+                      fontWeight: 600,
+                      '&:hover': {
+                        backgroundColor: '#11468F50',
+                        borderRadius: '20px',
+                      },
+                    }
+              }
+            />
+          </div>
           <div className='div2-Button-fieldsAdd'>
             {props.isField6 ? null : (
               <Button

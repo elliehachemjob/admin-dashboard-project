@@ -13,7 +13,7 @@ import { makeStyles } from '@material-ui/core/styles';
 import './editSubConditions.mini.styles.css';
 
 function EditSubConditions(props) {
-  const [open, setOpen] = useState(true);
+  const [open, setOpen] = useState(false);
   const handleClose = () => setOpen(false);
   const handleOpen = () => setOpen(true);
   const [label1, setLabel1] = useState([
@@ -67,7 +67,13 @@ function EditSubConditions(props) {
     <ModalUsage
       open={open}
       handleClose={handleClose}
-      icon={<StackIcon onClick={handleOpen} />}
+      icon={
+        <StackIcon
+          className='stackIcon-editSubCondition'
+          onClick={handleOpen}
+        />
+      }
+      modalBackground='#C1E0F7'
     >
       {/* 1st */}
       <Label className='header-editSubCondition' label='Condition 1' />

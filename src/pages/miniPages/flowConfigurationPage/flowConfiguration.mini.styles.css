@@ -8,13 +8,14 @@
 
 .breakLine-flowConfiguration {
   border-bottom: 0px;
-  border-left: 5px dotted #000;
+  border-left: 5px dotted #0caadc;
   height: 50px;
-  opacity: 0.5;
+  opacity: 0.4;
 }
 
 .breakLine-flowConfiguration-checked {
-  border-left: 5px dotted #2b3a67;
+  border-left: 5px dotted #0caadc;
+  opacity: 1;
 }
 
 .wrapper-addIcon-applicationFlow {
@@ -162,9 +163,6 @@
 .main-header-flowConfiguration {
 }
 
-.label-flowConfiguration {
-}
-
 .dropdown-flowConfiguration {
 }
 
@@ -250,4 +248,7 @@
 }
 
 .profileIcon-applicationFlow {
+}
+
+.label-flowConfiguration {
 }

@@ -194,6 +194,7 @@ function FlowConfiguration() {
                   label='Basics'
                   className='label-FlowConfiguration'
                   size={18.72}
+                  fontWeight={1000}
                   onClick={handleBasicsIcon}
                 />
               </div>
@@ -203,12 +204,11 @@ function FlowConfiguration() {
                 className={
                   basicBreakLine
                     ? 'breakLine-flowConfiguration'
-                    : 'breakLine-flowConfiguration breakLine-flowConfiguration-checked '
+                    : 'breakLine-flowConfiguration breakLine-flowConfiguration-checked'
                 }
               />
             </div>
             {/* 2nd */}
-
             <div className='inner-iconWrapper-flowConfiguration'>
               <WalletConfigurationIcon />
               <div className='inner-label-flowConfiguration'>
@@ -216,6 +216,7 @@ function FlowConfiguration() {
                   label='Wallet Configuration'
                   className='label-FlowConfiguration'
                   size={18.72}
+                  fontWeight={1000}
                   onClick={handleWalletConfigurationIcon}
                 />
               </div>
@@ -237,6 +238,7 @@ function FlowConfiguration() {
                   label='Conditions Configuration'
                   className='label-FlowConfiguration'
                   size={18.72}
+                  fontWeight={1000}
                   onClick={handleConditionsConfigurationIcon}
                 />
               </div>
@@ -260,6 +262,7 @@ function FlowConfiguration() {
                   label='Conditions'
                   className='label-FlowConfiguration'
                   size={18.72}
+                  fontWeight={1000}
                   onClick={handleConditionsIcon}
                 />
               </div>
@@ -281,6 +284,7 @@ function FlowConfiguration() {
                   label='Registration'
                   className='label-FlowConfiguration'
                   size={18.72}
+                  fontWeight={1000}
                   onClick={handleRegistrationIcon}
                 />
               </div>
