@@ -127,27 +127,30 @@ function ApplicationFlowPage() {
         }
         section2={
           <>
-            <Dropdown
-              items={menu}
-              label={value}
-              handleChange={handleChange}
-              value={value}
-              inputLabel={value ? value : 'Server - MT4'}
-              sx={{
-                marginLeft: 0.2,
-                minWidth: 165,
-                borderRadius: 4,
-                background: 'linear-gradient(21deg, #10abff, #1beabd)',
-              }}
-              menuSx={{
-                width: 165,
-              }}
-            />
-            <Input
-              label='Activation Logins'
-              style={{ marginTop: 2, marginBottom: 2, width: 165 }}
-              textFieldStyles={classes.textField}
-            />
+            <div className='sectionsWrapper-applicationFlow'>
+              <Dropdown
+                items={menu}
+                label={value}
+                handleChange={handleChange}
+                value={value}
+                inputLabel={value ? value : 'Server - MT4'}
+                sx={{
+                  marginLeft: 0.2,
+                  minWidth: 165,
+                  borderRadius: 4,
+                  background: 'linear-gradient(21deg, #10abff, #1beabd)',
+                }}
+                menuSx={{
+                  width: 165,
+                }}
+              />
+              <Input
+                label='Activation Logins'
+                style={{ marginLeft: 2, width: 165 }}
+                textFieldStyles={classes.textField}
+              />
+            </div>
+
             <AddFields
               sx={{
                 backgroundColor: '#04724D',
@@ -239,7 +242,7 @@ function ApplicationFlowPage() {
           />
         }
         section2={
-          <>
+          <div className='sectionsWrapper-noAddFields-applicationFlow'>
             <Dropdown
               items={menu}
               label={value}
@@ -258,10 +261,10 @@ function ApplicationFlowPage() {
             />
             <Input
               label='Activation Logins'
-              style={{ marginTop: 2, marginBottom: 2, width: 165 }}
+              style={{ marginLeft: 2, width: 165 }}
               textFieldStyles={classes.textField}
             />
-          </>
+          </div>
         }
       />
       {/* 8th */}
@@ -274,28 +277,30 @@ function ApplicationFlowPage() {
         }
         section2={
           <>
-            <Dropdown
-              items={menu}
-              label={value}
-              handleChange={handleChange}
-              value={value}
-              inputLabel={value ? value : 'Server - MT4'}
-              sx={{
-                marginLeft: 0.2,
-                minWidth: 165,
-                borderRadius: 4,
-                background: 'linear-gradient(21deg, #10abff, #1beabd)',
-              }}
-              menuSx={{
-                width: 165,
-              }}
-            />
+            <div className='sectionsWrapper-applicationFlow'>
+              <Dropdown
+                items={menu}
+                label={value}
+                handleChange={handleChange}
+                value={value}
+                inputLabel={value ? value : 'Server - MT4'}
+                sx={{
+                  marginLeft: 0.2,
+                  minWidth: 165,
+                  borderRadius: 4,
+                  background: 'linear-gradient(21deg, #10abff, #1beabd)',
+                }}
+                menuSx={{
+                  width: 165,
+                }}
+              />
+              <Input
+                label='Activation Logins'
+                style={{ marginLeft: 2, width: 165 }}
+                textFieldStyles={classes.textField}
+              />
+            </div>
 
-            <Input
-              label='Activation Logins'
-              style={{ marginTop: 2, marginBottom: 2, width: 165 }}
-              textFieldStyles={classes.textField}
-            />
             <AddFields
               sx={{
                 backgroundColor: '#04724D',
@@ -329,7 +334,7 @@ function ApplicationFlowPage() {
           <Label label='Upload Documents' className='label-applicationFlow' />
         }
         section2={
-          <>
+          <div className='sectionsWrapper-noAddFields-applicationFlow '>
             <Dropdown
               items={menu}
               label={value}
@@ -348,16 +353,17 @@ function ApplicationFlowPage() {
             />
             <Input
               label='Activation Logins'
-              style={{ marginTop: 2, marginBottom: 2, width: 165 }}
+              style={{ marginLeft: 2, width: 165 }}
               textFieldStyles={classes.textField}
             />
             <DropdownTagSelector
               sx={{
                 width: 165,
+                marginLeft: 2,
               }}
               widthTagSelectorOpened={165}
             />
-          </>
+          </div>
         }
       />
       {/* 10th */}

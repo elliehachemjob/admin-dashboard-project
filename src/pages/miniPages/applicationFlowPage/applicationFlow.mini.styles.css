@@ -165,3 +165,12 @@
 
 .profileIcon-applicationFlow {
 }
+
+.sectionsWrapper-applicationFlow {
+  display: flex;
+  margin-bottom: 30px;
+}
+
+.sectionsWrapper-noAddFields-applicationFlow {
+  display: flex;
+}
