@@ -46,13 +46,13 @@ function ApplicationFlowPage() {
 
   const [flowName, setFlowName] = useState('USA Registration Flow');
 
-  const [value, setValue] = useState();
-  const [smsVerificationValue, setSmsVerificationValue] = useState();
-  const [emailVerificationValue, setEmailVerificationValue] = useState();
-  const [selfieVerificationValue, setSelfieVerificationValue] = useState();
-  const [addressVerificationValue, setAddressVerificationValue] = useState();
-  const [applicantDataValue, setApplicantDataValue] = useState();
-  const [uploadDocumentsValue, setUploadDocumentsValue] = useState();
+  const [value, setValue] = useState('');
+  const [smsVerificationValue, setSmsVerificationValue] = useState('');
+  const [emailVerificationValue, setEmailVerificationValue] = useState('');
+  const [selfieVerificationValue, setSelfieVerificationValue] = useState('');
+  const [addressVerificationValue, setAddressVerificationValue] = useState('');
+  const [applicantDataValue, setApplicantDataValue] = useState('');
+  const [uploadDocumentsValue, setUploadDocumentsValue] = useState('');
 
   const smsVerificationMenu = [{ value: 'Twilio' }];
   const emailVerificationMenu = [{ value: 'By Code' }, { value: 'By Email' }];

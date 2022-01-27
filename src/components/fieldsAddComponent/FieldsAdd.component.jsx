@@ -11,7 +11,7 @@ import ListFieldsAddComponent from '../../components/ListComponents/ListFieldsAd
 
 function FieldsAdd(props) {
   const [addedField, setAddedField] = useState(true);
-  const [value, setValue] = useState();
+  const [value, setValue] = useState('');
   const [fields, setFields] = useState([]);
 
   const menu = [{ value: 'Server - MT4' }, { value: 'Demo - MT5' }];

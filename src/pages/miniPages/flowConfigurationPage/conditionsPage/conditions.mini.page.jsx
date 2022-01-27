@@ -11,7 +11,7 @@ import EditSubConditions from '../editSubConditionsPage/editSubConditions.mini.p
 
 import './conditions.mini.styles.css';
 function Conditions() {
-  const [value, setValue] = useState();
+  const [value, setValue] = useState('');
   const menu = [{ value: 'Server - MT4' }, { value: 'Demo - MT5' }];
 
   const handleChange = (event) => {

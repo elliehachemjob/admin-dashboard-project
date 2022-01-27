@@ -19,10 +19,10 @@ import SmallLogo from '../../assets/images/DarkLogo.png';
 import SecondarySmallLogo from '../../assets/images/DarkLogo.png';
 import './companySettings.styles.css';
 function CompanySettings() {
-  const [registrationLinks, setRegistrationLinks] = useState();
-  const [registrationLinks2, setRegistrationLinks2] = useState();
-  const [platformLinks, setPlatformLinks] = useState();
-  const [platformLinks2, setPlatformLinks2] = useState();
+  const [registrationLinks, setRegistrationLinks] = useState('');
+  const [registrationLinks2, setRegistrationLinks2] = useState('');
+  const [platformLinks, setPlatformLinks] = useState('');
+  const [platformLinks2, setPlatformLinks2] = useState('');
 
   const [companyDetailsState, setCompanyDetailsState] = useState({
     companyName: '',

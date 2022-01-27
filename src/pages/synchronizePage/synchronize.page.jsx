@@ -6,10 +6,10 @@ import Button from '../../components/FlexibleButtonComponent/FlexibleButton.comp
 import './synchronize.styles.css';
 
 function Synchronize() {
-  const [value, setValue] = useState();
-  const [value2, setValue2] = useState();
-  const [value3, setValue3] = useState();
-  const [value4, setValue4] = useState();
+  const [value, setValue] = useState('');
+  const [value2, setValue2] = useState('');
+  const [value3, setValue3] = useState('');
+  const [value4, setValue4] = useState('');
 
   const [label1, setLabel1] = useState([{ id: 1, label: 'Auto Sync' }]);
 

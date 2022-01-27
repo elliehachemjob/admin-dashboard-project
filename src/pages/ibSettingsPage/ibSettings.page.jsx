@@ -44,8 +44,8 @@ function IbSettings() {
       editable: true,
     },
   ]);
-  const [value, setValue] = useState();
-  const [value2, setValue2] = useState();
+  const [value, setValue] = useState('');
+  const [value2, setValue2] = useState('');
 
   const menu = [{ value: 'Trades' }, { value: 'Breakdown report' }];
 

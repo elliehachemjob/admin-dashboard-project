@@ -8,7 +8,7 @@ import './buildForm.styles.css';
 import LegalDisclaimerExpand from './legalDisclaimerComponentFlowConfiguration/LegalDisclaimerExpand.component';
 
 function BuildForm() {
-  const [array, setArray] = useState();
+  const [array, setArray] = useState('');
   const useStyles = makeStyles((theme) => ({
     textField: {
       border: `1px solid  linear-gradient(21deg, #10abff, #1beabd)`,

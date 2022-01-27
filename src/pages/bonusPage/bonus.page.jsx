@@ -19,14 +19,15 @@ function Bonus() {
   const [resetNegativeBalanceLabel, setResetNegativeBalanceLabel] = useState([
     { id: 1, label: 'Reset Negative Balance' },
   ]);
-  const [excludeComment, setExcludeComment] = useState();
-  const [excludeComment2, setExcludeComment2] = useState();
-  const [apiKey, setApiKey] = useState();
-  const [excludeComment3, setExcludeComment3] = useState();
-  const [excludeComment4, setExcludeComment4] = useState();
-  const [excludeComment5, setExcludeComment5] = useState();
+  const [excludeComment, setExcludeComment] = useState('');
+  const [excludeComment2, setExcludeComment2] = useState('');
+  const [apiKey, setApiKey] = useState('');
+  const [excludeComment3, setExcludeComment3] = useState('');
+  const [excludeComment4, setExcludeComment4] = useState('');
+  const [excludeComment5, setExcludeComment5] = useState('');
 
-  const [bonusRemovalCreditComment, setBonusRemovalCreditComment] = useState();
+  const [bonusRemovalCreditComment, setBonusRemovalCreditComment] =
+    useState('');
 
   const [abuseValidation, setAbuseValidation] = useState([
     { label: 'All Bonus abuse validation with' },

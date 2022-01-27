@@ -4,7 +4,7 @@ import Label from '../../labelComponent/Label.component';
 import './toggleList.styles.css';
 
 function ToggleList(props) {
-  const [list, setList] = useState();
+  const [list, setList] = useState('');
 
   return (
     <>

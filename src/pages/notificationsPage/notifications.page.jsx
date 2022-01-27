@@ -6,7 +6,7 @@ import ToggleList from '../../components/ListComponents/toggleListComponent/Togg
 import './notifications.styles.css';
 
 function Notifications() {
-  const [value, setValue] = useState();
+  const [value, setValue] = useState('');
 
   const [label1, setLabel1] = useState([
     { id: 1, label: 'Turn on/off notifications' },

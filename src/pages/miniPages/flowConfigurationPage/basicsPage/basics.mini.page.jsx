@@ -6,9 +6,10 @@ import ToggleList from '../../../../components/ListComponents/toggleListComponen
 
 import { makeStyles } from '@material-ui/core/styles';
 
+
 import './basics.mini.styles.css';
 function Basics() {
-  const [value, setValue] = useState();
+  const [value, setValue] = useState('');
   const menu = [{ value: 'IB' }, { value: 'Trader' }, { value: 'Signal' }];
   const [label1, setLabel1] = useState([
     {

@@ -5,9 +5,9 @@ import Dropdown from '../../components/dropdownComponent/Dropdown.component';
 import Input from '../../components/inputComponent/Input.component';
 import './dynamicMargin.styles.css';
 function DynamicMargin() {
-  const [value, setValue] = useState();
-  const [value2, setValue2] = useState();
-  const [activationLogins, setActivationLogins] = useState();
+  const [value, setValue] = useState('');
+  const [value2, setValue2] = useState('');
+  const [activationLogins, setActivationLogins] = useState('');
 
   const handleActivationLoginsChange = (event) => {
     setActivationLogins(event.target.value);

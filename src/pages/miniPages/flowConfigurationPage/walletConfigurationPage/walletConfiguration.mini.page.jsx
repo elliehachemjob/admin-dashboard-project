@@ -4,10 +4,10 @@ import Label from '../../../../components/labelComponent/Label.component';
 import Dropdown from '../../../../components/dropdownComponent/SpecialDropdown.component';
 
 function WalletConfiguration() {
-  const [value, setValue] = useState();
-  const [typeValue, setTypeValue] = useState();
-  const [walletTypeValue, setWalletTypeValue] = useState();
-  const [currencyMenuValue, setCurrencyMenuValue] = useState();
+  const [value, setValue] = useState('');
+  const [typeValue, setTypeValue] = useState('');
+  const [walletTypeValue, setWalletTypeValue] = useState('');
+  const [currencyMenuValue, setCurrencyMenuValue] = useState('');
 
   const typeMenu = [{ value: 'IB' }, { value: 'Trader' }, { value: 'Signal' }];
   const walletTypeMenu = [

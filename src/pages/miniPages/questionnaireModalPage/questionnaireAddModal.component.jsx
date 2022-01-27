@@ -14,11 +14,11 @@ import ToggleList from '../../../components/ListComponents/toggleListComponent/T
 // drop down case
 
 function QuestionnaireAddModal(props) {
-  const [questionName, setQuestionName] = useState();
-  const [questionLabel, setQuestionLabel] = useState();
-  const [label1, setLabel1] = useState();
-  const [label2, setLabel2] = useState();
-  const [value, setValue] = useState();
+  const [questionName, setQuestionName] = useState('');
+  const [questionLabel, setQuestionLabel] = useState('');
+  const [label1, setLabel1] = useState('');
+  const [label2, setLabel2] = useState('');
+  const [value, setValue] = useState('');
   const [questionLabelText, setQuestionLabelText] = useState('Question Label');
   const [questionLabelShow, setQuestionLabelShow] = useState(true);
   const [formControlWidth, setFormControlWidth] = useState(0);

@@ -9,12 +9,12 @@ import './mamSettings.Styles.css';
 
 function MamSettings() {
   const [label, setLabel] = useState([{ id: 1, label: 'Is User Comment' }]);
-  const [value, setValue] = useState();
-  const [value2, setValue2] = useState();
-  const [value3, setValue3] = useState();
-  const [value4, setValue4] = useState();
-  const [mam, setMam] = useState();
-  const [signalComment, setSignalComment] = useState();
+  const [value, setValue] = useState('');
+  const [value2, setValue2] = useState('');
+  const [value3, setValue3] = useState('');
+  const [value4, setValue4] = useState('');
+  const [mam, setMam] = useState('');
+  const [signalComment, setSignalComment] = useState('');
 
   const menu = [{ value: 'Server - MT4' }, { value: 'Demo - MT5' }];
 
