@@ -57,7 +57,6 @@ function CompanySettings() {
       ...mailServiceSettings,
       [evt.target.name]: value,
     });
-    console.log('hey');
   }
 
   const handleRegistrationLinksChange = (event) => {

@@ -30,7 +30,6 @@ function SearchInput(props) {
       // size={props.size ? props.size : ''}
       className={props.className}
       renderInput={(params) => {
-        console.log('params', params);
         const {
           InputLabelProps,
           disabled,

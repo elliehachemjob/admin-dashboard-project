@@ -5,19 +5,30 @@ import Dropdown from '../../../../components/dropdownComponent/SpecialDropdown.c
 
 function WalletConfiguration() {
   const [value, setValue] = useState();
-  const menu = [{ value: 'Server - MT4' }, { value: 'Demo - MT5' }];
+  const [typeValue, setTypeValue] = useState();
+  const [walletTypeValue, setWalletTypeValue] = useState();
+  const [currencyMenuValue, setCurrencyMenuValue] = useState();
+
+  const typeMenu = [{ value: 'IB' }, { value: 'Trader' }, { value: 'Signal' }];
+  const walletTypeMenu = [
+    { value: 'Test Wallet Type' },
+    { value: 'My Wallet' },
+    { value: 'Category Name' },
+  ];
+  const currencyMenu = [{ value: 'EUR' }, { value: 'USD' }, { value: 'BTC' }];
+
   const handleChange = (event) => {
     setValue(event.target.value);
   };
-
-  //  <Label
-  //           label='Wallet Configuration'
-  //           className='header-walletConfiguration'
-  //         />
-  //         <Label
-  //           label='Set Default Wallet Type and Currency '
-  //           className='header-walletConfiguration'
-  //         />
+  const handleTypeChange = (event) => {
+    setTypeValue(event.target.value);
+  };
+  const handleWalletTypeChange = (event) => {
+    setWalletTypeValue(event.target.value);
+  };
+  const handleCurrencyMenuChange = (event) => {
+    setCurrencyMenuValue(event.target.value);
+  };
 
   return (
     <div className='parent-walletConfiguration'>
@@ -25,11 +36,11 @@ function WalletConfiguration() {
       <div className='div1-walletConfiguration'>
         <Label label='Type' className='header-walletConfiguration' />
         <Dropdown
-          items={menu}
+          items={typeMenu}
           label={value}
-          handleChange={handleChange}
+          handleChange={handleTypeChange}
           value={value}
-          inputLabel={value ? value : 'Server - MT4'}
+          inputLabel={value ? value : 'Select'}
           sx={{
             marginLeft: 0.2,
             minWidth: 165,
@@ -45,11 +56,11 @@ function WalletConfiguration() {
       <div className='div2-walletConfiguration'>
         <Label label='Wallet Type' className='header-walletConfiguration' />
         <Dropdown
-          items={menu}
+          items={walletTypeMenu}
           label={value}
-          handleChange={handleChange}
+          handleChange={handleWalletTypeChange}
           value={value}
-          inputLabel={value ? value : 'Server - MT4'}
+          inputLabel={value ? value : 'Select'}
           sx={{
             marginLeft: 0.2,
             minWidth: 165,
@@ -64,11 +75,11 @@ function WalletConfiguration() {
       <div className='div3-walletConfiguration'>
         <Label label='Currency' className='header-walletConfiguration' />
         <Dropdown
-          items={menu}
+          items={currencyMenu}
           label={value}
-          handleChange={handleChange}
+          handleChange={handleCurrencyMenuChange}
           value={value}
-          inputLabel={value ? value : 'Server - MT4'}
+          inputLabel={value ? value : 'Select'}
           sx={{
             marginLeft: 0.2,
             minWidth: 165,

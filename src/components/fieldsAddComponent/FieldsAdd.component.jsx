@@ -25,7 +25,6 @@ function FieldsAdd(props) {
     const newId = date.toString();
 
     setFields([...fields, { id: newId, name: 'hi' }]);
-    console.log('fields', [...fields, { id: 6, name: 'hi' }]);
   };
 
   const [abuseValidation, setAbuseValidation] = useState([

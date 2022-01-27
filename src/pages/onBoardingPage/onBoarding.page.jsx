@@ -10,9 +10,9 @@ function OnBoarding() {
       {/* 1st */}
       {/* <QuestionnaireAddModal /> */}
       {/* 2nd */}
-      <ApplicationFlowPage />
+      {/* <ApplicationFlowPage /> */}
       {/* 3rd */}
-      {/* <FlowConfiguration /> */}
+      <FlowConfiguration />
     </>
   );
 }

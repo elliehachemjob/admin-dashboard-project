@@ -7,12 +7,7 @@ import DropdownTagSelector from '../../../components/dropdownTagSelectorComponen
 import Input from '../../../components/inputComponent/Input.component';
 import AddFields from '../../../components/fieldsAddComponent/FieldsAdd.component';
 import './applicationFlow.mini.page';
-import ScrollableTab from '../../../components/scrollableTabComponent/ScrollableTab.component';
-import MenuList from '../../../components/menuListComponent/MenuList.component';
-import {
-  CancelCircleIcon,
-  DeleteItemIcon,
-} from '../../../components/iconsComponent/Icons.component';
+import { DeleteItemIcon } from '../../../components/iconsComponent/Icons.component';
 import FlowStepsModal from './flowStepsModalPage/flowStepsModal.mini.page';
 import FlowListModal from './flowListModalPage/flowListModal.mini.page';
 import ServerChooseModal from './serverChooseModalPage/serverChooseModal.mini.page';
@@ -52,51 +47,39 @@ function ApplicationFlowPage() {
   const [flowName, setFlowName] = useState('USA Registration Flow');
 
   const [value, setValue] = useState();
-  const [tabValue, setTabValue] = useState(0);
-  const menu = [{ value: 'Server - MT4' }, { value: 'Demo - MT5' }];
-  const handleChange = (event) => {
-    setValue(event.target.value);
-  };
-  const [tabList, setTabList] = useState([
-    { id: 1, label: <div>Primary</div> },
-  ]);
-  const handleTabChange = (event, newValue) => {
-    setTabValue(newValue);
-    console.log('hey');
-  };
-  const cancelClick = (id) => {
-    setTabList((tabValue) => {
-      return tabValue.filter((item) => {
-        return item.id !== 4;
-      });
-    });
-  };
-  const handleSecondaryFlow = () => {
-    setTabValue((tabValue) => tabValue + 1);
+  const [smsVerificationValue, setSmsVerificationValue] = useState();
+  const [emailVerificationValue, setEmailVerificationValue] = useState();
+  const [selfieVerificationValue, setSelfieVerificationValue] = useState();
+  const [addressVerificationValue, setAddressVerificationValue] = useState();
+  const [applicantDataValue, setApplicantDataValue] = useState();
+  const [uploadDocumentsValue, setUploadDocumentsValue] = useState();
 
-    setTabList([
-      ...tabList,
-      {
-        id: 4,
-        label: (
-          <div>
-            Secondary
-            <CancelCircleIcon
-              className='cancelCircleIcon-applicationFlowPage'
-              onClick={cancelClick}
-            />
-          </div>
-        ),
-      },
-    ]);
-    console.log(tabList);
+  const smsVerificationMenu = [{ value: 'Twilio' }];
+  const emailVerificationMenu = [{ value: 'By Code' }, { value: 'By Email' }];
+  const selfieVerification = [{ value: 'None' }, { value: 'sumsub' }];
+  const addressVerification = [{ value: 'None' }, { value: 'sumsub' }];
+  const applicantData = [{ value: 'None' }, { value: 'sumsub' }];
+  const uploadDocuments = [{ value: 'None' }, { value: 'sumsub' }];
+
+  const menu = [{ value: 'Server - MT4' }];
+
+  const handleSmsVerificationChange = (event) => {
+    setSmsVerificationValue(event.target.value);
   };
-  const menuItemsList = [
-    { id: 1, label: 'IB' },
-    { id: 2, label: 'Trader' },
-  ];
-  const HandleAddStep = () => {
-    alert('clicked');
+  const handleEmailVerificationChange = (event) => {
+    setEmailVerificationValue(event.target.value);
+  };
+  const handleSelfieVerificationChange = (event) => {
+    setSelfieVerificationValue(event.target.value);
+  };
+  const handleAddressVerificationChange = (event) => {
+    setAddressVerificationValue(event.target.value);
+  };
+  const handleApplicantDataChange = (event) => {
+    setApplicantDataValue(event.target.value);
+  };
+  const handleUploadDocumentsChange = (event) => {
+    setUploadDocumentsValue(event.target.value);
   };
 
   return (
@@ -129,24 +112,24 @@ function ApplicationFlowPage() {
           <>
             <div className='sectionsWrapper-applicationFlow'>
               <Dropdown
-                items={menu}
-                label={value}
-                handleChange={handleChange}
-                value={value}
-                inputLabel={value ? value : 'Server - MT4'}
+                items={applicantData}
+                label={applicantDataValue}
+                handleChange={handleApplicantDataChange}
+                value={applicantDataValue}
+                inputLabel={applicantDataValue ? applicantDataValue : 'None'}
                 sx={{
                   marginLeft: 0.2,
-                  minWidth: 165,
+                  minWidth: 200,
                   borderRadius: 4,
                   background: 'linear-gradient(21deg, #10abff, #1beabd)',
                 }}
                 menuSx={{
-                  width: 165,
+                  width: 200,
                 }}
               />
               <Input
-                label='Activation Logins'
-                style={{ marginLeft: 2, width: 165 }}
+                label='SumSub Applicant Name'
+                style={{ marginLeft: 2, width: 200 }}
                 textFieldStyles={classes.textField}
               />
             </div>
@@ -189,7 +172,7 @@ function ApplicationFlowPage() {
                   options={searchList}
                   label={<Label label='Applicant Data' size={15} />}
                   className='searchInput-emailTemplate'
-                  sx={{ marginLeft: 0, width: 165 }}
+                  sx={{ marginLeft: 0, width: 200 }}
                   textFieldStyles={classes.textField}
                 />
               }
@@ -216,19 +199,19 @@ function ApplicationFlowPage() {
         }
         section2={
           <Dropdown
-            items={menu}
-            label={value}
-            handleChange={handleChange}
-            value={value}
-            inputLabel={value ? value : 'Server - MT4'}
+            items={smsVerificationMenu}
+            label={smsVerificationValue}
+            handleChange={handleSmsVerificationChange}
+            value={smsVerificationValue}
+            inputLabel={smsVerificationValue ? smsVerificationValue : 'Twilio'}
             sx={{
               marginLeft: 0.2,
-              minWidth: 165,
+              minWidth: 200,
               borderRadius: 4,
               background: 'linear-gradient(21deg, #10abff, #1beabd)',
             }}
             menuSx={{
-              width: 165,
+              width: 200,
             }}
           />
         }
@@ -243,19 +226,21 @@ function ApplicationFlowPage() {
         }
         section2={
           <Dropdown
-            items={menu}
-            label={value}
-            handleChange={handleChange}
-            value={value}
-            inputLabel={value ? value : 'Server - MT4'}
+            items={emailVerificationMenu}
+            label={emailVerificationValue}
+            handleChange={handleEmailVerificationChange}
+            value={emailVerificationValue}
+            inputLabel={
+              emailVerificationValue ? emailVerificationValue : 'By Code'
+            }
             sx={{
               marginLeft: 0.2,
-              minWidth: 165,
+              minWidth: 200,
               borderRadius: 4,
               background: 'linear-gradient(21deg, #10abff, #1beabd)',
             }}
             menuSx={{
-              width: 165,
+              width: 200,
             }}
           />
         }
@@ -271,24 +256,26 @@ function ApplicationFlowPage() {
         section2={
           <div className='sectionsWrapper-noAddFields-applicationFlow'>
             <Dropdown
-              items={menu}
-              label={value}
-              handleChange={handleChange}
-              value={value}
-              inputLabel={value ? value : 'Server - MT4'}
+              items={selfieVerification}
+              label={selfieVerificationValue}
+              handleChange={handleSelfieVerificationChange}
+              value={selfieVerificationValue}
+              inputLabel={
+                selfieVerificationValue ? selfieVerificationValue : 'None'
+              }
               sx={{
                 marginLeft: 0.2,
-                minWidth: 165,
+                minWidth: 200,
                 borderRadius: 4,
                 background: 'linear-gradient(21deg, #10abff, #1beabd)',
               }}
               menuSx={{
-                width: 165,
+                width: 200,
               }}
             />
             <Input
-              label='Activation Logins'
-              style={{ marginLeft: 2, width: 165 }}
+              label='SumSub Applicant Name'
+              style={{ marginLeft: 2, width: 200 }}
               textFieldStyles={classes.textField}
             />
           </div>
@@ -306,24 +293,26 @@ function ApplicationFlowPage() {
           <>
             <div className='sectionsWrapper-applicationFlow'>
               <Dropdown
-                items={menu}
-                label={value}
-                handleChange={handleChange}
-                value={value}
-                inputLabel={value ? value : 'Server - MT4'}
+                items={addressVerification}
+                label={addressVerificationValue}
+                handleChange={handleAddressVerificationChange}
+                value={addressVerificationValue}
+                inputLabel={
+                  addressVerificationValue ? addressVerificationValue : 'None'
+                }
                 sx={{
                   marginLeft: 0.2,
-                  minWidth: 165,
+                  minWidth: 200,
                   borderRadius: 4,
                   background: 'linear-gradient(21deg, #10abff, #1beabd)',
                 }}
                 menuSx={{
-                  width: 165,
+                  width: 200,
                 }}
               />
               <Input
-                label='Activation Logins'
-                style={{ marginLeft: 2, width: 165 }}
+                label='SumSub Applicant Name'
+                style={{ marginLeft: 2, width: 200 }}
                 textFieldStyles={classes.textField}
               />
             </div>
@@ -366,7 +355,7 @@ function ApplicationFlowPage() {
                   options={searchList}
                   label={<Label label='Applicant Data' size={15} />}
                   className='searchInput-emailTemplate'
-                  sx={{ marginLeft: 0, width: 165 }}
+                  sx={{ marginLeft: 0, width: 200 }}
                   textFieldStyles={classes.textField}
                 />
               }
@@ -391,32 +380,32 @@ function ApplicationFlowPage() {
         section2={
           <div className='sectionsWrapper-noAddFields-applicationFlow '>
             <Dropdown
-              items={menu}
-              label={value}
-              handleChange={handleChange}
-              value={value}
-              inputLabel={value ? value : 'Server - MT4'}
+              items={uploadDocuments}
+              label={uploadDocumentsValue}
+              handleChange={handleUploadDocumentsChange}
+              value={uploadDocumentsValue}
+              inputLabel={uploadDocumentsValue ? uploadDocumentsValue : 'None'}
               sx={{
                 marginLeft: 0.2,
-                minWidth: 165,
+                minWidth: 200,
                 borderRadius: 4,
                 background: 'linear-gradient(21deg, #10abff, #1beabd)',
               }}
               menuSx={{
-                width: 165,
+                width: 200,
               }}
             />
             <Input
-              label='Activation Logins'
-              style={{ marginLeft: 2, width: 165 }}
+              label='SumSub Applicant Name'
+              style={{ marginLeft: 2, width: 200 }}
               textFieldStyles={classes.textField}
             />
             <DropdownTagSelector
               sx={{
-                width: 165,
+                width: 200,
                 marginLeft: 2,
               }}
-              widthTagSelectorOpened={165}
+              widthTagSelectorOpened={200}
             />
           </div>
         }
@@ -465,7 +454,7 @@ function ApplicationFlowPage() {
                 options={searchList}
                 label={<Label label='Applicant Data' size={15} />}
                 className='searchInput-emailTemplate'
-                sx={{ marginLeft: 0, width: 165 }}
+                sx={{ marginLeft: 0, width: 200 }}
                 textFieldStyles={classes.textField}
               />
             }
@@ -525,7 +514,7 @@ function ApplicationFlowPage() {
                 options={searchList}
                 label={<Label label='Applicant Data' size={15} />}
                 className='searchInput-emailTemplate'
-                sx={{ marginLeft: 0, width: 165 }}
+                sx={{ marginLeft: 0, width: 200 }}
                 textFieldStyles={classes.textField}
               />
             }

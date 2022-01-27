@@ -21,13 +21,7 @@ function Menu() {
     >
       <List>
         {['Inbox', 'Starred', 'Send email', 'Drafts'].map((text, index) => (
-          <ListItem
-            button
-            onClick={() => {
-              console.log(text);
-            }}
-            key={text}
-          >
+          <ListItem button key={text}>
             <ListItemIcon>
               {index % 2 === 0 ? <InboxIcon /> : <MailIcon />}
             </ListItemIcon>
@@ -38,13 +32,7 @@ function Menu() {
       <Divider />
       <List>
         {['All mail', 'Trash', 'Spam'].map((text, index) => (
-          <ListItem
-            button
-            onClick={() => {
-              console.log(text);
-            }}
-            key={text}
-          >
+          <ListItem button key={text}>
             <ListItemIcon>
               {index % 2 === 0 ? <InboxIcon /> : <MailIcon />}
             </ListItemIcon>

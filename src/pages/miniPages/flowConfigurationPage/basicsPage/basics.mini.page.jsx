@@ -9,7 +9,7 @@ import { makeStyles } from '@material-ui/core/styles';
 import './basics.mini.styles.css';
 function Basics() {
   const [value, setValue] = useState();
-  const menu = [{ value: 'Server - MT4' }, { value: 'Demo - MT5' }];
+  const menu = [{ value: 'IB' }, { value: 'Trader' }, { value: 'Signal' }];
   const [label1, setLabel1] = useState([
     {
       id: 1,
@@ -56,7 +56,7 @@ function Basics() {
       <div className='div2-parent-basics'>
         <Label label='Title' className='header-basics' />
         <Input
-          label='Activation Logins'
+          label='AMConfig-IB'
           style={{
             // marginBottom: 2.5,
             marginLeft: 0.8,
@@ -73,7 +73,7 @@ function Basics() {
           label={value}
           handleChange={handleChange}
           value={value}
-          inputLabel={value ? value : 'Server - MT4'}
+          inputLabel={value ? value : 'Select'}
           sx={{
             marginLeft: 0.2,
             minWidth: 165,
