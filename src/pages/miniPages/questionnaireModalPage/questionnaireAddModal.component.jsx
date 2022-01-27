@@ -7,7 +7,7 @@ import {
   EditItemIcon,
   DeleteItemIcon,
 } from '../../../components/iconsComponent/Icons.component';
-import SpecialDropdown from '../../../components/dropdownComponent/SpecialDropdown.component';
+import Dropdown from '../../../components/dropdownComponent/SpecialDropdown.component';
 import { makeStyles } from '@material-ui/core/styles';
 import RadioButton from '../../../components/ListComponents/radioButtonListComponent/RadioButtonList.component';
 import ToggleList from '../../../components/ListComponents/toggleListComponent/ToggleList.component';
@@ -21,6 +21,7 @@ function QuestionnaireAddModal(props) {
   const [value, setValue] = useState();
   const [questionLabelText, setQuestionLabelText] = useState('Question Label');
   const [questionLabelShow, setQuestionLabelShow] = useState(true);
+  const [formControlWidth, setFormControlWidth] = useState(0);
 
   const [dropdownLabel, setDropdownLabel] = useState([
     { id: 1, label: 'MultiSelect' },
@@ -39,41 +40,23 @@ function QuestionnaireAddModal(props) {
     { value: 'DropDown' },
     { value: 'Boolean' },
     { value: 'CheckBox' },
-    { value: 'Declaration' },
+    // { value: 'Declaration' },
     { value: 'Date Selector' },
     { value: 'Title' },
   ];
 
   const useStyles = makeStyles((theme) => ({
     textField: {
-      border: '1px solid #94b3fd20',
-      backgroundColor: '#94b3fd15',
-      borderRadius: '10px',
-      opacity: 0.3,
+      border: '',
+      backgroundColor: '',
+      borderRadius: '15px',
+      background: 'linear-gradient(21deg, #10abff, #1beabd)',
+      width: 165,
+      opacity: 1,
       '&:hover,&:focus': {
-        border: '1px solid #94b3fd20',
-        backgroundColor: '#94b3fd20',
+        border: ' ',
+        backgroundColor: '',
         opacity: 1,
-      },
-      button: {
-        backgroundColor: '#11468F',
-        borderRadius: '20px',
-        '&:hover': {
-          backgroundColor: '#11468F50',
-          borderRadius: '20px',
-        },
-      },
-      dropdown: {
-        border: '2px solid #94b3fd20',
-        backgroundColor: '#94b3fd15',
-        minWidth: 189.3,
-        borderRadius: '10px',
-        opacity: 0.3,
-        '&:hover,&:focus': {
-          border: '2px solid #94b3fd20',
-          backgroundColor: '#94b3fd20',
-          opacity: 0.3,
-        },
       },
     },
   }));
@@ -87,10 +70,10 @@ function QuestionnaireAddModal(props) {
       setQuestionLabelText('Title');
     }
 
-    if (event.target.value === 'Declaration') {
-      setQuestionLabelText('Content');
-      setQuestionLabelShow(false);
-    }
+    // if (event.target.value === 'Declaration') {
+    //   setQuestionLabelText('Content');
+    //   setQuestionLabelShow(false);
+    // }
     setValue(event.target.value);
   };
   const handleQuestionNameChange = (event) => {
@@ -135,9 +118,9 @@ function QuestionnaireAddModal(props) {
     if (value === 'CheckBox') {
       alert('CheckBox Added');
     }
-    if (value === 'Declaration') {
-      alert('Declaration Added');
-    }
+    // if (value === 'Declaration') {
+    //   alert('Declaration Added');
+    // }
     if (value === 'Date Selector') {
       alert('Date Selector Added');
     }
@@ -149,7 +132,6 @@ function QuestionnaireAddModal(props) {
   return (
     <>
       {/* 1st */}
-
       <div className='container1-questionnaireModal'>
         <div className='parent-questionnaireModal'>
           <div className='div1-questionnaireModal'>
@@ -186,13 +168,21 @@ function QuestionnaireAddModal(props) {
                 label='Question Type'
                 className='label-questionnaireModal'
               />
-              <SpecialDropdown
+              <Dropdown
                 items={menu}
                 label={value}
                 handleChange={handleChange}
                 value={value}
                 inputLabel={value ? value : 'TextBox'}
-                sx={{ m: 1.9, width: 189.3 }}
+                sx={{
+                  marginLeft: 0.2,
+                  minWidth: 165,
+                  borderRadius: 4,
+                  background: 'linear-gradient(21deg, #10abff, #1beabd)',
+                }}
+                menuSx={{
+                  width: 165,
+                }}
               />
             </div>
           )}
@@ -203,13 +193,26 @@ function QuestionnaireAddModal(props) {
                 label='Question Type'
                 className='label-questionnaireModal'
               />
-              <SpecialDropdown
+              <Dropdown
                 items={menu}
                 label={value}
                 handleChange={handleChange}
                 value={value}
                 inputLabel={value ? value : 'TextBox'}
-                sx={{ m: 1.9, width: 189.3 }}
+                sx={{
+                  marginLeft: 0.2,
+                  minWidth: 165,
+                  borderRadius: 4,
+                  background: 'linear-gradient(21deg, #10abff, #1beabd)',
+                }}
+                menuSx={{
+                  width: 165,
+                }}
+                formControl={{
+                  marginTop: 2,
+                  marginLeft: 1.8,
+                  marginBottom: 7,
+                }}
               />
             </div>
           ) : (
@@ -217,20 +220,23 @@ function QuestionnaireAddModal(props) {
           )}
 
           <div className='div4-questionnaireModal'>
-            <Button
-              // className='button-questionnaireModal'
-              onClick={handleOnPressAdd}
-              name='Add'
-              variant='contained'
-              sx={{
-                backgroundColor: '#11468F',
-                borderRadius: '20px',
-                '&:hover': {
-                  backgroundColor: '#11468F50',
-                  borderRadius: '20px',
-                },
-              }}
-            />
+            <div className='button-wrapper-questionnaireModal'>
+              <Button
+                // className='button-questionnaireModal'
+                onClick={handleOnPressAdd}
+                name='Add'
+                variant='contained'
+                sx={{
+                  backgroundColor: '#2B3A67',
+                  borderRadius: '10px',
+                  fontWeight: 600,
+                  '&:hover': {
+                    backgroundColor: '#5E807F',
+                    borderRadius: '10px',
+                  },
+                }}
+              />
+            </div>
           </div>
           <div className='div5-children-questionnaireModal'>
             {value === 'DropDown' && (
@@ -242,20 +248,22 @@ function QuestionnaireAddModal(props) {
                 div2='div2-toggle-list-parent-questionnaireModal'
               />
             )}
-
             {value === 'Boolean' && (
-              <>
-                <Label
-                  label='Choose Your Own Values'
-                  className='label-questionnaireModal'
-                />
-
-                <RadioButton list={booleanList} style={{ marginLeft: 15 }} />
-              </>
+              <div className='booleanWrapper-questionnaireModal'>
+                <div className=''>
+                  <Label
+                    label='Choose Values'
+                    className='label-questionnaireModal'
+                  />
+                </div>
+                <div className=''>
+                  <RadioButton list={booleanList} style={{ marginLeft: 15 }} />
+                </div>
+              </div>
             )}
 
-            {value === 'Declaration' && (
-              <div className='wrapper-questionnaireModal'>
+            {/* {value === 'Declaration' && (
+              <div className=''>
                 <Input
                   value={label2}
                   onChange={handleLabel2Change}
@@ -267,61 +275,12 @@ function QuestionnaireAddModal(props) {
                   maxRows={2}
                   textFieldStyles={classes.textField}
                 />
-                {/* <ToggleList
-                  key={list2.id}
-                  list={list2}
-                  parent='toggle-list-parent-questionnaireModal'
-                  div1='div1-toggle-list-parent-questionnaireModal'
-                  div2='div2-toggle-list-parent-questionnaireModal'
-                /> */}
               </div>
             )}
-            {props.children}
+            {props.children} */}
           </div>
         </div>
-        {/* <Label
-          label='Edit Question'
-          size={18.72}
-          className='header-questionnaireModal'
-        /> */}
-        {/* 2nd */}
-        {/* 3rd */}
-        {/* 4th */}
       </div>
-      {/* 5th */}
-      {/* <ToggleList
-        key={list.id}
-        list={list}
-        parent='toggle-list-parent-notificationPage'
-        div1='div1-toggle-list-parent-notificationPage'
-        div2='div2-toggle-list-parent-notificationPage'
-      /> */}
-      {/* 6th */}
-      {/* <Label label='Options' className='label-questionnaireModal' />
-      <Button className='button-questionnaireModal' name='Add' /> */}
-      {/* 7th */}
-      {/* <Label label='Label' className='label-questionnaireModal' />
-      <Input
-        value={label1}
-        onChange={handleLabel1Change}
-        label='option 1'
-        className='input-questionnaireModal'
-        style={{ margin: 1.8 }}
-      /> */}
-      {/* <EditItemIcon />
-      <DeleteItemIcon /> */}
-      {/* 8th */}
-      {/* <Label label='Label' className='label-questionnaireModal' />
-      <Input
-        value={label2}
-        onChange={handleLabel2Change}
-        label='option 2'
-        className='input-questionnaireModal'
-        style={{ margin: 1.8 }}
-      /> */}
-      {/* <EditItemIcon />
-      <DeleteItemIcon /> */}
-      {/* 9th */}
     </>
   );
 }

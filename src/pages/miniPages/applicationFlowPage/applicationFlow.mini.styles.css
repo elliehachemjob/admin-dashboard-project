@@ -144,6 +144,7 @@
 }
 
 .deleteItemIcon-applicationFlow {
+  color: red;
 }
 
 .refreshIcon-applicationFlow {
@@ -173,4 +174,30 @@
 
 .sectionsWrapper-noAddFields-applicationFlow {
   display: flex;
+}
+
+.checkBox-wrapper-applicationFlow {
+}
+
+.div1-label-applicationFlow {
+  grid-area: 1 / 1 / 2 / 2;
+  width: 165px;
+  padding-left: 5px;
+}
+
+.div2-label-applicationFlow {
+  grid-area: 1 / 2 / 2 / 3;
+  width: 165px;
+  padding-left: 12.5px;
+}
+
+.div3-label-applicationFlow {
+  grid-area: 1 / 3 / 2 / 4;
+  width: 165px;
+  padding-left: 3px;
+}
+
+.div4-label-applicationFlow {
+  grid-area: 1 / 4 / 2 / 5;
+  width: 165px;
 }

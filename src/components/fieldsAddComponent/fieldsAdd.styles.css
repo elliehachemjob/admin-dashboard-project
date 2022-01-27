@@ -1,5 +1,8 @@
 .breakLine-fieldsAdd {
   border: 1px solid #c1e0f780;
+  opacity: 0.1;
+  padding-bottom: 5px;
+  padding-top: 5px;
 }
 
 .deleteItemIcon-fieldsAdd {

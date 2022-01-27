@@ -8,9 +8,9 @@ function OnBoarding() {
   return (
     <>
       {/* 1st */}
-      <QuestionnaireAddModal />
+      {/* <QuestionnaireAddModal /> */}
       {/* 2nd */}
-      {/* <ApplicationFlowPage /> */}
+      <ApplicationFlowPage />
       {/* 3rd */}
       {/* <FlowConfiguration /> */}
     </>

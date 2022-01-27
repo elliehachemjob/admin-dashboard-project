@@ -152,6 +152,10 @@ function ApplicationFlowPage() {
             </div>
 
             <AddFields
+              div1Label='div1-label-applicationFlow'
+              div2Label='div2-label-applicationFlow'
+              div3Label='div3-label-applicationFlow'
+              div4Label='div4-label-applicationFlow'
               sx={{
                 backgroundColor: '#04724D',
                 borderRadius: '10px',
@@ -175,6 +179,29 @@ function ApplicationFlowPage() {
               items={menu}
               label={value}
               value={value}
+              field1='FieldName'
+              field2='IsRequired'
+              field3='Remove '
+              field4='Type'
+              field5='Add Field'
+              testComponent1={
+                <SearchInput
+                  options={searchList}
+                  label={<Label label='Applicant Data' size={15} />}
+                  className='searchInput-emailTemplate'
+                  sx={{ marginLeft: 0, width: 165 }}
+                  textFieldStyles={classes.textField}
+                />
+              }
+              testComponent2={
+                <div className='checkBox-wrapper-applicationFlow'>
+                  <CheckBox />
+                </div>
+              }
+              testComponent3={
+                <DeleteItemIcon className='deleteItemIcon-applicationFlow' />
+              }
+              testComponent4={<Label label='Type' className='' />}
             />
           </>
         }
@@ -302,10 +329,15 @@ function ApplicationFlowPage() {
             </div>
 
             <AddFields
+              div1Label='div1-label-applicationFlow'
+              div2Label='div2-label-applicationFlow'
+              div3Label='div3-label-applicationFlow'
+              div4Label='div4-label-applicationFlow'
               sx={{
                 backgroundColor: '#04724D',
                 borderRadius: '10px',
                 fontWeight: 600,
+
                 '&:hover': {
                   backgroundColor: '#5E807F',
                   borderRadius: '10px',
@@ -324,6 +356,29 @@ function ApplicationFlowPage() {
               items={menu}
               label={value}
               value={value}
+              field1='FieldName'
+              field2='IsRequired'
+              field3='Remove '
+              field4='Type'
+              field5='Add Field'
+              testComponent1={
+                <SearchInput
+                  options={searchList}
+                  label={<Label label='Applicant Data' size={15} />}
+                  className='searchInput-emailTemplate'
+                  sx={{ marginLeft: 0, width: 165 }}
+                  textFieldStyles={classes.textField}
+                />
+              }
+              testComponent2={
+                <div className='checkBox-wrapper-applicationFlow'>
+                  <CheckBox />
+                </div>
+              }
+              testComponent3={
+                <DeleteItemIcon className='deleteItemIcon-applicationFlow' />
+              }
+              testComponent4={<Label label='Type' className='' />}
             />
           </>
         }
@@ -373,6 +428,10 @@ function ApplicationFlowPage() {
         }
         section2={
           <AddFields
+            div1Label='div1-label-applicationFlow'
+            div2Label='div2-label-applicationFlow'
+            div3Label='div3-label-applicationFlow'
+            div4Label='div4-label-applicationFlow'
             sx={{
               backgroundColor: '#04724D',
               borderRadius: '10px',
@@ -406,12 +465,18 @@ function ApplicationFlowPage() {
                 options={searchList}
                 label={<Label label='Applicant Data' size={15} />}
                 className='searchInput-emailTemplate'
-                sx={{ marginLeft: 1, width: 190 }}
+                sx={{ marginLeft: 0, width: 165 }}
                 textFieldStyles={classes.textField}
               />
             }
-            testComponent2={<CheckBox />}
-            testComponent3={<DeleteItemIcon />}
+            testComponent2={
+              <div className='checkBox-wrapper-applicationFlow'>
+                <CheckBox />
+              </div>
+            }
+            testComponent3={
+              <DeleteItemIcon className='deleteItemIcon-applicationFlow' />
+            }
             testComponent4={<Label label='Type' className='' />}
           />
         }
@@ -423,6 +488,10 @@ function ApplicationFlowPage() {
         }
         section2={
           <AddFields
+            div1Label='div1-label-applicationFlow'
+            div2Label='div2-label-applicationFlow'
+            div3Label='div3-label-applicationFlow'
+            div4Label='div4-label-applicationFlow'
             sx={{
               backgroundColor: '#04724D',
               borderRadius: '10px',
@@ -446,6 +515,29 @@ function ApplicationFlowPage() {
             items={menu}
             label={value}
             value={value}
+            field1='FieldName'
+            field2='IsRequired'
+            field3='Remove '
+            field4='Type'
+            field5='Add Field'
+            testComponent1={
+              <SearchInput
+                options={searchList}
+                label={<Label label='Applicant Data' size={15} />}
+                className='searchInput-emailTemplate'
+                sx={{ marginLeft: 0, width: 165 }}
+                textFieldStyles={classes.textField}
+              />
+            }
+            testComponent2={
+              <div className='checkBox-wrapper-applicationFlow'>
+                <CheckBox />
+              </div>
+            }
+            testComponent3={
+              <DeleteItemIcon className='deleteItemIcon-applicationFlow' />
+            }
+            testComponent4={<Label label='Type' className='' />}
           />
         }
       />
