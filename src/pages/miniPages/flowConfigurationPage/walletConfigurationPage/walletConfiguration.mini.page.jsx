@@ -37,10 +37,10 @@ function WalletConfiguration() {
         <Label label='Type' className='header-walletConfiguration' />
         <Dropdown
           items={typeMenu}
-          label={value}
+          label={typeValue}
           handleChange={handleTypeChange}
-          value={value}
-          inputLabel={value ? value : 'Select'}
+          value={typeValue}
+          inputLabel={typeValue ? typeValue : 'Select'}
           sx={{
             marginLeft: 0.2,
             minWidth: 165,
@@ -57,10 +57,10 @@ function WalletConfiguration() {
         <Label label='Wallet Type' className='header-walletConfiguration' />
         <Dropdown
           items={walletTypeMenu}
-          label={value}
+          label={walletTypeValue}
           handleChange={handleWalletTypeChange}
-          value={value}
-          inputLabel={value ? value : 'Select'}
+          value={walletTypeValue}
+          inputLabel={walletTypeValue ? walletTypeValue : 'Select'}
           sx={{
             marginLeft: 0.2,
             minWidth: 165,
@@ -76,10 +76,10 @@ function WalletConfiguration() {
         <Label label='Currency' className='header-walletConfiguration' />
         <Dropdown
           items={currencyMenu}
-          label={value}
+          label={currencyMenuValue}
           handleChange={handleCurrencyMenuChange}
-          value={value}
-          inputLabel={value ? value : 'Select'}
+          value={currencyMenuValue}
+          inputLabel={currencyMenuValue ? currencyMenuValue : 'Select'}
           sx={{
             marginLeft: 0.2,
             minWidth: 165,
