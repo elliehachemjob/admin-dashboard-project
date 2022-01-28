@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <style>
+      * {
+        box-sizing: border-box;
+      }
+      .btn {
+        background: hsl(0, 0%, 90%);
+        border: 1px solid hsl(0, 0%, 70%);
+        outline: none;
+        cursor: pointer;
+        padding: 0.5em 1em;
+        border-radius: 0.3rem;
+      }
+      .btn:hover,
+      :focus {
+        background-color: hsl(0, 0%, 80%);
+        box-shadow: 0 0 5px hsl(0, 0%, 70%);
+      }
+      .btn-primary {
+        background-color: hsl(271, 70%, 50%);
+        border-color: hsl(271, 70%, 30%);
+        color: white;
+      }
+
+      .btn-primary:hover,
+      .btn-primary:focus {
+        background-color: hsl(271, 70%, 40%);
+        box-shadow: 0 0 5px hsl(271, 70%, 30%);
+      }
+
+      .btn-accent {
+        background-color: hsl(200, 100%, 40%);
+        border-color: hsl(200, 100%, 20%);
+        color: white;
+      }
+
+      .btn-accent:hover,
+      .btn-accent:focus {
+        background-color: hsl(200, 100%, 30%);
+        box-shadow: 0 0 5px hsl(200, 100%, 20%);
+      }
+
+      .btn-danger {
+        background-color: hsl(0, 60%, 50%);
+        border-color: hsl(0, 60%, 30%);
+        color: white;
+      }
+
+      .btn-danger:hover,
+      .btn-danger:focus {
+        background-color: hsl(0, 60%, 40%);
+        box-shadow: 0 0 5px hsl(0, 60%, 30%);
+      }
+
+      .btn-large {
+        font-size: 1.25rem;
+      }
+
+      .btn-small {
+        font-size: 0.75rem;
+      }
+
+      .btn-pill {
+        border-radius: 1000000px;
+      }
+      .btn-custom {
+        background: linear-gradient(
+          to right,
+          hsl(271, 70%, 50%),
+          hsl(200, 100%, 40%)
+        );
+        color: white;
+        border-color: #222;
+      }
+      .btn-custom:hover,
+      .btn-custom:focus {
+        background: linear-gradient(
+          to right,
+          hsl(271, 70%, 40%),
+          hsl(200, 100%, 30%)
+        );
+        border-color: black;
+        box-shadow: 0 0 5px black;
+      }
+    </style>
+    <!-- <link href="styles.css" rel="stylesheet" /> -->
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Button Library</title>
+  </head>
+  <body>
+    <button class="btn">Default</button>
+    <button class="btn btn-primary">Primary</button>
+    <button class="btn btn-accent">Accent</button>
+    <button class="btn btn-danger">Danger</button>
+    <button class="btn btn-large">Large</button>
+    <button class="btn btn-small">Small</button>
+    <button class="btn btn-pill">Pill</button>
+    <button class="btn btn-custom">Custom</button>
+  </body>
+</html>

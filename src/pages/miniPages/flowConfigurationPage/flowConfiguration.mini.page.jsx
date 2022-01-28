@@ -12,6 +12,7 @@ import {
   CorrectCircleIcon,
 } from '../../../components/iconsComponent/Icons.component';
 import BreakLine from '../../../components/breakLineComponent/BreakLine.component';
+import ConfettiExplosion from 'react-confetti-explosion';
 
 import './flowConfiguration.mini.styles.css';
 

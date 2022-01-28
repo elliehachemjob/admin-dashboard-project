@@ -18,6 +18,7 @@ import Test from './pages/testPage/Test.page';
 import OnBoarding from './pages/onBoardingPage/onBoarding.page';
 import './index.css';
 import Dashboard from './components/NewDashboardComponent/DashboardComponent/Dashboard.component';
+import ConfettiExplosion from 'react-confetti-explosion';
 
 function App() {
   return (
