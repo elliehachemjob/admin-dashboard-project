@@ -29,10 +29,12 @@ function Basics() {
       outline: 'none',
       fontSize: 'inherit',
       borderRadius: '0.75em',
-      '&:hover': {
-        border: ' ',
-        backgroundColor: '',
-        opacity: '',
+      '&.Mui-focused': {
+        borderColor: '#0AF',
+        boxShadow: '0 0 5px #0AF ',
+      },
+      '& .MuiOutlinedInput-notchedOutline': {
+        border: 'none',
       },
     },
   }));
@@ -72,9 +74,18 @@ function Basics() {
           value={value}
           inputLabel={value ? value : 'Select'}
           sx={{
-            minWidth: 165,
-            borderRadius: 4,
-            background: '',
+            border: '1px solid #AAA',
+            outline: 'none',
+            fontSize: 'inherit',
+            width: 165,
+            borderRadius: '0.75em',
+            '&.Mui-focused': {
+              borderColor: '#0AF',
+              boxShadow: '0 0 5px #0AF ',
+            },
+            '& .MuiOutlinedInput-notchedOutline': {
+              border: 'none',
+            },
           }}
           menuSx={{
             width: 165,
