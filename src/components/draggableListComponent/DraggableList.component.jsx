@@ -1,8 +1,8 @@
 import React, { Component } from 'react';
 import { DragDropContext, Droppable, Draggable } from 'react-beautiful-dnd';
-
+import Button from '../../components/FlexibleButtonComponent/FlexibleButton.component';
+import Label from '../../components/labelComponent/Label.component';
 import './draggableList.styles.css';
-
 
 const reorder = (list, startIndex, endIndex) => {
   const result = Array.from(list);
@@ -16,7 +16,7 @@ export default class DraggableList extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      items: props.getItems(),
+      items: props.getItems,
     };
     this.onDragEnd = this.onDragEnd.bind(this);
   }
@@ -61,6 +61,59 @@ export default class DraggableList extends Component {
             </div>
           )}
         </Droppable>
+        <div className='parent2-buttons-applicationFlow'>
+          <div className='buttons2-child-applicationFlow'>
+            <Button
+              className='button-fieldsAdd'
+              name={
+                <div className='wrapper-addIcon-applicationFlow'>
+                  <Label
+                    label='Save Flow'
+                    className='label-addIcon-applicationFlow'
+                  />
+                </div>
+              }
+              variant='contained'
+              sx={{
+                backgroundColor: '#2B3A67',
+                borderRadius: '10px',
+                fontWeight: 600,
+                '&:hover': {
+                  backgroundColor: '#5E807F',
+                  borderRadius: '10px',
+                },
+              }}
+            />
+          </div>
+          <div className='buttons2-child-applicationFlow'>
+            <Button
+              onClick={() => {
+                this.setState({
+                  items: this.props.getItems2,
+                });
+              }}
+              className='button-fieldsAdd'
+              name={
+                <div className='wrapper-addIcon-applicationFlow'>
+                  <Label
+                    label='New Flow'
+                    className='label-addIcon-applicationFlow'
+                  />
+                </div>
+              }
+              variant='contained'
+              sx={{
+                backgroundColor: '#2B3A67',
+                borderRadius: '10px',
+                fontWeight: 600,
+                '&:hover': {
+                  backgroundColor: '#5E807F',
+                  borderRadius: '10px',
+                },
+              }}
+            />
+          </div>
+        </div>
       </DragDropContext>
     );
   }

@@ -246,3 +246,18 @@
 .wrapper-applicationFlow {
   padding-top: 33px;
 }
+
+.expandableAccordionWrapper-applicationFlow {
+  position: relative;
+}
+
+.positionedItem-applicationFlow {
+  position: absolute;
+  right: 10px;
+  top: 10px;
+}
+
+.deleteStep-applicationFlow {
+  color: #ff331f;
+  cursor: default;
+}
