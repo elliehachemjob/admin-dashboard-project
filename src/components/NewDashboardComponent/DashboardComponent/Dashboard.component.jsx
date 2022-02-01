@@ -115,7 +115,9 @@ function DashboardContent(props) {
 
         {/* right side */}
         <>
-          <Container>{props.rightSide}</Container>
+          <Container maxWidth='lg' sx={{ mt: 20, mb: 20, minWidth: 1500 }}>
+            {props.rightSide}
+          </Container>
         </>
       </Box>
     </ThemeProvider>
