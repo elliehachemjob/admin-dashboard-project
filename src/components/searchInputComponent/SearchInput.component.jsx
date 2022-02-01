@@ -18,7 +18,7 @@ function SearchInput(props) {
               borderRadius: '5px',
               width: 190,
               marginLeft: 1,
-              background: 'linear-gradient(21deg, #10abff, #1beabd)',
+              background: '""',
               opacity: 1,
               '&:hover,&:focus': {
                 border: ' ',

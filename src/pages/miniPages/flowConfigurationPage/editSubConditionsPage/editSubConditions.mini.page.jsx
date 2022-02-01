@@ -43,7 +43,7 @@ function EditSubConditions(props) {
       border: '',
       backgroundColor: '',
       borderRadius: '10px',
-      background: 'linear-gradient(21deg, #10abff, #1beabd)',
+      background: '""',
       opacity: 1,
       '&:hover,&:focus': {
         border: ' ',

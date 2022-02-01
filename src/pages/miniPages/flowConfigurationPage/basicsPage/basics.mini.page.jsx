@@ -25,15 +25,14 @@ function Basics() {
   };
   const useStyles = makeStyles((theme) => ({
     textField: {
-      border: '',
-      backgroundColor: '',
-      borderRadius: '15px',
-      background: 'linear-gradient(21deg, #10abff, #1beabd)',
-      opacity: 1,
-      '&:hover,&:focus': {
+      border: '1px solid #AAA',
+      outline: 'none',
+      fontSize: 'inherit',
+      borderRadius: '0.75em',
+      '&:hover': {
         border: ' ',
         backgroundColor: '',
-        opacity: 1,
+        opacity: '',
       },
     },
   }));
@@ -75,7 +74,7 @@ function Basics() {
           sx={{
             minWidth: 165,
             borderRadius: 4,
-            background: 'linear-gradient(21deg, #10abff, #1beabd)',
+            background: '',
           }}
           menuSx={{
             width: 165,

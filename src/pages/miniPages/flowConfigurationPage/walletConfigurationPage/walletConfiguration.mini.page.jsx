@@ -45,7 +45,7 @@ function WalletConfiguration() {
             marginLeft: 0.2,
             minWidth: 165,
             borderRadius: 4,
-            background: 'linear-gradient(21deg, #10abff, #1beabd)',
+            background: '""',
           }}
           menuSx={{
             width: 165,
@@ -65,7 +65,7 @@ function WalletConfiguration() {
             marginLeft: 0.2,
             minWidth: 165,
             borderRadius: 4,
-            background: 'linear-gradient(21deg, #10abff, #1beabd)',
+            background: '""',
           }}
           menuSx={{
             width: 165,
@@ -84,7 +84,7 @@ function WalletConfiguration() {
             marginLeft: 0.2,
             minWidth: 165,
             borderRadius: 4,
-            background: 'linear-gradient(21deg, #10abff, #1beabd)',
+            background: '""',
           }}
           menuSx={{
             width: 165,

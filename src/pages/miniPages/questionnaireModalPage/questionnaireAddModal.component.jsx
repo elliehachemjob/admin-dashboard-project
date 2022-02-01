@@ -50,7 +50,7 @@ function QuestionnaireAddModal(props) {
       border: '',
       backgroundColor: '',
       borderRadius: '15px',
-      background: 'linear-gradient(21deg, #10abff, #1beabd)',
+      background: '""',
       width: 165,
       opacity: 1,
       '&:hover,&:focus': {
@@ -178,7 +178,7 @@ function QuestionnaireAddModal(props) {
                   marginLeft: 0.2,
                   minWidth: 165,
                   borderRadius: 4,
-                  background: 'linear-gradient(21deg, #10abff, #1beabd)',
+                  background: '""',
                 }}
                 menuSx={{
                   width: 165,
@@ -203,7 +203,7 @@ function QuestionnaireAddModal(props) {
                   marginLeft: 0.2,
                   minWidth: 165,
                   borderRadius: 4,
-                  background: 'linear-gradient(21deg, #10abff, #1beabd)',
+                  background: '""',
                 }}
                 menuSx={{
                   width: 165,

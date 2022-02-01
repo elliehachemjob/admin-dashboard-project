@@ -25,7 +25,7 @@ function ApplicationFlowPage() {
       border: '',
       backgroundColor: '',
       borderRadius: '15px',
-      background: 'linear-gradient(21deg, #10abff, #1beabd)',
+      background: '""',
       opacity: 1,
       '&:hover,&:focus': {
         border: ' ',
@@ -110,7 +110,7 @@ function ApplicationFlowPage() {
                     sx={{
                       width: 200,
                       borderRadius: 4,
-                      background: 'linear-gradient(21deg, #10abff, #1beabd)',
+                      background: '""',
                     }}
                     menuSx={{
                       width: 200,
@@ -218,7 +218,7 @@ function ApplicationFlowPage() {
                     sx={{
                       width: 200,
                       borderRadius: 4,
-                      background: 'linear-gradient(21deg, #10abff, #1beabd)',
+                      background: '""',
                     }}
                     menuSx={{
                       width: 200,
@@ -265,7 +265,7 @@ function ApplicationFlowPage() {
                     sx={{
                       width: 200,
                       borderRadius: 4,
-                      background: 'linear-gradient(21deg, #10abff, #1beabd)',
+                      background: '""',
                     }}
                     menuSx={{
                       width: 200,
@@ -310,7 +310,7 @@ function ApplicationFlowPage() {
                     sx={{
                       width: 200,
                       borderRadius: 4,
-                      background: 'linear-gradient(21deg, #10abff, #1beabd)',
+                      background: '""',
                     }}
                     menuSx={{
                       width: 200,
@@ -365,7 +365,7 @@ function ApplicationFlowPage() {
                       sx={{
                         width: 200,
                         borderRadius: 4,
-                        background: 'linear-gradient(21deg, #10abff, #1beabd)',
+                        background: '""',
                       }}
                       menuSx={{
                         width: 200,
@@ -478,7 +478,7 @@ function ApplicationFlowPage() {
                       sx={{
                         width: 200,
                         borderRadius: 4,
-                        background: 'linear-gradient(21deg, #10abff, #1beabd)',
+                        background: '""',
                       }}
                       menuSx={{
                         width: 200,
@@ -588,7 +588,7 @@ function ApplicationFlowPage() {
                     sx={{
                       width: 200,
                       borderRadius: 4,
-                      background: 'linear-gradient(21deg, #10abff, #1beabd)',
+                      background: '""',
                     }}
                     menuSx={{
                       width: 200,
@@ -823,7 +823,7 @@ function ApplicationFlowPage() {
                   sx={{
                     width: 200,
                     borderRadius: 4,
-                    background: 'linear-gradient(21deg, #10abff, #1beabd)',
+                    background: '""',
                   }}
                   menuSx={{
                     width: 200,
@@ -860,7 +860,7 @@ function ApplicationFlowPage() {
                   sx={{
                     width: 200,
                     borderRadius: 4,
-                    background: 'linear-gradient(21deg, #10abff, #1beabd)',
+                    background: '""',
                   }}
                   menuSx={{
                     width: 200,
@@ -907,7 +907,7 @@ function ApplicationFlowPage() {
                     sx={{
                       width: 200,
                       borderRadius: 4,
-                      background: 'linear-gradient(21deg, #10abff, #1beabd)',
+                      background: '""',
                     }}
                     menuSx={{
                       width: 200,
@@ -1012,7 +1012,7 @@ function ApplicationFlowPage() {
                     sx={{
                       width: 200,
                       borderRadius: 4,
-                      background: 'linear-gradient(21deg, #10abff, #1beabd)',
+                      background: '""',
                     }}
                     menuSx={{
                       width: 200,
@@ -1111,7 +1111,7 @@ function ApplicationFlowPage() {
                   sx={{
                     width: 200,
                     borderRadius: 4,
-                    background: 'linear-gradient(21deg, #10abff, #1beabd)',
+                    background: '""',
                   }}
                   menuSx={{
                     width: 200,

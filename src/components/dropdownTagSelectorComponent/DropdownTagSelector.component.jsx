@@ -56,7 +56,7 @@ function DropdownTagSelector(props) {
         input={
           <OutlinedInput
             sx={{
-              background: 'linear-gradient(21deg, #10abff, #1beabd)',
+              background: '""',
               borderRadius: 4,
               minWidth: 165,
 

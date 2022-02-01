@@ -21,7 +21,7 @@ function Conditions() {
 
   const useStyles = makeStyles((theme) => ({
     textField: {
-      background: 'linear-gradient(21deg, #10abff, #1beabd)',
+      background: '""',
       minWidth: 165,
       borderRadius: '15px',
       opacity: 1,
@@ -92,7 +92,7 @@ function Conditions() {
                 <DropdownTagSelector
                   sx={{
                     width: 165,
-                    background: 'linear-gradient(21deg, #10abff, #1beabd)',
+                    background: '""',
                     borderRadius: 4,
                   }}
                   widthTagSelectorOpened={100}
@@ -116,7 +116,7 @@ function Conditions() {
                     inputLabel={value ? value : 'Server - MT4'}
                     sx={{
                       width: 165,
-                      background: 'linear-gradient(21deg, #10abff, #1beabd)',
+                      background: '""',
                       borderRadius: 4,
                     }}
                     menuSx={{ width: 165 }}

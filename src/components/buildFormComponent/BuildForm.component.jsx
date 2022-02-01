@@ -11,9 +11,9 @@ function BuildForm() {
   const [array, setArray] = useState('');
   const useStyles = makeStyles((theme) => ({
     textField: {
-      border: `1px solid  linear-gradient(21deg, #10abff, #1beabd)`,
+      border: `1px solid  ""`,
       minWidth: 189.3,
-      background: 'linear-gradient(21deg, #10abff, #1beabd)',
+      background: '""',
       borderRadius: '10px',
       opacity: 0.6,
       '&:hover,&:focus': {
