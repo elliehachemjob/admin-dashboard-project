@@ -56,9 +56,7 @@ function FlowStepsModal(props) {
       popupButtonName={
         <div className='wrapper-addIcon-applicationFlow'>
           <Label
-            label={
-              props.modalButtonName ? props.modalButtonName : 'Edit Flow Steps'
-            }
+            label={props.modalButtonName ? props.modalButtonName : 'Flow Steps'}
             className='label-addIcon-applicationFlow'
           />
         </div>

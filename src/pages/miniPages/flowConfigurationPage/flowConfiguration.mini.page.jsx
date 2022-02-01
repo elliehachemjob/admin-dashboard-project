@@ -13,6 +13,7 @@ import {
 } from '../../../components/iconsComponent/Icons.component';
 import BreakLine from '../../../components/breakLineComponent/BreakLine.component';
 import ConfettiExplosion from 'react-confetti-explosion';
+import BuildFormMini from './buildFormPage/buildForm.mini.page';
 
 import './flowConfiguration.mini.styles.css';
 
@@ -27,11 +28,14 @@ function FlowConfiguration() {
     useState('default');
   const [conditionsIcon, setConditionsIcon] = useState('default');
   const [registrationIcon, setRegistrationIcon] = useState('default');
+  const [buildFormMiniIcon, setBuildFormMiniIcon] = useState('default');
+
   const [basicBreakLine, setBasicBreakLine] = useState(true);
   const [WalletConfigurationBreakLine, setWalletConfiguration] = useState(true);
   const [ConditionsConfigurationBreakLine, setConditionsConfiguration] =
     useState(true);
   const [ConditionsBreakLine, setConditionsBreakLine] = useState(true);
+  const [BuildFormMiniBreakLine, setBuildFormMiniBreakLine] = useState(true);
 
   const BasicIcon = () => {
     if (basicsIcon === 'default') {
@@ -118,6 +122,26 @@ function FlowConfiguration() {
       );
     }
   };
+
+  const BuildFormMiniIcon = () => {
+    if (buildFormMiniIcon === 'default') {
+      return (
+        <BlackCircleIcon
+          className='icon-flowConfiguration-defaultsExceptBasics'
+          sx={{ width: '15px', height: '15px' }}
+        />
+      );
+    }
+    if (buildFormMiniIcon) {
+      return <CorrectCircleIcon className='icon-flowConfiguration-default' />;
+    }
+    if (!buildFormMiniIcon) {
+      return (
+        <CancelCircleIcon className='icon-flowConfiguration-notComplete' />
+      );
+    }
+  };
+
   const handleBasicsIcon = (e) => {
     setBasicBreakLine(false);
 
@@ -165,6 +189,17 @@ function FlowConfiguration() {
       setRegistrationIcon(false);
     }
   };
+
+  const handleBuildFormIcon = (e) => {
+    setBuildFormMiniBreakLine(false);
+
+    setRightSide('Form');
+    setBuildFormMiniIcon(true);
+    if (e.detail > 1) {
+      setBuildFormMiniIcon(false);
+    }
+  };
+
   const RightSideBasics = () => {
     if (rightSide === 'basics') {
       return <Basics />;
@@ -181,11 +216,14 @@ function FlowConfiguration() {
     if (rightSide === 'Registration') {
       return <Registration />;
     }
+    if (rightSide === 'Form') {
+      return <BuildFormMini />;
+    }
   };
 
   return (
     <div className='newWrapper-flowConfiguration'>
-      <div style={{ minWidth: 300 }} id='mySidebar'>
+      <div style={{ minWidth: '18.75rem' }} id='mySidebar'>
         <div className='div1-wholeContainer'>
           <div className='wrapper-FlowConfiguration'>
             <div className='inner-iconWrapper-flowConfiguration'>
@@ -279,6 +317,28 @@ function FlowConfiguration() {
             </div>
             {/* 5th */}
             <div className='inner-iconWrapper-flowConfiguration'>
+              <BuildFormMiniIcon />
+              <div className='inner-label-flowConfiguration'>
+                <Label
+                  label='Build Form'
+                  className='label-FlowConfiguration'
+                  size={18.72}
+                  fontWeight={1000}
+                  onClick={handleBuildFormIcon}
+                />
+              </div>
+            </div>
+            <div className='inner-breakLineWrapper-flowConfiguration'>
+              <BreakLine
+                className={
+                  BuildFormMiniBreakLine
+                    ? 'breakLine-flowConfiguration'
+                    : 'breakLine-flowConfiguration breakLine-flowConfiguration-checked'
+                }
+              />
+            </div>
+            {/* 6th */}
+            <div className='inner-iconWrapper-flowConfiguration'>
               <RegistrationIcon />
               <div className='inner-label-flowConfiguration'>
                 <Label
@@ -293,7 +353,7 @@ function FlowConfiguration() {
           </div>
         </div>
       </div>
-      <div className='div2-wholeContainer'>
+      <div style={{ maxWidth: '34.375rem' }} className='div2-wholeContainer'>
         <RightSideBasics />
       </div>
     </div>

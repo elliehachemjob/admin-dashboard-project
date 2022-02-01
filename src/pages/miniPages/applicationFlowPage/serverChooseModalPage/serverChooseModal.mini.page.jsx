@@ -23,7 +23,7 @@ function ServerChooseModal() {
       popupButtonName={
         <div className='wrapper-addIcon-applicationFlow'>
           <Label
-            label='Choose Server '
+            label='Pick Server'
             className='label-addIcon-applicationFlow'
           />
         </div>

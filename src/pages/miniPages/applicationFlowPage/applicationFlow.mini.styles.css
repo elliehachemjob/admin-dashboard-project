@@ -201,3 +201,34 @@
   grid-area: 1 / 4 / 2 / 5;
   width: 165px;
 }
+
+.div-wrapper-applicationFlow {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.div-wrapper-child-applicationFlow {
+  padding: 0.5rem 0.25rem;
+}
+
+.parent2-buttons-applicationFlow {
+  display: flex;
+}
+
+.buttons2-child-applicationFlow {
+  padding: 0.25rem 0.5rem 0rem 0rem;
+}
+
+.parent1-buttons-applicationFlow {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  width: 140px;
+}
+
+.buttons1-child-applicationFlow {
+  padding: 0.25rem 0.5rem 0rem 0rem;
+}

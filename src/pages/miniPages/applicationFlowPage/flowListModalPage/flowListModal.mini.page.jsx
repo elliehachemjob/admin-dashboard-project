@@ -20,10 +20,7 @@ function FlowListModal(props) {
     <ModalUsage
       popupButtonName={
         <div className='wrapper-addIcon-applicationFlow'>
-          <Label
-            label='Choose Flow '
-            className='label-addIcon-applicationFlow'
-          />
+          <Label label='Pick Flows' className='label-addIcon-applicationFlow' />
         </div>
       }
       sx={{

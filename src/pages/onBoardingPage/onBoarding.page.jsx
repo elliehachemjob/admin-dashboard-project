@@ -1,19 +1,22 @@
 import React, { useState } from 'react';
-import QuestionnaireAddModal from '../miniPages/questionnaireModalPage/questionnaireAddModal.component';
 import ApplicationFlowPage from '../miniPages/applicationFlowPage/applicationFlow.mini.page';
-import ListFieldsAddComponent from '../../components/ListComponents/ListFieldsAddComponent/ListFieldsAddComponent.component';
 import FlowConfiguration from '../miniPages/flowConfigurationPage/flowConfiguration.mini.page';
+import './onBoarding.styles.css';
 
 function OnBoarding() {
   return (
-    <>
+    <div className='parent-onBoarding'>
       {/* 1st */}
       {/* <QuestionnaireAddModal /> */}
       {/* 2nd */}
-      <ApplicationFlowPage />
+      <div className='div1-onBoarding'>
+        <ApplicationFlowPage />
+      </div>
       {/* 3rd */}
-      {/* <FlowConfiguration /> */}
-    </>
+      <div className='div2-onBoarding'>
+        <FlowConfiguration />
+      </div>
+    </div>
   );
 }
 
