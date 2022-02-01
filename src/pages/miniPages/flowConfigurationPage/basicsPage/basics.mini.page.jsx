@@ -6,7 +6,6 @@ import ToggleList from '../../../../components/ListComponents/toggleListComponen
 
 import { makeStyles } from '@material-ui/core/styles';
 
-
 import './basics.mini.styles.css';
 function Basics() {
   const [value, setValue] = useState('');
@@ -42,9 +41,9 @@ function Basics() {
   const classes = useStyles();
 
   return (
-    <div className='parent-basics'>
+    <div className=''>
       {/* 1st */}
-      <div className='div1-parent-basics'>
+      <div className=''>
         <Label label='Configuration' className='header-basics' />
         <ToggleList
           key={label1.id}
@@ -54,20 +53,18 @@ function Basics() {
           div2='div2-toggle-list-parent-basics'
         />
       </div>
-      <div className='div2-parent-basics'>
+      <div className=''>
         <Label label='Title' className='header-basics' />
         <Input
           label='AMConfig-IB'
           style={{
-            // marginBottom: 2.5,
-            marginLeft: 0.8,
             width: 165,
           }}
           textFieldStyles={classes.textField}
         />
       </div>
 
-      <div className='div3-parent-basics'>
+      <div className=''>
         <Label label='Select Permission' className='header-basics' />
         <Dropdown
           items={menu}
@@ -76,7 +73,6 @@ function Basics() {
           value={value}
           inputLabel={value ? value : 'Select'}
           sx={{
-            marginLeft: 0.2,
             minWidth: 165,
             borderRadius: 4,
             background: 'linear-gradient(21deg, #10abff, #1beabd)',

@@ -14,7 +14,7 @@ import {
 import BreakLine from '../../../components/breakLineComponent/BreakLine.component';
 import ConfettiExplosion from 'react-confetti-explosion';
 import BuildFormMini from './buildFormPage/buildForm.mini.page';
-
+import ServerChooseModal from '../applicationFlowPage/serverChooseModalPage/serverChooseModal.mini.page';
 import './flowConfiguration.mini.styles.css';
 
 // make Container marginLeft to  0 or add props/redux etc
@@ -222,141 +222,147 @@ function FlowConfiguration() {
   };
 
   return (
-    <div className='newWrapper-flowConfiguration'>
-      <div style={{ minWidth: '18.75rem' }} id='mySidebar'>
-        <div className='div1-wholeContainer'>
-          <div className='wrapper-FlowConfiguration'>
-            <div className='inner-iconWrapper-flowConfiguration'>
-              <BasicIcon />
-              <div className='inner-label-flowConfiguration'>
-                <Label
-                  label='Basics'
-                  className='label-FlowConfiguration'
-                  size={18.72}
-                  fontWeight={1000}
-                  onClick={handleBasicsIcon}
+    <>
+      {/* <Label label='' className='main-header-flowConfiguration' /> */}
+      <div className='serverChooseModalButton-flowConfiguration'>
+        <ServerChooseModal />
+      </div>
+      <div className='newWrapper-flowConfiguration'>
+        <div style={{ minWidth: '18.75rem' }} id='mySidebar'>
+          <div className='div1-wholeContainer'>
+            <div className='wrapper-FlowConfiguration'>
+              <div className='inner-iconWrapper-flowConfiguration'>
+                <BasicIcon />
+                <div className='inner-label-flowConfiguration'>
+                  <Label
+                    label='Basics'
+                    className='label-FlowConfiguration'
+                    size={18.72}
+                    fontWeight={1000}
+                    onClick={handleBasicsIcon}
+                  />
+                </div>
+              </div>
+              <div className='inner-breakLineWrapper-flowConfiguration'>
+                <BreakLine
+                  className={
+                    basicBreakLine
+                      ? 'breakLine-flowConfiguration'
+                      : 'breakLine-flowConfiguration breakLine-flowConfiguration-checked'
+                  }
                 />
               </div>
-            </div>
-            <div className='inner-breakLineWrapper-flowConfiguration'>
-              <BreakLine
-                className={
-                  basicBreakLine
-                    ? 'breakLine-flowConfiguration'
-                    : 'breakLine-flowConfiguration breakLine-flowConfiguration-checked'
-                }
-              />
-            </div>
-            {/* 2nd */}
-            <div className='inner-iconWrapper-flowConfiguration'>
-              <WalletConfigurationIcon />
-              <div className='inner-label-flowConfiguration'>
-                <Label
-                  label='Wallet Configuration'
-                  className='label-FlowConfiguration'
-                  size={18.72}
-                  fontWeight={1000}
-                  onClick={handleWalletConfigurationIcon}
+              {/* 2nd */}
+              <div className='inner-iconWrapper-flowConfiguration'>
+                <WalletConfigurationIcon />
+                <div className='inner-label-flowConfiguration'>
+                  <Label
+                    label='Wallet Configuration'
+                    className='label-FlowConfiguration'
+                    size={18.72}
+                    fontWeight={1000}
+                    onClick={handleWalletConfigurationIcon}
+                  />
+                </div>
+              </div>
+              <div className='inner-breakLineWrapper-flowConfiguration'>
+                <BreakLine
+                  className={
+                    WalletConfigurationBreakLine
+                      ? 'breakLine-flowConfiguration'
+                      : 'breakLine-flowConfiguration breakLine-flowConfiguration-checked'
+                  }
                 />
               </div>
-            </div>
-            <div className='inner-breakLineWrapper-flowConfiguration'>
-              <BreakLine
-                className={
-                  WalletConfigurationBreakLine
-                    ? 'breakLine-flowConfiguration'
-                    : 'breakLine-flowConfiguration breakLine-flowConfiguration-checked'
-                }
-              />
-            </div>
-            {/* 3rd */}
-            <div className='inner-iconWrapper-flowConfiguration'>
-              <ConditionsConfigurationIcon />
-              <div className='inner-label-flowConfiguration'>
-                <Label
-                  label='Conditions Configuration'
-                  className='label-FlowConfiguration'
-                  size={18.72}
-                  fontWeight={1000}
-                  onClick={handleConditionsConfigurationIcon}
-                />
+              {/* 3rd */}
+              <div className='inner-iconWrapper-flowConfiguration'>
+                <ConditionsConfigurationIcon />
+                <div className='inner-label-flowConfiguration'>
+                  <Label
+                    label='Conditions Configuration'
+                    className='label-FlowConfiguration'
+                    size={18.72}
+                    fontWeight={1000}
+                    onClick={handleConditionsConfigurationIcon}
+                  />
+                </div>
               </div>
-            </div>
 
-            <div className='inner-breakLineWrapper-flowConfiguration'>
-              <BreakLine
-                className={
-                  ConditionsConfigurationBreakLine
-                    ? 'breakLine-flowConfiguration'
-                    : 'breakLine-flowConfiguration breakLine-flowConfiguration-checked '
-                }
-              />
-            </div>
+              <div className='inner-breakLineWrapper-flowConfiguration'>
+                <BreakLine
+                  className={
+                    ConditionsConfigurationBreakLine
+                      ? 'breakLine-flowConfiguration'
+                      : 'breakLine-flowConfiguration breakLine-flowConfiguration-checked '
+                  }
+                />
+              </div>
 
-            {/* 4th */}
-            <div className='inner-iconWrapper-flowConfiguration'>
-              <ConditionsIcon />
-              <div className='inner-label-flowConfiguration'>
-                <Label
-                  label='Conditions'
-                  className='label-FlowConfiguration'
-                  size={18.72}
-                  fontWeight={1000}
-                  onClick={handleConditionsIcon}
+              {/* 4th */}
+              <div className='inner-iconWrapper-flowConfiguration'>
+                <ConditionsIcon />
+                <div className='inner-label-flowConfiguration'>
+                  <Label
+                    label='Conditions'
+                    className='label-FlowConfiguration'
+                    size={18.72}
+                    fontWeight={1000}
+                    onClick={handleConditionsIcon}
+                  />
+                </div>
+              </div>
+              <div className='inner-breakLineWrapper-flowConfiguration'>
+                <BreakLine
+                  className={
+                    ConditionsBreakLine
+                      ? 'breakLine-flowConfiguration'
+                      : 'breakLine-flowConfiguration breakLine-flowConfiguration-checked'
+                  }
                 />
               </div>
-            </div>
-            <div className='inner-breakLineWrapper-flowConfiguration'>
-              <BreakLine
-                className={
-                  ConditionsBreakLine
-                    ? 'breakLine-flowConfiguration'
-                    : 'breakLine-flowConfiguration breakLine-flowConfiguration-checked'
-                }
-              />
-            </div>
-            {/* 5th */}
-            <div className='inner-iconWrapper-flowConfiguration'>
-              <BuildFormMiniIcon />
-              <div className='inner-label-flowConfiguration'>
-                <Label
-                  label='Build Form'
-                  className='label-FlowConfiguration'
-                  size={18.72}
-                  fontWeight={1000}
-                  onClick={handleBuildFormIcon}
+              {/* 5th */}
+              <div className='inner-iconWrapper-flowConfiguration'>
+                <BuildFormMiniIcon />
+                <div className='inner-label-flowConfiguration'>
+                  <Label
+                    label='Build Form'
+                    className='label-FlowConfiguration'
+                    size={18.72}
+                    fontWeight={1000}
+                    onClick={handleBuildFormIcon}
+                  />
+                </div>
+              </div>
+              <div className='inner-breakLineWrapper-flowConfiguration'>
+                <BreakLine
+                  className={
+                    BuildFormMiniBreakLine
+                      ? 'breakLine-flowConfiguration'
+                      : 'breakLine-flowConfiguration breakLine-flowConfiguration-checked'
+                  }
                 />
               </div>
-            </div>
-            <div className='inner-breakLineWrapper-flowConfiguration'>
-              <BreakLine
-                className={
-                  BuildFormMiniBreakLine
-                    ? 'breakLine-flowConfiguration'
-                    : 'breakLine-flowConfiguration breakLine-flowConfiguration-checked'
-                }
-              />
-            </div>
-            {/* 6th */}
-            <div className='inner-iconWrapper-flowConfiguration'>
-              <RegistrationIcon />
-              <div className='inner-label-flowConfiguration'>
-                <Label
-                  label='Registration'
-                  className='label-FlowConfiguration'
-                  size={18.72}
-                  fontWeight={1000}
-                  onClick={handleRegistrationIcon}
-                />
+              {/* 6th */}
+              <div className='inner-iconWrapper-flowConfiguration'>
+                <RegistrationIcon />
+                <div className='inner-label-flowConfiguration'>
+                  <Label
+                    label='Registration'
+                    className='label-FlowConfiguration'
+                    size={18.72}
+                    fontWeight={1000}
+                    onClick={handleRegistrationIcon}
+                  />
+                </div>
               </div>
             </div>
           </div>
         </div>
+        <div style={{ maxWidth: '34.375rem' }} className='div2-wholeContainer'>
+          <RightSideBasics />
+        </div>
       </div>
-      <div style={{ maxWidth: '34.375rem' }} className='div2-wholeContainer'>
-        <RightSideBasics />
-      </div>
-    </div>
+    </>
   );
 }
 

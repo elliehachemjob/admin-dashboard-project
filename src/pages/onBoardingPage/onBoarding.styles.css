@@ -3,7 +3,7 @@
   grid-template-columns: 1fr 4fr;
   grid-template-rows: 1fr;
   grid-column-gap: 0px;
-  grid-row-gap: 200px;
+  grid-row-gap: 0;
 }
 
 .div1-onBoarding {
@@ -11,4 +11,11 @@
 }
 .div2-onBoarding {
   grid-area: 1 / 2 / 2 / 3;
+}
+
+.main-header-onBoarding {
+  padding-bottom: 40px;
+  padding-top: 15px;
+  font-weight: 1000;
+  font-size: 50px;
 }

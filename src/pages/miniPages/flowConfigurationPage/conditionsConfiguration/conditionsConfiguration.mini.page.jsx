@@ -35,9 +35,9 @@ function ConditionsConfiguration() {
   };
 
   return (
-    <div className='parent-conditionsConfiguration'>
+    <div className=''>
       {/* 1st */}
-      <div className='div1-layout-walletConfiguration'>
+      <div className=''>
         <Label
           label='Rejected Countries'
           className='header-conditionsConfiguration'
@@ -55,7 +55,7 @@ function ConditionsConfiguration() {
           widthTagSelectorOpened={165}
         />
       </div>
-      <div className='div2-layout-walletConfiguration'>
+      <div className=''>
         {/* <div className=''>
           <Label
             label='Condition Types'
@@ -167,7 +167,7 @@ function ConditionsConfiguration() {
         </div>
       </div>
 
-      <div className='div3-layout-walletConfiguration'>
+      <div className=''>
         <ToggleList
           key={label1.id}
           list={label1}

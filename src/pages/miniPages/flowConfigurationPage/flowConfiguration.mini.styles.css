@@ -252,3 +252,13 @@
 
 .label-flowConfiguration {
 }
+
+.serverChooseModalButton-flowConfiguration {
+  padding-bottom: 1rem;
+  padding-top: 4.4rem;
+}
+
+.main-header-flowConfiguration {
+  font-weight: 1000;
+  font-size: 40px;
+}

@@ -31,9 +31,9 @@ function WalletConfiguration() {
   };
 
   return (
-    <div className='parent-walletConfiguration'>
+    <div className=''>
       {/* 1st */}
-      <div className='div1-walletConfiguration'>
+      <div className=''>
         <Label label='Type' className='header-walletConfiguration' />
         <Dropdown
           items={typeMenu}
@@ -53,7 +53,7 @@ function WalletConfiguration() {
         />
       </div>
 
-      <div className='div2-walletConfiguration'>
+      <div className=''>
         <Label label='Wallet Type' className='header-walletConfiguration' />
         <Dropdown
           items={walletTypeMenu}
@@ -72,7 +72,7 @@ function WalletConfiguration() {
           }}
         />
       </div>
-      <div className='div3-walletConfiguration'>
+      <div className=''>
         <Label label='Currency' className='header-walletConfiguration' />
         <Dropdown
           items={currencyMenu}
