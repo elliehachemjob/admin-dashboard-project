@@ -261,3 +261,11 @@
   color: #ff331f;
   cursor: default;
 }
+
+.deleteStep-applicationFlow:hover {
+  color: hsl(5, 100%, 46%);
+}
+
+.deleteStep-applicationFlow:focus {
+  color: hsl(5, 100%, 46%);
+}

@@ -89,6 +89,7 @@ function ConditionsConfiguration() {
                 '&:hover': {
                   backgroundColor: '#5E807F',
                   borderRadius: '10px',
+                  boxShadow: '0 0 5px 0 	hsl(178, 15%, 34%)',
                 },
               }}
             />
@@ -113,6 +114,7 @@ function ConditionsConfiguration() {
                 '&:hover': {
                   backgroundColor: '#5E807F',
                   borderRadius: '10px',
+                  boxShadow: '0 0 5px 0 	hsl(178, 15%, 34%)',
                 },
               }}
             />
@@ -137,6 +139,7 @@ function ConditionsConfiguration() {
                 '&:hover': {
                   backgroundColor: '#5E807F',
                   borderRadius: '10px',
+                  boxShadow: '0 0 5px 0 	hsl(178, 15%, 34%)',
                 },
               }}
             />
@@ -160,6 +163,7 @@ function ConditionsConfiguration() {
                 '&:hover': {
                   backgroundColor: '#5E807F',
                   borderRadius: '10px',
+                  boxShadow: '0 0 5px 0 	hsl(178, 15%, 34%)',
                 },
               }}
             />
@@ -177,8 +181,6 @@ function ConditionsConfiguration() {
         />
       </div>
       {/* 2nd */}
-
-      {/* 3rd */}
     </div>
   );
 }

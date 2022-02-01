@@ -81,7 +81,7 @@ function Basics() {
             borderRadius: '0.75em',
             '&.Mui-focused': {
               borderColor: '#0AF',
-              boxShadow: '0 0 5px #0AF ',
+              boxShadow: '0 0 5px #0AF',
             },
             '& .MuiOutlinedInput-notchedOutline': {
               border: 'none',
