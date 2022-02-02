@@ -6,157 +6,52 @@
         box-sizing: border-box;
       }
 
-      body {
-        display: flex;
-        justify-content: center;
-        align-self: center;
-        height: 100vh;
-        margin: 0;
-        background-color: #555;
-      }
-
-      .modal {
-        height: 80vh;
-        width: 900px;
-        max-width: 80%;
-        background-color: white;
-        border-radius: 8px;
-        display: flex;
-        flex-direction: column;
-      }
-      .header {
-        padding: 0 1rem;
-        border-bottom: 1px solid #777;
-        padding-bottom: 0.5rem;
+      .nav {
+        background: #333;
+        color: white;
         display: flex;
         justify-content: space-between;
+        align-items: center;
+        padding: 0 0.5rem;
       }
 
-      .title {
-        font-size: 1.5rem;
-        padding-top: 1rem;
+      body {
+        margin: 0px;
       }
 
-      .close-button {
-        background: none;
-        border: none;
-        font-size: 1.5rem;
-        font-weight: bold;
-        margin: 0;
-        padding: 0;
-        cursor: pointer;
-        align-self: flex-start;
-        padding-top: 0.5rem;
-      }
-      .body {
-        flex-grow: 1;
-        overflow: auto;
-        padding: 1rem;
-      }
-
-      .footer {
-        display: flex;
-        justify-content: flex-end;
+      .link {
         padding: 0.5rem;
-        border-top: 1px solid #777;
       }
 
-      .footer .btn {
-        margin-right: 0.5rem;
+      .link:hover {
+        background-color: #777;
+      }
+      .link-list {
+        display: flex;
+        margin: 0;
+        list-style: none;
       }
 
-      .footer .btn:last-child {
-        margin-right: initial;
-      }
-
-      .btn {
-        padding: 0.5rem 1rem;
-        font-size: inherit;
-        border-radius: 0.3em;
-        border: none;
-        color: white;
-        cursor: pointer;
-      }
-
-      .btn.btn-primary {
-        background-color: #1ca;
-      }
-
-      .btn.btn-primary:hover,
-      .btn.btn-primary:focus {
-        background-color: #0a8;
-      }
-
-      .btn.btn-danger {
-        background-color: #c33;
-      }
-      .btn.btn-danger:hover,
-      .btn.btn-danger:focus {
-        background-color: #a11;
+      .link a {
+        color: inherit;
+        text-decoration: none;
       }
     </style>
     <!-- <link href="styles.css" rel="stylesheet" /> -->
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Modal</title>
+    <title>Navbar</title>
   </head>
   <body>
-    <div class="modal">
-      <div class="header">
-        <span class="title">Title</span>
-        <button class="close-button">&times;</button>
-      </div>
-      <div class="body">
-        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Inventore,
-        perspiciatis officia! Nobis autem dolores aliquam pariatur animi
-        provident, voluptatem culpa dolor possimus aperiam! Consectetur sint
-        quisquam fugit magnam blanditiis atque, libero dignissimos recusandae
-        debitis, accusantium laudantium labore rerum doloribus doloremque
-        consequatur voluptatum iste optio! Reprehenderit, quis provident aut ex
-        soluta fuga rerum laudantium iure, quos ipsum accusamus veniam velit
-        eaque beatae a eos nobis voluptates error fugit deleniti pariatur
-        assumenda! Sed, aliquam rem quibusdam reprehenderit dolorum non
-        veritatis illum harum minus at voluptatum praesentium modi voluptate
-        architecto quo, ea esse optio libero dolores? Est earum, nostrum neque
-        quidem nisi quae omnis voluptatum, pariatur praesentium voluptatibus
-        porro harum, qui facilis minus adipisci aperiam. Consectetur ipsam unde
-        laudantium quia alias saepe. Reprehenderit maiores magni inventore ad
-        non, exercitationem cumque, repudiandae error, tempore accusantium
-        mollitia culpa. Temporibus a ad veritatis ea repudiandae obcaecati unde
-        est voluptate culpa omnis fugit vitae esse fugiat non, consectetur
-        tempora illo dignissimos vel animi cupiditate odit cum inventore
-        voluptatibus. Suscipit voluptates deserunt beatae in harum commodi
-        reprehenderit, officia minima recusandae maiores eligendi blanditiis
-        dolorum aut maxime quae libero saepe magnam? Molestias vero nisi
-        quisquam voluptas, non facere expedita quidem, placeat eveniet tempore
-        minus consectetur fuga ex maxime facilis porro laborum sequi
-        reprehenderit. Ipsa reiciendis vitae facere autem nemo! Ad, rerum.
-        Voluptate ut omnis iure quis in alias, eligendi, neque ex minus ducimus
-        sed dolorum expedita numquam commodi doloremque sapiente. Atque cumque
-        debitis dolorem voluptates fugiat quia. Eos ullam dicta accusantium
-        voluptatum sint veritatis quam vero? Pariatur amet itaque doloremque
-        nulla nisi odit. Vero animi fuga eligendi iusto voluptas dolorem,
-        quaerat temporibus rem atque expedita quae. Porro quisquam earum
-        praesentium, nobis sint sit eveniet dicta? Quidem animi, quae earum
-        architecto dolore magni odit totam autem explicabo eveniet voluptatum
-        repellat doloremque. Laborum, quae commodi. Nesciunt inventore earum,
-        voluptas eos odio unde ut ipsam enim eveniet molestias? Voluptate rerum
-        incidunt dignissimos hic rem illum iusto suscipit, facilis cupiditate
-        earum quas in cumque. Voluptas provident molestias, eius quod dolor modi
-        dolorem enim amet consequuntur, voluptate minus hic adipisci doloribus
-        sit, ea eligendi eum ipsum perferendis aliquid laboriosam quam! Amet
-        nam, rerum natus vitae ipsa nulla enim? Laborum ipsa, dolorum quaerat
-        culpa facilis nisi itaque. At id quas voluptatibus soluta iste rem
-        suscipit, dolores doloribus vitae cupiditate aperiam perferendis quaerat
-        veritatis dicta odio iure ad saepe magnam voluptate enim minus eaque
-        cum. Culpa nulla magni ullam dolorem sed reprehenderit ducimus voluptate
-        modi ipsum.
-      </div>
-      <div class="footer">
-        <button class="btn btn-primary">Ok</button>
-        <button class="btn btn-danger">Cancel</button>
-      </div>
-    </div>
+    <nav class="nav">
+      <span>Brand Name</span>
+      <ul class="link-list">
+        <li class="link"><a href="#">Home</a></li>
+        <li class="link"><a href="#">Pricing</a></li>
+        <li class="link"><a href="#">About</a></li>
+        <li class="link"><a href="#">Contact</a></li>
+      </ul>
+    </nav>
   </body>
 </html>
