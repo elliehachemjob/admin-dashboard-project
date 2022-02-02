@@ -24,15 +24,9 @@ import './applicationFlow.mini.styles.css';
 function ApplicationFlowPage() {
   const useStyles = makeStyles((theme) => ({
     textField: {
-      border: '',
-      backgroundColor: '',
-      borderRadius: '15px',
-      opacity: 1,
-      '&:hover,&:focus': {
-        border: ' ',
-        backgroundColor: '',
-        opacity: 1,
-      },
+      outline: 'none',
+      fontSize: 'inherit',
+      borderRadius: 15,
     },
   }));
 
