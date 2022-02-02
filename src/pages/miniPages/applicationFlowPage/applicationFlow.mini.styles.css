@@ -276,3 +276,8 @@
   justify-content: flex-end;
   align-items: center;
 }
+
+.scroll-applicationFlow {
+  height: 800px;
+  overflow-y: auto;
+}

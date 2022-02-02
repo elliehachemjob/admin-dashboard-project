@@ -1523,7 +1523,7 @@ function ApplicationFlowPage() {
   ]);
 
   return (
-    <>
+    <div className='scroll-applicationFlow'>
       <div className='wrapper-applicationFlow'>
         <Label
           label={`Flow Name: ${flowName}`}
@@ -1545,7 +1545,7 @@ function ApplicationFlowPage() {
         />
         {/* 12th */}
       </div>
-    </>
+    </div>
   );
 }
 
