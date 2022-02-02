@@ -182,9 +182,8 @@ function ConditionsConfiguration() {
         <ToggleList
           key={label1.id}
           list={label1}
-          parent='toggle-list-parent-walletConfiguration'
-          div1='div1-toggle-list-parent-walletConfiguration'
-          div2='div2-toggle-list-parent-walletConfiguration'
+          parent='toggle-list-parent-conditionConfiguration'
+          div1='div1-toggle-list-parent-conditionConfiguration'
         />
       </div>
       {/* 2nd */}
