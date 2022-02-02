@@ -19,13 +19,14 @@ function FlowListModal(props) {
   return (
     <ModalUsage
       popupButtonName={
-        <div className='wrapper-addIcon-applicationFlow'>
-          <Label label='Pick Flows' className='label-addIcon-applicationFlow' />
+        <div className='wrapper-addIcon-flowListModal'>
+          <Label label='Pick Flows' className='label-addIcon-flowListModal' />
         </div>
       }
       sx={{
         backgroundColor: '#2B3A67',
         borderRadius: '10px',
+        marginBottom: 0.55,
         fontWeight: 600,
         '&:hover': {
           backgroundColor: '#5E807F',

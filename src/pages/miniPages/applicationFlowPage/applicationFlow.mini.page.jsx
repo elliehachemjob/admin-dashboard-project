@@ -14,7 +14,9 @@ import ServerChooseModal from './serverChooseModalPage/serverChooseModal.mini.pa
 import { makeStyles } from '@material-ui/core/styles';
 import CheckBox from '../../../components/checkboxComponent/CheckBox.component';
 import SearchInput from '../../../components/searchInputComponent/SearchInput.component';
-import ConditionsModal from '../conditionsModalPage/conditionsModal.mini.page';
+import ConditionsModal, {
+  ConditionsModalFixed,
+} from '../conditionsModalPage/conditionsModal.mini.page';
 import DraggableList from '../../../components/draggableListComponent/DraggableList.component';
 
 import './applicationFlow.mini.styles.css';
@@ -632,7 +634,7 @@ function ApplicationFlowPage() {
               <Label label='Questionnaire' className='label-applicationFlow' />
             }
             section2={
-              <ConditionsModal
+              <ConditionsModalFixed
                 content={
                   <AddFields
                     div1Label='div1-label-applicationFlow'
@@ -709,7 +711,7 @@ function ApplicationFlowPage() {
               <Label label='Create Account' className='label-applicationFlow' />
             }
             section2={
-              <ConditionsModal
+              <ConditionsModalFixed
                 content={
                   <AddFields
                     div1Label='div1-label-applicationFlow'
@@ -1216,62 +1218,66 @@ function ApplicationFlowPage() {
             <Label label='Create Account' className='label-applicationFlow' />
           }
           section2={
-            <ConditionsModal
-              content={
-                <AddFields
-                  div1Label='div1-label-applicationFlow'
-                  div2Label='div2-label-applicationFlow'
-                  div3Label='div3-label-applicationFlow'
-                  div4Label='div4-label-applicationFlow'
-                  sx={{
-                    backgroundColor: '#04724D',
-                    borderRadius: '10px',
-                    fontWeight: 600,
-
-                    '&:hover': {
-                      backgroundColor: '#5E807F',
-                      borderRadius: '10px',
-                    },
-                  }}
-                  sx2={{
-                    backgroundColor: '#04724D',
-                    borderRadius: '10px',
-                    fontWeight: 600,
-                    marginTop: 2.5,
-                    '&:hover': {
-                      backgroundColor: '#5E807F',
-                      borderRadius: '10px',
-                    },
-                  }}
-                  items={menu}
-                  label={value}
-                  value={value}
-                  field1='FieldName'
-                  field2='IsRequired'
-                  field3='Remove '
-                  field4='Type'
-                  field5='Add Field'
-                  testComponent1={
-                    <SearchInput
-                      options={searchList}
-                      label={<Label label='Applicant Data' size={15} />}
-                      className='searchInput-emailTemplate'
-                      sx={{ marginLeft: 0, width: 200 }}
-                      textFieldStyles={classes.textField}
+            <div className='div-wrapper-applicationFlow '>
+              <div className='div-wrapper-child-applicationFlow'>
+                <ConditionsModal
+                  iconMargin={true}
+                  content={
+                    <AddFields
+                      div1Label='div1-label-applicationFlow'
+                      div2Label='div2-label-applicationFlow'
+                      div3Label='div3-label-applicationFlow'
+                      div4Label='div4-label-applicationFlow'
+                      sx={{
+                        backgroundColor: '#04724D',
+                        borderRadius: '10px',
+                        fontWeight: 600,
+                        '&:hover': {
+                          backgroundColor: '#5E807F',
+                          borderRadius: '10px',
+                        },
+                      }}
+                      sx2={{
+                        backgroundColor: '#04724D',
+                        borderRadius: '10px',
+                        fontWeight: 600,
+                        marginTop: 2.5,
+                        '&:hover': {
+                          backgroundColor: '#5E807F',
+                          borderRadius: '10px',
+                        },
+                      }}
+                      items={menu}
+                      label={value}
+                      value={value}
+                      field1='FieldName'
+                      field2='IsRequired'
+                      field3='Remove '
+                      field4='Type'
+                      field5='Add Field'
+                      testComponent1={
+                        <SearchInput
+                          options={searchList}
+                          label={<Label label='Applicant Data' size={15} />}
+                          className='searchInput-emailTemplate'
+                          sx={{ marginLeft: 0, width: 200 }}
+                          textFieldStyles={classes.textField}
+                        />
+                      }
+                      testComponent2={
+                        <div className='checkBox-wrapper-applicationFlow'>
+                          <CheckBox />
+                        </div>
+                      }
+                      testComponent3={
+                        <DeleteItemIcon className='deleteItemIcon-applicationFlow' />
+                      }
+                      testComponent4={<Label label='Type' className='' />}
                     />
                   }
-                  testComponent2={
-                    <div className='checkBox-wrapper-applicationFlow'>
-                      <CheckBox />
-                    </div>
-                  }
-                  testComponent3={
-                    <DeleteItemIcon className='deleteItemIcon-applicationFlow' />
-                  }
-                  testComponent4={<Label label='Type' className='' />}
                 />
-              }
-            />
+              </div>
+            </div>
           }
         />
       ),

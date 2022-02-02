@@ -241,6 +241,7 @@
   font-weight: 1000;
   font-size: 13px;
   padding-bottom: 10px;
+  padding-left: 2px;
 }
 
 .wrapper-applicationFlow {
@@ -268,4 +269,10 @@
 
 .deleteStep-applicationFlow:focus {
   color: hsl(5, 100%, 46%);
+}
+
+.flex-applicationFlow {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
 }
