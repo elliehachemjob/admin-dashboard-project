@@ -279,7 +279,7 @@ function FlowConfiguration() {
                 <ConditionsConfigurationIcon />
                 <div className='inner-label-flowConfiguration'>
                   <Label
-                    label='Conditions Configuration'
+                    label='Conditions & Configuration'
                     className='label-FlowConfiguration'
                     size={18.72}
                     fontWeight={1000}
@@ -299,7 +299,7 @@ function FlowConfiguration() {
               </div>
 
               {/* 4th */}
-              <div className='inner-iconWrapper-flowConfiguration'>
+              {/* <div className='inner-iconWrapper-flowConfiguration'>
                 <ConditionsIcon />
                 <div className='inner-label-flowConfiguration'>
                   <Label
@@ -319,9 +319,9 @@ function FlowConfiguration() {
                       : 'breakLine-flowConfiguration breakLine-flowConfiguration-checked'
                   }
                 />
-              </div>
+              </div> */}
               {/* 5th */}
-              <div className='inner-iconWrapper-flowConfiguration'>
+              {/* <div className='inner-iconWrapper-flowConfiguration'>
                 <BuildFormMiniIcon />
                 <div className='inner-label-flowConfiguration'>
                   <Label
@@ -341,7 +341,7 @@ function FlowConfiguration() {
                       : 'breakLine-flowConfiguration breakLine-flowConfiguration-checked'
                   }
                 />
-              </div>
+              </div> */}
               {/* 6th */}
               <div className='inner-iconWrapper-flowConfiguration'>
                 <RegistrationIcon />

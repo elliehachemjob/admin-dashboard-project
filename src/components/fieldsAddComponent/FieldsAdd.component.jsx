@@ -160,7 +160,10 @@ function FieldsAdd(props) {
                   onClick={handleOnPressAdd}
                   className='button-fieldsAdd'
                   name={
-                    <div className='wrapper-addIcon-applicationFlow'>
+                    <div
+                      className='wrapper-addIcon-applicationFlow'
+                      style={{ width: 130 }}
+                    >
                       <AddItemIcon className='addItemIcon-applicationFlow' />
 
                       <Label

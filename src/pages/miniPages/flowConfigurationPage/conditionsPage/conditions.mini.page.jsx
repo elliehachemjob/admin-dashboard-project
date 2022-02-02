@@ -8,7 +8,7 @@ import DropdownTagSelector from '../../../../components/dropdownTagSelectorCompo
 import { DeleteItemIcon } from '../../../../components/iconsComponent/Icons.component';
 import SeeGroups from '../seeGroupsPage/seeGroups.mini.page';
 import EditSubConditions from '../editSubConditionsPage/editSubConditions.mini.page';
-import ConditionsModal from '../../conditionsModalPage/conditionsModal.mini.page';
+import { ConditionsModalFixed } from '../../conditionsModalPage/conditionsModal.mini.page';
 
 import './conditions.mini.styles.css';
 function Conditions() {
@@ -42,7 +42,7 @@ function Conditions() {
 
   return (
     <>
-      <ConditionsModal
+      <ConditionsModalFixed
         content={
           <>
             <Label
@@ -121,7 +121,7 @@ function Conditions() {
                     menuSx={{ width: 165 }}
                   />
                   <div className='icons-wrapper-conditions'>
-                    <SeeGroups   />
+                    <SeeGroups />
                     <EditSubConditions />
                     <DeleteItemIcon
                       className='deleteIcon-conditions'

@@ -3,6 +3,7 @@ import Label from '../../../../components/labelComponent/Label.component';
 import Button from '../../../../components/FlexibleButtonComponent/FlexibleButton.component';
 import ToggleList from '../../../../components/ListComponents/toggleListComponent/ToggleList.component';
 import DropdownTagSelector from '../../../../components/dropdownTagSelectorComponent/DropdownTagSelector.component';
+import Conditions from '../conditionsPage/conditions.mini.page';
 
 import './conditionsConfiguration.mini.styles.css';
 
@@ -37,23 +38,29 @@ function ConditionsConfiguration() {
   return (
     <div className=''>
       {/* 1st */}
-      <div className=''>
-        <Label
-          label='Rejected Countries'
-          className='header-conditionsConfiguration'
-        />
-        {/* <Label
+      <div className='wrapper-test-conditionsConfiguration'>
+        <div className=''>
+          <Label
+            label='Rejected Countries'
+            className='header-conditionsConfiguration'
+          />
+          {/* <Label
           label='Select Countries You Want to Reject'
           className='header-conditionsConfiguration'
         /> */}
-        <DropdownTagSelector
-          sx={{
-            width: 189.3,
-            marginLeft: 0.7,
-            width: 165,
-          }}
-          widthTagSelectorOpened={165}
-        />
+          <DropdownTagSelector
+            sx={{
+              width: 189.3,
+              marginLeft: 0.7,
+              width: 165,
+            }}
+            widthTagSelectorOpened={165}
+          />
+        </div>
+        <div className='conditionsModal-conditionsConfiguration'>
+          <Conditions />
+          <div className='special-conditionsConfiguration'>Add Conditions</div>
+        </div>
       </div>
       <div className=''>
         {/* <div className=''>
@@ -181,6 +188,9 @@ function ConditionsConfiguration() {
         />
       </div>
       {/* 2nd */}
+      {/* <div className='conditions-modal-conditionConfiguration'>
+        
+      </div> */}
     </div>
   );
 }

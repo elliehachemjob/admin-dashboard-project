@@ -3,12 +3,12 @@ import Label from '../../../../components/labelComponent/Label.component';
 import Button from '../../../../components/FlexibleButtonComponent/FlexibleButton.component';
 import FlowStepsModal from '../../applicationFlowPage/flowStepsModalPage/flowStepsModal.mini.page';
 import BuildForm from '../../../../components/buildFormComponent/BuildForm.component';
-import BuildFormModal from '../buildFormModalPage/buildFormModal.mini.page';
+import { BuildFormModalFixed } from '../buildFormModalPage/buildFormModal.mini.page';
 import './buildForm.mini.styles.css';
 
 function BuildFormMini() {
   return (
-    <BuildFormModal
+    <BuildFormModalFixed
       content={
         <>
           <Label label='Build The Form' className='header-registration' />

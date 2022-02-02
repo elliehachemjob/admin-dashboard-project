@@ -13,7 +13,12 @@ function ConditionsModal(props) {
       open={open}
       handleClose={handleClose}
       modalBackground='#C1E0F7'
-      icon={<ConditionsIcon onClick={handleOpen} />}
+      icon={
+        <ConditionsIcon
+          className='default-ConditionsIcon-conditionModal'
+          onClick={handleOpen}
+        />
+      }
     >
       {props.content}
     </ModalUsage>

@@ -4,7 +4,7 @@ import Button from '../../../../components/FlexibleButtonComponent/FlexibleButto
 import FlowStepsModal from '../../applicationFlowPage/flowStepsModalPage/flowStepsModal.mini.page';
 import ToggleList from '../../../../components/ListComponents/toggleListComponent/ToggleList.component';
 import BuildForm from '../../../../components/buildFormComponent/BuildForm.component';
-
+import BuildFormMini from '../buildFormPage/buildForm.mini.page';
 import './registration.mini.styles.css';
 
 function Registration() {
@@ -34,6 +34,8 @@ function Registration() {
         div1='div1-toggle-list-parent-registration'
         div2='div2-toggle-list-parent-registration'
       />
+      <Label label='Build Form' className='header-registration' />
+      <BuildFormMini />
     </>
   );
 }

@@ -19,7 +19,13 @@ import GavelIcon from '@mui/icons-material/Gavel';
 import BuildIcon from '@mui/icons-material/Build';
 
 export function CreateIcon(props) {
-  return <BuildIcon className={props.className} onClick={props.onClick} />;
+  return (
+    <BuildIcon
+      style={props.style}
+      className={props.className}
+      onClick={props.onClick}
+    />
+  );
 }
 
 export function ConditionsIcon(props) {
