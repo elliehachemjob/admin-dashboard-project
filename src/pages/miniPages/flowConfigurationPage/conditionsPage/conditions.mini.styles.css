@@ -50,8 +50,7 @@
 .header-conditions {
   padding-bottom: 20px;
   padding-top: 20px;
-  padding-left: 4px;
-
+  padding-left: 29px;
   font-weight: 1000;
 }
 
@@ -196,4 +195,12 @@
 
 .deleteIcon-conditions {
   color: #ff331f;
+}
+
+.deleteIcon-conditions:hover {
+  color: hsl(5, 100%, 46%);
+}
+
+.deleteIcon-conditions:focus {
+  color: hsl(5, 100%, 46%);
 }

@@ -8,7 +8,6 @@ import './buildForm.styles.css';
 import LegalDisclaimerExpand from './legalDisclaimerComponentFlowConfiguration/LegalDisclaimerExpand.component';
 
 function BuildForm() {
-  const [array, setArray] = useState('');
   const useStyles = makeStyles((theme) => ({
     textField: {
       border: `1px solid  ""`,
@@ -32,6 +31,7 @@ function BuildForm() {
     <>
       {/* 1st  */}
       <ExpandableAccordion
+        width={700}
         className='expandableAccordionTest-buildForm'
         expanded={false}
         hideExpandIcon={true}
@@ -54,6 +54,7 @@ function BuildForm() {
         }
       />
       <ExpandableAccordion
+        width={700}
         section1={
           <ToggleList
             key={label1.id}
@@ -73,6 +74,7 @@ function BuildForm() {
         section2={<PasswordExpand />}
       />
       <ExpandableAccordion
+        width={700}
         expanded={false}
         hideExpandIcon={true}
         section1={
@@ -93,6 +95,7 @@ function BuildForm() {
         }
       />
       <ExpandableAccordion
+        width={700}
         expanded={false}
         hideExpandIcon={true}
         section1={
@@ -113,6 +116,7 @@ function BuildForm() {
         }
       />
       <ExpandableAccordion
+        width={700}
         expanded={false}
         hideExpandIcon={true}
         section1={
@@ -133,6 +137,7 @@ function BuildForm() {
         }
       />
       <ExpandableAccordion
+        width={700}
         expanded={false}
         hideExpandIcon={true}
         section1={
@@ -153,6 +158,7 @@ function BuildForm() {
         }
       />
       <ExpandableAccordion
+        width={700}
         expanded={false}
         hideExpandIcon={true}
         section1={
@@ -173,6 +179,7 @@ function BuildForm() {
         }
       />
       <ExpandableAccordion
+        width={700}
         expanded={false}
         hideExpandIcon={true}
         section1={
@@ -193,6 +200,7 @@ function BuildForm() {
         }
       />
       <ExpandableAccordion
+        width={700}
         section1={
           <ToggleList
             key={label1.id}
@@ -212,6 +220,7 @@ function BuildForm() {
         section2={<LegalDisclaimerExpand />}
       />
       <ExpandableAccordion
+        width={700}
         expanded={false}
         hideExpandIcon={true}
         section1={

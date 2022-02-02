@@ -54,7 +54,6 @@ function Conditions() {
                 backgroundColor: '#04724D',
                 borderRadius: '10px',
                 fontWeight: 600,
-
                 '&:hover': {
                   backgroundColor: '#5E807F',
                   borderRadius: '10px',
@@ -122,7 +121,7 @@ function Conditions() {
                     menuSx={{ width: 165 }}
                   />
                   <div className='icons-wrapper-conditions'>
-                    <SeeGroups />
+                    <SeeGroups   />
                     <EditSubConditions />
                     <DeleteItemIcon
                       className='deleteIcon-conditions'

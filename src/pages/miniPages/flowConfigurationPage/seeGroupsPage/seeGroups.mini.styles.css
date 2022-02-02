@@ -75,6 +75,13 @@
   color: #edae49;
 }
 
+.specialEditIcon-seeGroups:hover {
+  color: hsl(37, 82%, 51%);
+}
+.specialEditIcon-seeGroups:focus {
+  color: hsl(37, 82%, 51%);
+}
+
 .correctIcon-seeGroup {
   margin-right: -7px;
 }

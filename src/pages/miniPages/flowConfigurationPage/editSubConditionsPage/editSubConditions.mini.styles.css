@@ -46,3 +46,10 @@
 .stackIcon-editSubCondition {
   color: #4c230a;
 }
+
+.stackIcon-editSubCondition:hover {
+  color: hsl(23, 77%, 7%);
+}
+.stackIcon-editSubCondition:focus {
+  color: hsl(23, 77%, 7%);
+}

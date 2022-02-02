@@ -33,10 +33,6 @@ function FieldsAdd(props) {
     { label: 'State' },
   ]);
 
-  const handleAddField = () => {
-    const array = [...abuseValidation];
-  };
-
   return (
     <div className='container1-fieldsAdd'>
       <div className=''>
@@ -151,6 +147,7 @@ function FieldsAdd(props) {
                       '&:hover': {
                         backgroundColor: '#11468F50',
                         borderRadius: '20px',
+                        boxShadow: '0 0 5px 0 	hsl(178, 15%, 34%)',
                       },
                     }
               }
@@ -183,6 +180,7 @@ function FieldsAdd(props) {
                           '&:hover': {
                             backgroundColor: '#11468F50',
                             borderRadius: '20px',
+                            boxShadow: '0 0 5px 0 	hsl(178, 15%, 34%)',
                           },
                         }
                   }

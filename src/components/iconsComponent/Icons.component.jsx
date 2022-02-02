@@ -16,6 +16,11 @@ import CheckCircleIcon from '@mui/icons-material/CheckCircle';
 import AutoAwesomeMotionIcon from '@mui/icons-material/AutoAwesomeMotion';
 import AutoAwesomeIcon from '@mui/icons-material/AutoAwesome';
 import GavelIcon from '@mui/icons-material/Gavel';
+import BuildIcon from '@mui/icons-material/Build';
+
+export function CreateIcon(props) {
+  return <BuildIcon className={props.className} onClick={props.onClick} />;
+}
 
 export function ConditionsIcon(props) {
   return <GavelIcon className={props.className} onClick={props.onClick} />;

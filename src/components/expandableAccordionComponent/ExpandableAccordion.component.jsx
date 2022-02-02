@@ -15,18 +15,17 @@ function ExpandableAccordion(props) {
           : {
               marginTop: '10px',
               marginBottom: '10px',
-              backgroundColor: '#EEF2FF50',
-              border: '1px solid #C1E0F780',
+              backgroundColor: 'hsl(206, 77%, 96%)',
               borderRadius: '10px',
               width: props.width,
               '&:hover': {
-                backgroundColor: '#EEF2FF50',
-                border: '1px solid #C1E0F7',
+                backgroundColor: 'hsl(206, 77%, 96%)',
               },
             }
       }
     >
       <AccordionSummary
+        style={{ marginTop: 5 }}
         expandIcon={props.hideExpandIcon ? null : <ExpandMoreIcon />}
         aria-controls='panel1a-content'
         id='panel1a-header'

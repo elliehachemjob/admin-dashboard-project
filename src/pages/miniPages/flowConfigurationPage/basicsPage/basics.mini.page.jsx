@@ -25,17 +25,9 @@ function Basics() {
   };
   const useStyles = makeStyles((theme) => ({
     textField: {
-      border: '1px solid #AAA',
       outline: 'none',
       fontSize: 'inherit',
-      borderRadius: '0.75em',
-      '&.Mui-focused': {
-        borderColor: '#0AF',
-        boxShadow: '0 0 5px #0AF ',
-      },
-      '& .MuiOutlinedInput-notchedOutline': {
-        border: 'none',
-      },
+      borderRadius: 15,
     },
   }));
 
@@ -74,18 +66,9 @@ function Basics() {
           value={value}
           inputLabel={value ? value : 'Select'}
           sx={{
-            border: '1px solid #AAA',
-            outline: 'none',
             fontSize: 'inherit',
             width: 165,
-            borderRadius: '0.75em',
-            '&.Mui-focused': {
-              borderColor: '#0AF',
-              boxShadow: '0 0 5px #0AF',
-            },
-            '& .MuiOutlinedInput-notchedOutline': {
-              border: 'none',
-            },
+            borderRadius: 4,
           }}
           menuSx={{
             width: 165,
