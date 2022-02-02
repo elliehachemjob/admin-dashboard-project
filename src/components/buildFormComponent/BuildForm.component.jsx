@@ -12,13 +12,10 @@ function BuildForm() {
     textField: {
       border: `1px solid  ""`,
       minWidth: 189.3,
-      background: '""',
+
       borderRadius: '10px',
       opacity: 0.6,
-      '&:hover,&:focus': {
-        border: ' ',
-        backgroundColor: '',
-      },
+      '&:hover,&:focus': {},
     },
   }));
   const classes = useStyles();
