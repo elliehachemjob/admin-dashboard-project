@@ -1,6 +1,10 @@
 import React, { Component } from 'react';
 import { DragDropContext, Droppable, Draggable } from 'react-beautiful-dnd';
 import Button from '../../components/FlexibleButtonComponent/FlexibleButton.component';
+import {
+  AddItemIcon,
+  SaveIcon,
+} from '../../components/iconsComponent/Icons.component';
 import Label from '../../components/labelComponent/Label.component';
 import './draggableList.styles.css';
 
@@ -8,7 +12,6 @@ const reorder = (list, startIndex, endIndex) => {
   const result = Array.from(list);
   const [removed] = result.splice(startIndex, 1);
   result.splice(endIndex, 0, removed);
-
   return result;
 };
 
@@ -66,11 +69,16 @@ export default class DraggableList extends Component {
             <Button
               className='button-fieldsAdd'
               name={
-                <div className='wrapper-addIcon-applicationFlow'>
+                <div className='newFlow-applicationFlow'>
                   <Label
-                    label='Save Flow'
+                    label={
+                      <div className='newFlow-applicationFlow'>
+                        <SaveIcon />
+                        Save Flow
+                      </div>
+                    }
                     className='label-addIcon-applicationFlow'
-                  />
+                  />{' '}
                 </div>
               }
               variant='contained'
@@ -96,7 +104,12 @@ export default class DraggableList extends Component {
               name={
                 <div className='wrapper-addIcon-applicationFlow'>
                   <Label
-                    label='New Flow'
+                    label={
+                      <div className='newFlow-applicationFlow'>
+                        <AddItemIcon />
+                        New Flow
+                      </div>
+                    }
                     className='label-addIcon-applicationFlow'
                   />
                 </div>

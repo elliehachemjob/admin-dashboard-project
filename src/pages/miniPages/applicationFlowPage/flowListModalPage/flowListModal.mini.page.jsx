@@ -3,7 +3,10 @@ import './flowListModal.mini.styles.css';
 import ModalUsage from '../../../../components/modalUsageComponent/ModalUsage.component';
 import Button from '../../../../components/FlexibleButtonComponent/FlexibleButton.component';
 import Label from '../../../../components/labelComponent/Label.component';
-import { AddItemIcon } from '../../../../components/iconsComponent/Icons.component';
+import {
+  AddItemIcon,
+  PickIcon,
+} from '../../../../components/iconsComponent/Icons.component';
 
 function FlowListModal(props) {
   const [createFlows, setCreatedFlows] = useState([
@@ -20,7 +23,15 @@ function FlowListModal(props) {
     <ModalUsage
       popupButtonName={
         <div className='wrapper-addIcon-flowListModal'>
-          <Label label='Pick Flows' className='label-addIcon-flowListModal' />
+          <Label
+            label={
+              <div className='newFlow-applicationFlow'>
+                <PickIcon />
+                Pick Flows
+              </div>
+            }
+            className='label-addIcon-flowListModal'
+          />
         </div>
       }
       sx={{

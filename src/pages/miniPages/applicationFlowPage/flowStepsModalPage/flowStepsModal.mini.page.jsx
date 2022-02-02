@@ -4,7 +4,10 @@ import './flowStepsModal.mini.styles.css';
 import Description from '../../../../components/descriptionComponent/Description.component';
 import Button from '../../../../components/FlexibleButtonComponent/FlexibleButton.component';
 import Label from '../../../../components/labelComponent/Label.component';
-import { AddItemIcon } from '../../../../components/iconsComponent/Icons.component';
+import {
+  AddItemIcon,
+  EditItemIcon,
+} from '../../../../components/iconsComponent/Icons.component';
 
 function FlowStepsModal(props) {
   const [smsVerificationDisplay, setSmsVerificationDisplay] = useState('');
@@ -56,7 +59,16 @@ function FlowStepsModal(props) {
       popupButtonName={
         <div className='wrapper-addIcon-applicationFlow'>
           <Label
-            label={props.modalButtonName ? props.modalButtonName : 'Flow Steps'}
+            label={
+              props.modalButtonName ? (
+                props.modalButtonName
+              ) : (
+                <div className='newFlow-applicationFlow'>
+                  <EditItemIcon />
+                  Flow Steps
+                </div>
+              )
+            }
             className='label-addIcon-applicationFlow'
           />
         </div>

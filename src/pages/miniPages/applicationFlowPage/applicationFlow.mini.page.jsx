@@ -94,7 +94,7 @@ function ApplicationFlowPage() {
       content: (
         <div className='expandableAccordionWrapper-applicationFlow'>
           <ExpandableAccordion
-            width='16.5rem'
+            width='19.2rem'
             section1={
               <Label label='Applicant Data' className='label-applicationFlow' />
             }
@@ -198,7 +198,7 @@ function ApplicationFlowPage() {
       content: (
         <div className='expandableAccordionWrapper-applicationFlow'>
           <ExpandableAccordion
-            width='16.5rem'
+            width='19.2rem'
             section1={
               <Label
                 label='SMS Verification Data'
@@ -243,7 +243,7 @@ function ApplicationFlowPage() {
       content: (
         <div className='expandableAccordionWrapper-applicationFlow'>
           <ExpandableAccordion
-            width='16.5rem'
+            width='19.2rem'
             section1={
               <Label
                 label='E-mail Verification'
@@ -290,7 +290,7 @@ function ApplicationFlowPage() {
       content: (
         <div className='expandableAccordionWrapper-applicationFlow'>
           <ExpandableAccordion
-            width='16.5rem'
+            width='19.2rem'
             section1={
               <Label
                 label='Selfie Verification'
@@ -342,7 +342,7 @@ function ApplicationFlowPage() {
       content: (
         <div className='expandableAccordionWrapper-applicationFlow'>
           <ExpandableAccordion
-            width='16.5rem'
+            width='19.2rem'
             section1={
               <Label
                 label='Address Verification'
@@ -455,7 +455,7 @@ function ApplicationFlowPage() {
       content: (
         <div className='expandableAccordionWrapper-applicationFlow'>
           <ExpandableAccordion
-            width='16.5rem'
+            width='19.2rem'
             section1={
               <Label
                 label='Address Verification'
@@ -568,7 +568,7 @@ function ApplicationFlowPage() {
       content: (
         <div className='expandableAccordionWrapper-applicationFlow'>
           <ExpandableAccordion
-            width='16.5rem'
+            width='19.2rem'
             section1={
               <Label
                 label='Upload Documents'
@@ -628,7 +628,7 @@ function ApplicationFlowPage() {
       content: (
         <div className='expandableAccordionWrapper-applicationFlow'>
           <ExpandableAccordion
-            width='16.5rem'
+            width='19.2rem'
             section1={
               <Label label='Questionnaire' className='label-applicationFlow' />
             }
@@ -705,7 +705,7 @@ function ApplicationFlowPage() {
       content: (
         <div className='expandableAccordionWrapper-applicationFlow'>
           <ExpandableAccordion
-            width='16.5rem'
+            width='19.2rem'
             section1={
               <Label label='Create Account' className='label-applicationFlow' />
             }
@@ -782,7 +782,7 @@ function ApplicationFlowPage() {
       content: (
         <div className='expandableAccordionWrapper-applicationFlow'>
           <ExpandableAccordion
-            width='16.5rem'
+            width='19.2rem'
             section1={
               <Label label='Deposit Money ' className='label-applicationFlow' />
             }

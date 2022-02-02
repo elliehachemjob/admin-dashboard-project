@@ -17,7 +17,28 @@ import AutoAwesomeMotionIcon from '@mui/icons-material/AutoAwesomeMotion';
 import AutoAwesomeIcon from '@mui/icons-material/AutoAwesome';
 import GavelIcon from '@mui/icons-material/Gavel';
 import BuildIcon from '@mui/icons-material/Build';
+import SaveAltIcon from '@mui/icons-material/SaveAlt';
+import TouchAppIcon from '@mui/icons-material/TouchApp';
 
+export function PickIcon(props) {
+  return (
+    <TouchAppIcon
+      style={props.style}
+      className={props.className}
+      onClick={props.onClick}
+    />
+  );
+}
+
+export function SaveIcon(props) {
+  return (
+    <SaveAltIcon
+      style={props.style}
+      className={props.className}
+      onClick={props.onClick}
+    />
+  );
+}
 export function CreateIcon(props) {
   return (
     <BuildIcon
