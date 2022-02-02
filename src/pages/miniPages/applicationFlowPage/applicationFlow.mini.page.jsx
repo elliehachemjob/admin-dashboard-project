@@ -27,7 +27,6 @@ function ApplicationFlowPage() {
       border: '',
       backgroundColor: '',
       borderRadius: '15px',
-      background: '""',
       opacity: 1,
       '&:hover,&:focus': {
         border: ' ',
@@ -122,7 +121,18 @@ function ApplicationFlowPage() {
                 <div className='div-wrapper-child-applicationFlow'>
                   <Input
                     label='SumSub Applicant Name'
-                    style={{ width: 200 }}
+                    style={{
+                      border: '',
+                      backgroundColor: '',
+                      borderRadius: '15px',
+                      width: 200,
+                      opacity: 1,
+                      '&:hover,&:focus': {
+                        border: ' ',
+                        backgroundColor: '',
+                        opacity: 1,
+                      },
+                    }}
                     textFieldStyles={classes.textField}
                   />
                 </div>
@@ -321,7 +331,18 @@ function ApplicationFlowPage() {
                 <div className='div-wrapper-child-applicationFlow'>
                   <Input
                     label='SumSub Applicant Name'
-                    style={{ width: 200 }}
+                    style={{
+                      border: '',
+                      backgroundColor: '',
+                      borderRadius: '15px',
+                      width: 200,
+                      opacity: 1,
+                      '&:hover,&:focus': {
+                        border: ' ',
+                        backgroundColor: '',
+                        opacity: 1,
+                      },
+                    }}
                     textFieldStyles={classes.textField}
                   />
                 </div>
@@ -377,7 +398,18 @@ function ApplicationFlowPage() {
                   <div className='div-wrapper-child-applicationFlow'>
                     <Input
                       label='SumSub Applicant Name'
-                      style={{ width: 200 }}
+                      style={{
+                        border: '',
+                        backgroundColor: '',
+                        borderRadius: '15px',
+                        width: 200,
+                        opacity: 1,
+                        '&:hover,&:focus': {
+                          border: ' ',
+                          backgroundColor: '',
+                          opacity: 1,
+                        },
+                      }}
                       textFieldStyles={classes.textField}
                     />
                   </div>
@@ -490,7 +522,18 @@ function ApplicationFlowPage() {
                   <div className='div-wrapper-child-applicationFlow'>
                     <Input
                       label='SumSub Applicant Name'
-                      style={{ width: 200 }}
+                      style={{
+                        border: '',
+                        backgroundColor: '',
+                        borderRadius: '15px',
+                        width: 200,
+                        opacity: 1,
+                        '&:hover,&:focus': {
+                          border: ' ',
+                          backgroundColor: '',
+                          opacity: 1,
+                        },
+                      }}
                       textFieldStyles={classes.textField}
                     />
                   </div>
@@ -832,7 +875,18 @@ function ApplicationFlowPage() {
                 <div className='div-wrapper-child-applicationFlow'>
                   <Input
                     label='SumSub Applicant Name'
-                    style={{ width: 200 }}
+                    style={{
+                      border: '',
+                      backgroundColor: '',
+                      borderRadius: '15px',
+                      width: 200,
+                      opacity: 1,
+                      '&:hover,&:focus': {
+                        border: ' ',
+                        backgroundColor: '',
+                        opacity: 1,
+                      },
+                    }}
                     textFieldStyles={classes.textField}
                   />
                 </div>
@@ -1031,7 +1085,18 @@ function ApplicationFlowPage() {
                 <div className='div-wrapper-child-applicationFlow'>
                   <Input
                     label='SumSub Applicant Name'
-                    style={{ width: 200 }}
+                    style={{
+                      border: '',
+                      backgroundColor: '',
+                      borderRadius: '15px',
+                      width: 200,
+                      opacity: 1,
+                      '&:hover,&:focus': {
+                        border: ' ',
+                        backgroundColor: '',
+                        opacity: 1,
+                      },
+                    }}
                     textFieldStyles={classes.textField}
                   />
                 </div>
@@ -1087,7 +1152,18 @@ function ApplicationFlowPage() {
                   <div className='div-wrapper-child-applicationFlow'>
                     <Input
                       label='SumSub Applicant Name'
-                      style={{ width: 200 }}
+                      style={{
+                        border: '',
+                        backgroundColor: '',
+                        borderRadius: '15px',
+                        width: 200,
+                        opacity: 1,
+                        '&:hover,&:focus': {
+                          border: ' ',
+                          backgroundColor: '',
+                          opacity: 1,
+                        },
+                      }}
                       textFieldStyles={classes.textField}
                     />
                   </div>
@@ -1200,7 +1276,18 @@ function ApplicationFlowPage() {
                   <div className='div-wrapper-child-applicationFlow'>
                     <Input
                       label='SumSub Applicant Name'
-                      style={{ width: 200 }}
+                      style={{
+                        border: '',
+                        backgroundColor: '',
+                        borderRadius: '15px',
+                        width: 200,
+                        opacity: 1,
+                        '&:hover,&:focus': {
+                          border: ' ',
+                          backgroundColor: '',
+                          opacity: 1,
+                        },
+                      }}
                       textFieldStyles={classes.textField}
                     />
                   </div>

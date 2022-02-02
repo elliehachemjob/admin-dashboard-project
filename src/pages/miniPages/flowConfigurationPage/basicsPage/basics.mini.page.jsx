@@ -3,7 +3,6 @@ import Label from '../../../../components/labelComponent/Label.component';
 import Dropdown from '../../../../components/dropdownComponent/SpecialDropdown.component';
 import Input from '../../../../components/inputComponent/Input.component';
 import ToggleList from '../../../../components/ListComponents/toggleListComponent/ToggleList.component';
-
 import { makeStyles } from '@material-ui/core/styles';
 
 import './basics.mini.styles.css';
