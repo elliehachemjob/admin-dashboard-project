@@ -17,6 +17,8 @@ import SidebarLink from '../sidebarLinkComponent/SidebarLink.component';
 import './sidebarLinks.styles.css';
 import BugReportIcon from '@mui/icons-material/BugReport';
 import AirplaneTicketIcon from '@mui/icons-material/AirplaneTicket';
+import DisplaySettingsIcon from '@mui/icons-material/DisplaySettings';
+import AccountTreeIcon from '@mui/icons-material/AccountTree';
 
 function SidebarLinks(props) {
   const links = [
@@ -100,6 +102,18 @@ function SidebarLinks(props) {
       path: '/onBoarding',
       name: 'OnBoarding',
       icon: <AirplaneTicketIcon />,
+    },
+    {
+      id: 17,
+      path: '/applicationFlowHolder',
+      name: 'OnBoarding',
+      icon: <AccountTreeIcon />,
+    },
+    {
+      id: 18,
+      path: '/flowConfigurationHolder',
+      name: 'OnBoarding',
+      icon: <DisplaySettingsIcon />,
     },
   ];
 

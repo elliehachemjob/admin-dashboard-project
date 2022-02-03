@@ -16,9 +16,12 @@ import WebHooks from './pages/webhooksPage/webhooks.page';
 import Notifications from './pages/notificationsPage/notifications.page';
 import Test from './pages/testPage/Test.page';
 import OnBoarding from './pages/onBoardingPage/onBoarding.page';
-import './index.css';
+import ApplicationFlowPage from './pages/miniPages/applicationFlowPage/applicationFlow.mini.page';
+import ApplicationFlowHolder from './pages/applicationFlowHolderPage/applicationFlowHolder.page';
+import FlowConfiguration from './pages/miniPages/flowConfigurationPage/flowConfiguration.mini.page';
+import FlowConfigurationHolder from './pages/flowConfigurationHolderPage/flowConfigurationHolder.page';
 import Dashboard from './components/NewDashboardComponent/DashboardComponent/Dashboard.component';
-import ConfettiExplosion from 'react-confetti-explosion';
+import './index.css';
 
 function App() {
   return (
@@ -134,6 +137,39 @@ function App() {
             path='/onBoarding'
             element={
               <Dashboard rightSide={<OnBoarding />} label='OnBoarding' />
+            }
+          />
+          <Route
+            path='/applicationFlow'
+            element={
+              <Dashboard
+                rightSide={<ApplicationFlowPage />}
+                label='OnBoarding'
+              />
+            }
+          />
+          <Route
+            path='/flowConfiguration'
+            element={
+              <Dashboard rightSide={<FlowConfiguration />} label='OnBoarding' />
+            }
+          />
+          <Route
+            path='/applicationFlowHolder'
+            element={
+              <Dashboard
+                rightSide={<ApplicationFlowHolder />}
+                label='OnBoarding'
+              />
+            }
+          />
+          <Route
+            path='/flowConfigurationHolder'
+            element={
+              <Dashboard
+                rightSide={<FlowConfigurationHolder />}
+                label='OnBoarding'
+              />
             }
           />
         </Routes>

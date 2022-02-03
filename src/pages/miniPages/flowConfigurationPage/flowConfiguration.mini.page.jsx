@@ -223,10 +223,6 @@ function FlowConfiguration() {
 
   return (
     <>
-      {/* <Label label='' className='main-header-flowConfiguration' /> */}
-      <div className='serverChooseModalButton-flowConfiguration'>
-        <ServerChooseModal />
-      </div>
       <div className='newWrapper-flowConfiguration'>
         <div style={{ minWidth: '18.75rem' }} id='mySidebar'>
           <div className='div1-wholeContainer'>

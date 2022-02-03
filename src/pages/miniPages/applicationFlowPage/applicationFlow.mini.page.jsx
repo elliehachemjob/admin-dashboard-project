@@ -1538,6 +1538,9 @@ function ApplicationFlowPage() {
             {/* 2nd */}
             <FlowStepsModal />
           </div>
+          <div className='buttons1-child-applicationFlow'>
+            <ServerChooseModal />
+          </div>
         </div>
         <DraggableList
           getItems={draggableListContent1}
