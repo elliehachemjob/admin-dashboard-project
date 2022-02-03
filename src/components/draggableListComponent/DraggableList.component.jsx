@@ -6,6 +6,8 @@ import {
   SaveIcon,
 } from '../../components/iconsComponent/Icons.component';
 import Label from '../../components/labelComponent/Label.component';
+import CreateNewFlowModalPage from '../../pages/miniPages/applicationFlowPage/createNewFlowModalPage/createNewFlowModalPage.mini.page';
+
 import './draggableList.styles.css';
 
 const reorder = (list, startIndex, endIndex) => {
@@ -95,12 +97,12 @@ export default class DraggableList extends Component {
               />
             </div>
             <div className='buttons2-child-applicationFlow'>
-              <Button
-                onClick={() => {
-                  this.setState({
-                    items: this.props.getItems2,
-                  });
-                }}
+              {/* <Button
+                // onClick={() => {
+                //   this.setState({
+                //     items: this.props.getItems2,
+                //   });
+                // }}
                 className='button-fieldsAdd'
                 name={
                   <div className='wrapper-addIcon-applicationFlow'>
@@ -124,6 +126,13 @@ export default class DraggableList extends Component {
                     backgroundColor: '#5E807F',
                     borderRadius: '10px',
                   },
+                }}
+              /> */}
+              <CreateNewFlowModalPage
+                onClick={() => {
+                  this.setState({
+                    items: this.props.getItems2,
+                  });
                 }}
               />
             </div>
