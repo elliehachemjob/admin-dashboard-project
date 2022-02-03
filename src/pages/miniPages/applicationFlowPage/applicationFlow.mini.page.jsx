@@ -1535,7 +1535,7 @@ function ApplicationFlowPage() {
         <div className='wrapper-applicationFlow'>
           <Label
             label={`Flow Name: ${flowName}`}
-            className='flowNameLabel-applicationFlow'
+            className='flowNameLabelHeader-applicationFlow'
           />
           <div className='parent1-buttons-applicationFlow'>
             <div className='buttons1-child-applicationFlow'>

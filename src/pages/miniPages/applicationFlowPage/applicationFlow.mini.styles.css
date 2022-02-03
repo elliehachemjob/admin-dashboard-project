@@ -303,3 +303,10 @@
 .goBackIcon-applicationFlow {
   margin-top: -3px;
 }
+
+.flowNameLabelHeader-applicationFlow {
+  font-weight: 1000;
+  font-size: 20px;
+  padding-bottom: 10px;
+  padding-left: 2px;
+}
