@@ -189,6 +189,11 @@ function ApplicationFlowPage() {
                     />
                   }
                 />
+
+                <Label
+                  label='Add Conditions'
+                  className='label-nearCondition2-applicationFlow'
+                />
               </div>
             }
           />
@@ -459,6 +464,10 @@ function ApplicationFlowPage() {
                       />
                     }
                   />
+                  <Label
+                    label='Add Conditions'
+                    className='label-nearCondition2-applicationFlow'
+                  />
                 </div>
               </>
             }
@@ -583,6 +592,10 @@ function ApplicationFlowPage() {
                       />
                     }
                   />
+                  <Label
+                    label='Add Conditions'
+                    className='label-nearCondition2-applicationFlow'
+                  />
                 </div>
               </>
             }
@@ -677,61 +690,67 @@ function ApplicationFlowPage() {
               <Label label='Questionnaire' className='label-applicationFlow' />
             }
             section2={
-              <ConditionsModalFixed
-                content={
-                  <AddFields
-                    div1Label='div1-label-applicationFlow'
-                    div2Label='div2-label-applicationFlow'
-                    div3Label='div3-label-applicationFlow'
-                    div4Label='div4-label-applicationFlow'
-                    sx={{
-                      backgroundColor: '#04724D',
-                      borderRadius: '10px',
-                      fontWeight: 600,
-                      '&:hover': {
-                        backgroundColor: '#5E807F',
+              <div className='wrapper-questioner-applicationFlow '>
+                <ConditionsModalFixed
+                  content={
+                    <AddFields
+                      div1Label='div1-label-applicationFlow'
+                      div2Label='div2-label-applicationFlow'
+                      div3Label='div3-label-applicationFlow'
+                      div4Label='div4-label-applicationFlow'
+                      sx={{
+                        backgroundColor: '#04724D',
                         borderRadius: '10px',
-                      },
-                    }}
-                    sx2={{
-                      backgroundColor: '#04724D',
-                      borderRadius: '10px',
-                      fontWeight: 600,
-                      marginTop: 2.5,
-                      '&:hover': {
-                        backgroundColor: '#5E807F',
+                        fontWeight: 600,
+                        '&:hover': {
+                          backgroundColor: '#5E807F',
+                          borderRadius: '10px',
+                        },
+                      }}
+                      sx2={{
+                        backgroundColor: '#04724D',
                         borderRadius: '10px',
-                      },
-                    }}
-                    items={menu}
-                    label={value}
-                    value={value}
-                    field1='FieldName'
-                    field2='IsRequired'
-                    field3='Remove '
-                    field4='Type'
-                    field5='Add Field'
-                    testComponent1={
-                      <SearchInput
-                        options={searchList}
-                        label={<Label label='Applicant Data' size={15} />}
-                        className='searchInput-emailTemplate'
-                        sx={{ marginLeft: 0, width: 200 }}
-                        textFieldStyles={classes.textField}
-                      />
-                    }
-                    testComponent2={
-                      <div className='checkBox-wrapper-applicationFlow'>
-                        <CheckBox />
-                      </div>
-                    }
-                    testComponent3={
-                      <DeleteItemIcon className='deleteItemIcon-applicationFlow' />
-                    }
-                    testComponent4={<Label label='Type' className='' />}
-                  />
-                }
-              />
+                        fontWeight: 600,
+                        marginTop: 2.5,
+                        '&:hover': {
+                          backgroundColor: '#5E807F',
+                          borderRadius: '10px',
+                        },
+                      }}
+                      items={menu}
+                      label={value}
+                      value={value}
+                      field1='FieldName'
+                      field2='IsRequired'
+                      field3='Remove '
+                      field4='Type'
+                      field5='Add Field'
+                      testComponent1={
+                        <SearchInput
+                          options={searchList}
+                          label={<Label label='Applicant Data' size={15} />}
+                          className='searchInput-emailTemplate'
+                          sx={{ marginLeft: 0, width: 200 }}
+                          textFieldStyles={classes.textField}
+                        />
+                      }
+                      testComponent2={
+                        <div className='checkBox-wrapper-applicationFlow'>
+                          <CheckBox />
+                        </div>
+                      }
+                      testComponent3={
+                        <DeleteItemIcon className='deleteItemIcon-applicationFlow' />
+                      }
+                      testComponent4={<Label label='Type' className='' />}
+                    />
+                  }
+                />
+                <Label
+                  label='Add Conditions'
+                  className='label-nearCondition-applicationFlow'
+                />
+              </div>
             }
           />
           <span className='positionedItem-applicationFlow'>
@@ -753,62 +772,68 @@ function ApplicationFlowPage() {
               <Label label='Create Account' className='label-applicationFlow' />
             }
             section2={
-              <ConditionsModalFixed
-                content={
-                  <AddFields
-                    div1Label='div1-label-applicationFlow'
-                    div2Label='div2-label-applicationFlow'
-                    div3Label='div3-label-applicationFlow'
-                    div4Label='div4-label-applicationFlow'
-                    sx={{
-                      backgroundColor: '#04724D',
-                      borderRadius: '10px',
-                      fontWeight: 600,
+              <div className='wrapper-questioner-applicationFlow'>
+                <ConditionsModalFixed
+                  content={
+                    <AddFields
+                      div1Label='div1-label-applicationFlow'
+                      div2Label='div2-label-applicationFlow'
+                      div3Label='div3-label-applicationFlow'
+                      div4Label='div4-label-applicationFlow'
+                      sx={{
+                        backgroundColor: '#04724D',
+                        borderRadius: '10px',
+                        fontWeight: 600,
 
-                      '&:hover': {
-                        backgroundColor: '#5E807F',
+                        '&:hover': {
+                          backgroundColor: '#5E807F',
+                          borderRadius: '10px',
+                        },
+                      }}
+                      sx2={{
+                        backgroundColor: '#04724D',
                         borderRadius: '10px',
-                      },
-                    }}
-                    sx2={{
-                      backgroundColor: '#04724D',
-                      borderRadius: '10px',
-                      fontWeight: 600,
-                      marginTop: 2.5,
-                      '&:hover': {
-                        backgroundColor: '#5E807F',
-                        borderRadius: '10px',
-                      },
-                    }}
-                    items={menu}
-                    label={value}
-                    value={value}
-                    field1='FieldName'
-                    field2='IsRequired'
-                    field3='Remove '
-                    field4='Type'
-                    field5='Add Field'
-                    testComponent1={
-                      <SearchInput
-                        options={searchList}
-                        label={<Label label='Applicant Data' size={15} />}
-                        className='searchInput-emailTemplate'
-                        sx={{ marginLeft: 0, width: 200 }}
-                        textFieldStyles={classes.textField}
-                      />
-                    }
-                    testComponent2={
-                      <div className='checkBox-wrapper-applicationFlow'>
-                        <CheckBox />
-                      </div>
-                    }
-                    testComponent3={
-                      <DeleteItemIcon className='deleteItemIcon-applicationFlow' />
-                    }
-                    testComponent4={<Label label='Type' className='' />}
-                  />
-                }
-              />
+                        fontWeight: 600,
+                        marginTop: 2.5,
+                        '&:hover': {
+                          backgroundColor: '#5E807F',
+                          borderRadius: '10px',
+                        },
+                      }}
+                      items={menu}
+                      label={value}
+                      value={value}
+                      field1='FieldName'
+                      field2='IsRequired'
+                      field3='Remove '
+                      field4='Type'
+                      field5='Add Field'
+                      testComponent1={
+                        <SearchInput
+                          options={searchList}
+                          label={<Label label='Applicant Data' size={15} />}
+                          className='searchInput-emailTemplate'
+                          sx={{ marginLeft: 0, width: 200 }}
+                          textFieldStyles={classes.textField}
+                        />
+                      }
+                      testComponent2={
+                        <div className='checkBox-wrapper-applicationFlow'>
+                          <CheckBox />
+                        </div>
+                      }
+                      testComponent3={
+                        <DeleteItemIcon className='deleteItemIcon-applicationFlow' />
+                      }
+                      testComponent4={<Label label='Type' className='' />}
+                    />
+                  }
+                />
+                <Label
+                  label='Add Conditions'
+                  className='label-nearCondition-applicationFlow'
+                />
+              </div>
             }
           />
           <span className='positionedItem-applicationFlow'>
@@ -1371,62 +1396,65 @@ function ApplicationFlowPage() {
               <Label label='Questionnaire' className='label-applicationFlow' />
             }
             section2={
-              <ConditionsModalFixed
-                content={
-                  <AddFields
-                    div1Label='div1-label-applicationFlow'
-                    div2Label='div2-label-applicationFlow'
-                    div3Label='div3-label-applicationFlow'
-                    div4Label='div4-label-applicationFlow'
-                    sx={{
-                      backgroundColor: '#04724D',
-                      borderRadius: '10px',
-                      fontWeight: 600,
+              <>
+                <div>hi</div>
+                <ConditionsModalFixed
+                  content={
+                    <AddFields
+                      div1Label='div1-label-applicationFlow'
+                      div2Label='div2-label-applicationFlow'
+                      div3Label='div3-label-applicationFlow'
+                      div4Label='div4-label-applicationFlow'
+                      sx={{
+                        backgroundColor: '#04724D',
+                        borderRadius: '10px',
+                        fontWeight: 600,
 
-                      '&:hover': {
-                        backgroundColor: '#5E807F',
+                        '&:hover': {
+                          backgroundColor: '#5E807F',
+                          borderRadius: '10px',
+                        },
+                      }}
+                      sx2={{
+                        backgroundColor: '#04724D',
                         borderRadius: '10px',
-                      },
-                    }}
-                    sx2={{
-                      backgroundColor: '#04724D',
-                      borderRadius: '10px',
-                      fontWeight: 600,
-                      marginTop: 2.5,
-                      '&:hover': {
-                        backgroundColor: '#5E807F',
-                        borderRadius: '10px',
-                      },
-                    }}
-                    items={menu}
-                    label={value}
-                    value={value}
-                    field1='FieldName'
-                    field2='IsRequired'
-                    field3='Remove '
-                    field4='Type'
-                    field5='Add Field'
-                    testComponent1={
-                      <SearchInput
-                        options={searchList}
-                        label={<Label label='Applicant Data' size={15} />}
-                        className='searchInput-emailTemplate'
-                        sx={{ marginLeft: 0, width: 200 }}
-                        textFieldStyles={classes.textField}
-                      />
-                    }
-                    testComponent2={
-                      <div className='checkBox-wrapper-applicationFlow'>
-                        <CheckBox />
-                      </div>
-                    }
-                    testComponent3={
-                      <DeleteItemIcon className='deleteItemIcon-applicationFlow' />
-                    }
-                    testComponent4={<Label label='Type' className='' />}
-                  />
-                }
-              />
+                        fontWeight: 600,
+                        marginTop: 2.5,
+                        '&:hover': {
+                          backgroundColor: '#5E807F',
+                          borderRadius: '10px',
+                        },
+                      }}
+                      items={menu}
+                      label={value}
+                      value={value}
+                      field1='FieldName'
+                      field2='IsRequired'
+                      field3='Remove '
+                      field4='Type'
+                      field5='Add Field'
+                      testComponent1={
+                        <SearchInput
+                          options={searchList}
+                          label={<Label label='Applicant Data' size={15} />}
+                          className='searchInput-emailTemplate'
+                          sx={{ marginLeft: 0, width: 200 }}
+                          textFieldStyles={classes.textField}
+                        />
+                      }
+                      testComponent2={
+                        <div className='checkBox-wrapper-applicationFlow'>
+                          <CheckBox />
+                        </div>
+                      }
+                      testComponent3={
+                        <DeleteItemIcon className='deleteItemIcon-applicationFlow' />
+                      }
+                      testComponent4={<Label label='Type' className='' />}
+                    />
+                  }
+                />
+              </>
             }
           />
           <span className='positionedItem-applicationFlow'>
