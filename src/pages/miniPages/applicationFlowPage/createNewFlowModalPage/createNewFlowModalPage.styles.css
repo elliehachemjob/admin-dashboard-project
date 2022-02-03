@@ -11,8 +11,8 @@
   align-items: center;
   padding-bottom: 30px;
   padding-top: 30px;
-  padding-left: 30px;
-  padding-right: 30px;
+  padding-left: 65px;
+  padding-right: 65px;
   border: 1px solid #2b3a6790;
   border-radius: 10px;
 }
@@ -26,5 +26,13 @@
 }
 
 .button-wrapper-flowStepsModal {
-  padding-right: 10px;
+}
+
+.ServerChooseModal-wrapper-flowStepsModal {
+  padding-right: 70px;
+}
+
+.button-wrapper-flowStepsModal {
+  display: flex;
+  justify-content: flex-end;
 }

@@ -6,6 +6,7 @@ import { AddItemIcon } from '../../../../components/iconsComponent/Icons.compone
 import Description from '../../../../components/descriptionComponent/Description.component';
 import Button from '../../../../components/FlexibleButtonComponent/FlexibleButton.component';
 import { makeStyles } from '@material-ui/core/styles';
+import ServerChooseModal from '../serverChooseModalPage/serverChooseModal.mini.page';
 import './createNewFlowModalPage.styles.css';
 
 function CreateNewFlowModalPage(props) {
@@ -111,6 +112,9 @@ function CreateNewFlowModalPage(props) {
               textFieldStyles={classes.textField}
             />
           </div>
+          <div className='ServerChooseModal-wrapper-flowStepsModal'>
+            <ServerChooseModal />
+          </div>
 
           <div className='button-wrapper-flowStepsModal'>
             <Button
@@ -119,11 +123,11 @@ function CreateNewFlowModalPage(props) {
               variant='contained'
               sx={{
                 backgroundColor: '#2B3A67',
-                borderRadius: '20px',
+                borderRadius: '10px',
                 fontWeight: 600,
                 '&:hover': {
                   backgroundColor: '#5E807F',
-                  borderRadius: '20px',
+                  borderRadius: '10px',
                 },
               }}
             />
@@ -140,13 +144,13 @@ function CreateNewFlowModalPage(props) {
             variant='contained'
             sx={{
               backgroundColor: '#2B3A67',
-              borderRadius: '20px',
+              borderRadius: '10px',
               display: smsVerificationDisplay,
               fontWeight: 600,
 
               '&:hover': {
                 backgroundColor: '#5E807F',
-                borderRadius: '20px',
+                borderRadius: '10px',
               },
             }}
           />
@@ -174,12 +178,12 @@ function CreateNewFlowModalPage(props) {
             variant='contained'
             sx={{
               backgroundColor: '#2B3A67',
-              borderRadius: '20px',
+              borderRadius: '10px',
               fontWeight: 600,
               display: emailVerificationDisplay,
               '&:hover': {
                 backgroundColor: '#5E807F',
-                borderRadius: '20px',
+                borderRadius: '10px',
               },
             }}
           />
@@ -207,12 +211,12 @@ function CreateNewFlowModalPage(props) {
             variant='contained'
             sx={{
               backgroundColor: '#2B3A67',
-              borderRadius: '20px',
+              borderRadius: '10px',
               fontWeight: 600,
               display: selfieVerificationDisplay,
               '&:hover': {
                 backgroundColor: '#5E807F',
-                borderRadius: '20px',
+                borderRadius: '10px',
               },
             }}
           />
@@ -242,12 +246,12 @@ function CreateNewFlowModalPage(props) {
             variant='contained'
             sx={{
               backgroundColor: '#2B3A67',
-              borderRadius: '20px',
+              borderRadius: '10px',
               fontWeight: 600,
               display: addressVerificationDisplay,
               '&:hover': {
                 backgroundColor: '#5E807F',
-                borderRadius: '20px',
+                borderRadius: '10px',
               },
             }}
           />
@@ -275,12 +279,12 @@ function CreateNewFlowModalPage(props) {
             variant='contained'
             sx={{
               backgroundColor: '#2B3A67',
-              borderRadius: '20px',
+              borderRadius: '10px',
               fontWeight: 600,
               display: createAccountDisplay,
               '&:hover': {
                 backgroundColor: '#5E807F',
-                borderRadius: '20px',
+                borderRadius: '10px',
               },
             }}
           />
@@ -309,13 +313,13 @@ function CreateNewFlowModalPage(props) {
             variant='contained'
             sx={{
               backgroundColor: '#2B3A67',
-              borderRadius: '20px',
+              borderRadius: '10px',
               fontWeight: 600,
               display: questionnaireDisplay,
 
               '&:hover': {
                 backgroundColor: '#5E807F',
-                borderRadius: '20px',
+                borderRadius: '10px',
               },
             }}
           />
@@ -343,12 +347,12 @@ function CreateNewFlowModalPage(props) {
             variant='contained'
             sx={{
               backgroundColor: '#2B3A67',
-              borderRadius: '20px',
+              borderRadius: '10px',
               fontWeight: 600,
               display: depositMoneyDisplay,
               '&:hover': {
                 backgroundColor: '#5E807F',
-                borderRadius: '20px',
+                borderRadius: '10px',
               },
             }}
           />
@@ -375,12 +379,12 @@ function CreateNewFlowModalPage(props) {
             variant='contained'
             sx={{
               backgroundColor: '#2B3A67',
-              borderRadius: '20px',
+              borderRadius: '10px',
               fontWeight: 600,
               display: applicantDataDisplay,
               '&:hover': {
                 backgroundColor: '#5E807F',
-                borderRadius: '20px',
+                borderRadius: '10px',
               },
             }}
           />
@@ -409,13 +413,13 @@ function CreateNewFlowModalPage(props) {
             variant='contained'
             sx={{
               backgroundColor: '#2B3A67',
-              borderRadius: '20px',
+              borderRadius: '10px',
               fontWeight: 600,
               display: uploadDocumentsDisplay,
 
               '&:hover': {
                 backgroundColor: '#5E807F',
-                borderRadius: '20px',
+                borderRadius: '10px',
               },
             }}
           />
@@ -445,13 +449,13 @@ function CreateNewFlowModalPage(props) {
                 variant='contained'
                 sx={{
                   backgroundColor: '#2B3A67',
-                  borderRadius: '20px',
+                  borderRadius: '10px',
                   fontWeight: 600,
                   display: uploadDocumentsDisplay,
 
                   '&:hover': {
                     backgroundColor: '#5E807F',
-                    borderRadius: '20px',
+                    borderRadius: '10px',
                   },
                 }}
               />
@@ -470,23 +474,22 @@ function CreateNewFlowModalPage(props) {
             </div>
           </>
         ) : null} */}
-        <div>
-          <div className='button-wrapper-flowStepsModal'>
-            <Button
-              className='button-fieldsAdd'
-              name='Continue'
-              variant='contained'
-              sx={{
-                backgroundColor: '#2B3A67',
-                borderRadius: '20px',
-                fontWeight: 600,
-                '&:hover': {
-                  backgroundColor: '#5E807F',
-                  borderRadius: '20px',
-                },
-              }}
-            />
-          </div>
+        <div></div>
+        <div className='button-wrapper-flowStepsModal'>
+          <Button
+            className='button-fieldsAdd'
+            name='Save'
+            variant='contained'
+            sx={{
+              backgroundColor: '#2B3A67',
+              borderRadius: '10px',
+              fontWeight: 600,
+              '&:hover': {
+                backgroundColor: '#5E807F',
+                borderRadius: '10px',
+              },
+            }}
+          />
         </div>
       </div>
     </ModalUsage>
