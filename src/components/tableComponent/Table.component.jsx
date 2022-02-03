@@ -7,7 +7,11 @@ function Table(props) {
       style={
         props.style
           ? props.style
-          : { height: 600, width: '99.4%', marginLeft: 5 }
+          : {
+              height: 600,
+              width: '99.5%',
+              marginLeft: 5,
+            }
       }
       className={props.className}
     >

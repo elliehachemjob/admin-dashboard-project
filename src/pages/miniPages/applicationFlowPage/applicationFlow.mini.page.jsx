@@ -7,7 +7,10 @@ import DropdownTagSelector from '../../../components/dropdownTagSelectorComponen
 import Input from '../../../components/inputComponent/Input.component';
 import AddFields from '../../../components/fieldsAddComponent/FieldsAdd.component';
 import './applicationFlow.mini.page';
-import { DeleteItemIcon } from '../../../components/iconsComponent/Icons.component';
+import {
+  DeleteItemIcon,
+  GoBackIcon,
+} from '../../../components/iconsComponent/Icons.component';
 import FlowStepsModal from './flowStepsModalPage/flowStepsModal.mini.page';
 import FlowListModal from './flowListModalPage/flowListModal.mini.page';
 import ServerChooseModal from './serverChooseModalPage/serverChooseModal.mini.page';
@@ -18,6 +21,7 @@ import ConditionsModal, {
   ConditionsModalFixed,
 } from '../conditionsModalPage/conditionsModal.mini.page';
 import DraggableList from '../../../components/draggableListComponent/DraggableList.component';
+import { Link } from 'react-router-dom';
 
 import './applicationFlow.mini.styles.css';
 
@@ -87,7 +91,7 @@ function ApplicationFlowPage() {
       content: (
         <div className='expandableAccordionWrapper-applicationFlow'>
           <ExpandableAccordion
-            width='19.2rem'
+            width='60rem'
             section1={
               <Label label='Applicant Data' className='label-applicationFlow' />
             }
@@ -202,7 +206,7 @@ function ApplicationFlowPage() {
       content: (
         <div className='expandableAccordionWrapper-applicationFlow'>
           <ExpandableAccordion
-            width='19.2rem'
+            width='60rem'
             section1={
               <Label
                 label='SMS Verification Data'
@@ -247,7 +251,7 @@ function ApplicationFlowPage() {
       content: (
         <div className='expandableAccordionWrapper-applicationFlow'>
           <ExpandableAccordion
-            width='19.2rem'
+            width='60rem'
             section1={
               <Label
                 label='E-mail Verification'
@@ -267,14 +271,6 @@ function ApplicationFlowPage() {
                         ? emailVerificationValue
                         : 'By Code'
                     }
-                    sx={{
-                      width: 200,
-                      borderRadius: 4,
-                      background: '""',
-                    }}
-                    menuSx={{
-                      width: 200,
-                    }}
                   />
                 </div>
               </div>
@@ -294,7 +290,7 @@ function ApplicationFlowPage() {
       content: (
         <div className='expandableAccordionWrapper-applicationFlow'>
           <ExpandableAccordion
-            width='19.2rem'
+            width='60rem'
             section1={
               <Label
                 label='Selfie Verification'
@@ -357,7 +353,7 @@ function ApplicationFlowPage() {
       content: (
         <div className='expandableAccordionWrapper-applicationFlow'>
           <ExpandableAccordion
-            width='19.2rem'
+            width='60rem'
             section1={
               <Label
                 label='Address Verification'
@@ -481,7 +477,7 @@ function ApplicationFlowPage() {
       content: (
         <div className='expandableAccordionWrapper-applicationFlow'>
           <ExpandableAccordion
-            width='19.2rem'
+            width='60rem'
             section1={
               <Label
                 label='Address Verification'
@@ -605,7 +601,7 @@ function ApplicationFlowPage() {
       content: (
         <div className='expandableAccordionWrapper-applicationFlow'>
           <ExpandableAccordion
-            width='19.2rem'
+            width='60rem'
             section1={
               <Label
                 label='Upload Documents'
@@ -676,7 +672,7 @@ function ApplicationFlowPage() {
       content: (
         <div className='expandableAccordionWrapper-applicationFlow'>
           <ExpandableAccordion
-            width='19.2rem'
+            width='60rem'
             section1={
               <Label label='Questionnaire' className='label-applicationFlow' />
             }
@@ -692,7 +688,6 @@ function ApplicationFlowPage() {
                       backgroundColor: '#04724D',
                       borderRadius: '10px',
                       fontWeight: 600,
-
                       '&:hover': {
                         backgroundColor: '#5E807F',
                         borderRadius: '10px',
@@ -753,7 +748,7 @@ function ApplicationFlowPage() {
       content: (
         <div className='expandableAccordionWrapper-applicationFlow'>
           <ExpandableAccordion
-            width='19.2rem'
+            width='60rem'
             section1={
               <Label label='Create Account' className='label-applicationFlow' />
             }
@@ -830,7 +825,7 @@ function ApplicationFlowPage() {
       content: (
         <div className='expandableAccordionWrapper-applicationFlow'>
           <ExpandableAccordion
-            width='19.2rem'
+            width='60rem'
             section1={
               <Label label='Deposit Money ' className='label-applicationFlow' />
             }
@@ -852,7 +847,7 @@ function ApplicationFlowPage() {
       content: (
         <div className='expandableAccordionWrapper-applicationFlow'>
           <ExpandableAccordion
-            width='19.2rem'
+            width='60rem'
             section1={
               <Label label='Flow Changed' className='label-applicationFlow' />
             }
@@ -967,7 +962,7 @@ function ApplicationFlowPage() {
       content: (
         <div className='expandableAccordionWrapper-applicationFlow'>
           <ExpandableAccordion
-            width='19.2rem'
+            width='60rem'
             section1={
               <Label
                 label='SMS Verification Data'
@@ -1012,7 +1007,7 @@ function ApplicationFlowPage() {
       content: (
         <div className='expandableAccordionWrapper-applicationFlow'>
           <ExpandableAccordion
-            width='19.2rem'
+            width='60rem'
             section1={
               <Label
                 label='E-mail Verification'
@@ -1059,7 +1054,7 @@ function ApplicationFlowPage() {
       content: (
         <div className='expandableAccordionWrapper-applicationFlow'>
           <ExpandableAccordion
-            width='19.2rem'
+            width='60rem'
             section1={
               <Label
                 label='Selfie Verification'
@@ -1122,7 +1117,7 @@ function ApplicationFlowPage() {
       content: (
         <div className='expandableAccordionWrapper-applicationFlow'>
           <ExpandableAccordion
-            width='19.2rem'
+            width='60rem'
             section1={
               <Label
                 label='Address Verification'
@@ -1246,7 +1241,7 @@ function ApplicationFlowPage() {
       content: (
         <div className='expandableAccordionWrapper-applicationFlow'>
           <ExpandableAccordion
-            width='19.2rem'
+            width='60rem'
             section1={
               <Label
                 label='Address Verification'
@@ -1371,7 +1366,7 @@ function ApplicationFlowPage() {
       content: (
         <div className='expandableAccordionWrapper-applicationFlow'>
           <ExpandableAccordion
-            width='19.2rem'
+            width='60rem'
             section1={
               <Label label='Questionnaire' className='label-applicationFlow' />
             }
@@ -1448,7 +1443,7 @@ function ApplicationFlowPage() {
       content: (
         <div className='expandableAccordionWrapper-applicationFlow'>
           <ExpandableAccordion
-            width='19.2rem'
+            width='60rem'
             section1={
               <Label label='Create Account' className='label-applicationFlow' />
             }
@@ -1522,33 +1517,48 @@ function ApplicationFlowPage() {
     },
   ]);
 
+
   return (
-    <div className='scroll-applicationFlow'>
-      <div className='wrapper-applicationFlow'>
+    <>
+      <Link
+        to='/applicationFlowHolder'
+        className='link-applicationFlow goBack-wrapper-applicationFlow'
+      >
+        <GoBackIcon className='goBackIcon-applicationFlow' />
         <Label
-          label={`Flow Name: ${flowName}`}
-          className='flowNameLabel-applicationFlow'
+          label='Go Back'
+          className='goBack-applicationFlow'
+          fontWeight={1000}
         />
-        <div className='parent1-buttons-applicationFlow'>
-          <div className='buttons1-child-applicationFlow'>
-            {/* 1st */}
-            <FlowListModal flowName={flowName} setFlowName={setFlowName} />
+      </Link>
+
+      <div className='scroll-applicationFlow'>
+        <div className='wrapper-applicationFlow'>
+          <Label
+            label={`Flow Name: ${flowName}`}
+            className='flowNameLabel-applicationFlow'
+          />
+          <div className='parent1-buttons-applicationFlow'>
+            <div className='buttons1-child-applicationFlow'>
+              {/* 1st */}
+              <FlowListModal flowName={flowName} setFlowName={setFlowName} />
+            </div>
+            <div className='buttons1-child-applicationFlow'>
+              {/* 2nd */}
+              <FlowStepsModal />
+            </div>
+            <div className='buttons1-child-applicationFlow'>
+              <ServerChooseModal />
+            </div>
           </div>
-          <div className='buttons1-child-applicationFlow'>
-            {/* 2nd */}
-            <FlowStepsModal />
-          </div>
-          <div className='buttons1-child-applicationFlow'>
-            <ServerChooseModal />
-          </div>
+          <DraggableList
+            getItems={draggableListContent1}
+            getItems2={draggableListContent2}
+          />
+          {/* 12th */}
         </div>
-        <DraggableList
-          getItems={draggableListContent1}
-          getItems2={draggableListContent2}
-        />
-        {/* 12th */}
       </div>
-    </div>
+    </>
   );
 }
 

@@ -64,67 +64,69 @@ export default class DraggableList extends Component {
             </div>
           )}
         </Droppable>
-        <div className='parent2-buttons-applicationFlow'>
-          <div className='buttons2-child-applicationFlow'>
-            <Button
-              className='button-fieldsAdd'
-              name={
-                <div className='newFlow-applicationFlow'>
-                  <Label
-                    label={
-                      <div className='newFlow-applicationFlow'>
-                        <SaveIcon />
-                        Save Flow
-                      </div>
-                    }
-                    className='label-addIcon-applicationFlow'
-                  />{' '}
-                </div>
-              }
-              variant='contained'
-              sx={{
-                backgroundColor: '#2B3A67',
-                borderRadius: '10px',
-                fontWeight: 600,
-                '&:hover': {
-                  backgroundColor: '#5E807F',
+        <div className='wrapper-parent-applicationFlow'>
+          <div className='parent2-buttons-applicationFlow'>
+            <div className='buttons2-child-applicationFlow'>
+              <Button
+                className='button-fieldsAdd'
+                name={
+                  <div className='newFlow-applicationFlow'>
+                    <Label
+                      label={
+                        <div className='newFlow-applicationFlow'>
+                          <SaveIcon />
+                          Save Flow
+                        </div>
+                      }
+                      className='label-addIcon-applicationFlow'
+                    />{' '}
+                  </div>
+                }
+                variant='contained'
+                sx={{
+                  backgroundColor: '#2B3A67',
                   borderRadius: '10px',
-                },
-              }}
-            />
-          </div>
-          <div className='buttons2-child-applicationFlow'>
-            <Button
-              onClick={() => {
-                this.setState({
-                  items: this.props.getItems2,
-                });
-              }}
-              className='button-fieldsAdd'
-              name={
-                <div className='wrapper-addIcon-applicationFlow'>
-                  <Label
-                    label={
-                      <div className='newFlow-applicationFlow'>
-                        <AddItemIcon />
-                        New Flow
-                      </div>
-                    }
-                    className='label-addIcon-applicationFlow'
-                  />
-                </div>
-              }
-              variant='contained'
-              sx={{
-                backgroundColor: '#2B3A67',
-                borderRadius: '10px',
-                fontWeight: 600,
-                '&:hover': {
-                  backgroundColor: '#5E807F',
+                  fontWeight: 600,
+                  '&:hover': {
+                    backgroundColor: '#5E807F',
+                    borderRadius: '10px',
+                  },
+                }}
+              />
+            </div>
+            <div className='buttons2-child-applicationFlow'>
+              <Button
+                onClick={() => {
+                  this.setState({
+                    items: this.props.getItems2,
+                  });
+                }}
+                className='button-fieldsAdd'
+                name={
+                  <div className='wrapper-addIcon-applicationFlow'>
+                    <Label
+                      label={
+                        <div className='newFlow-applicationFlow'>
+                          <AddItemIcon />
+                          New Flow
+                        </div>
+                      }
+                      className='label-addIcon-applicationFlow'
+                    />
+                  </div>
+                }
+                variant='contained'
+                sx={{
+                  backgroundColor: '#2B3A67',
                   borderRadius: '10px',
-                },
-              }}
-            />
+                  fontWeight: 600,
+                  '&:hover': {
+                    backgroundColor: '#5E807F',
+                    borderRadius: '10px',
+                  },
+                }}
+              />
+            </div>
           </div>
         </div>
       </DragDropContext>

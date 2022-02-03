@@ -19,6 +19,17 @@ import GavelIcon from '@mui/icons-material/Gavel';
 import BuildIcon from '@mui/icons-material/Build';
 import SaveAltIcon from '@mui/icons-material/SaveAlt';
 import TouchAppIcon from '@mui/icons-material/TouchApp';
+import ReplyAllIcon from '@mui/icons-material/ReplyAll';
+
+export function GoBackIcon(props) {
+  return (
+    <ReplyAllIcon
+      style={props.style}
+      className={props.className}
+      onClick={props.onClick}
+    />
+  );
+}
 
 export function PickIcon(props) {
   return (
