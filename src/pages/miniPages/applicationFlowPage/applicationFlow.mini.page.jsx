@@ -22,7 +22,7 @@ import ConditionsModal, {
 } from '../conditionsModalPage/conditionsModal.mini.page';
 import DraggableList from '../../../components/draggableListComponent/DraggableList.component';
 import { Link } from 'react-router-dom';
-import CreateNewFlowModalPage from './createNewFlowModalPage/createNewFlowModalPage.mini.page';
+
 import './applicationFlow.mini.styles.css';
 
 function ApplicationFlowPage() {
@@ -1530,6 +1530,7 @@ function ApplicationFlowPage() {
           fontWeight={1000}
         />
       </Link>
+
       <div className='scroll-applicationFlow'>
         <div className='wrapper-applicationFlow'>
           <Label

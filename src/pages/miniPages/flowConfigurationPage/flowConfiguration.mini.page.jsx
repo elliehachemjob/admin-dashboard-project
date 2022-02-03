@@ -10,11 +10,15 @@ import {
   BlackCircleIcon,
   CancelCircleIcon,
   CorrectCircleIcon,
+  GoBackIcon,
+  SaveIcon,
 } from '../../../components/iconsComponent/Icons.component';
 import BreakLine from '../../../components/breakLineComponent/BreakLine.component';
 import ConfettiExplosion from 'react-confetti-explosion';
 import BuildFormMini from './buildFormPage/buildForm.mini.page';
 import ServerChooseModal from '../applicationFlowPage/serverChooseModalPage/serverChooseModal.mini.page';
+import { Link } from 'react-router-dom';
+
 import './flowConfiguration.mini.styles.css';
 
 // make Container marginLeft to  0 or add props/redux etc
@@ -223,6 +227,20 @@ function FlowConfiguration() {
 
   return (
     <>
+      <div className='goBack-wrapper-flowConfiguration'>
+        <Link
+          to='/flowConfigurationHolder'
+          className='link-applicationFlow goBack-wrapper-applicationFlow'
+        >
+          <GoBackIcon className='goBackIcon-applicationFlow' />
+          <Label
+            label='Go Back'
+            className='goBack-applicationFlow'
+            fontWeight={1000}
+          />
+        </Link>
+      </div>
+
       <div className='newWrapper-flowConfiguration'>
         <div style={{ minWidth: '18.75rem' }} id='mySidebar'>
           <div className='div1-wholeContainer'>
@@ -357,6 +375,34 @@ function FlowConfiguration() {
         <div style={{ maxWidth: '34.375rem' }} className='div2-wholeContainer'>
           <RightSideBasics />
         </div>
+      </div>
+      <div className='saveButton-wrapper-flowConfiguration'>
+        <Button
+          className='button-fieldsAdd'
+          name={
+            <div className='wrapper-addIcon-applicationFlow'>
+              <Label
+                label={
+                  <div className='newFlow-applicationFlow'>
+                    <SaveIcon />
+                    Save Configuration
+                  </div>
+                }
+                className='label-addIcon-applicationFlow'
+              />
+            </div>
+          }
+          variant='contained'
+          sx={{
+            backgroundColor: '#2B3A67',
+            borderRadius: '10px',
+            fontWeight: 600,
+            '&:hover': {
+              backgroundColor: '#5E807F',
+              borderRadius: '10px',
+            },
+          }}
+        />
       </div>
     </>
   );

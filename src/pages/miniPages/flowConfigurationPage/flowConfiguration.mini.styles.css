@@ -263,3 +263,15 @@
   font-weight: 1000;
   font-size: 40px;
 }
+
+.goBack-wrapper-flowConfiguration {
+  display: flex;
+  margin-left: -150px;
+  margin-bottom: 20px;
+}
+
+.saveButton-wrapper-flowConfiguration {
+  display: flex;
+  justify-content: flex-end;
+  padding-top: 10px;
+}
