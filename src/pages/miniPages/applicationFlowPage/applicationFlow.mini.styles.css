@@ -204,13 +204,12 @@
 
 .div-wrapper-applicationFlow {
   display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
+  justify-content: flex-start;
+  align-items: flex-start;
 }
 
 .div-wrapper-child-applicationFlow {
-  padding: 0.5rem 0.25rem;
+  padding: 0.5rem 1rem;
 }
 
 .parent2-buttons-applicationFlow {

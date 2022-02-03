@@ -1,12 +1,21 @@
 .fix-conditionIcon {
   color: #2b3a67;
-  margin-left: 110px;
+  margin-left: 400px;
 
   transform: scale(1.8);
 }
 
 .default-ConditionsIcon-conditionModal {
   color: #2b3a67;
-  margin-right: 10px;
+  margin-right: 20px;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  transform: scale(1.2);
+}
+
+.fixed-ConditionsIcon2-conditionModal {
+  color: #2b3a67;
+  margin-left: 120px;
+
   transform: scale(1.2);
 }

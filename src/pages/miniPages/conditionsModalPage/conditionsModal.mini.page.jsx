@@ -45,3 +45,25 @@ export function ConditionsModalFixed(props) {
     </ModalUsage>
   );
 }
+
+export function ConditionsModalFixedAgain(props) {
+  const [open, setOpen] = useState(false);
+  const handleClose = () => setOpen(false);
+  const handleOpen = () => setOpen(true);
+
+  return (
+    <ModalUsage
+      open={open}
+      handleClose={handleClose}
+      modalBackground='#C1E0F7'
+      icon={
+        <ConditionsIcon
+          className='fixed-ConditionsIcon2-conditionModal'
+          onClick={handleOpen}
+        />
+      }
+    >
+      {props.content}
+    </ModalUsage>
+  );
+}
