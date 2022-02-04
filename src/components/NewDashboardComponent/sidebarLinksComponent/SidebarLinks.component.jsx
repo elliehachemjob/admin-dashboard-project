@@ -106,14 +106,20 @@ function SidebarLinks(props) {
     {
       id: 17,
       path: '/applicationFlowHolder',
-      name: 'OnBoarding',
+      name: 'Application FlowHolder',
       icon: <AccountTreeIcon />,
     },
     {
       id: 18,
       path: '/flowConfigurationHolder',
-      name: 'OnBoarding',
+      name: 'Flow ConfigurationHolder',
       icon: <DisplaySettingsIcon />,
+    },
+    {
+      id: 10,
+      path: '/newApplicationFlow',
+      name: 'New Application Flow',
+      icon: <AccountTreeIcon />,
     },
   ];
 

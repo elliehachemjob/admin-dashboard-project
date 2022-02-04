@@ -80,7 +80,10 @@ function CompanySettings() {
       <div className='parent-companyImage'>
         <div className='div1-companyImage'>
           <Label label='Company Image' size={18.72} />
-          <ProfileIcon className='profileIcon-companySettings' />
+          <ProfileIcon
+            sx={{ fontSize: 500 }}
+            className='profileIcon-companySettings'
+          />
 
           <Upload />
           <Description description='Upload your logo with dimension: 320px * 160px, png format with transparent background.'>

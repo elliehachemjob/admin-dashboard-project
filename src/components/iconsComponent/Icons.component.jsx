@@ -21,6 +21,136 @@ import SaveAltIcon from '@mui/icons-material/SaveAlt';
 import TouchAppIcon from '@mui/icons-material/TouchApp';
 import ReplyAllIcon from '@mui/icons-material/ReplyAll';
 import WbIncandescentIcon from '@mui/icons-material/WbIncandescent';
+import ArrowBackIosIcon from '@mui/icons-material/ArrowBackIos';
+import HomeIcon from '@mui/icons-material/Home';
+import SmsIcon from '@mui/icons-material/Sms';
+import EmailIcon from '@mui/icons-material/Email';
+import CameraFrontIcon from '@mui/icons-material/CameraFront';
+import FileUploadIcon from '@mui/icons-material/FileUpload';
+import QuestionAnswerIcon from '@mui/icons-material/QuestionAnswer';
+import AttachMoneyIcon from '@mui/icons-material/AttachMoney';
+import PersonOutlineOutlinedIcon from '@mui/icons-material/PersonOutlineOutlined';
+import SmsOutlinedIcon from '@mui/icons-material/SmsOutlined';
+import EmailOutlinedIcon from '@mui/icons-material/EmailOutlined';
+import CameraFrontOutlinedIcon from '@mui/icons-material/CameraFrontOutlined';
+
+export function SelfieVerificationOutlinedIcon(props) {
+  return (
+    <CameraFrontOutlinedIcon
+      style={props.style}
+      className={props.className}
+      onClick={props.onClick}
+    />
+  );
+}
+
+export function EmailVerificationOutlinedIconIcon(props) {
+  return (
+    <EmailOutlinedIcon
+      style={props.style}
+      className={props.className}
+      onClick={props.onClick}
+    />
+  );
+}
+export function SmsVerificationOutlinedIcon(props) {
+  return (
+    <SmsOutlinedIcon
+      style={props.style}
+      className={props.className}
+      onClick={props.onClick}
+    />
+  );
+}
+
+export function ProfileIconOutlined(props) {
+  return (
+    <PersonOutlineOutlinedIcon
+      style={props.style}
+      className={props.className}
+      onClick={props.onClick}
+    />
+  );
+}
+
+export function DepositMoneyIcon(props) {
+  return (
+    <AttachMoneyIcon
+      style={props.style}
+      className={props.className}
+      onClick={props.onClick}
+    />
+  );
+}
+
+export function QuestionnaireIcon(props) {
+  return (
+    <QuestionAnswerIcon
+      style={props.style}
+      className={props.className}
+      onClick={props.onClick}
+    />
+  );
+}
+
+export function UploadDocumentIcon(props) {
+  return (
+    <FileUploadIcon
+      style={props.style}
+      className={props.className}
+      onClick={props.onClick}
+    />
+  );
+}
+
+export function SelfieVerificationIcon(props) {
+  return (
+    <CameraFrontIcon
+      style={props.style}
+      className={props.className}
+      onClick={props.onClick}
+    />
+  );
+}
+export function EmailVerificationIcon(props) {
+  return (
+    <EmailIcon
+      style={props.style}
+      className={props.className}
+      onClick={props.onClick}
+    />
+  );
+}
+
+export function SMSVerificationIcon(props) {
+  return (
+    <SmsIcon
+      style={props.style}
+      className={props.className}
+      onClick={props.onClick}
+    />
+  );
+}
+
+export function AddressVerificationIcon(props) {
+  return (
+    <HomeIcon
+      style={props.style}
+      className={props.className}
+      onClick={props.onClick}
+    />
+  );
+}
+
+export function NewGoBackIcon(props) {
+  return (
+    <ArrowBackIosIcon
+      style={props.style}
+      className={props.className}
+      onClick={props.onClick}
+    />
+  );
+}
 
 export function InstructionsIcon(props) {
   return (
@@ -126,8 +256,8 @@ export function CopyItemIcon() {
   return <ContentCopyOutlinedIcon />;
 }
 
-export function AddItemIcon() {
-  return <AddIcon />;
+export function AddItemIcon(props) {
+  return <AddIcon style={props.style} />;
 }
 
 export function EditItemIcon() {
@@ -143,7 +273,9 @@ export function SpecialLinkIcon() {
 }
 
 export function ProfileIcon(props) {
-  return <PersonIcon sx={{ fontSize: 500 }} className={props.className} />;
+  return (
+    <PersonIcon style={props.style} sx={props.sx} className={props.className} />
+  );
 }
 
 export function CancelCircleIcon(props) {

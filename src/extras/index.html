@@ -2,34 +2,54 @@
 <html lang="en">
   <head>
     <style>
+      * {
+        box-sizing: border-box;
+      }
       body {
         display: flex;
-        flex-wrap: wrap;
-        perspective: 530px;
-        perspective-origin: top right;
+        justify-content: center;
+        align-items: center;
+        min-height: 100vh;
+        margin: 0;
+        perspective: 400px;
       }
-      div {
-        background-color: red;
-        height: 50px;
-        width: 50px;
-        margin: 10px;
-        transform: rotateX(45deg);
+
+      .cube {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+
+      .side {
+        --size: 75px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: var(--size);
+        height: var(--size);
+        position: absolute;
+        background-color: hsla(200, 100%, 50%, 0.5);
+        border: 1px solid hsla(200, 100%, 10%, 0.5);
+      }
+
+      .right {
+        transform: rotateY(90deg) translateZ(calc(var(--size)) / 2);
       }
     </style>
     <!-- <link href="styles.css" rel="stylesheet" /> -->
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Perspective</title>
+    <title>Cube</title>
   </head>
   <body>
-    <div></div>
-    <div></div>
-    <div></div>
-    <div></div>
-    <div></div>
-    <div></div>
-    <div></div>
-    <div></div>
+    <div class="cube">
+      <div class="side front">Front</div>
+      <div class="side left">Left</div>
+      <div class="side right">Right</div>
+      <div class="side back">Back</div>
+      <div class="side top">Top</div>
+      <div class="side bottom">Bottom</div>
+    </div>
   </body>
 </html>

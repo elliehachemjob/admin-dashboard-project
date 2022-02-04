@@ -20,6 +20,8 @@ import ApplicationFlowPage from './pages/miniPages/applicationFlowPage/applicati
 import ApplicationFlowHolder from './pages/applicationFlowHolderPage/applicationFlowHolder.page';
 import FlowConfiguration from './pages/miniPages/flowConfigurationPage/flowConfiguration.mini.page';
 import FlowConfigurationHolder from './pages/flowConfigurationHolderPage/flowConfigurationHolder.page';
+import NewApplicationFlow from './pages/newApplicationFlowPage/newApplicationFlow.page';
+
 import Dashboard from './components/NewDashboardComponent/DashboardComponent/Dashboard.component';
 import './index.css';
 
@@ -169,6 +171,15 @@ function App() {
               <Dashboard
                 rightSide={<FlowConfigurationHolder />}
                 label='OnBoarding'
+              />
+            }
+          />
+          <Route
+            path='/newApplicationFlow'
+            element={
+              <Dashboard
+                rightSide={<NewApplicationFlow />}
+                label='New Application Flow'
               />
             }
           />

@@ -1,49 +1,138 @@
 import React from 'react';
-
+import {
+  NewGoBackIcon,
+  AddressVerificationIcon,
+  ProfileIconOutlined,
+  SmsVerificationOutlinedIcon,
+  EmailVerificationOutlinedIconIcon,
+  SelfieVerificationOutlinedIcon,
+  UploadDocumentIcon,
+  QuestionnaireIcon,
+  AddItemIcon,
+  DepositMoneyIcon,
+} from '../../components/iconsComponent/Icons.component';
+import Button from '../../components/FlexibleButtonComponent/FlexibleButton.component';
+import Label from '../../components/labelComponent/Label.component';
+import BreakLine from '../../components/breakLineComponent/BreakLine.component';
 import './newApplicationFlow.styles.css';
 function NewApplicationFlow() {
   return (
-    <>
+    <div className='parent-newApplicationFlow'>
       {/* 1st left side */}
-      <div>Background color </div>
-      <div>Go Back Icon</div>
-      <div>Flow Setup Header</div>
-      <div>Levels Label</div>
-      {/* 2nd */}
-      <div>box1</div>
-      <div>box1Icon</div>
-      <div>box2</div>
-      <div>box2Icon</div>
-      <div>box3</div>
-      <div>box3Icon</div>
-      <div>box4</div>
-      <div>box4Icon</div>
-      <div>box5</div>
-      <div>box5Icon</div>
-      <div>box6</div>
-      <div>box6Icon</div>
-      <div>box7</div>
-      <div>box7Icon</div>
-      <div>box8</div>
-      <div>box8Icon</div>
-      <div>box9</div>
-      <div>box9Icon</div>
-      <div>box10</div>
-      <div>box10Icon</div>
-      <div>box11</div>
-      <div>box11Icon</div>
-      <div>box12</div>
-      <div>box12Icon</div>
-      <div>Submit Flow Button</div>
+      <div className='wrapper-left-newApplicationFlow'>
+        <NewGoBackIcon className='newGoBackIcon-newApplicationFlow' />
+        <Label label='Flow Setup' className='header-newApplicationFlow' />
+
+        <Label label='Levels' className='levelsLabel-newApplicationFlow' />
+        {/* 2nd */}
+        <div className='parent-stepsWrapper-newApplicationFlow'>
+          <div className='iconWrapper-newApplicationFlow'>
+            <ProfileIconOutlined style={{ fontSize: 50 }} />
+          </div>
+          <div className='iconWrapper-newApplicationFlow'>
+            <SmsVerificationOutlinedIcon
+              style={{ fontSize: 50 }}
+              className='iconStyles-newApplicationFlow'
+            />
+          </div>
+          <div className='iconWrapper-newApplicationFlow'>
+            <EmailVerificationOutlinedIconIcon
+              style={{ fontSize: 50 }}
+              className='iconStyles-newApplicationFlow'
+            />
+          </div>
+          <div className='iconWrapper-newApplicationFlow'>
+            <SelfieVerificationOutlinedIcon
+              style={{ fontSize: 50 }}
+              className='iconStyles-newApplicationFlow'
+            />
+          </div>
+          <div className='iconWrapper-newApplicationFlow'>
+            <AddressVerificationIcon
+              style={{ fontSize: 50 }}
+              className='iconStyles-newApplicationFlow'
+            />
+          </div>
+          <div className='iconWrapper-newApplicationFlow'>
+            <UploadDocumentIcon
+              style={{ fontSize: 50 }}
+              className='iconStyles-newApplicationFlow'
+            />
+          </div>
+          <div className='iconWrapper-newApplicationFlow'>
+            <QuestionnaireIcon
+              style={{ fontSize: 50 }}
+              className='iconStyles-newApplicationFlow'
+            />
+          </div>
+          <div className='iconWrapper-newApplicationFlow'>
+            <AddItemIcon
+              style={{ fontSize: 50 }}
+              className='iconStyles-newApplicationFlow'
+            />
+          </div>
+          <div className='iconWrapper-newApplicationFlow'>
+            <DepositMoneyIcon
+              style={{ fontSize: 50 }}
+              className='iconStyles-newApplicationFlow'
+            />
+          </div>
+        </div>
+
+        <div className='buttonWrapper-newApplicationFlow'>
+          <Button
+            className='button-fieldsAdd'
+            name={
+              <div className=''>
+                <Label label='Submit Flow' className='' />
+              </div>
+            }
+            variant='contained'
+            sx={{
+              backgroundColor: 'hsl(163.2,41.3%,55.9%)',
+              borderRadius: '10px',
+              fontWeight: 600,
+              '&:hover': {
+                backgroundColor: 'hsl(163.2,41.3%,45.9%)',
+                borderRadius: '10px',
+                boxShadow: '0 0 5px 0 	hsl(163.2,41.3%,35.9%)',
+              },
+            }}
+          />
+        </div>
+      </div>
+
       {/* 3rd right side */}
-      <div>Background color </div>
-      <div>box1</div>
-      <div>Divider</div>
-      <div>box2</div>
-      <div>Divider</div>
-      <div>box3</div>
+      <div className='wrapper-right-newApplicationFlow'>
+        <div className='rightSide-steps-newApplicationFlow'>
+          <div>
+            <Label
+              label='Applicant Data'
+              className='label-newApplicationFlow'
+            />
+            <ProfileIconOutlined />
+          </div>
+          <BreakLine className='breakLine-steps-newApplicationFlow' />
+          <div>
+            <Label
+              label='SMS Verification'
+              className='label-newApplicationFlow'
+            />
+            <SmsVerificationOutlinedIcon className='breakLine-steps-newApplicationFlow' />
+          </div>
+          <BreakLine className='breakLine-steps-newApplicationFlow' />
+
+          <div>
+            <Label
+              label='E-mail Verification'
+              className='label-newApplicationFlow'
+            />
+            <EmailVerificationOutlinedIconIcon />
+          </div>
+        </div>
+      </div>
       {/* 4th  later deduced*/}
-    </>
+    </div>
   );
 }
 

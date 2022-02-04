@@ -1,0 +1,75 @@
+.parent-newApplicationFlow {
+  height: 100%;
+  display: grid;
+  grid-template-columns: 1fr 4fr;
+  grid-template-rows: 1fr;
+  grid-column-gap: 0px;
+  grid-row-gap: 0px;
+}
+
+.wrapper-left-newApplicationFlow {
+  background-color: rgb(65, 73, 89);
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  padding: 30px;
+}
+
+.wrapper-right-newApplicationFlow {
+  background-color: rgb(238, 240, 242);
+}
+
+.parent-stepsWrapper-newApplicationFlow {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(3, 1fr);
+  grid-column-gap: 70px;
+  grid-row-gap: 70px;
+}
+
+.rightSide-steps-newApplicationFlow {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.breakLine-steps-newApplicationFlow {
+  border-bottom: 0px;
+  border-left: 5px dotted rgb(124, 174, 161);
+  height: 100px;
+  opacity: 1;
+}
+
+.newGoBackIcon-newApplicationFlow {
+  margin-bottom: 10px;
+  color: rgb(226, 229, 232);
+}
+
+.header-newApplicationFlow {
+  margin-bottom: 50px;
+  font-weight: 1000;
+  color: rgb(226, 229, 232);
+}
+.levelsLabel-newApplicationFlow {
+  margin-bottom: 30px;
+  color: rgb(226, 229, 232);
+}
+
+.buttonWrapper-newApplicationFlow {
+  margin-top: 150px;
+}
+
+.iconWrapper-newApplicationFlow {
+  background-color: rgb(255, 255, 255);
+  border-radius: 10px;
+  width: 75px;
+  height: 75px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 40px;
+}
+.iconStyles-newApplicationFlow {
+}
