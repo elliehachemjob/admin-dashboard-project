@@ -2,59 +2,42 @@
 <html lang="en">
   <head>
     <style>
-      * {
-        box-sizing: border-box;
-      }
-      body {
-        margin: 0;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        min-height: 100vh;
-        flex-direction: column;
-      }
-
-      .btn {
-        margin: 1rem;
-        background-color: hsl(200, 100%, 50%);
-        border: none;
-        outline: none;
+      div {
+        background-color: red;
+        height: 100px;
+        width: 100px;
         color: white;
-        padding: 0.5em 1em;
-        border-radius: 0.3em;
-        cursor: pointer;
+
+        animation: color-change,
+          size-change 1s linear 0.5s forwards alternate infinite;
+      }
+      div:hover {
+        animation-play-state: paused;
       }
 
-      .btn-hide {
-        opacity: 0.7;
-        transition: opacity 500ms;
-      }
-      .btn-hide:hover {
-        opacity: 1;
-      }
-
-      .btn-hide:focus {
-        opacity: 0;
+      @keyframes color-change {
+        100% {
+          background-color: green;
+          color: black;
+        }
       }
 
-      .btn-color {
-        transition-property: background-color, color;
-        transition-duration: 500ms;
-      }
+      
 
-      .btn-color:focus {
-        color: #333;
-        background-color: hsl(20, 100%, 50%);
+      @keyframes size-change {
+        to {
+          width: 200px;
+          height: 200px;
+        }
       }
     </style>
     <!-- <link href="styles.css" rel="stylesheet" /> -->
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Button Animation</title>
+    <title>Animations</title>
   </head>
   <body>
-    <button class="btn btn-hide">Click Me To Hide</button>
-    <button class="btn btn-color">Click Me To Change Color</button>
+    <div>Div</div>
   </body>
 </html>
