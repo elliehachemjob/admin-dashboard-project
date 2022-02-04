@@ -74,7 +74,6 @@ function ApplicationFlowHolder(props) {
   return (
     <>
       {/* 1st */}
-
       <Label
         label='Application Flow'
         className='header-ApplicationFlowHolder'

@@ -20,6 +20,17 @@ import BuildIcon from '@mui/icons-material/Build';
 import SaveAltIcon from '@mui/icons-material/SaveAlt';
 import TouchAppIcon from '@mui/icons-material/TouchApp';
 import ReplyAllIcon from '@mui/icons-material/ReplyAll';
+import WbIncandescentIcon from '@mui/icons-material/WbIncandescent';
+
+export function InstructionsIcon(props) {
+  return (
+    <WbIncandescentIcon
+      style={props.style}
+      className={props.className}
+      onClick={props.onClick}
+    />
+  );
+}
 
 export function GoBackIcon(props) {
   return (

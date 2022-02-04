@@ -6,6 +6,7 @@ import {
   EditItemIcon,
   DeleteItemIcon,
   GoBackIcon,
+  InstructionsIcon,
 } from '../../components/iconsComponent/Icons.component';
 import SearchInput from '../../components/searchInputComponent/SearchInput.component';
 import Table from '../../components/tableComponent/Table.component';
@@ -221,9 +222,9 @@ function FlowConfigurationHolder() {
 
   return (
     <>
-
       {/* 1st */}
-      
+      {/* <InstructionsIcon className='instructions-flowConfiguration' /> */}
+
       <Label
         label='Flow Configuration'
         className='header-ApplicationFlowHolder'
