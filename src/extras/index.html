@@ -2,41 +2,24 @@
 <html lang="en">
   <head>
     <style>
-      :root {
-        --primary-color: green;
-        --margin: 1rem;
-      }
-
       h2 {
-        margin: var(--margin, 10px);
-        background-color: var(--primary-color);
-        color: white;
-        padding: 0.5rem;
+        margin: 1rem;
       }
 
       p {
-        margin: var(--margin);
-
-        color: var(--primary-color);
+        --margin: 10px;
+        margin: calc(var(--margin) + 5px);
       }
     </style>
     <!-- <link href="styles.css" rel="stylesheet" /> -->
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>custom properties</title>
+    <title>Calc</title>
   </head>
   <body>
     <h2>Heading</h2>
     <p>Paragraph 1</p>
     <p>Paragraph 2</p>
-    <button>Click Me</button>
-    <script>
-      const button = document
-        .querySelector('button')
-        .addEventListener('click', () => {
-          document.documentElement.style.setProperty('--primary-color', 'red');
-        });
-    </script> 
   </body>
 </html>
