@@ -2,32 +2,24 @@
 <html lang="en">
   <head>
     <style>
-      div {
+      .div {
         background-color: red;
         height: 100px;
         width: 100px;
         color: white;
-
-        animation: color-change,
-          size-change 1s linear 0.5s forwards alternate infinite;
+        animation: custom 1s linear 0.5s forwards alternate infinite;
+        transform: translate(100%);
       }
-      div:hover {
+      .div:hover {
         animation-play-state: paused;
       }
 
-      @keyframes color-change {
-        100% {
-          background-color: green;
-          color: black;
+      @keyframes custom {
+        from {
+          transform: translate(0%) scale(1.1);
         }
-      }
-
-      
-
-      @keyframes size-change {
         to {
-          width: 200px;
-          height: 200px;
+          transform: translate(100%);
         }
       }
     </style>
@@ -38,6 +30,10 @@
     <title>Animations</title>
   </head>
   <body>
+    <div class="div">Div</div>
+    <div>Div</div>
+    <div>Div</div>
+    <div>Div</div>
     <div>Div</div>
   </body>
 </html>
