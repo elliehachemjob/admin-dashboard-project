@@ -66,6 +66,7 @@ export function SmsVerificationOutlinedIcon(props) {
 export function ProfileIconOutlined(props) {
   return (
     <PersonOutlineOutlinedIcon
+      onMouseOver={props.onMouseOver}
       style={props.style}
       className={props.className}
       onClick={props.onClick}
