@@ -81,20 +81,25 @@ function NewApplicationFlow() {
 
         <div className='buttonWrapper-newApplicationFlow'>
           <Button
-            className='button-fieldsAdd'
+            className=''
             name={
               <div className=''>
-                <Label label='Submit Flow' className='' />
+                <Label
+                  label='Submit Flow'
+                  className='buttonLabel-newApplicationFlow'
+                />
               </div>
             }
             variant='contained'
             sx={{
               backgroundColor: 'hsl(163.2,41.3%,55.9%)',
-              borderRadius: '10px',
-              fontWeight: 600,
+              borderRadius: '25px',
+
+              padding: 1.5,
+              paddingLeft: 3,
+              paddingRight: 3,
               '&:hover': {
                 backgroundColor: 'hsl(163.2,41.3%,45.9%)',
-                borderRadius: '10px',
                 boxShadow: '0 0 5px 0 	hsl(163.2,41.3%,35.9%)',
               },
             }}
@@ -105,29 +110,28 @@ function NewApplicationFlow() {
       {/* 3rd right side */}
       <div className='wrapper-right-newApplicationFlow'>
         <div className='rightSide-steps-newApplicationFlow'>
-          <div>
+          <div className='rightSide-labelIconWrapper-newApplicationFlow'>
+            <ProfileIconOutlined />
             <Label
               label='Applicant Data'
               className='label-newApplicationFlow'
             />
-            <ProfileIconOutlined />
           </div>
           <BreakLine className='breakLine-steps-newApplicationFlow' />
-          <div>
+          <div className='rightSide-labelIconWrapper-newApplicationFlow'>
+            <SmsVerificationOutlinedIcon />
             <Label
               label='SMS Verification'
               className='label-newApplicationFlow'
             />
-            <SmsVerificationOutlinedIcon className='breakLine-steps-newApplicationFlow' />
           </div>
           <BreakLine className='breakLine-steps-newApplicationFlow' />
-
-          <div>
+          <div className='rightSide-labelIconWrapper-newApplicationFlow'>
+            <EmailVerificationOutlinedIconIcon />
             <Label
               label='E-mail Verification'
               className='label-newApplicationFlow'
             />
-            <EmailVerificationOutlinedIconIcon />
           </div>
         </div>
       </div>
