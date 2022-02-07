@@ -17,8 +17,16 @@ import BreakLine from '../../components/breakLineComponent/BreakLine.component';
 import './newApplicationFlow.styles.css';
 function NewApplicationFlow() {
   const [isApplicantData, setIsApplicantData] = useState(false);
+  const [isSmsVerification, setIsSmsVerification] = useState(false);
+  const [isEmailVerification, setIsEmailVerification] = useState(false);
   const handleMouseOverChange1 = () => {
     setIsApplicantData(true);
+  };
+  const handleMouseOverChange2 = () => {
+    setIsSmsVerification(true);
+  };
+  const handleMouseOverChange3 = () => {
+    setIsEmailVerification(true);
   };
 
   return (
@@ -35,17 +43,20 @@ function NewApplicationFlow() {
             className='wrapperIconLabel-background-newApplicationFlow'
             onMouseOver={handleMouseOverChange1}
           >
-            <div className='iconWrapper1-newApplicationFlow'>
+            {/* <div className='iconWrapper-newApplicationFlow'>
               <ProfileIconOutlined style={{ fontSize: 50 }} />
-            </div>
+            </div> */}
           </div>
           <div className='wrapperIconLabel-background-newApplicationFlow'>
-            <div className='iconWrapper2-newApplicationFlow'>
+            {/* <div
+              className='iconWrapper-newApplicationFlow'
+              onMouseOver={handleMouseOverChange2}
+            >
               <SmsVerificationOutlinedIcon
                 style={{ fontSize: 50 }}
                 className='iconStyles-newApplicationFlow'
               />
-            </div>
+            </div> */}
           </div>
           <div className='wrapperIconLabel-background-newApplicationFlow'>
             <div className='iconWrapper3-newApplicationFlow'>
@@ -125,7 +136,7 @@ function NewApplicationFlow() {
       <div className='wrapper-right-newApplicationFlow'>
         <div className='rightSide-steps-newApplicationFlow'>
           <div className='rightSide-labelIconWrapper-newApplicationFlow'>
-            {isApplicantData ? (
+            {/* {isApplicantData ? (
               <div className='fix-labelRightSide-newApplicationFlow'>
                 <Label
                   label='Applicant Data'
@@ -134,43 +145,47 @@ function NewApplicationFlow() {
               </div>
             ) : (
               ''
-            )}
-            {/* <ProfileIconOutlined />
-            <Label
-              label='Applicant Data'
-              className='label-newApplicationFlow'
-            /> */}
+            )} */}
+            <div className='fix-labelRightSide-newApplicationFlow'>
+              <ProfileIconOutlined style={{ fontSize: 30 }} />
+              <Label
+                label='Applicant Data'
+                className='labelIcon1-newApplicationFlow'
+              />
+            </div>
           </div>
           <BreakLine className='breakLine-steps-newApplicationFlow' />
           <div className='rightSide-labelIconWrapper-newApplicationFlow'>
-            {isApplicantData ? (
+            {/* {isSmsVerification ? (
               <div className='fix-labelRightSide-newApplicationFlow'>
                 <Label
-                  label='Applicant Data'
+                  label='SMS Verification'
                   className='label-newApplicationFlow'
                 />
               </div>
             ) : (
               ''
-            )}
-            {/* <SmsVerificationOutlinedIcon />
-            <Label
-              label='SMS Verification'
-              className='label-newApplicationFlow'
-            /> */}
+            )} */}
+            <div className='fix-labelRightSide-newApplicationFlow'>
+              <SmsVerificationOutlinedIcon style={{ fontSize: 30 }} />
+              <Label
+                label='SMS Verification'
+                className='labelIcon2-newApplicationFlow'
+              />
+            </div>
           </div>
           <BreakLine className='breakLine-steps-newApplicationFlow' />
           <div className='rightSide-labelIconWrapper-newApplicationFlow'>
-            {isApplicantData ? (
+            {/* {isEmailVerification ? (
               <div className='fix-labelRightSide-newApplicationFlow'>
                 <Label
-                  label='Applicant Data'
+                  label='E-mail Verification'
                   className='label-newApplicationFlow'
                 />
               </div>
             ) : (
               ''
-            )}
+            )} */}
             {/* <EmailVerificationOutlinedIconIcon />
             <Label
               label='E-mail Verification'
