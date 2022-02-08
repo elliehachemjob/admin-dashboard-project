@@ -10,10 +10,10 @@ import {
   QuestionnaireIcon,
   AddItemIcon,
   DepositMoneyIcon,
-} from '../../components/iconsComponent/Icons.component';
-import Button from '../../components/FlexibleButtonComponent/FlexibleButton.component';
-import Label from '../../components/labelComponent/Label.component';
-import BreakLine from '../../components/breakLineComponent/BreakLine.component';
+} from '../../../components/iconsComponent/Icons.component';
+import Button from '../../../components/FlexibleButtonComponent/FlexibleButton.component';
+import Label from '../../../components/labelComponent/Label.component';
+import BreakLine from '../../../components/breakLineComponent/BreakLine.component';
 import './newApplicationFlow.styles.css';
 function NewApplicationFlow() {
   const [isApplicantData, setIsApplicantData] = useState(false);

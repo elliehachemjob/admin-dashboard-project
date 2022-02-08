@@ -1,0 +1,347 @@
+.parent-newApplicationFlow {
+  height: 100%;
+  display: grid;
+  grid-template-columns: 1fr 4fr;
+  grid-template-rows: 1fr;
+  grid-column-gap: 0px;
+  grid-row-gap: 0px;
+}
+
+.wrapper-left-newApplicationFlow {
+  background-color: rgb(65, 73, 89);
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  padding: 30px;
+}
+
+.wrapper-right-newApplicationFlow {
+  background-color: rgb(238, 240, 242);
+}
+
+.parent-stepsWrapper-newApplicationFlow {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(3, 1fr);
+  grid-column-gap: 25px;
+  grid-row-gap: 25px;
+  border: 1px solid black;
+  border-radius: 99999px;
+}
+
+.firstBackground-stepWrapper-newApplicationFlow {
+  border: 1px solid black;
+  border-radius: 99999px;
+  padding: 50px;
+}
+
+.rightSide-steps-newApplicationFlow {
+  padding-top: 110px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.breakLine-steps-newApplicationFlow {
+  padding: 5px;
+  border-bottom: 0px;
+  margin-top: 5px;
+  border-left: 5px dotted rgb(124, 174, 161);
+  height: 100px;
+  opacity: 1;
+}
+
+.newGoBackIcon-newApplicationFlow {
+  margin-bottom: 10px;
+  color: rgb(226, 229, 232);
+}
+
+.header-newApplicationFlow {
+  margin-bottom: 50px;
+  font-weight: 1000;
+  color: rgb(226, 229, 232);
+  font-family: 'Montserrat', sans-serif;
+  font-family: 'Open Sans', sans-serif;
+}
+.levelsLabel-newApplicationFlow {
+  margin-bottom: 30px;
+  color: rgb(226, 229, 232);
+  font-family: 'Montserrat', sans-serif;
+  font-family: 'Open Sans', sans-serif;
+}
+
+.buttonLabel-newApplicationFlow {
+  font-family: 'Montserrat', sans-serif;
+  font-family: 'Open Sans', sans-serif;
+  font-weight: 1000;
+}
+
+.buttonWrapper-newApplicationFlow {
+  margin-top: 110px;
+}
+
+.iconWrapper-newApplicationFlow {
+  background-color: rgb(255, 255, 255);
+  border-radius: 10px;
+  width: 55px;
+  height: 55px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 40px;
+  border-radius: 40px;
+}
+
+.iconWrapper-newApplicationFlow:hover {
+  background-color: rgb(255, 255, 255);
+  width: 55px;
+  height: 55px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 40px;
+  transform: scale(1.2);
+  border-radius: 40px;
+}
+
+/* icon 4 */
+.iconWrapper4-newApplicationFlow {
+  background-color: rgb(255, 255, 255);
+  border-radius: 10px;
+  width: 55px;
+  height: 55px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 40px;
+  border-radius: 40px;
+  transform: translate(-50px, 0);
+}
+
+.iconWrapper4-newApplicationFlow:hover {
+  background-color: rgb(255, 255, 255);
+  width: 55px;
+  height: 55px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 40px;
+  transform: scale(1.2) translate(-50px, 0);
+  border-radius: 40px;
+}
+
+/* icon 5 */
+.iconWrapper5-newApplicationFlow {
+  background-color: rgb(255, 255, 255);
+  border-radius: 10px;
+  width: 55px;
+  height: 55px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 40px;
+  border-radius: 40px;
+  transform: translate(-110px, 80px);
+}
+
+.iconWrapper5-newApplicationFlow:hover {
+  background-color: rgb(255, 255, 255);
+  width: 55px;
+  height: 55px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 40px;
+  transform: scale(1.2) translate(-110px, 80px);
+  border-radius: 40px;
+}
+
+/* icon 6 */
+.iconWrapper6-newApplicationFlow {
+  background-color: rgb(255, 255, 255);
+  border-radius: 10px;
+  width: 55px;
+  height: 55px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 40px;
+  border-radius: 40px;
+  transform: translate(-110px, 130px);
+}
+
+.iconWrapper6-newApplicationFlow:hover {
+  background-color: rgb(255, 255, 255);
+  width: 55px;
+  height: 55px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 40px;
+  transform: scale(1.2) translate(-110px, 130px);
+  border-radius: 40px;
+}
+
+/* icon 7 */
+.iconWrapper7-newApplicationFlow {
+  background-color: rgb(255, 255, 255);
+  border-radius: 10px;
+  width: 55px;
+  height: 55px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 40px;
+  border-radius: 40px;
+  transform: translate(-110px, 500);
+}
+
+.iconWrapper7-newApplicationFlow:hover {
+  background-color: rgb(255, 255, 255);
+  width: 55px;
+  height: 55px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 40px;
+  transform: scale(1.2) translate(-110px, 130px);
+  border-radius: 40px;
+}
+
+.iconWrapper1-newApplicationFlow {
+  background-color: rgb(255, 255, 255);
+  border-radius: 10px;
+  width: 55px;
+  height: 55px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 40px;
+}
+
+.iconWrapper1-newApplicationFlow::after {
+  content: '';
+}
+
+/* .iconWrapper1-newApplicationFlow:hover {
+  content: 'test';
+  background-color: transparent;
+  border-radius: 10px;
+  width: 55px;
+  height: 55px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 40px;
+  transform: translate(735px, -90px) scale(0.55);
+  transition: 1.5s;
+} */
+
+/* .iconWrapper2-newApplicationFlow {
+  background-color: rgb(255, 255, 255);
+  border-radius: 10px;
+  width: 55px;
+  height: 55px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 40px;
+}
+
+.iconWrapper2-newApplicationFlow:hover {
+  background-color: transparent;
+  border-radius: 10px;
+  width: 55px;
+  height: 55px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 40px;
+  transform: translate(630px, 85px) scale(0.55);
+  transition: 1.5s;
+} */
+.wrapperIconLabel-background-newApplicationFlow {
+  background-color: rgb(86, 94, 110);
+  border-radius: 40px;
+}
+
+.iconWrapper3-newApplicationFlow {
+  background-color: rgb(255, 255, 255);
+  border-radius: 10px;
+  width: 55px;
+  height: 55px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 40px;
+  border-radius: 40px;
+}
+
+.iconWrapper3-newApplicationFlow::after {
+  content: '';
+  white-space: nowrap;
+  display: block;
+  font-size: 20px;
+  font-weight: 1000;
+}
+
+.iconWrapper3-newApplicationFlow:hover {
+  background-color: transparent;
+  width: 55px;
+  height: 55px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 40px;
+  transform: translate(620px, 265px) scale(0.55);
+  transition: 1.5s;
+}
+
+.iconWrapper3-newApplicationFlow:hover::after {
+  content: 'Email Verification';
+  font-family: 'Montserrat', sans-serif;
+  font-family: 'Open Sans', sans-serif;
+  transition: 1.5s;
+}
+
+.rightSide-labelIconWrapper-newApplicationFlow {
+  display: flex;
+  justify-content: center;
+  align-self: center;
+  border: 1px solid black;
+  background-color: rgb(255, 255, 255);
+  width: 250px;
+  min-height: 54px;
+  border-radius: 5px;
+  padding: 15px;
+}
+
+.label-newApplicationFlow {
+  font-weight: 1000;
+  font-family: 'Montserrat', sans-serif;
+  font-family: 'Open Sans', sans-serif;
+}
+
+.fix-labelRightSide-newApplicationFlow {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.labelIcon1-newApplicationFlow {
+  font-weight: 1000;
+  font-family: 'Montserrat', sans-serif;
+  font-family: 'Open Sans', sans-serif;
+  padding-left: 4px;
+  padding-top: 1.2px;
+}
+
+.labelIcon2-newApplicationFlow {
+  font-weight: 1000;
+  font-family: 'Montserrat', sans-serif;
+  font-family: 'Open Sans', sans-serif;
+  padding-left: 4px;
+  padding-bottom: 2px;
+}

@@ -10,12 +10,11 @@ import {
   QuestionnaireIcon,
   AddItemIcon,
   DepositMoneyIcon,
-} from '../../components/iconsComponent/Icons.component';
-import Button from '../../components/FlexibleButtonComponent/FlexibleButton.component';
-import Label from '../../components/labelComponent/Label.component';
-import BreakLine from '../../components/breakLineComponent/BreakLine.component';
-import './newApplicationFlow.styles.css';
-function NewApplicationFlow() {
+} from '../../../components/iconsComponent/Icons.component';
+import Button from '../../../components/FlexibleButtonComponent/FlexibleButton.component';
+import Label from '../../../components/labelComponent/Label.component';
+import BreakLine from '../../../components/breakLineComponent/BreakLine.component';
+function NewApplicationFlowTweak() {
   const [isApplicantData, setIsApplicantData] = useState(false);
   const [isSmsVerification, setIsSmsVerification] = useState(false);
   const [isEmailVerification, setIsEmailVerification] = useState(false);
@@ -38,69 +37,71 @@ function NewApplicationFlow() {
 
         <Label label='Levels' className='levelsLabel-newApplicationFlow' />
         {/* 2nd */}
-        <div className='parent-stepsWrapper-newApplicationFlow'>
-          <div
-            className='wrapperIconLabel-background-newApplicationFlow'
-            onMouseOver={handleMouseOverChange1}
-          >
-            {/* <div className='iconWrapper-newApplicationFlow'>
-              <ProfileIconOutlined style={{ fontSize: 50 }} />
+        <div className='firstBackground-stepWrapper-newApplicationFlow'>
+          <div className='parent-stepsWrapper-newApplicationFlow'>
+            <div
+              className='wrapperIconLabel-background-newApplicationFlow'
+              onMouseOver={handleMouseOverChange1}
+            >
+              {/* <div className='iconWrapper-newApplicationFlow'>
+              <ProfileIconOutlined style={{ fontSize: 25 }} />
             </div> */}
-          </div>
-          <div className='wrapperIconLabel-background-newApplicationFlow'>
-            {/* <div
+            </div>
+            <div className='wrapperIconLabel-background-newApplicationFlow'>
+              {/* <div
               className='iconWrapper-newApplicationFlow'
               onMouseOver={handleMouseOverChange2}
             >
               <SmsVerificationOutlinedIcon
-                style={{ fontSize: 50 }}
+                style={{ fontSize: 25 }}
                 className='iconStyles-newApplicationFlow'
               />
             </div> */}
-          </div>
-          <div className='wrapperIconLabel-background-newApplicationFlow'>
-            <div className='iconWrapper3-newApplicationFlow'>
-              <EmailVerificationOutlinedIconIcon
-                style={{ fontSize: 50 }}
+            </div>
+            <div className='wrapperIconLabel-background-newApplicationFlow'>
+              <div className='iconWrapper3-newApplicationFlow'>
+                <EmailVerificationOutlinedIconIcon
+                  style={{ fontSize: 25 }}
+                  className='iconStyles-newApplicationFlow'
+                />
+              </div>
+            </div>
+            <div className='iconWrapper4-newApplicationFlow'>
+              <SelfieVerificationOutlinedIcon
+                style={{ fontSize: 25 }}
                 className='iconStyles-newApplicationFlow'
               />
             </div>
-          </div>
-          <div className='iconWrapper-newApplicationFlow'>
-            <SelfieVerificationOutlinedIcon
-              style={{ fontSize: 50 }}
-              className='iconStyles-newApplicationFlow'
-            />
-          </div>
-          <div className='iconWrapper-newApplicationFlow'>
-            <AddressVerificationIcon
-              style={{ fontSize: 50 }}
-              className='iconStyles-newApplicationFlow'
-            />
-          </div>
-          <div className='iconWrapper-newApplicationFlow'>
-            <UploadDocumentIcon
-              style={{ fontSize: 50 }}
-              className='iconStyles-newApplicationFlow'
-            />
-          </div>
-          <div className='iconWrapper-newApplicationFlow'>
-            <QuestionnaireIcon
-              style={{ fontSize: 50 }}
-              className='iconStyles-newApplicationFlow'
-            />
-          </div>
-          <div className='iconWrapper-newApplicationFlow'>
-            <AddItemIcon
-              style={{ fontSize: 50 }}
-              className='iconStyles-newApplicationFlow'
-            />
-          </div>
-          <div className='iconWrapper-newApplicationFlow'>
-            <DepositMoneyIcon
-              style={{ fontSize: 50 }}
-              className='iconStyles-newApplicationFlow'
-            />
+            <div className='iconWrapper5-newApplicationFlow'>
+              <AddressVerificationIcon
+                style={{ fontSize: 25 }}
+                className='iconStyles-newApplicationFlow'
+              />
+            </div>
+            <div className='iconWrapper6-newApplicationFlow'>
+              <UploadDocumentIcon
+                style={{ fontSize: 25 }}
+                className='iconStyles-newApplicationFlow'
+              />
+            </div>
+            <div className='iconWrapper7-newApplicationFlow'>
+              <QuestionnaireIcon
+                style={{ fontSize: 25 }}
+                className='iconStyles-newApplicationFlow'
+              />
+            </div>
+            <div className='iconWrapper-newApplicationFlow'>
+              <AddItemIcon
+                style={{ fontSize: 25 }}
+                className='iconStyles-newApplicationFlow'
+              />
+            </div>
+            <div className='iconWrapper-newApplicationFlow'>
+              <DepositMoneyIcon
+                style={{ fontSize: 25 }}
+                className='iconStyles-newApplicationFlow'
+              />
+            </div>
           </div>
         </div>
         <div className='buttonWrapper-newApplicationFlow'>
@@ -198,4 +199,4 @@ function NewApplicationFlow() {
   );
 }
 
-export default NewApplicationFlow;
+export default NewApplicationFlowTweak;
