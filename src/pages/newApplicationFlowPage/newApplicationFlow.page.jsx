@@ -126,6 +126,7 @@ function NewApplicationFlow() {
               '&:hover': {
                 backgroundColor: 'hsl(163.2,41.3%,45.9%)',
                 boxShadow: '0 0 5px 0 	hsl(163.2,41.3%,35.9%)',
+                transition: '1s',
               },
             }}
           />
