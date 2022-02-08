@@ -25,6 +25,7 @@ function Input(props) {
           style={props.style}
           InputProps={{ className: props.textFieldStyles }}
           sx={props.sx}
+          disabled={props.disabled}
         ></TextField>
       </Box>
     </>
