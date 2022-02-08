@@ -10,13 +10,15 @@ function RadioButtonList(props) {
       <RadioGroup defaultValue={props.defaultValue} name='radio-buttons-group'>
         {props.list.map((item) => {
           return (
-            <FormControlLabel
-              key={item.id}
-              value={item.value}
-              label={item.label}
-              control={<Radio />}
-              style={props.style}
-            />
+            <div className={props.containerClass}>
+              <FormControlLabel
+                key={item.id}
+                value={item.value}
+                label={item.label}
+                control={<Radio />}
+                style={props.style}
+              />
+            </div>
           );
         })}
       </RadioGroup>

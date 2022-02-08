@@ -4,7 +4,8 @@ import Input from '../../../components/inputComponent/Input.component';
 import BreakLine from '../../../components/breakLineComponent/BreakLine.component';
 import Button from '../../../components/FlexibleButtonComponent/FlexibleButton.component';
 import CheckBox from '../../../components/checkboxComponent/CheckBox.component';
-import RadioButtonList from '../../../components/ListComponents/radioButtonListComponent/RadioButtonList.component';
+import RadioButton from '../../../components/radioButtonComponent/radioButton.component';
+
 import SearchInput from '../../../components/searchInputComponent/SearchInput.component';
 
 import { makeStyles } from '@material-ui/core/styles';
@@ -51,26 +52,32 @@ function ApplicationFlowFill() {
     <div className='mainWrapper-ApplicationFlowFill'>
       {/* 1st */}
       <div className='container1-ApplicationFlowFill'>
-        <Label label='Level Name' className='header-ApplicationFlowFill' />
+        <Label
+          label='Level Name'
+          className='levelNameHeader-ApplicationFlowFill'
+        />
         <Input name='basic-kyc-level' textFieldStyles={classes.textField} />
         <Label
           label='Note that once you create a level,you will not be able to change its name/.'
-          className='label-ApplicationFlowFill'
+          className='levelNameLabel-ApplicationFlowFill'
         />
       </div>
       {/* 2nd */}
       <div className='container2-ApplicationFlowFill'>
-        <Label label='Required Steps' className='header-ApplicationFlowFill' />
-        <BreakLine />
         <Label
-          label='here you should set up the steps that are required
+          label='Required Steps'
+          className='requiredStepsHeader-ApplicationFlowFill'
+        />
+        <BreakLine className='breakLine-ApplicationFlowFill' />
+        <Label
+          label='Here you should set up the steps that are required
           from your customers to complete the verification process'
-          className='label-ApplicationFlowFill'
+          className='requiredStepsLabel-ApplicationFlowFill'
         />
         <Label
           label={`Please note that the order of these steps is
           important, as it defines your customer's journey  `}
-          className='label-ApplicationFlowFill'
+          className='requiredStepsLabel-ApplicationFlowFill'
         />
         {/* 3rd */}
         <div>steps information Filling component</div>
@@ -79,34 +86,34 @@ function ApplicationFlowFill() {
           label='Countries and Territories'
           className='header-ApplicationFlowFill'
         />
-        <RadioButtonList list={countriesAndTerritoriesList} />
-        <SearchInput
-          options={countryList}
-          label='Select included countries'
-          sx={{ width: 300, margin: 2 }}
-        />
+
+        <RadioButton label='Included' />
+        <RadioButton label='Excluded' />
+
+        <SearchInput options={countryList} label='Select included countries' />
         <Label
           label={`Here you may specify the countries that this
           applicant level supports.leave this field empty if there is no
           restrictions `}
-          className='label-ApplicationFlowFill'
+          className='countryIncludedLabel-ApplicationFlowFill'
         />
         <Label label='Source Key' className='header-ApplicationFlowFill' />
-        <SearchInput
-          options={optionsList}
-          label='Select option'
-          sx={{ width: 300, margin: 2 }}
-        />
-        <CheckBox />
-        <Label
-          label='Email Notifications'
-          className='checkboxLabel-ApplicationFlowFill'
-        />
-        <CheckBox />
-        <Label
-          label='Use Custom ID documents Settings'
-          className='checkboxLabel-ApplicationFlowFill'
-        />
+        <SearchInput options={optionsList} label='Select option' />
+        <div className='checkBoxAndLabelWrapper-ApplicationFlowFill'>
+          <CheckBox />
+          <Label
+            label='Email Notifications'
+            className='checkboxLabel-ApplicationFlowFill'
+          />
+        </div>
+        <div className='checkBoxAndLabelWrapper-ApplicationFlowFill'>
+          <CheckBox />
+          <Label
+            label='Use Custom ID documents Settings'
+            className='checkboxLabel-ApplicationFlowFill'
+          />
+        </div>
+
         {/* 5th */}
         <Button name='Add New Flow' />
         <Button name='Save' />
