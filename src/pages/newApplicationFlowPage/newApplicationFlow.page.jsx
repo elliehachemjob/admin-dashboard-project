@@ -14,6 +14,7 @@ import {
 import Button from '../../components/FlexibleButtonComponent/FlexibleButton.component';
 import Label from '../../components/labelComponent/Label.component';
 import BreakLine from '../../components/breakLineComponent/BreakLine.component';
+import ApplicationFlowFill from './applicantionFlowFill/applicationFlowFill.page';
 import './newApplicationFlow.styles.css';
 function NewApplicationFlow() {
   const [isApplicantData, setIsApplicantData] = useState(false);
@@ -21,7 +22,7 @@ function NewApplicationFlow() {
   const [isEmailVerification, setIsEmailVerification] = useState(false);
   const [counter, setCounter] = useState(1);
   const [submitFlowGlow, setSubmitFlowGlow] = useState('');
-
+  const [isCounterStepDisplay, setIsCounterStepDisplay] = useState('');
   const Step1Component = () => {
     return (
       <>
@@ -166,6 +167,10 @@ function NewApplicationFlow() {
     }
   };
 
+  const handleSubmitChange = () => {
+    setStepsList(<ApplicationFlowFill />);
+    setIsCounterStepDisplay('none');
+  };
   return (
     <div className='parent-newApplicationFlow'>
       {/* 1st left side */}
@@ -242,9 +247,7 @@ function NewApplicationFlow() {
         </div>
         <div className='buttonWrapper-newApplicationFlow'>
           <Button
-            onClick={() => {
-              alert('hey');
-            }}
+            onClick={handleSubmitChange}
             className=''
             name={
               <div className=''>
@@ -279,17 +282,18 @@ function NewApplicationFlow() {
           {/* <BreakLine className='breakLineIndicator-newApplicationFlow' /> */}
           {stepsList}
         </div>
-
-        <div className='navigateSteps-newApplicationFlow'>
-          <NewGoBackIcon
-            className='backwardIcon-newApplicationFlow'
-            onClick={handleBackwardChange}
-          />
-          <div className='steps-counter-newApplicationFlow'>{counter}</div>
-          <NewGoBackIcon
-            className='forwardIcon-newApplicationFlow'
-            onClick={handleForwardChange}
-          />
+        <div style={{ display: isCounterStepDisplay }}>
+          <div className='navigateSteps-newApplicationFlow'>
+            <NewGoBackIcon
+              className='backwardIcon-newApplicationFlow'
+              onClick={handleBackwardChange}
+            />
+            <div className='steps-counter-newApplicationFlow'>{counter}</div>
+            <NewGoBackIcon
+              className='forwardIcon-newApplicationFlow'
+              onClick={handleForwardChange}
+            />
+          </div>
         </div>
       </div>
       {/* 4th  later deduced*/}
