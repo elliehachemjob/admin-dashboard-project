@@ -45,6 +45,14 @@
   opacity: 1;
 }
 
+.breakLineIndicator-newApplicationFlow {
+  border: 5px solid rgb(124, 174, 161);
+  width: 22%;
+  opacity: 1;
+  border-radius: 9999px;
+  margin-bottom: 50px;
+}
+
 .newGoBackIcon-newApplicationFlow {
   margin-bottom: 10px;
   color: rgb(226, 229, 232);
@@ -231,4 +239,30 @@
   font-family: 'Open Sans', sans-serif;
   padding-left: 4px;
   padding-bottom: 2px;
+}
+
+.navigateSteps-newApplicationFlow {
+  display: flex;
+  justify-content: center;
+}
+
+.forwardIcon-newApplicationFlow {
+  transform: rotate(180deg);
+
+  margin-top: 20px;
+}
+
+.backwardIcon-newApplicationFlow {
+  margin-top: 20px;
+}
+
+.steps-counter-newApplicationFlow {
+  margin-top: 20px;
+  padding-right: 7px;
+  padding-left: 7px;
+  margin-left: 100px;
+  margin-right: 100px;
+  transform: translate(-5px);
+  background-color: hsl(163.2, 41.3%, 40.9%);
+  border-radius: 40px;
 }

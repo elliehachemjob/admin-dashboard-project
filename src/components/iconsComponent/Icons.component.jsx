@@ -33,6 +33,17 @@ import PersonOutlineOutlinedIcon from '@mui/icons-material/PersonOutlineOutlined
 import SmsOutlinedIcon from '@mui/icons-material/SmsOutlined';
 import EmailOutlinedIcon from '@mui/icons-material/EmailOutlined';
 import CameraFrontOutlinedIcon from '@mui/icons-material/CameraFrontOutlined';
+import ArrowForwardIosOutlinedIcon from '@mui/icons-material/ArrowForwardIosOutlined';
+
+export function ForwardOutlinedIcon(props) {
+  return (
+    <ArrowForwardIosOutlinedIcon
+      style={props.style}
+      className={props.className}
+      onClick={props.onClick}
+    />
+  );
+}
 
 export function SelfieVerificationOutlinedIcon(props) {
   return (

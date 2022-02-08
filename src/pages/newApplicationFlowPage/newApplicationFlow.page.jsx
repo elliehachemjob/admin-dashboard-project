@@ -19,6 +19,109 @@ function NewApplicationFlow() {
   const [isApplicantData, setIsApplicantData] = useState(false);
   const [isSmsVerification, setIsSmsVerification] = useState(false);
   const [isEmailVerification, setIsEmailVerification] = useState(false);
+  const [counter, setCounter] = useState(1);
+  const [submitFlowGlow, setSubmitFlowGlow] = useState('');
+
+  const Step1Component = () => {
+    return (
+      <>
+        <div className='rightSide-labelIconWrapper-newApplicationFlow'>
+          <div className='fix-labelRightSide-newApplicationFlow'>
+            <ProfileIconOutlined style={{ fontSize: 30 }} />
+            <Label
+              label='Applicant Data'
+              className='labelIcon1-newApplicationFlow'
+            />
+          </div>
+        </div>
+        <BreakLine className='breakLine-steps-newApplicationFlow' />
+        <div className='rightSide-labelIconWrapper-newApplicationFlow'>
+          <div className='fix-labelRightSide-newApplicationFlow'>
+            <SmsVerificationOutlinedIcon style={{ fontSize: 30 }} />
+            <Label
+              label='SMS Verification'
+              className='labelIcon2-newApplicationFlow'
+            />
+          </div>
+        </div>
+        <BreakLine className='breakLine-steps-newApplicationFlow' />
+        <div className='rightSide-labelIconWrapper-newApplicationFlow'>
+          <EmailVerificationOutlinedIconIcon />
+          <Label
+            label='E-mail Verification'
+            className='label-newApplicationFlow'
+          />
+        </div>
+      </>
+    );
+  };
+
+  const Step2Component = () => {
+    return (
+      <>
+        <div className='rightSide-labelIconWrapper-newApplicationFlow'>
+          <div className='fix-labelRightSide-newApplicationFlow'>
+            <SelfieVerificationOutlinedIcon style={{ fontSize: 30 }} />
+            <Label
+              label='Selfie Verification'
+              className='labelIcon1-newApplicationFlow'
+            />
+          </div>
+        </div>
+        <BreakLine className='breakLine-steps-newApplicationFlow' />
+        <div className='rightSide-labelIconWrapper-newApplicationFlow'>
+          <div className='fix-labelRightSide-newApplicationFlow'>
+            <AddressVerificationIcon style={{ fontSize: 30 }} />
+            <Label
+              label='Address Verification'
+              className='labelIcon2-newApplicationFlow'
+            />
+          </div>
+        </div>
+        <BreakLine className='breakLine-steps-newApplicationFlow' />
+        <div className='rightSide-labelIconWrapper-newApplicationFlow'>
+          <UploadDocumentIcon />
+          <Label
+            label='Upload Documents'
+            className='label-newApplicationFlow'
+          />
+        </div>
+      </>
+    );
+  };
+  const Step3Component = () => {
+    return (
+      <>
+        <div className='rightSide-labelIconWrapper-newApplicationFlow'>
+          <div className='fix-labelRightSide-newApplicationFlow'>
+            <QuestionnaireIcon style={{ fontSize: 30 }} />
+            <Label
+              label='Questionnaire'
+              className='labelIcon1-newApplicationFlow'
+            />
+          </div>
+        </div>
+        <BreakLine className='breakLine-steps-newApplicationFlow' />
+        <div className='rightSide-labelIconWrapper-newApplicationFlow'>
+          <div className='fix-labelRightSide-newApplicationFlow'>
+            <AddItemIcon style={{ fontSize: 30 }} />
+            <Label
+              label='Create Account'
+              className='labelIcon2-newApplicationFlow'
+            />
+          </div>
+        </div>
+        <BreakLine className='breakLine-steps-newApplicationFlow' />
+        <div className='rightSide-labelIconWrapper-newApplicationFlow'>
+          <DepositMoneyIcon />
+          <Label label='Deposit Money' className='label-newApplicationFlow' />
+        </div>
+      </>
+    );
+  };
+
+  const [stepsList, setStepsList] = useState(Step1Component);
+
   const handleMouseOverChange1 = () => {
     setIsApplicantData(true);
   };
@@ -27,6 +130,40 @@ function NewApplicationFlow() {
   };
   const handleMouseOverChange3 = () => {
     setIsEmailVerification(true);
+  };
+
+  const handleBackwardChange = () => {
+    setCounter((prev) => {
+      return prev - 1;
+    });
+    if (counter <= 1) {
+      setCounter(1);
+    }
+
+    if (counter === 2) {
+      setStepsList(Step1Component);
+    }
+    if (counter === 3) {
+      setStepsList(Step2Component);
+      setSubmitFlowGlow('setSubmitFlowGlow');
+    }
+  };
+
+  const handleForwardChange = () => {
+    setCounter((prev) => {
+      return prev + 1;
+    });
+    if (counter >= 3) {
+      setCounter(3);
+    }
+
+    if (counter === 1) {
+      setStepsList(Step2Component);
+    }
+    if (counter === 2) {
+      setStepsList(Step3Component);
+      setSubmitFlowGlow('0px 0px 30px 10px hsl(163.2,41.3%,35.9%)');
+    }
   };
 
   return (
@@ -43,12 +180,12 @@ function NewApplicationFlow() {
             className='wrapperIconLabel-background-newApplicationFlow'
             onMouseOver={handleMouseOverChange1}
           >
-            {/* <div className='iconWrapper-newApplicationFlow'>
+            <div className='iconWrapper-newApplicationFlow'>
               <ProfileIconOutlined style={{ fontSize: 50 }} />
-            </div> */}
+            </div>
           </div>
           <div className='wrapperIconLabel-background-newApplicationFlow'>
-            {/* <div
+            <div
               className='iconWrapper-newApplicationFlow'
               onMouseOver={handleMouseOverChange2}
             >
@@ -56,7 +193,7 @@ function NewApplicationFlow() {
                 style={{ fontSize: 50 }}
                 className='iconStyles-newApplicationFlow'
               />
-            </div> */}
+            </div>
           </div>
           <div className='wrapperIconLabel-background-newApplicationFlow'>
             <div className='iconWrapper3-newApplicationFlow'>
@@ -105,6 +242,9 @@ function NewApplicationFlow() {
         </div>
         <div className='buttonWrapper-newApplicationFlow'>
           <Button
+            onClick={() => {
+              alert('hey');
+            }}
             className=''
             name={
               <div className=''>
@@ -122,9 +262,11 @@ function NewApplicationFlow() {
               padding: 1.5,
               paddingLeft: 3,
               paddingRight: 3,
+              boxShadow: submitFlowGlow,
               '&:hover': {
                 backgroundColor: 'hsl(163.2,41.3%,45.9%)',
-                boxShadow: '0 0 5px 0 	hsl(163.2,41.3%,35.9%)',
+                boxShadow: '0 0 5px 0	hsl(163.2,41.3%,35.9%)',
+
                 transition: '1s',
               },
             }}
@@ -134,63 +276,20 @@ function NewApplicationFlow() {
       {/* 3rd right side */}
       <div className='wrapper-right-newApplicationFlow'>
         <div className='rightSide-steps-newApplicationFlow'>
-          <div className='rightSide-labelIconWrapper-newApplicationFlow'>
-            {/* {isApplicantData ? (
-              <div className='fix-labelRightSide-newApplicationFlow'>
-                <Label
-                  label='Applicant Data'
-                  className='label-newApplicationFlow'
-                />
-              </div>
-            ) : (
-              ''
-            )} */}
-            <div className='fix-labelRightSide-newApplicationFlow'>
-              <ProfileIconOutlined style={{ fontSize: 30 }} />
-              <Label
-                label='Applicant Data'
-                className='labelIcon1-newApplicationFlow'
-              />
-            </div>
-          </div>
-          <BreakLine className='breakLine-steps-newApplicationFlow' />
-          <div className='rightSide-labelIconWrapper-newApplicationFlow'>
-            {/* {isSmsVerification ? (
-              <div className='fix-labelRightSide-newApplicationFlow'>
-                <Label
-                  label='SMS Verification'
-                  className='label-newApplicationFlow'
-                />
-              </div>
-            ) : (
-              ''
-            )} */}
-            <div className='fix-labelRightSide-newApplicationFlow'>
-              <SmsVerificationOutlinedIcon style={{ fontSize: 30 }} />
-              <Label
-                label='SMS Verification'
-                className='labelIcon2-newApplicationFlow'
-              />
-            </div>
-          </div>
-          <BreakLine className='breakLine-steps-newApplicationFlow' />
-          <div className='rightSide-labelIconWrapper-newApplicationFlow'>
-            {/* {isEmailVerification ? (
-              <div className='fix-labelRightSide-newApplicationFlow'>
-                <Label
-                  label='E-mail Verification'
-                  className='label-newApplicationFlow'
-                />
-              </div>
-            ) : (
-              ''
-            )} */}
-            {/* <EmailVerificationOutlinedIconIcon />
-            <Label
-              label='E-mail Verification'
-              className='label-newApplicationFlow'
-            /> */}
-          </div>
+          {/* <BreakLine className='breakLineIndicator-newApplicationFlow' /> */}
+          {stepsList}
+        </div>
+
+        <div className='navigateSteps-newApplicationFlow'>
+          <NewGoBackIcon
+            className='backwardIcon-newApplicationFlow'
+            onClick={handleBackwardChange}
+          />
+          <div className='steps-counter-newApplicationFlow'>{counter}</div>
+          <NewGoBackIcon
+            className='forwardIcon-newApplicationFlow'
+            onClick={handleForwardChange}
+          />
         </div>
       </div>
       {/* 4th  later deduced*/}
