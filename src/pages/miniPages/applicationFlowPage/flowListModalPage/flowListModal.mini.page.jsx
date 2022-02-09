@@ -44,7 +44,7 @@ function FlowListModal(props) {
           borderRadius: '10px',
         },
       }}
-      modalBackground='#C1E0F7'
+      modalBackground='white'
     >
       {createFlows.map((item) => {
         return (

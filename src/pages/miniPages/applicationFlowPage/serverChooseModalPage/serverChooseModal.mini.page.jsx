@@ -45,7 +45,7 @@ function ServerChooseModal() {
           borderRadius: '10px',
         },
       }}
-      modalBackground='#C1E0F7'
+      modalBackground='white'
     >
       <div className='parent-toggle-serverChooseModal'>
         <div className='div1-toggle-serverChooseModal'>

@@ -1571,7 +1571,7 @@ function ApplicationFlowPage() {
             </div>
             <div className='buttons1-child-applicationFlow'>
               {/* 2nd */}
-              <FlowStepsModal />
+              {/* <FlowStepsModal /> */}
             </div>
             <div className='buttons1-child-applicationFlow'>
               <ServerChooseModal />

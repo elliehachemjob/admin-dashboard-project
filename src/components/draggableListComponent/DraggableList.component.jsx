@@ -129,13 +129,13 @@ export default class DraggableList extends Component {
                   },
                 }}
               /> */}
-              {/* <CreateNewFlowModalPage
+              <CreateNewFlowModalPage
                 onClick={() => {
                   this.setState({
                     items: this.props.getItems2,
                   });
                 }}
-              /> */}
+              />
             </div>
           </div>
         </div>

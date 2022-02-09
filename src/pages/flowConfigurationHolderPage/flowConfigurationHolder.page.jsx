@@ -214,7 +214,7 @@ function FlowConfigurationHolder() {
     textField: {
       outline: 'none',
       fontSize: 'inherit',
-      borderRadius: 15,
+      borderRadius: 5,
     },
   }));
 
@@ -251,11 +251,11 @@ function FlowConfigurationHolder() {
               }
               variant='contained'
               sx={{
-                backgroundColor: '#2B3A67',
+                backgroundColor: 'hsl(204, 82%, 43%)',
                 borderRadius: '10px',
                 fontWeight: 600,
                 '&:hover': {
-                  backgroundColor: '#5E807F',
+                  backgroundColor: 'hsl(204, 82%, 33%)',
                   borderRadius: '10px',
                 },
               }}
@@ -281,11 +281,11 @@ function FlowConfigurationHolder() {
               }
               variant='contained'
               sx={{
-                backgroundColor: '#2B3A67',
+                backgroundColor: 'hsl(204, 82%, 43%)',
                 borderRadius: '10px',
                 fontWeight: 600,
                 '&:hover': {
-                  backgroundColor: '#5E807F',
+                  backgroundColor: 'hsl(204, 82%, 33%)',
                   borderRadius: '10px',
                 },
               }}
@@ -311,11 +311,11 @@ function FlowConfigurationHolder() {
             }
             variant='contained'
             sx={{
-              backgroundColor: '#2B3A67',
+              backgroundColor: 'hsl(204, 82%, 43%)',
               borderRadius: '10px',
               fontWeight: 600,
               '&:hover': {
-                backgroundColor: '#5E807F',
+                backgroundColor: 'hsl(204, 82%, 33%)',
                 borderRadius: '10px',
               },
             }}

@@ -194,7 +194,7 @@ function ApplicationFlowPageRegistration() {
               </div>
             }
           />
-          <span className='positionedItem-applicationFlow'>
+          <span className='positionedItem-applicationFlow-registration'>
             <DeleteIconOutlinedIcon
               onClick={handleDeleteStep}
               className='deleteStep-applicationFlow'
@@ -240,7 +240,7 @@ function ApplicationFlowPageRegistration() {
               </div>
             }
           />
-          <span className='positionedItem-applicationFlow'>
+          <span className='positionedItem-applicationFlow-registration'>
             <DeleteIconOutlinedIcon
               onClick={handleDeleteStep}
               className='deleteStep-applicationFlow'
@@ -280,7 +280,7 @@ function ApplicationFlowPageRegistration() {
               </div>
             }
           />
-          <span className='positionedItem-applicationFlow'>
+          <span className='positionedItem-applicationFlow-registration'>
             <DeleteIconOutlinedIcon
               onClick={handleDeleteStep}
               className='deleteStep-applicationFlow'
@@ -344,7 +344,7 @@ function ApplicationFlowPageRegistration() {
               </div>
             }
           />
-          <span className='positionedItem-applicationFlow'>
+          <span className='positionedItem-applicationFlow-registration'>
             <DeleteIconOutlinedIcon
               onClick={handleDeleteStep}
               className='deleteStep-applicationFlow'
@@ -473,7 +473,7 @@ function ApplicationFlowPageRegistration() {
               </>
             }
           />
-          <span className='positionedItem-applicationFlow'>
+          <span className='positionedItem-applicationFlow-registration'>
             <DeleteIconOutlinedIcon
               onClick={handleDeleteStep}
               className='deleteStep-applicationFlow'
@@ -602,7 +602,7 @@ function ApplicationFlowPageRegistration() {
               </>
             }
           />
-          <span className='positionedItem-applicationFlow'>
+          <span className='positionedItem-applicationFlow-registration'>
             <DeleteIconOutlinedIcon
               onClick={handleDeleteStep}
               className='deleteStep-applicationFlow'
@@ -674,7 +674,7 @@ function ApplicationFlowPageRegistration() {
               </div>
             }
           />
-          <span className='positionedItem-applicationFlow'>
+          <span className='positionedItem-applicationFlow-registration'>
             <DeleteIconOutlinedIcon
               onClick={handleDeleteStep}
               className='deleteStep-applicationFlow'
@@ -757,7 +757,7 @@ function ApplicationFlowPageRegistration() {
               </div>
             }
           />
-          <span className='positionedItem-applicationFlow'>
+          <span className='positionedItem-applicationFlow-registration'>
             <DeleteIconOutlinedIcon
               onClick={handleDeleteStep}
               className='deleteStep-applicationFlow'
@@ -841,7 +841,7 @@ function ApplicationFlowPageRegistration() {
               </div>
             }
           />
-          <span className='positionedItem-applicationFlow'>
+          <span className='positionedItem-applicationFlow-registration'>
             <DeleteIconOutlinedIcon
               onClick={handleDeleteStep}
               className='deleteStep-applicationFlow'
@@ -862,7 +862,7 @@ function ApplicationFlowPageRegistration() {
             }
             section2=''
           />
-          <span className='positionedItem-applicationFlow'>
+          <span className='positionedItem-applicationFlow-registration'>
             <DeleteIconOutlinedIcon
               onClick={handleDeleteStep}
               className='deleteStep-applicationFlow'

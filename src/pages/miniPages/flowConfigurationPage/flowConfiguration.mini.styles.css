@@ -275,3 +275,7 @@
   justify-content: flex-end;
   padding-top: 10px;
 }
+
+.goBackIcon-applicationFlow {
+  color: hsl(204, 82%, 43%);
+}

@@ -65,7 +65,7 @@ function ApplicationFlowHolder(props) {
     textField: {
       outline: 'none',
       fontSize: 'inherit',
-      borderRadius: 15,
+      borderRadius: 5,
     },
   }));
 
@@ -82,7 +82,7 @@ function ApplicationFlowHolder(props) {
       {/* 2nd */}
       <div className='buttonWrapper-applicationFlowHolder'>
         <div className='button1-wrapper-applicationFlowHolder'>
-          <Link to='/applicationFlow' className='link-applicationFlowHolder'>
+          <Link to='/newApplicationFlow' className='link-applicationFlowHolder'>
             <Button
               className='button-fieldsAdd'
               name={
@@ -100,18 +100,18 @@ function ApplicationFlowHolder(props) {
               }
               variant='contained'
               sx={{
-                backgroundColor: '#2B3A67',
+                backgroundColor: 'hsl(204, 82%, 43%)',
                 borderRadius: '10px',
                 fontWeight: 600,
                 '&:hover': {
-                  backgroundColor: '#5E807F',
+                  backgroundColor: 'hsl(204, 82%, 33%)',
                   borderRadius: '10px',
                 },
               }}
             />
           </Link>
         </div>
-        <Link to='/applicationFlow' className='link-applicationFlowHolder'>
+        <Link to='/newApplicationFlow' className='link-applicationFlowHolder'>
           <div className='button2-wrapper-applicationFlowHolder'>
             <Button
               className='button-fieldsAdd'
@@ -130,11 +130,11 @@ function ApplicationFlowHolder(props) {
               }
               variant='contained'
               sx={{
-                backgroundColor: '#2B3A67',
+                backgroundColor: 'hsl(204, 82%, 43%)',
                 borderRadius: '10px',
                 fontWeight: 600,
                 '&:hover': {
-                  backgroundColor: '#5E807F',
+                  backgroundColor: 'hsl(204, 82%, 33%)',
                   borderRadius: '10px',
                 },
               }}
@@ -160,11 +160,11 @@ function ApplicationFlowHolder(props) {
             }
             variant='contained'
             sx={{
-              backgroundColor: '#2B3A67',
+              backgroundColor: 'hsl(204, 82%, 43%)',
               borderRadius: '10px',
               fontWeight: 600,
               '&:hover': {
-                backgroundColor: '#5E807F',
+                backgroundColor: 'hsl(204, 82%, 33%)',
                 borderRadius: '10px',
               },
             }}
