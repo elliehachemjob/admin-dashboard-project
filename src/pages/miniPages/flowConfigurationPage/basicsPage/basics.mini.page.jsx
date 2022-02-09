@@ -26,7 +26,7 @@ function Basics() {
     textField: {
       outline: 'none',
       fontSize: 'inherit',
-      borderRadius: 15,
+      borderRadius: 5,
     },
   }));
 
@@ -36,7 +36,11 @@ function Basics() {
     <div className=''>
       {/* 1st */}
       <div className=''>
-        <Label label='Configuration' className='header-basics' />
+        <Label
+          label='Configuration'
+          className='header-basics'
+          marginLeft={-10}
+        />
         <ToggleList
           key={label1.id}
           list={label1}
@@ -46,18 +50,22 @@ function Basics() {
         />
       </div>
       <div className=''>
-        <Label label='Title' className='header-basics' />
+        <Label label='Title' className='header-basics' marginLeft={-10} />
         <Input
           label='AMConfig-IB'
           style={{
-            width: 165,
+            width: 210,
           }}
           textFieldStyles={classes.textField}
         />
       </div>
 
       <div className=''>
-        <Label label='Select Permission' className='header-basics' />
+        <Label
+          label='Select Permission'
+          className='header-basics'
+          marginLeft={-10}
+        />
         <Dropdown
           items={menu}
           label={value}
@@ -66,11 +74,11 @@ function Basics() {
           inputLabel={value ? value : 'Select'}
           sx={{
             fontSize: 'inherit',
-            width: 165,
-            borderRadius: 4,
+            width: 210,
+            borderRadius: 2,
           }}
           menuSx={{
-            width: 165,
+            width: 210,
           }}
         />
       </div>

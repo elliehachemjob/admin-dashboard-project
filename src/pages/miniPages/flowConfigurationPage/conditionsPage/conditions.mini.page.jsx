@@ -21,16 +21,10 @@ function Conditions() {
 
   const useStyles = makeStyles((theme) => ({
     textField: {
-      background: '""',
       minWidth: 165,
-      borderRadius: '15px',
+      borderRadius: '5px',
       opacity: 1,
-
-      '&:hover,&:focus': {
-        border: ' ',
-        backgroundColor: '',
-        opacity: 1,
-      },
+      '&:hover,&:focus': {},
     },
   }));
 
@@ -50,8 +44,16 @@ function Conditions() {
               className='header-conditions'
             />
             <AddFields
+              div1Label='div1Label-conditions'
+              div2Label='div2Label-conditions'
+              div3Label='div3Label-conditions'
+              div4Label='div4Label-conditions'
+              section1Style={{ margin: 0 }}
+              section2Style={{ margin: 0 }}
+              tableSection1='tableSection1-conditions'
+              tableSection2='tableSection2-conditions'
               sx={{
-                backgroundColor: '#04724D',
+                backgroundColor: '',
                 borderRadius: '10px',
                 fontWeight: 600,
                 '&:hover': {
@@ -60,12 +62,12 @@ function Conditions() {
                 },
               }}
               sx2={{
-                backgroundColor: '#04724D',
+                backgroundColor: 'hsl(168, 75%, 42%)',
                 borderRadius: '10px',
                 fontWeight: 600,
                 marginTop: 2.5,
                 '&:hover': {
-                  backgroundColor: '#5E807F',
+                  backgroundColor: 'hsl(168, 75%, 32%)',
                   borderRadius: '10px',
                 },
               }}
@@ -91,8 +93,7 @@ function Conditions() {
                 <DropdownTagSelector
                   sx={{
                     width: 165,
-                    background: '""',
-                    borderRadius: 4,
+                    borderRadius: 2,
                   }}
                   widthTagSelectorOpened={100}
                 />
@@ -101,6 +102,7 @@ function Conditions() {
                 <DropdownTagSelector
                   sx={{
                     width: 165,
+                    borderRadius: 2,
                   }}
                   widthTagSelectorOpened={100}
                 />
@@ -115,8 +117,7 @@ function Conditions() {
                     inputLabel={value ? value : 'Server - MT4'}
                     sx={{
                       width: 165,
-                      background: '""',
-                      borderRadius: 4,
+                      borderRadius: 2,
                     }}
                     menuSx={{ width: 165 }}
                   />

@@ -54,7 +54,7 @@ export function ConditionsModalFixedAgain(props) {
     <ModalUsage
       open={open}
       handleClose={handleClose}
-      modalBackground='#C1E0F7'
+      modalBackground='white'
       icon={
         <ConditionsIcon
           className='fixed-ConditionsIcon2-conditionModal'

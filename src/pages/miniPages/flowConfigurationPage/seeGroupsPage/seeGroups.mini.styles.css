@@ -1,5 +1,13 @@
 .icon-defaults-seeGroup {
-  color: #04724d;
+  color: hsl(168, 75%, 25%);
+}
+
+.icon-defaults-seeGroup:active {
+  color: hsl(168, 75%, 15%);
+}
+
+.icon-defaults-seeGroup:hover {
+  color: hsl(168, 75%, 15%);
 }
 
 .container-Icon-seeGroups {

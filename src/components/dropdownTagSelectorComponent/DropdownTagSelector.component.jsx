@@ -56,16 +56,10 @@ function DropdownTagSelector(props) {
         input={
           <OutlinedInput
             sx={{
-              background: '""',
-              borderRadius: 4,
+              borderRadius: 2,
               minWidth: 165,
-
               opacity: 1,
-              '&:hover,&:focus': {
-                border: '',
-                backgroundColor: '',
-                opacity: 0.6,
-              },
+              '&:hover,&:focus': {},
             }}
             id='select-multiple-chip'
             label='Chip'
@@ -82,12 +76,13 @@ function DropdownTagSelector(props) {
             {selected.map((value) => (
               <Chip
                 sx={{
-                  backgroundColor: '#04724D',
+                  backgroundColor: 'hsl(168, 75%, 42%)',
                   borderRadius: '10px',
                   fontWeight: 1000,
                   color: 'white',
+
                   '&:hover': {
-                    backgroundColor: '#5E807F',
+                    backgroundColor: 'hsl(168, 75%, 32%)',
                     borderRadius: '10px',
                   },
                 }}

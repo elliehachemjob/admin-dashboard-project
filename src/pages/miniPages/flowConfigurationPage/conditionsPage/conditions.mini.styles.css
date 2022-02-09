@@ -194,13 +194,45 @@
 }
 
 .deleteIcon-conditions {
-  color: #ff331f;
+  color: hsl(0, 82%, 59%);
 }
 
 .deleteIcon-conditions:hover {
-  color: hsl(5, 100%, 46%);
+  color: hsl(0, 82%, 49%);
 }
 
 .deleteIcon-conditions:focus {
-  color: hsl(5, 100%, 46%);
+  color: hsl(0, 82%, 49%);
+}
+
+.tableSection1-conditions {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: repeat(1, 1fr);
+  grid-column-gap: 0px;
+  grid-row-gap: 30px;
+  padding-left: 0px;
+}
+
+.tableSection2-conditions {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: repeat(1, 1fr);
+  grid-column-gap: 0px;
+  grid-row-gap: 0px;
+  padding-bottom: 10px;
+  padding-top: 10px;
+}
+
+.div1Label-conditions {
+}
+.div2Label-conditions {
+  margin-left: -3px;
+}
+.div3Label-conditions {
+  margin-left: -12px;
+}
+
+.div4Label-conditions {
+  margin-left: -20px;
 }

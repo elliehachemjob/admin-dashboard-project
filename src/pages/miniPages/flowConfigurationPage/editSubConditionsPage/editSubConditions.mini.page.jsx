@@ -73,7 +73,7 @@ function EditSubConditions(props) {
           onClick={handleOpen}
         />
       }
-      modalBackground='#C1E0F7'
+      modalBackground='white'
     >
       {/* 1st */}
       <Label className='header-editSubCondition' label='Condition 1' />

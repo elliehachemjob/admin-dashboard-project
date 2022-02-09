@@ -31,7 +31,7 @@ export function BuildFormModalFixed(props) {
     <ModalUsage
       open={open}
       handleClose={handleClose}
-      modalBackground='#C1E0F7'
+      modalBackground='white'
       icon={
         <CreateIcon
           className='fixedCreateIcon-buildFormModalFixed'

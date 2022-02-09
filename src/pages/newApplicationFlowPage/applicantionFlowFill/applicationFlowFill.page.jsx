@@ -8,6 +8,7 @@ import RadioButton from '../../../components/radioButtonComponent/radioButton.co
 import SearchInput from '../../../components/searchInputComponent/SearchInput.component';
 import ApplicationFlowPageRegistration from '../../miniPages/applicationFlowPage/applicationFlowRegistration.mini.page';
 import { makeStyles } from '@material-ui/core/styles';
+import FlowConfigurationRegistration from '../../miniPages/flowConfigurationPage/flowConfigurationRegistration.mini.page';
 
 import './applicationFlowFill.styles.css';
 
@@ -51,6 +52,20 @@ function ApplicationFlowFill() {
     { label: 'option2' },
     { label: 'option3' },
   ]);
+
+  const [secondFlow, setSecondFlow] = useState(false);
+
+  const handleSaveChange = () => {
+    setSecondFlow(true);
+  };
+
+  if (secondFlow) {
+    return (
+      <div style={{ width: '50vw' }}>
+        <FlowConfigurationRegistration />
+      </div>
+    );
+  }
 
   return (
     <div className='mainWrapper-ApplicationFlowFill'>
@@ -173,6 +188,7 @@ function ApplicationFlowFill() {
           </div>
           <div className='button2Wrapper-ApplicationFlowFill'>
             <Button
+              onClick={handleSaveChange}
               name={
                 <Label
                   textTransform='none'

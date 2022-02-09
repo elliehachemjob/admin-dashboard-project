@@ -79,7 +79,7 @@ function SeeGroups() {
         />
       }
       minWidth={1200}
-      modalBackground='#C1E0F7'
+      modalBackground='white'
     >
       {/* 1st */}
       <Label className='header-seeGroups' label='Condition 1' />

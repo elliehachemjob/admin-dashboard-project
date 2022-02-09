@@ -13,7 +13,7 @@ function BuildForm() {
       border: `1px solid  ""`,
       minWidth: 189.3,
 
-      borderRadius: '10px',
+      borderRadius: '5px',
       opacity: 0.6,
       '&:hover,&:focus': {},
     },
@@ -28,7 +28,14 @@ function BuildForm() {
     <>
       {/* 1st  */}
       <ExpandableAccordion
-        width={700}
+        sx={{
+          marginTop: '10px',
+          marginBottom: '10px',
+          backgroundColor: '',
+          borderRadius: '5px',
+          border: '1px solid 	hsl(0, 0%, 0%)',
+          width: 700,
+        }}
         className='expandableAccordionTest-buildForm'
         expanded={false}
         hideExpandIcon={true}
@@ -51,7 +58,15 @@ function BuildForm() {
         }
       />
       <ExpandableAccordion
-        width={700}
+        hideExpandIcon={true}
+        sx={{
+          marginTop: '10px',
+          marginBottom: '10px',
+          backgroundColor: '',
+          borderRadius: '5px',
+          border: '1px solid 	hsl(0, 0%, 0%)',
+          width: 700,
+        }}
         section1={
           <ToggleList
             key={label1.id}
@@ -71,7 +86,14 @@ function BuildForm() {
         section2={<PasswordExpand />}
       />
       <ExpandableAccordion
-        width={700}
+        sx={{
+          marginTop: '10px',
+          marginBottom: '10px',
+          backgroundColor: '',
+          borderRadius: '5px',
+          border: '1px solid 	hsl(0, 0%, 0%)',
+          width: 700,
+        }}
         expanded={false}
         hideExpandIcon={true}
         section1={
@@ -92,7 +114,14 @@ function BuildForm() {
         }
       />
       <ExpandableAccordion
-        width={700}
+        sx={{
+          marginTop: '10px',
+          marginBottom: '10px',
+          backgroundColor: '',
+          borderRadius: '5px',
+          border: '1px solid 	hsl(0, 0%, 0%)',
+          width: 700,
+        }}
         expanded={false}
         hideExpandIcon={true}
         section1={
@@ -113,7 +142,14 @@ function BuildForm() {
         }
       />
       <ExpandableAccordion
-        width={700}
+        sx={{
+          marginTop: '10px',
+          marginBottom: '10px',
+          backgroundColor: '',
+          borderRadius: '5px',
+          border: '1px solid 	hsl(0, 0%, 0%)',
+          width: 700,
+        }}
         expanded={false}
         hideExpandIcon={true}
         section1={
@@ -134,7 +170,14 @@ function BuildForm() {
         }
       />
       <ExpandableAccordion
-        width={700}
+        sx={{
+          marginTop: '10px',
+          marginBottom: '10px',
+          backgroundColor: '',
+          borderRadius: '5px',
+          border: '1px solid 	hsl(0, 0%, 0%)',
+          width: 700,
+        }}
         expanded={false}
         hideExpandIcon={true}
         section1={
@@ -155,7 +198,14 @@ function BuildForm() {
         }
       />
       <ExpandableAccordion
-        width={700}
+        sx={{
+          marginTop: '10px',
+          marginBottom: '10px',
+          backgroundColor: '',
+          borderRadius: '5px',
+          border: '1px solid 	hsl(0, 0%, 0%)',
+          width: 700,
+        }}
         expanded={false}
         hideExpandIcon={true}
         section1={
@@ -176,7 +226,14 @@ function BuildForm() {
         }
       />
       <ExpandableAccordion
-        width={700}
+        sx={{
+          marginTop: '10px',
+          marginBottom: '10px',
+          backgroundColor: '',
+          borderRadius: '5px',
+          border: '1px solid 	hsl(0, 0%, 0%)',
+          width: 700,
+        }}
         expanded={false}
         hideExpandIcon={true}
         section1={
@@ -197,7 +254,15 @@ function BuildForm() {
         }
       />
       <ExpandableAccordion
-        width={700}
+        hideExpandIcon={true}
+        sx={{
+          marginTop: '10px',
+          marginBottom: '10px',
+          backgroundColor: '',
+          borderRadius: '5px',
+          border: '1px solid 	hsl(0, 0%, 0%)',
+          width: 700,
+        }}
         section1={
           <ToggleList
             key={label1.id}
@@ -217,7 +282,14 @@ function BuildForm() {
         section2={<LegalDisclaimerExpand />}
       />
       <ExpandableAccordion
-        width={700}
+        sx={{
+          marginTop: '10px',
+          marginBottom: '10px',
+          backgroundColor: '',
+          borderRadius: '5px',
+          border: '1px solid 	hsl(0, 0%, 0%)',
+          width: 700,
+        }}
         expanded={false}
         hideExpandIcon={true}
         section1={

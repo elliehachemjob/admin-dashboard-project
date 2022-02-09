@@ -34,7 +34,11 @@ function WalletConfiguration() {
     <div className=''>
       {/* 1st */}
       <div className=''>
-        <Label label='Type' className='header-walletConfiguration' />
+        <Label
+          label='Type'
+          className='header-walletConfiguration'
+          marginLeft={-5}
+        />
         <Dropdown
           items={typeMenu}
           label={typeValue}
@@ -43,18 +47,22 @@ function WalletConfiguration() {
           inputLabel={typeValue ? typeValue : 'Select'}
           sx={{
             marginLeft: 0.2,
-            minWidth: 165,
-            borderRadius: 4,
+            width: 210,
+            borderRadius: 2,
             background: '""',
           }}
           menuSx={{
-            width: 165,
+            width: 210,
           }}
         />
       </div>
 
       <div className=''>
-        <Label label='Wallet Type' className='header-walletConfiguration' />
+        <Label
+          label='Wallet Type'
+          className='header-walletConfiguration'
+          marginLeft={-5}
+        />
         <Dropdown
           items={walletTypeMenu}
           label={walletTypeValue}
@@ -63,17 +71,21 @@ function WalletConfiguration() {
           inputLabel={walletTypeValue ? walletTypeValue : 'Select'}
           sx={{
             marginLeft: 0.2,
-            minWidth: 165,
-            borderRadius: 4,
+            width: 210,
+            borderRadius: 2,
             background: '""',
           }}
           menuSx={{
-            width: 165,
+            width: 210,
           }}
         />
       </div>
       <div className=''>
-        <Label label='Currency' className='header-walletConfiguration' />
+        <Label
+          label='Currency'
+          className='header-walletConfiguration'
+          marginLeft={-5}
+        />
         <Dropdown
           items={currencyMenu}
           label={currencyMenuValue}
@@ -82,12 +94,12 @@ function WalletConfiguration() {
           inputLabel={currencyMenuValue ? currencyMenuValue : 'Select'}
           sx={{
             marginLeft: 0.2,
-            minWidth: 165,
-            borderRadius: 4,
+            width: 210,
+            borderRadius: 2,
             background: '""',
           }}
           menuSx={{
-            width: 165,
+            width: 210,
           }}
         />
       </div>

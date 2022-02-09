@@ -21,9 +21,11 @@ function ConditionsConfiguration() {
   ]);
 
   const [nationalityButtonColor, setNationalityButtonColor] =
-    useState('#2B3A67');
-  const [countryOfResidence, setCountryOfResidence] = useState('#2B3A67');
-  const [rejectUScitizens, setRejectUScitizens] = useState('#2B3A67');
+    useState('hsl(204, 82%, 53%)');
+  const [countryOfResidence, setCountryOfResidence] =
+    useState('hsl(204, 82%, 53%)');
+  const [rejectUScitizens, setRejectUScitizens] =
+    useState('hsl(204, 82%, 53%)');
 
   const handleNationalityClicked = () => {
     setNationalityButtonColor('#FFC482');
@@ -52,9 +54,9 @@ function ConditionsConfiguration() {
             sx={{
               width: 189.3,
               marginLeft: 0.7,
-              width: 165,
+              width: 210,
             }}
-            widthTagSelectorOpened={165}
+            widthTagSelectorOpened={210}
           />
         </div>
         <div className='conditionsModal-conditionsConfiguration'>
@@ -83,7 +85,7 @@ function ConditionsConfiguration() {
               name={
                 <div className='wrapper-addIcon-conditionsConfiguration'>
                   <Label
-                    label='Nationality '
+                    label='Nationality'
                     className='label-addIcon-conditionsConfiguration'
                   />
                 </div>
@@ -94,9 +96,9 @@ function ConditionsConfiguration() {
                 borderRadius: '10px',
                 fontWeight: 600,
                 '&:hover': {
-                  backgroundColor: '#5E807F',
+                  backgroundColor: 'hsl(204, 82%, 43%)',
                   borderRadius: '10px',
-                  boxShadow: '0 0 5px 0 	hsl(178, 15%, 34%)',
+                  boxShadow: '0 0 5px 0 	hsl(204, 82%, 33%)',
                 },
               }}
             />
@@ -119,9 +121,9 @@ function ConditionsConfiguration() {
                 borderRadius: '10px',
                 fontWeight: 600,
                 '&:hover': {
-                  backgroundColor: '#5E807F',
+                  backgroundColor: 'hsl(204, 82%, 43%)',
                   borderRadius: '10px',
-                  boxShadow: '0 0 5px 0 	hsl(178, 15%, 34%)',
+                  boxShadow: '0 0 5px 0 	hsl(204, 82%, 33%)',
                 },
               }}
             />
@@ -144,9 +146,9 @@ function ConditionsConfiguration() {
                 borderRadius: '10px',
                 fontWeight: 600,
                 '&:hover': {
-                  backgroundColor: '#5E807F',
+                  backgroundColor: 'hsl(204, 82%, 43%)',
                   borderRadius: '10px',
-                  boxShadow: '0 0 5px 0 	hsl(178, 15%, 34%)',
+                  boxShadow: '0 0 5px 0 	hsl(204, 82%, 33%)',
                 },
               }}
             />
@@ -164,13 +166,13 @@ function ConditionsConfiguration() {
               }
               variant='contained'
               sx={{
-                backgroundColor: '#2B3A67',
+                backgroundColor: 'hsl(204, 82%, 53%)',
                 borderRadius: '10px',
                 fontWeight: 600,
                 '&:hover': {
-                  backgroundColor: '#5E807F',
+                  backgroundColor: 'hsl(204, 82%, 43%)',
                   borderRadius: '10px',
-                  boxShadow: '0 0 5px 0 	hsl(178, 15%, 34%)',
+                  boxShadow: '0 0 5px 0 	hsl(204, 82%, 33%)',
                 },
               }}
             />
@@ -184,6 +186,7 @@ function ConditionsConfiguration() {
           list={label1}
           parent='toggle-list-parent-conditionConfiguration'
           div1='div1-toggle-list-parent-conditionConfiguration'
+          div2='div2-toggle-list-parent-conditionConfiguration'
         />
       </div>
       {/* 2nd */}

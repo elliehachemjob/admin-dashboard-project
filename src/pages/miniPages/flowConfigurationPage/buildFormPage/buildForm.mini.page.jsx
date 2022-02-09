@@ -56,11 +56,11 @@ function BuildFormMini() {
               }
               variant='contained'
               sx={{
-                backgroundColor: '#2B3A67',
+                backgroundColor: 'hsl(204, 82%, 53%)',
                 borderRadius: '10px',
                 fontWeight: 600,
                 '&:hover': {
-                  backgroundColor: '#5E807F',
+                  backgroundColor: 'hsl(204, 82%, 43%)',
                   borderRadius: '10px',
                 },
               }}

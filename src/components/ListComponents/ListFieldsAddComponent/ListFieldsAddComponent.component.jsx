@@ -10,8 +10,12 @@ function ListFieldsAddComponent(props) {
         return (
           <div className={props.parent}>
             <div className={props.searchInputDiv}>{props.searchInput}</div>
-            <div className={props.isRequiredDiv}>{props.checkbox}</div>
-            <div className={props.deleteElementDiv}>{props.icon}</div>
+            <div style={props.section1Style} className={props.isRequiredDiv}>
+              {props.checkbox}
+            </div>
+            <div style={props.section2Style} className={props.deleteElementDiv}>
+              {props.icon}
+            </div>
             <div className={props.TypeDiv}>{props.type}</div>
           </div>
         );

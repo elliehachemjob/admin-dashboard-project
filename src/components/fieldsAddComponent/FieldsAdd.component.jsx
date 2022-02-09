@@ -36,7 +36,11 @@ function FieldsAdd(props) {
   return (
     <div className='container1-fieldsAdd'>
       <div className=''>
-        <div className='parentLabel-fieldsAdd'>
+        <div
+          className={
+            props.tableSection1 ? props.tableSection1 : 'parentLabel-fieldsAdd'
+          }
+        >
           <div
             className={
               props.div1Label ? props.div1Label : 'div1-label-fieldsAdd'
@@ -86,7 +90,15 @@ function FieldsAdd(props) {
 
       <div className='div3-main-fieldsAdd'>
         <ListFieldsAddComponent
-          parent='parentButton-fieldsAdd'
+          parent={
+            props.tableSection2 ? props.tableSection2 : 'parentButton-fieldsAdd'
+          }
+          section1Style={
+            props.section1Style ? props.section1Style : { paddingTop: 7 }
+          }
+          section2Style={
+            props.section2Style ? props.section2Style : { paddingTop: 14 }
+          }
           searchInput={
             props.testComponent1 ? (
               props.testComponent1
