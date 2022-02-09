@@ -1,5 +1,4 @@
 .breakLine-fieldsAdd {
-  opacity: 0.2;
   padding-bottom: 5px;
   padding-top: 5px;
 }
@@ -12,16 +11,17 @@
 }
 
 .container1-fieldsAdd {
-  border: 1px solid #2b3a6760;
-  border-radius: 10px 10px 10px 10px;
+  border: 1px solid hsl(0, 0%, 0%, 1);
+  border-radius: 5px 5px 5px 5px;
   padding: 30px;
+  background-color: rgb(255, 255, 255);
 }
 
 .parentLabel-fieldsAdd {
   display: grid;
-  grid-template-columns: repeat(5, 1fr);
+  grid-template-columns: 2fr repeat(3, 1fr);
   grid-template-rows: repeat(1, 1fr);
-  grid-column-gap: 32.5px;
+  grid-column-gap: 0px;
   grid-row-gap: 30px;
   padding-left: 0px;
 }
@@ -45,10 +45,10 @@
 
 .parentButton-fieldsAdd {
   display: grid;
-  grid-template-columns: repeat(5, 1fr);
+  grid-template-columns: 2fr repeat(3, 1fr);
   grid-template-rows: repeat(1, 1fr);
-  grid-column-gap: 30px;
-  grid-row-gap: 30px;
+  grid-column-gap: 0px;
+  grid-row-gap: 0px;
   padding-bottom: 10px;
   padding-top: 10px;
 }
@@ -61,9 +61,11 @@
 }
 .div3-Button-fieldsAdd {
   grid-area: 1 / 3 / 2 / 4;
+  padding-top: 7px;
 }
 .div4-Button-fieldsAdd {
   grid-area: 1 / 4 / 2 / 5;
+  padding-top: 7px;
 }
 
 .new-main-fieldsAdd {

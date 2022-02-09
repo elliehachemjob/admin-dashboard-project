@@ -66,9 +66,10 @@ export default class DraggableList extends Component {
             </div>
           )}
         </Droppable>
+
         <div className='wrapper-parent-applicationFlow'>
           <div className='parent2-buttons-applicationFlow'>
-            <div className='buttons2-child-applicationFlow'>
+            {/* <div className='buttons2-child-applicationFlow'>
               <Button
                 className='button-fieldsAdd'
                 name={
@@ -95,7 +96,7 @@ export default class DraggableList extends Component {
                   },
                 }}
               />
-            </div>
+            </div> */}
             <div className='buttons2-child-applicationFlow'>
               {/* <Button
                 // onClick={() => {
@@ -128,13 +129,13 @@ export default class DraggableList extends Component {
                   },
                 }}
               /> */}
-              <CreateNewFlowModalPage
+              {/* <CreateNewFlowModalPage
                 onClick={() => {
                   this.setState({
                     items: this.props.getItems2,
                   });
                 }}
-              />
+              /> */}
             </div>
           </div>
         </div>

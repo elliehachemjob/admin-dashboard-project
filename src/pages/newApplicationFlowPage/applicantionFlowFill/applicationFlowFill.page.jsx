@@ -5,9 +5,8 @@ import BreakLine from '../../../components/breakLineComponent/BreakLine.componen
 import Button from '../../../components/FlexibleButtonComponent/FlexibleButton.component';
 import CheckBox from '../../../components/checkboxComponent/CheckBox.component';
 import RadioButton from '../../../components/radioButtonComponent/radioButton.component';
-
 import SearchInput from '../../../components/searchInputComponent/SearchInput.component';
-
+import ApplicationFlowPageRegistration from '../../miniPages/applicationFlowPage/applicationFlowRegistration.mini.page';
 import { makeStyles } from '@material-ui/core/styles';
 
 import './applicationFlowFill.styles.css';
@@ -84,35 +83,64 @@ function ApplicationFlowFill() {
           important, as it defines your customer's journey  `}
           className='requiredStepsLabel-ApplicationFlowFill'
         />
+        <Label
+          label='Choose Server'
+          className='chooseServerHeader-ApplicationFlowFill'
+        />
+        <div className='radioButtons-ApplicationFlowFill'>
+          <RadioButton label='IB' />
+          <RadioButton label='Trader' />
+        </div>
         {/* 3rd */}
-        <div>steps information Filling component</div>
+        <div style={{ marginLeft: 5 }}>
+          <ApplicationFlowPageRegistration />
+          <div className='addNewStep-buttonWrapper-ApplicationFlowFill'>
+            <Button
+              name={
+                <Label
+                  textTransform='none'
+                  label='Add a new step'
+                  className='buttonLabel-ApplicationFlowFill'
+                />
+              }
+              variant='contained'
+            />
+          </div>
+        </div>
         {/* 4th */}
         <Label
           label='Countries and Territories'
-          className='header-ApplicationFlowFill'
+          className='countriesHeader-ApplicationFlowFill'
         />
-
-        <RadioButton label='Included' />
-        <RadioButton label='Excluded' />
+        <div className='radioButtons-ApplicationFlowFill'>
+          <RadioButton label='Included' />
+          <RadioButton label='Excluded' />
+        </div>
 
         <SearchInput
           options={countryList}
           label='Select included countries'
           textFieldStyles={classes.searchInput}
-          sx={{ margin: 0, padding: 0 }}
+          sx={{ marginLeft: 0.9, padding: 0 }}
         />
+
         <Label
           label={`Here you may specify the countries that this
           applicant level supports.leave this field empty if there is no
           restrictions `}
           className='countryIncludedLabel-ApplicationFlowFill'
+          marginLeft={6}
         />
-        <Label label='Source Key' className='header-ApplicationFlowFill' />
+        <Label
+          label='Source Key'
+          className='header-ApplicationFlowFill'
+          marginLeft={7}
+        />
         <SearchInput
           options={optionsList}
           label='Select option'
           textFieldStyles={classes.searchInput}
-          sx={{ margin: 0, padding: 0 }}
+          sx={{ marginLeft: 0.9, padding: 0 }}
         />
         <div className='checkBoxAndLabelWrapper-ApplicationFlowFill'>
           <CheckBox />
@@ -132,10 +160,28 @@ function ApplicationFlowFill() {
         {/* 5th */}
         <div className='buttonsWrapper-ApplicationFlowFill'>
           <div className='button1Wrapper-ApplicationFlowFill'>
-            <Button name='Add New Flow' variant='contained' />
+            <Button
+              name={
+                <Label
+                  textTransform='none'
+                  label='Add a new flow'
+                  className='buttonLabel-ApplicationFlowFill'
+                />
+              }
+              variant='contained'
+            />
           </div>
           <div className='button2Wrapper-ApplicationFlowFill'>
-            <Button name='Save' variant='contained' />
+            <Button
+              name={
+                <Label
+                  textTransform='none'
+                  label='Save'
+                  className='buttonLabel-ApplicationFlowFill'
+                />
+              }
+              variant='contained'
+            />
           </div>
         </div>
       </div>

@@ -10,6 +10,8 @@ function Label(props) {
         size: props.size,
         fontWeight: props.fontWeight,
         marginRight: props.margin,
+        textTransform: props.textTransform,
+        marginLeft: props.marginLeft,
       }}
     >
       {props.icon} {props.label}

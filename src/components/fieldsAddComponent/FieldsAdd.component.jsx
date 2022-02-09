@@ -94,7 +94,7 @@ function FieldsAdd(props) {
               <SearchInput
                 options={abuseValidation}
                 label='Add Fields'
-                // sx={{ width: 180, margin: 2 }}
+                // sx={{ minWidth: 380, margin: 2 }}
               />
             )
           }

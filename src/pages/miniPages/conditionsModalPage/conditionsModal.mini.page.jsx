@@ -12,7 +12,7 @@ function ConditionsModal(props) {
     <ModalUsage
       open={open}
       handleClose={handleClose}
-      modalBackground='#C1E0F7'
+      modalBackground='rgb(237,239,242)'
       icon={
         <ConditionsIcon
           className='default-ConditionsIcon-conditionModal'
@@ -36,7 +36,6 @@ export function ConditionsModalFixed(props) {
     <ModalUsage
       open={open}
       handleClose={handleClose}
-      modalBackground='#C1E0F7'
       icon={
         <ConditionsIcon className='fix-conditionIcon' onClick={handleOpen} />
       }

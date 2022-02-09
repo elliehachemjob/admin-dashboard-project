@@ -34,7 +34,17 @@ import SmsOutlinedIcon from '@mui/icons-material/SmsOutlined';
 import EmailOutlinedIcon from '@mui/icons-material/EmailOutlined';
 import CameraFrontOutlinedIcon from '@mui/icons-material/CameraFrontOutlined';
 import ArrowForwardIosOutlinedIcon from '@mui/icons-material/ArrowForwardIosOutlined';
+import DeleteOutlineOutlinedIcon from '@mui/icons-material/DeleteOutlineOutlined';
 
+export function DeleteIconOutlinedIcon(props) {
+  return (
+    <DeleteOutlineOutlinedIcon
+      style={props.style}
+      className={props.className}
+      onClick={props.onClick}
+    />
+  );
+}
 export function ForwardOutlinedIcon(props) {
   return (
     <ArrowForwardIosOutlinedIcon

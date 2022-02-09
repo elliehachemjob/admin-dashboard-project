@@ -17,10 +17,11 @@ export default function ModalUsage(props) {
     transform: 'translate(-50%, -50%)',
     minWidth: props.minWidth ? props.minWidth : 800,
     bgcolor: 'background.paper',
-    border: '2px solid #000',
+    border: '1px solid #000',
     boxShadow: 24,
     p: 4,
     backgroundColor: props.modalBackground,
+    borderRadius: 2,
   };
 
   return (
