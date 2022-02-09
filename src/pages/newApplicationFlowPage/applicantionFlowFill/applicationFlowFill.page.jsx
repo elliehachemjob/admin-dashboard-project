@@ -20,6 +20,11 @@ function ApplicationFlowFill() {
       color: 'black',
       backgroundColor: 'rgb(234,235,237)',
     },
+    searchInput: {
+      width: '40vw',
+      height: '5.5vh',
+      color: 'black',
+    },
   }));
   const classes = useStyles();
 
@@ -90,7 +95,12 @@ function ApplicationFlowFill() {
         <RadioButton label='Included' />
         <RadioButton label='Excluded' />
 
-        <SearchInput options={countryList} label='Select included countries' />
+        <SearchInput
+          options={countryList}
+          label='Select included countries'
+          textFieldStyles={classes.searchInput}
+          sx={{ margin: 0, padding: 0 }}
+        />
         <Label
           label={`Here you may specify the countries that this
           applicant level supports.leave this field empty if there is no
@@ -98,7 +108,12 @@ function ApplicationFlowFill() {
           className='countryIncludedLabel-ApplicationFlowFill'
         />
         <Label label='Source Key' className='header-ApplicationFlowFill' />
-        <SearchInput options={optionsList} label='Select option' />
+        <SearchInput
+          options={optionsList}
+          label='Select option'
+          textFieldStyles={classes.searchInput}
+          sx={{ margin: 0, padding: 0 }}
+        />
         <div className='checkBoxAndLabelWrapper-ApplicationFlowFill'>
           <CheckBox />
           <Label
@@ -115,8 +130,14 @@ function ApplicationFlowFill() {
         </div>
 
         {/* 5th */}
-        <Button name='Add New Flow' />
-        <Button name='Save' />
+        <div className='buttonsWrapper-ApplicationFlowFill'>
+          <div className='button1Wrapper-ApplicationFlowFill'>
+            <Button name='Add New Flow' variant='contained' />
+          </div>
+          <div className='button2Wrapper-ApplicationFlowFill'>
+            <Button name='Save' variant='contained' />
+          </div>
+        </div>
       </div>
     </div>
   );
