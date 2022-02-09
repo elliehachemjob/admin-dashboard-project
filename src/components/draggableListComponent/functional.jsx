@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React, { useState } from 'react';
 import { DragDropContext, Droppable, Draggable } from 'react-beautiful-dnd';
 import Button from '../../components/FlexibleButtonComponent/FlexibleButton.component';
 import {
@@ -10,65 +10,50 @@ import CreateNewFlowModalPage from '../../pages/miniPages/applicationFlowPage/cr
 
 import './draggableList.styles.css';
 
-const reorder = (list, startIndex, endIndex) => {
-  const result = Array.from(list);
-  const [removed] = result.splice(startIndex, 1);
-  result.splice(endIndex, 0, removed);
-  return result;
-};
+const DraggableList = (props) => {
+  const [items, setItems] = useState([
+    {
+      id: 'item-1',
+      content: <div>hi</div>,
+    },
+  ]);
 
-export default class DraggableList extends Component {
-  constructor(props) {
-    super(props);
-    this.state = {
-      items: props.getItems,
-    };
-    this.onDragEnd = this.onDragEnd.bind(this);
-  }
-
-  onDragEnd(result) {
-    // dropped outside the list
+  const onDragEnd = (result) => {
     if (!result.destination) {
       return;
     }
+  };
 
-    const items = reorder(
-      this.state.items,
-      result.source.index,
-      result.destination.index
-    );
+  return (
+    <DragDropContext onDragEnd={props.onDragEnd}>
+      <Droppable droppableId='droppable'>
+        {(provided, snapshot) => (
+          <div
+            className={props.className}
+            {...provided.droppableProps}
+            ref={provided.innerRef}
+          >
+            {props.getItems.map((item, index) => (
+              <Draggable key={item.id} draggableId={item.id} index={index}>
+                {(provided, snapshot) => (
+                  <div
+                    ref={provided.innerRef}
+                    {...provided.draggableProps}
+                    {...provided.dragHandleProps}
+                  >
+                    {item.content}
+                  </div>
+                )}
+              </Draggable>
+            ))}
+            {provided.placeholder}
+          </div>
+        )}
+      </Droppable>
 
-    this.setState({
-      items,
-    });
-  }
-
-  render() {
-    return (
-      <DragDropContext onDragEnd={this.onDragEnd}>
-        <Droppable droppableId='droppable'>
-          {(provided, snapshot) => (
-            <div {...provided.droppableProps} ref={provided.innerRef}>
-              {this.state.items.map((item, index) => (
-                <Draggable key={item.id} draggableId={item.id} index={index}>
-                  {(provided, snapshot) => (
-                    <div
-                      ref={provided.innerRef}
-                      {...provided.draggableProps}
-                      {...provided.dragHandleProps}
-                    >
-                      {item.content}
-                    </div>
-                  )}
-                </Draggable>
-              ))}
-              {provided.placeholder}
-            </div>
-          )}
-        </Droppable>
-        <div className='wrapper-parent-applicationFlow'>
-          <div className='parent2-buttons-applicationFlow'>
-            <div className='buttons2-child-applicationFlow'>
+      <div className='wrapper-parent-applicationFlow'>
+        <div className='parent2-buttons-applicationFlow'>
+          {/* <div className='buttons2-child-applicationFlow'>
               <Button
                 className='button-fieldsAdd'
                 name={
@@ -95,9 +80,9 @@ export default class DraggableList extends Component {
                   },
                 }}
               />
-            </div>
-            <div className='buttons2-child-applicationFlow'>
-              {/* <Button
+            </div> */}
+          <div className='buttons2-child-applicationFlow'>
+            {/* <Button
                 // onClick={() => {
                 //   this.setState({
                 //     items: this.props.getItems2,
@@ -128,17 +113,18 @@ export default class DraggableList extends Component {
                   },
                 }}
               /> */}
-              <CreateNewFlowModalPage
+            {/* <CreateNewFlowModalPage
                 onClick={() => {
                   this.setState({
                     items: this.props.getItems2,
                   });
                 }}
-              />
-            </div>
+              /> */}
           </div>
         </div>
-      </DragDropContext>
-    );
-  }
-}
+      </div>
+    </DragDropContext>
+  );
+};
+
+export default DraggableList;

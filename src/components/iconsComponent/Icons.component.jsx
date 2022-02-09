@@ -91,6 +91,7 @@ export function ProfileIconOutlined(props) {
       style={props.style}
       className={props.className}
       onClick={props.onClick}
+      onDrag={props.onDrag}
     />
   );
 }

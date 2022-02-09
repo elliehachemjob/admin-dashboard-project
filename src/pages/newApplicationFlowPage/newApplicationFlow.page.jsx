@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useRef } from 'react';
 import {
   NewGoBackIcon,
   AddressVerificationIcon,
@@ -15,7 +15,11 @@ import Button from '../../components/FlexibleButtonComponent/FlexibleButton.comp
 import Label from '../../components/labelComponent/Label.component';
 import BreakLine from '../../components/breakLineComponent/BreakLine.component';
 import ApplicationFlowFill from './applicantionFlowFill/applicationFlowFill.page';
+import { Link } from 'react-router-dom';
+import DraggableList from '../../components/draggableListComponent/DraggableList.component';
+
 import './newApplicationFlow.styles.css';
+
 function NewApplicationFlow() {
   const [isApplicantData, setIsApplicantData] = useState(false);
   const [isSmsVerification, setIsSmsVerification] = useState(false);
@@ -23,6 +27,8 @@ function NewApplicationFlow() {
   const [counter, setCounter] = useState(1);
   const [submitFlowGlow, setSubmitFlowGlow] = useState('');
   const [isCounterStepDisplay, setIsCounterStepDisplay] = useState('');
+  const location1 = useRef('33');
+
   const Step1Component = () => {
     return (
       <>
@@ -171,6 +177,130 @@ function NewApplicationFlow() {
     setStepsList(<ApplicationFlowFill />);
     setIsCounterStepDisplay('none');
   };
+
+  const handleProfileIconChange = (e) => {};
+
+  const onDragEndProfileIcon = () => {
+    console.log('test');
+  };
+  const [draggableListContent1, setDraggableListContent1] = useState([
+    {
+      id: 'item-1',
+      content: (
+        <div
+          draggable
+          onDrag={() => {
+            console.log('hey');
+          }}
+          className='wrapperIconLabel-background-newApplicationFlow'
+        >
+          <div className='iconWrapper-newApplicationFlow'>
+            <ProfileIconOutlined ref={location1} style={{ fontSize: 50 }} />
+          </div>
+        </div>
+      ),
+    },
+    {
+      id: 'item-2',
+      content: (
+        <div className='wrapperIconLabel-background-newApplicationFlow'>
+          <div
+            className='iconWrapper-newApplicationFlow'
+            onMouseOver={handleMouseOverChange2}
+          >
+            <SmsVerificationOutlinedIcon
+              style={{ fontSize: 50 }}
+              className='iconStyles-newApplicationFlow'
+            />
+          </div>
+        </div>
+      ),
+    },
+    {
+      id: 'item-3',
+      content: (
+        <div className='wrapperIconLabel-background-newApplicationFlow'>
+          <div className='iconWrapper-newApplicationFlow'>
+            <EmailVerificationOutlinedIconIcon
+              style={{ fontSize: 50 }}
+              className='iconStyles-newApplicationFlow'
+            />
+          </div>
+        </div>
+      ),
+    },
+    {
+      id: 'item-4',
+      content: (
+        <div className='iconWrapper-newApplicationFlow'>
+          <SelfieVerificationOutlinedIcon
+            style={{ fontSize: 50 }}
+            className='iconStyles-newApplicationFlow'
+          />
+        </div>
+      ),
+    },
+    {
+      id: 'item-5',
+      content: (
+        <div className='iconWrapper-newApplicationFlow'>
+          <AddressVerificationIcon
+            style={{ fontSize: 50 }}
+            className='iconStyles-newApplicationFlow'
+          />
+        </div>
+      ),
+    },
+    {
+      id: 'item-6',
+      content: (
+        <div className='iconWrapper-newApplicationFlow'>
+          <UploadDocumentIcon
+            style={{ fontSize: 50 }}
+            className='iconStyles-newApplicationFlow'
+          />
+        </div>
+      ),
+    },
+    {
+      id: 'item-7',
+      content: (
+        <div className='iconWrapper-newApplicationFlow'>
+          <QuestionnaireIcon
+            style={{ fontSize: 50 }}
+            className='iconStyles-newApplicationFlow'
+          />
+        </div>
+      ),
+    },
+    {
+      id: 'item-8',
+      content: (
+        <div className='iconWrapper-newApplicationFlow'>
+          <AddItemIcon
+            style={{ fontSize: 50 }}
+            className='iconStyles-newApplicationFlow'
+          />
+        </div>
+      ),
+    },
+    {
+      id: 'item-9',
+      content: (
+        <div className='iconWrapper-newApplicationFlow'>
+          <DepositMoneyIcon
+            style={{ fontSize: 50 }}
+            className='iconStyles-newApplicationFlow'
+          />
+        </div>
+      ),
+    },
+  ]);
+
+  const onDragEnd = (result) => {
+    console.log(result);
+  };
+
   return (
     <div className='parent-newApplicationFlow'>
       {/* 1st left side */}
@@ -180,71 +310,13 @@ function NewApplicationFlow() {
 
         <Label label='Levels' className='levelsLabel-newApplicationFlow' />
         {/* 2nd */}
-        <div className='parent-stepsWrapper-newApplicationFlow'>
-          <div
-            className='wrapperIconLabel-background-newApplicationFlow'
-            onMouseOver={handleMouseOverChange1}
-          >
-            <div className='iconWrapper-newApplicationFlow'>
-              <ProfileIconOutlined style={{ fontSize: 50 }} />
-            </div>
-          </div>
-          <div className='wrapperIconLabel-background-newApplicationFlow'>
-            <div
-              className='iconWrapper-newApplicationFlow'
-              onMouseOver={handleMouseOverChange2}
-            >
-              <SmsVerificationOutlinedIcon
-                style={{ fontSize: 50 }}
-                className='iconStyles-newApplicationFlow'
-              />
-            </div>
-          </div>
-          <div className='wrapperIconLabel-background-newApplicationFlow'>
-            <div className='iconWrapper3-newApplicationFlow'>
-              <EmailVerificationOutlinedIconIcon
-                style={{ fontSize: 50 }}
-                className='iconStyles-newApplicationFlow'
-              />
-            </div>
-          </div>
-          <div className='iconWrapper-newApplicationFlow'>
-            <SelfieVerificationOutlinedIcon
-              style={{ fontSize: 50 }}
-              className='iconStyles-newApplicationFlow'
-            />
-          </div>
-          <div className='iconWrapper-newApplicationFlow'>
-            <AddressVerificationIcon
-              style={{ fontSize: 50 }}
-              className='iconStyles-newApplicationFlow'
-            />
-          </div>
-          <div className='iconWrapper-newApplicationFlow'>
-            <UploadDocumentIcon
-              style={{ fontSize: 50 }}
-              className='iconStyles-newApplicationFlow'
-            />
-          </div>
-          <div className='iconWrapper-newApplicationFlow'>
-            <QuestionnaireIcon
-              style={{ fontSize: 50 }}
-              className='iconStyles-newApplicationFlow'
-            />
-          </div>
-          <div className='iconWrapper-newApplicationFlow'>
-            <AddItemIcon
-              style={{ fontSize: 50 }}
-              className='iconStyles-newApplicationFlow'
-            />
-          </div>
-          <div className='iconWrapper-newApplicationFlow'>
-            <DepositMoneyIcon
-              style={{ fontSize: 50 }}
-              className='iconStyles-newApplicationFlow'
-            />
-          </div>
-        </div>
+
+        <DraggableList
+          className='parent-stepsWrapper-newApplicationFlow'
+          getItems={draggableListContent1}
+          onDragEnd={onDragEnd}
+        />
+
         <div className='buttonWrapper-newApplicationFlow'>
           <Button
             onClick={handleSubmitChange}
