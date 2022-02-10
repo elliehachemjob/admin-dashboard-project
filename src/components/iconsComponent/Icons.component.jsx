@@ -35,6 +35,28 @@ import EmailOutlinedIcon from '@mui/icons-material/EmailOutlined';
 import CameraFrontOutlinedIcon from '@mui/icons-material/CameraFrontOutlined';
 import ArrowForwardIosOutlinedIcon from '@mui/icons-material/ArrowForwardIosOutlined';
 import DeleteOutlineOutlinedIcon from '@mui/icons-material/DeleteOutlineOutlined';
+import DoneOutlineIcon from '@mui/icons-material/DoneOutline';
+import SentimentSatisfiedAltIcon from '@mui/icons-material/SentimentSatisfiedAlt';
+
+export function HappySmileIcon(props) {
+  return (
+    <SentimentSatisfiedAltIcon
+      style={props.style}
+      className={props.className}
+      onClick={props.onClick}
+    />
+  );
+}
+
+export function ProcessDoneIcon(props) {
+  return (
+    <DoneOutlineIcon
+      style={props.style}
+      className={props.className}
+      onClick={props.onClick}
+    />
+  );
+}
 
 export function DeleteIconOutlinedIcon(props) {
   return (

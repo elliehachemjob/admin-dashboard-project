@@ -8,9 +8,12 @@
 
 .div1-onBoarding {
   grid-area: 1 / 1 / 2 / 2;
+  margin-left: -400px;
+  margin-top: 10px;
 }
 .div2-onBoarding {
   grid-area: 1 / 2 / 2 / 3;
+  margin-top: 125px;
 }
 
 .main-header-onBoarding {

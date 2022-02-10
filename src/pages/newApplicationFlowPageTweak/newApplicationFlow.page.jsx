@@ -39,10 +39,7 @@ function NewApplicationFlow() {
         <Label label='Levels' className='levelsLabel-newApplicationFlow' />
         {/* 2nd */}
         <div className='parent-stepsWrapper-newApplicationFlow'>
-          <div
-            className='wrapperIconLabel-background-newApplicationFlow'
-            onMouseOver={handleMouseOverChange1}
-          >
+          <div className='wrapperIconLabel-background-newApplicationFlow'>
             {/* <div className='iconWrapper-newApplicationFlow'>
               <ProfileIconOutlined style={{ fontSize: 50 }} />
             </div> */}
@@ -118,7 +115,6 @@ function NewApplicationFlow() {
             sx={{
               backgroundColor: 'hsl(163.2,41.3%,55.9%)',
               borderRadius: '25px',
-
               padding: 1.5,
               paddingLeft: 3,
               paddingRight: 3,

@@ -12,6 +12,7 @@ function Label(props) {
         marginRight: props.margin,
         textTransform: props.textTransform,
         marginLeft: props.marginLeft,
+        marginTop: props.marginTop,
       }}
     >
       {props.icon} {props.label}

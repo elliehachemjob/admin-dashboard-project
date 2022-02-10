@@ -9,6 +9,7 @@ function OnBoarding() {
   return (
     <>
       <Label
+        marginLeft={-250}
         label='Application Flow & Configuration'
         className='main-header-onBoarding'
       />

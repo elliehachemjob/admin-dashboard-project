@@ -11,7 +11,9 @@ import {
   CancelCircleIcon,
   CorrectCircleIcon,
   GoBackIcon,
+  ProcessDoneIcon,
   SaveIcon,
+  HappySmileIcon,
 } from '../../../components/iconsComponent/Icons.component';
 import BreakLine from '../../../components/breakLineComponent/BreakLine.component';
 import ConfettiExplosion from 'react-confetti-explosion';
@@ -226,7 +228,52 @@ function FlowConfigurationRegistration() {
   };
 
   if (flowConfigurationDone) {
-    return <div>Process Done</div>;
+    return (
+      <div
+        className='flowConfigurationDone-flowConfiguration '
+        style={{ overflow: 'hidden' }}
+      >
+        <ConfettiExplosion />
+        <Label
+          textTransform='none'
+          label='Process Done'
+          className='processFinishedLabel-flowConfigurationDone'
+        />
+
+        <ProcessDoneIcon
+          style={{ fontSize: 350, color: 'hsl(163.2,41.3%,55.9%)' }}
+        />
+        <div className='button-flowConfigurationDone'>
+          <Button
+            className='button-fieldsAdd'
+            name={
+              <div className='wrapper-addIcon-applicationFlow'>
+                <Label
+                  label={
+                    <div className='newFlow-applicationFlow'>
+                      <HappySmileIcon style={{ fontSize: 50 }} />
+                      <Label textTransform='none' label='Confirm' />
+                    </div>
+                  }
+                  className='label-addIcon-applicationFlow-flowConfigurationDone'
+                />
+              </div>
+            }
+            variant='contained'
+            sx={{
+              backgroundColor: 'hsl(204, 82%, 53%)',
+              borderRadius: '10px',
+              marginBottom: 2,
+              fontWeight: 600,
+              '&:hover': {
+                backgroundColor: 'hsl(204, 82%, 43%)',
+                borderRadius: '10px',
+              },
+            }}
+          />
+        </div>
+      </div>
+    );
   }
 
   const handleSaveConfigurationChange = () => {
