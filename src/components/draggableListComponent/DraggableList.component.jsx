@@ -27,6 +27,8 @@ export default class DraggableList extends Component {
   }
 
   onDragEnd(result) {
+    console.log(result.draggableId);
+
     // dropped outside the list
     if (!result.destination) {
       return;
@@ -45,10 +47,14 @@ export default class DraggableList extends Component {
 
   render() {
     return (
-      <DragDropContext onDragEnd={this.onDragEnd}>
+      <DragDropContext onDragEnd={this.props.onDragEnd}>
         <Droppable droppableId='droppable'>
           {(provided, snapshot) => (
-            <div {...provided.droppableProps} ref={provided.innerRef}>
+            <div
+              className={this.props.className}
+              {...provided.droppableProps}
+              ref={provided.innerRef}
+            >
               {this.state.items.map((item, index) => (
                 <Draggable key={item.id} draggableId={item.id} index={index}>
                   {(provided, snapshot) => (
@@ -69,7 +75,7 @@ export default class DraggableList extends Component {
         <div className='wrapper-parent-applicationFlow'>
           <div className='parent2-buttons-applicationFlow'>
             <div className='buttons2-child-applicationFlow'>
-              <Button
+              {/* <Button
                 className='button-fieldsAdd'
                 name={
                   <div className='newFlow-applicationFlow'>
@@ -94,7 +100,7 @@ export default class DraggableList extends Component {
                     borderRadius: '10px',
                   },
                 }}
-              />
+              /> */}
             </div>
             <div className='buttons2-child-applicationFlow'>
               {/* <Button
@@ -128,13 +134,13 @@ export default class DraggableList extends Component {
                   },
                 }}
               /> */}
-              <CreateNewFlowModalPage
+              {/* <CreateNewFlowModalPage
                 onClick={() => {
                   this.setState({
                     items: this.props.getItems2,
                   });
                 }}
-              />
+              /> */}
             </div>
           </div>
         </div>

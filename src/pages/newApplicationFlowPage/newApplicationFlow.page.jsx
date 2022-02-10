@@ -183,6 +183,7 @@ function NewApplicationFlow() {
   const onDragEndProfileIcon = () => {
     console.log('test');
   };
+
   const [draggableListContent1, setDraggableListContent1] = useState([
     {
       id: 'item-1',
@@ -301,6 +302,62 @@ function NewApplicationFlow() {
     console.log(result);
   };
 
+  const [profileIconOpacity, setProfileIconOpacity] = useState(1);
+  const [
+    smsVerificationOutlinedIconOpacity,
+    setSmsVerificationOutlinedIconOpacity,
+  ] = useState(1);
+  const [
+    emailVerificationOutlinedIconIconOpacity,
+    setEmailVerificationOutlinedIconIconOpacity,
+  ] = useState(1);
+  const [
+    selfieVerificationOutlinedIconOpacity,
+    setSelfieVerificationOutlinedIconOpacity,
+  ] = useState(1);
+
+  const [addressVerificationIconOpacity, setAddressVerificationIconOpacity] =
+    useState(1);
+
+  const [uploadDocumentIconOpacity, setUploadDocumentIconOpacity] = useState(1);
+  const [questionnaireIconOpacity, setQuestionnaireIconOpacity] = useState(1);
+  const [addItemIconIconOpacity, setAddItemIconIconOpacity] = useState(1);
+  const [depositMoneyIconOpacity, setDepositMoneyIconOpacity] = useState(1);
+
+  const handleProfileClickChange = () => {
+    setProfileIconOpacity(0);
+  };
+
+  const handleSmsVerificationChange = () => {
+    setSmsVerificationOutlinedIconOpacity(0);
+  };
+
+  const handleEmailVerificationChange = () => {
+    setEmailVerificationOutlinedIconIconOpacity(0);
+  };
+  const handleSelfieVerificationChange = () => {
+    setSelfieVerificationOutlinedIconOpacity(0);
+  };
+
+  const handleAddressVerificationChange = () => {
+    setAddressVerificationIconOpacity(0);
+  };
+
+  const handleUploadDocumentChange = () => {
+    setUploadDocumentIconOpacity(0);
+  };
+
+  const handleQuestionnaireChange = () => {
+    setQuestionnaireIconOpacity(0);
+  };
+
+  const handleAddItemChange = () => {
+    setAddItemIconIconOpacity(0);
+  };
+
+  const handleDepositMoneyChange = () => {
+    setDepositMoneyIconOpacity(0);
+  };
   return (
     <div className='parent-newApplicationFlow'>
       {/* 1st left side */}
@@ -310,12 +367,134 @@ function NewApplicationFlow() {
 
         <Label label='Levels' className='levelsLabel-newApplicationFlow' />
         {/* 2nd */}
+        <div className='parent-stepsWrapper-newApplicationFlow'>
+          <div
+            className='wrapperIconLabel-background-newApplicationFlow'
+            onClick={handleProfileClickChange}
+          >
+            <div
+              className='iconWrapper-newApplicationFlow'
+              style={{ opacity: profileIconOpacity }}
+            >
+              <ProfileIconOutlined style={{ fontSize: 50 }} />
+            </div>
+          </div>
+          <div className='wrapperIconLabel-background-newApplicationFlow'>
+            <div
+              className='iconWrapper-newApplicationFlow'
+              onClick={handleSmsVerificationChange}
+              style={{ opacity: smsVerificationOutlinedIconOpacity }}
+            >
+              <SmsVerificationOutlinedIcon
+                style={{ fontSize: 50 }}
+                className='iconStyles-newApplicationFlow'
+              />
+            </div>
+          </div>
 
-        <DraggableList
-          className='parent-stepsWrapper-newApplicationFlow'
-          getItems={draggableListContent1}
-          onDragEnd={onDragEnd}
-        />
+          <div
+            onClick={handleEmailVerificationChange}
+            className='wrapperIconLabel-background-newApplicationFlow'
+          >
+            <div
+              className='iconWrapper-newApplicationFlow'
+              style={{ opacity: emailVerificationOutlinedIconIconOpacity }}
+            >
+              <EmailVerificationOutlinedIconIcon
+                style={{ fontSize: 50 }}
+                className='iconStyles-newApplicationFlow'
+              />
+            </div>
+          </div>
+          <div
+            className='wrapperIconLabel-background-newApplicationFlow'
+            onClick={handleSelfieVerificationChange}
+          >
+            <div
+              className='iconWrapper-newApplicationFlow'
+              style={{ opacity: selfieVerificationOutlinedIconOpacity }}
+            >
+              <SelfieVerificationOutlinedIcon
+                style={{ fontSize: 50 }}
+                className='iconStyles-newApplicationFlow'
+              />
+            </div>
+          </div>
+          <div
+            className='wrapperIconLabel-background-newApplicationFlow'
+            onClick={handleAddressVerificationChange}
+          >
+            <div
+              className='iconWrapper-newApplicationFlow'
+              style={{ opacity: addressVerificationIconOpacity }}
+            >
+              <AddressVerificationIcon
+                style={{ fontSize: 50 }}
+                className='iconStyles-newApplicationFlow'
+              />
+            </div>
+          </div>
+
+          <div
+            className='wrapperIconLabel-background-newApplicationFlow'
+            onClick={handleUploadDocumentChange}
+          >
+            <div
+              className='iconWrapper-newApplicationFlow'
+              style={{ opacity: uploadDocumentIconOpacity }}
+            >
+              <UploadDocumentIcon
+                style={{ fontSize: 50 }}
+                className='iconStyles-newApplicationFlow'
+              />
+            </div>
+          </div>
+
+          <div
+            className='wrapperIconLabel-background-newApplicationFlow'
+            onClick={handleQuestionnaireChange}
+          >
+            <div
+              className='iconWrapper-newApplicationFlow'
+              style={{ opacity: questionnaireIconOpacity }}
+            >
+              <QuestionnaireIcon
+                style={{ fontSize: 50 }}
+                className='iconStyles-newApplicationFlow'
+              />
+            </div>
+          </div>
+
+          <div
+            className='wrapperIconLabel-background-newApplicationFlow'
+            onClick={handleAddItemChange}
+          >
+            <div
+              className='iconWrapper-newApplicationFlow'
+              style={{ opacity: addItemIconIconOpacity }}
+            >
+              <AddItemIcon
+                style={{ fontSize: 50 }}
+                className='iconStyles-newApplicationFlow'
+              />
+            </div>
+          </div>
+
+          <div
+            className='wrapperIconLabel-background-newApplicationFlow'
+            onClick={handleDepositMoneyChange}
+          >
+            <div
+              className='iconWrapper-newApplicationFlow'
+              style={{ opacity: depositMoneyIconOpacity }}
+            >
+              <DepositMoneyIcon
+                style={{ fontSize: 50 }}
+                className='iconStyles-newApplicationFlow'
+              />
+            </div>
+          </div>
+        </div>
 
         <div className='buttonWrapper-newApplicationFlow'>
           <Button
