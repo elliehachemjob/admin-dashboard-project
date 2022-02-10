@@ -29,6 +29,8 @@ function NewApplicationFlow() {
   const [isCounterStepDisplay, setIsCounterStepDisplay] = useState('');
   const location1 = useRef('33');
 
+  const [label1, setLabel1] = useState('');
+
   const Step1Component = () => {
     return (
       <>
