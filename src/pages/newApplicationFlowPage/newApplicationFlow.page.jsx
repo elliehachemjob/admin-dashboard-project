@@ -361,6 +361,10 @@ function NewApplicationFlow() {
   const handleDepositMoneyChange = () => {
     setDepositMoneyIconOpacity(0);
   };
+
+  const condition = () => {
+    alert('condition');
+  };
   return (
     <div className='parent-newApplicationFlow'>
       {/* 1st left side */}
@@ -370,35 +374,26 @@ function NewApplicationFlow() {
 
         <Label label='Levels' className='levelsLabel-newApplicationFlow' />
         {/* 2nd */}
-        {/* <DraggableItem
-          x1={1187}
-          x2={1228}
-          y1={437}
-          y2={508}
-          setPositionX={750}
-          setPositionY={110}
-          content={
-            <div className='wrapperIconLabel-background-newApplicationFlow'>
-              <div
-                className='iconWrapper-newApplicationFlow'
-                style={{ opacity: profileIconOpacity }}
-              >
-                <ProfileIconOutlined style={{ fontSize: 50 }} />
-              </div>
-            </div>
-          }
-        /> */}
+
         <div className='parent-stepsWrapper-newApplicationFlow'>
-          <div
-            className='wrapperIconLabel-background-newApplicationFlow'
-            onClick={handleProfileClickChange}
-          >
-            <div
-              className='iconWrapper-newApplicationFlow'
-              style={{ opacity: profileIconOpacity }}
-            >
-              <ProfileIconOutlined style={{ fontSize: 50 }} />
-            </div>
+          <div className='wrapperIconLabel-background-newApplicationFlow'>
+            <DraggableItem
+              condition={condition}
+              x1={1187}
+              x2={1228}
+              y1={437}
+              y2={508}
+              setPositionX={750}
+              setPositionY={110}
+              content={
+                <div
+                  className='iconWrapper-newApplicationFlow'
+                  style={{ opacity: profileIconOpacity }}
+                >
+                  <ProfileIconOutlined style={{ fontSize: 50 }} />
+                </div>
+              }
+            />
           </div>
           <div className='wrapperIconLabel-background-newApplicationFlow'>
             <div

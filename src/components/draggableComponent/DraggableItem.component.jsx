@@ -25,7 +25,7 @@ function DraggableItem(props) {
       onStop={(e) => {
         const clientX = e.clientX;
         const clientY = e.clientY;
-
+        props.condition();
         console.log(clientX, clientY);
         if (clientX >= props.x1 && clientY >= props.y1) {
           setPositionX(props.setPositionX);
