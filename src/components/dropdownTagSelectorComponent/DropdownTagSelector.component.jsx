@@ -7,6 +7,7 @@ import MenuItem from '@mui/material/MenuItem';
 import FormControl from '@mui/material/FormControl';
 import Select from '@mui/material/Select';
 import Chip from '@mui/material/Chip';
+import { DownArrowIcon } from '../iconsComponent/Icons.component';
 
 function DropdownTagSelector(props) {
   const theme = useTheme();
@@ -48,6 +49,8 @@ function DropdownTagSelector(props) {
     <FormControl sx={props.sx ? props.sx : { margin: 0, width: 300 }}>
       <InputLabel id='demo-multiple-chip-label'> Chip </InputLabel>
       <Select
+        style={{ paddingTop: 25, paddingBottom: 25 }}
+        IconComponent={props.icon ? props.icon : DownArrowIcon}
         labelId='demo-multiple-chip-label'
         id='demo-multiple-chip'
         multiple
@@ -57,6 +60,10 @@ function DropdownTagSelector(props) {
           <OutlinedInput
             sx={{
               borderRadius: 2,
+              width: 275,
+              borderRadius: 1,
+              background: '""',
+              height: 40,
 
               minWidth: props.minWidth ? props.minWidth : 165,
               opacity: 1,
