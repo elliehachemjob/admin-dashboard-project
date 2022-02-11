@@ -46,8 +46,15 @@ function DropdownTagSelector(props) {
   };
 
   return (
-    <FormControl sx={props.sx ? props.sx : { margin: 0, width: 300 }}>
-      <InputLabel id='demo-multiple-chip-label'> Chip </InputLabel>
+    <FormControl
+      sx={props.sx ? props.sx : { margin: 0, width: 300, height: 20 }}
+    >
+      <InputLabel
+        id='demo-multiple-chip-label'
+        style={{ fontWeight: 700, marginTop: -2 }}
+      >
+        Chip
+      </InputLabel>
       <Select
         style={{ paddingTop: 25, paddingBottom: 25 }}
         IconComponent={props.icon ? props.icon : DownArrowIcon}
@@ -59,12 +66,16 @@ function DropdownTagSelector(props) {
         input={
           <OutlinedInput
             sx={{
+              maxRows: 1,
+              gap: 0,
+              multiline: false,
               borderRadius: 2,
               width: 275,
               borderRadius: 1,
-              background: '""',
-              height: 40,
-
+              background: '',
+              minHeight: 5,
+              padding: 0,
+              margin: 0,
               minWidth: props.minWidth ? props.minWidth : 165,
               opacity: 1,
               '&:hover,&:focus': {},
@@ -87,7 +98,6 @@ function DropdownTagSelector(props) {
                   borderRadius: '10px',
                   fontWeight: 1000,
                   color: 'white',
-
                   '&:hover': {
                     backgroundColor: 'hsl(168, 75%, 32%)',
                     borderRadius: '10px',

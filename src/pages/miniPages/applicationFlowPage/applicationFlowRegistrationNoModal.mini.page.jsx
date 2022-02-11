@@ -124,7 +124,7 @@ function ApplicationFlowPageRegistrationNoModal() {
                       applicantDataValue ? (
                         applicantDataValue
                       ) : (
-                        <div style={{ marginTop: -5, fontWeight: 700 }}>
+                        <div style={{ marginTop: -2, fontWeight: 700 }}>
                           Applicant Data
                         </div>
                       )
@@ -133,7 +133,7 @@ function ApplicationFlowPageRegistrationNoModal() {
                       width: 275,
                       borderRadius: 1,
                       background: '""',
-                      height: 40,
+                      height: 50,
                     }}
                     menuSx={{
                       width: 275,
@@ -312,7 +312,7 @@ function ApplicationFlowPageRegistrationNoModal() {
                       applicantDataValue ? (
                         applicantDataValue
                       ) : (
-                        <div style={{ marginTop: -5, fontWeight: 700 }}>
+                        <div style={{ marginTop: -2, fontWeight: 700 }}>
                           SMS Verification Data
                         </div>
                       )
@@ -321,7 +321,7 @@ function ApplicationFlowPageRegistrationNoModal() {
                       width: 275,
                       borderRadius: 1,
                       background: '""',
-                      height: 40,
+                      height: 50,
                     }}
                     menuSx={{
                       width: 275,
@@ -365,7 +365,7 @@ function ApplicationFlowPageRegistrationNoModal() {
                       applicantDataValue ? (
                         applicantDataValue
                       ) : (
-                        <div style={{ marginTop: -5, fontWeight: 700 }}>
+                        <div style={{ marginTop: -2, fontWeight: 700 }}>
                           E-mail Verification
                         </div>
                       )
@@ -374,7 +374,7 @@ function ApplicationFlowPageRegistrationNoModal() {
                       width: 275,
                       borderRadius: 1,
                       background: '""',
-                      height: 40,
+                      height: 50,
                     }}
                     menuSx={{
                       width: 275,
@@ -418,7 +418,7 @@ function ApplicationFlowPageRegistrationNoModal() {
                       applicantDataValue ? (
                         applicantDataValue
                       ) : (
-                        <div style={{ marginTop: -5, fontWeight: 700 }}>
+                        <div style={{ marginTop: -2, fontWeight: 700 }}>
                           Selfie Verification
                         </div>
                       )
@@ -427,7 +427,7 @@ function ApplicationFlowPageRegistrationNoModal() {
                       width: 275,
                       borderRadius: 1,
                       background: '""',
-                      height: 40,
+                      height: 50,
                     }}
                     menuSx={{
                       width: 275,
@@ -490,7 +490,7 @@ function ApplicationFlowPageRegistrationNoModal() {
                         applicantDataValue ? (
                           applicantDataValue
                         ) : (
-                          <div style={{ marginTop: -5, fontWeight: 700 }}>
+                          <div style={{ marginTop: -2, fontWeight: 700 }}>
                             Address Verification
                           </div>
                         )
@@ -499,7 +499,7 @@ function ApplicationFlowPageRegistrationNoModal() {
                         width: 275,
                         borderRadius: 1,
                         background: '""',
-                        height: 40,
+                        height: 50,
                       }}
                       menuSx={{
                         width: 275,
@@ -677,7 +677,7 @@ function ApplicationFlowPageRegistrationNoModal() {
                       applicantDataValue ? (
                         applicantDataValue
                       ) : (
-                        <div style={{ marginTop: -5, fontWeight: 700 }}>
+                        <div style={{ marginTop: -2, fontWeight: 700 }}>
                           Upload Documents
                         </div>
                       )
@@ -686,7 +686,7 @@ function ApplicationFlowPageRegistrationNoModal() {
                       width: 275,
                       borderRadius: 1,
                       background: '""',
-                      height: 40,
+                      height: 50,
                     }}
                     menuSx={{
                       width: 275,
@@ -714,7 +714,7 @@ function ApplicationFlowPageRegistrationNoModal() {
                 <div className='div-wrapper-child-applicationFlow'>
                   <DropdownTagSelector
                     sx={{
-                      width: 200,
+                      height: 50,
                     }}
                     minWidth={500}
                     widthTagSelectorOpened={200}
@@ -757,7 +757,7 @@ function ApplicationFlowPageRegistrationNoModal() {
                       applicantDataValue ? (
                         applicantDataValue
                       ) : (
-                        <div style={{ marginTop: -5, fontWeight: 700 }}>
+                        <div style={{ marginTop: -2, fontWeight: 700 }}>
                           Questionnaire
                         </div>
                       )
@@ -766,7 +766,7 @@ function ApplicationFlowPageRegistrationNoModal() {
                       width: 275,
                       borderRadius: 1,
                       background: '""',
-                      height: 40,
+                      height: 50,
                     }}
                     menuSx={{
                       width: 275,
@@ -942,7 +942,7 @@ function ApplicationFlowPageRegistrationNoModal() {
                       applicantDataValue ? (
                         applicantDataValue
                       ) : (
-                        <div style={{ marginTop: -5, fontWeight: 700 }}>
+                        <div style={{ marginTop: -2, fontWeight: 700 }}>
                           Create Account
                         </div>
                       )
@@ -951,7 +951,7 @@ function ApplicationFlowPageRegistrationNoModal() {
                       width: 275,
                       borderRadius: 1,
                       background: '""',
-                      height: 40,
+                      height: 50,
                     }}
                     menuSx={{
                       width: 275,
@@ -1127,7 +1127,7 @@ function ApplicationFlowPageRegistrationNoModal() {
                       applicantDataValue ? (
                         applicantDataValue
                       ) : (
-                        <div style={{ marginTop: -5, fontWeight: 700 }}>
+                        <div style={{ marginTop: -2, fontWeight: 700 }}>
                           Deposit Money
                         </div>
                       )
@@ -1136,7 +1136,7 @@ function ApplicationFlowPageRegistrationNoModal() {
                       width: 275,
                       borderRadius: 1,
                       background: '""',
-                      height: 40,
+                      height: 50,
                     }}
                     menuSx={{
                       width: 275,
