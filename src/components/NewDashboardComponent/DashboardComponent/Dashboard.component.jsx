@@ -71,17 +71,18 @@ function DashboardContent(props) {
 
   return (
     <ThemeProvider theme={mdTheme}>
-      <Box sx={{ display: 'flex' }}>
+      <Box sx={{ display: 'flex', backgroundColor: 'rgb(237,239,242)' }}>
         <CssBaseline />
         <AppBar position='absolute' open={open}>
           <Toolbar
             sx={{
-              pr: '24px', // keep right padding when drawer closed
+              pr: '24px',
+              color: 'black',
+              backgroundColor: 'rgb(255,255,255)', // keep right padding when drawer closed
             }}
           >
             <IconButton
               edge='start'
-              color='inherit'
               aria-label='open drawer'
               onClick={toggleDrawer}
               sx={{
@@ -115,7 +116,7 @@ function DashboardContent(props) {
 
         {/* right side */}
         <>
-          <Container sx={{ mt: 20, mb: 20, minWidth: 1500 }}>
+          <Container sx={{ mt: 20, mb: 20, Width: 1500 }}>
             {props.rightSide}
           </Container>
         </>

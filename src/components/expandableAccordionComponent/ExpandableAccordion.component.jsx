@@ -8,7 +8,8 @@ import './expandableAccordion.styles.css';
 function ExpandableAccordion(props) {
   return (
     <Accordion
-      expanded={props.expanded && props.expanded}
+      expanded
+      // expanded={props.expanded && props.expanded}
       sx={
         props.sx
           ? props.sx

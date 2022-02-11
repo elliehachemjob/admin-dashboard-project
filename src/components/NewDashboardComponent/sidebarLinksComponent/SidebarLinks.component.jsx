@@ -116,9 +116,15 @@ function SidebarLinks(props) {
       icon: <DisplaySettingsIcon />,
     },
     {
-      id: 10,
+      id: 19,
       path: '/newApplicationFlow',
       name: 'New Application Flow',
+      icon: <AccountTreeIcon />,
+    },
+    {
+      id: 20,
+      path: '/newApplicationFlowAlone',
+      name: 'New Application Flow Alone',
       icon: <AccountTreeIcon />,
     },
   ];

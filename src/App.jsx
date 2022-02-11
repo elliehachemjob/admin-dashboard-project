@@ -21,7 +21,7 @@ import ApplicationFlowHolder from './pages/applicationFlowHolderPage/application
 import FlowConfiguration from './pages/miniPages/flowConfigurationPage/flowConfiguration.mini.page';
 import FlowConfigurationHolder from './pages/flowConfigurationHolderPage/flowConfigurationHolder.page';
 import NewApplicationFlow from './pages/newApplicationFlowPage/newApplicationFlow.page';
-
+import NewApplicationFlowAlone from './pages/newApplicationFlowAlonePage/newApplicationFlowAlone.page';
 import Dashboard from './components/NewDashboardComponent/DashboardComponent/Dashboard.component';
 import './index.css';
 
@@ -179,6 +179,15 @@ function App() {
             element={
               <Dashboard
                 rightSide={<NewApplicationFlow />}
+                label='New Application Flow'
+              />
+            }
+          />
+          <Route
+            path='/newApplicationFlowAlone'
+            element={
+              <Dashboard
+                rightSide={<NewApplicationFlowAlone />}
                 label='New Application Flow'
               />
             }

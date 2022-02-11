@@ -7,6 +7,7 @@ import CheckBox from '../../../components/checkboxComponent/CheckBox.component';
 import RadioButton from '../../../components/radioButtonComponent/radioButton.component';
 import SearchInput from '../../../components/searchInputComponent/SearchInput.component';
 import ApplicationFlowPageRegistration from '../../miniPages/applicationFlowPage/applicationFlowRegistration.mini.page';
+import ApplicationFlowPageRegistrationNoModal from '../../miniPages/applicationFlowPage/applicationFlowRegistrationNoModal.mini.page';
 import { makeStyles } from '@material-ui/core/styles';
 import FlowConfigurationRegistration from '../../miniPages/flowConfigurationPage/flowConfigurationRegistration.mini.page';
 
@@ -77,7 +78,7 @@ function ApplicationFlowFill() {
         />
         <Input name='basic-kyc-level' textFieldStyles={classes.textField} />
         <Label
-          label='Note that once you create a level,you will not be able to change its name/.'
+          label='Note that once you create a level,you will not be able to change its name.'
           className='levelNameLabel-ApplicationFlowFill'
         />
       </div>
@@ -108,7 +109,7 @@ function ApplicationFlowFill() {
         </div>
         {/* 3rd */}
         <div style={{ marginLeft: 5 }}>
-          <ApplicationFlowPageRegistration />
+          <ApplicationFlowPageRegistrationNoModal />
           <div className='addNewStep-buttonWrapper-ApplicationFlowFill'>
             <Button
               name={
