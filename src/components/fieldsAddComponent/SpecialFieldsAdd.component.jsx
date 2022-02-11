@@ -34,7 +34,7 @@ function SpecialFieldsAdd(props) {
   ]);
 
   return (
-    <div className='container1-fieldsAdd-noModal'>
+    <div className=''>
       <div className=''>
         <div
           className={
@@ -51,33 +51,15 @@ function SpecialFieldsAdd(props) {
               className='label-fieldsAdd'
             />
           </div>
-          <div
-            className={
-              props.div2Label ? props.div2Label : 'div2-label-fieldsAdd'
-            }
-          >
-            <Label
-              label={props.field2 ? props.field2 : 'IsRequired'}
-              className='label-fieldsAdd'
-            />
-          </div>
-          <div
-            className={
-              props.div3Label ? props.div3Label : 'div3-label-fieldsAdd'
-            }
-          >
-            {/* <Label
-              label={props.field3 ? props.field3 : 'Remove'}
-              className='label-fieldsAdd'
-            /> */}
-          </div>
         </div>
       </div>
 
-      <div className='div3-main-fieldsAdd'>
+      <div className=''>
         <ListFieldsAddComponent
           parent={
-            props.tableSection2 ? props.tableSection2 : 'parentButton-fieldsAdd'
+            props.tableSection2
+              ? props.tableSection2
+              : 'parentButton2-fieldsAdd'
           }
           section1Style={
             props.section1Style ? props.section1Style : { paddingTop: 7 }
@@ -89,40 +71,12 @@ function SpecialFieldsAdd(props) {
             props.testComponent1 ? (
               props.testComponent1
             ) : (
-              <SearchInput
-                options={abuseValidation}
-                label='Add Fields'
-                // sx={{ minWidth: 380, margin: 2 }}
-              />
+              <SearchInput options={abuseValidation} label='Add Fields' />
             )
           }
           searchInputDiv='div1-Button-fieldsAdd'
-          checkbox={
-            props.testComponent2 ? (
-              props.testComponent2
-            ) : (
-              <>
-                <CheckBox />
-                <DeleteItemIcon className='deleteItemIcon-fieldsAdd' />
-              </>
-            )
-          }
           isRequiredDiv='div2-Button-fieldsAdd'
-          // icon={
-          //   props.testComponent3 ? (
-          //     props.testComponent3
-          //   ) : (
-          //     <DeleteItemIcon className='deleteItemIcon-fieldsAdd' />
-          //   )
-          // }
           deleteElementDiv='div3-Button-fieldsAdd '
-          // type={
-          //   props.testComponent4 ? (
-          //     props.testComponent4
-          //   ) : (
-          //     <Label label='Type' className='label-fieldsAdd' />
-          //   )
-          // }
           TypeDiv='div4-Button-fieldsAdd'
           fieldsList={fields}
         />
@@ -132,9 +86,16 @@ function SpecialFieldsAdd(props) {
           <div className='button-wrapper-fieldsAdd'>
             <Button
               onClick={handleOnPressAdd}
-              className='button-fieldsAdd'
+              className='button-fieldsAdd-noModal'
               name={
-                <div className='wrapper-addIcon-addFields'>
+                <div
+                  className='wrapper-addIcon-addFields'
+                  style={{
+                    width: 300,
+                    display: 'flex',
+                    justifyContent: 'center',
+                  }}
+                >
                   <AddItemIcon className='addItemIcon-applicationFlow' />
 
                   <Label

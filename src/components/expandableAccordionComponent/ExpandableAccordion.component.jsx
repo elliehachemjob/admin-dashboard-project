@@ -8,6 +8,7 @@ import './expandableAccordion.styles.css';
 function ExpandableAccordion(props) {
   return (
     <Accordion
+      style={props.style}
       expanded
       // expanded={props.expanded && props.expanded}
       sx={
@@ -23,7 +24,7 @@ function ExpandableAccordion(props) {
       }
     >
       <AccordionSummary
-        style={{ marginTop: 5 }}
+        style={{ marginTop: 10, marginBottom: -70 }}
         expandIcon={props.hideExpandIcon ? null : <ExpandMoreIcon />}
         aria-controls='panel1a-content'
         id='panel1a-header'

@@ -14,7 +14,6 @@
   align-items: flex-start;
   margin-bottom: 10px;
   margin-left: 2px;
-  
 }
 
 .div1-applicationFlow {
@@ -329,8 +328,6 @@
 .DeleteIconOutlinedIcon-applicationFlow {
   color: #f17070;
   cursor: default;
-  margin-right: -18px;
-  margin-left: 10px;
 }
 
 .DeleteIconOutlinedIcon-applicationFlow:hover {
@@ -341,9 +338,15 @@
   color: hsl(0, 82%, 59%);
 }
 
-.checkBox-wrapper-applicationFlow-noModal {
+.checkBoxLabel-wrapper-applicationFlow-noModal {
   display: flex;
-  justify-content: center;
+  justify-content: space-between;
   align-items: center;
-  margin-left: -70px;
+}
+.checkBox-wrapper-applicationFlow-noModal {
+  margin-left: 15px;
+}
+
+.secondBoxAddCustomFieldsWrapper-applicationFlow {
+  margin-left: -140px;
 }
