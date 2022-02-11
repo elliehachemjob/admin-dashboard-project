@@ -37,6 +37,17 @@ import ArrowForwardIosOutlinedIcon from '@mui/icons-material/ArrowForwardIosOutl
 import DeleteOutlineOutlinedIcon from '@mui/icons-material/DeleteOutlineOutlined';
 import DoneOutlineIcon from '@mui/icons-material/DoneOutline';
 import SentimentSatisfiedAltIcon from '@mui/icons-material/SentimentSatisfiedAlt';
+import KeyboardArrowDownIcon from '@mui/icons-material/KeyboardArrowDown';
+
+export function DownArrowIcon(props) {
+  return (
+    <KeyboardArrowDownIcon
+      style={props.style}
+      className={props.className}
+      onClick={props.onClick}
+    />
+  );
+}
 
 export function HappySmileIcon(props) {
   return (

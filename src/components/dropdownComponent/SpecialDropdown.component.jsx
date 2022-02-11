@@ -3,17 +3,26 @@ import InputLabel from '@mui/material/InputLabel';
 import MenuItem from '@mui/material/MenuItem';
 import FormControl from '@mui/material/FormControl';
 import Select from '@mui/material/Select';
+import { DownArrowIcon } from '../iconsComponent/Icons.component';
 
 function Dropdown(props) {
   return (
     <>
       <FormControl
-        sx={props.formControl ? props.formControl : { m: 0, minWidth: 165 }}
+        sx={
+          props.formControl
+            ? props.formControl
+            : {
+                m: 0,
+                minWidth: 165,
+              }
+        }
       >
         <InputLabel id='demo-simple-select-autowidth-label'>
           {props.inputLabel}
         </InputLabel>
         <Select
+          IconComponent={props.icon ? props.icon : DownArrowIcon}
           labelId='demo-simple-select-autowidth-label'
           id='demo-simple-select-autowidth'
           value={props.value}

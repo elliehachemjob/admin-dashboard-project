@@ -10,6 +10,7 @@ import './applicationFlow.mini.page';
 import {
   DeleteIconOutlinedIcon,
   GoBackIcon,
+  DownArrowIcon,
 } from '../../../components/iconsComponent/Icons.component';
 import { makeStyles } from '@material-ui/core/styles';
 import CheckBox from '../../../components/checkboxComponent/CheckBox.component';
@@ -114,20 +115,28 @@ function ApplicationFlowPageRegistrationNoModal() {
               <div className='div-wrapper-applicationFlow'>
                 <div className='div-wrapper-child-applicationFlow'>
                   <Dropdown
+                    icon={DownArrowIcon}
                     items={applicantData}
                     label={applicantDataValue}
                     handleChange={handleApplicantDataChange}
                     value={applicantDataValue}
                     inputLabel={
-                      applicantDataValue ? applicantDataValue : 'Applicant Data'
+                      applicantDataValue ? (
+                        applicantDataValue
+                      ) : (
+                        <div style={{ marginTop: -5, fontWeight: 700 }}>
+                          Applicant Data
+                        </div>
+                      )
                     }
                     sx={{
-                      width: 200,
-                      borderRadius: 2,
+                      width: 275,
+                      borderRadius: 1,
                       background: '""',
+                      height: 40,
                     }}
                     menuSx={{
-                      width: 200,
+                      width: 275,
                     }}
                   />
                 </div>
@@ -294,22 +303,28 @@ function ApplicationFlowPageRegistrationNoModal() {
               <div className='div-wrapper-applicationFlow'>
                 <div className='div-wrapper-child-applicationFlow'>
                   <Dropdown
-                    items={smsVerificationMenu}
-                    label={smsVerificationValue}
-                    handleChange={handleSmsVerificationChange}
-                    value={smsVerificationValue}
+                    icon={DownArrowIcon}
+                    items={applicantData}
+                    label={applicantDataValue}
+                    handleChange={handleApplicantDataChange}
+                    value={applicantDataValue}
                     inputLabel={
-                      smsVerificationValue
-                        ? smsVerificationValue
-                        : 'SMS Verification Data'
+                      applicantDataValue ? (
+                        applicantDataValue
+                      ) : (
+                        <div style={{ marginTop: -5, fontWeight: 700 }}>
+                          SMS Verification Data
+                        </div>
+                      )
                     }
                     sx={{
-                      width: 200,
-                      borderRadius: 2,
+                      width: 275,
+                      borderRadius: 1,
                       background: '""',
+                      height: 40,
                     }}
                     menuSx={{
-                      width: 200,
+                      width: 275,
                     }}
                   />
                 </div>
@@ -341,15 +356,29 @@ function ApplicationFlowPageRegistrationNoModal() {
               <div className='div-wrapper-applicationFlow'>
                 <div className='div-wrapper-child-applicationFlow'>
                   <Dropdown
-                    items={emailVerificationMenu}
-                    label={emailVerificationValue}
-                    handleChange={handleEmailVerificationChange}
-                    value={emailVerificationValue}
+                    icon={DownArrowIcon}
+                    items={applicantData}
+                    label={applicantDataValue}
+                    handleChange={handleApplicantDataChange}
+                    value={applicantDataValue}
                     inputLabel={
-                      emailVerificationValue
-                        ? emailVerificationValue
-                        : 'E-mail Verification'
+                      applicantDataValue ? (
+                        applicantDataValue
+                      ) : (
+                        <div style={{ marginTop: -5, fontWeight: 700 }}>
+                          E-mail Verification
+                        </div>
+                      )
                     }
+                    sx={{
+                      width: 275,
+                      borderRadius: 1,
+                      background: '""',
+                      height: 40,
+                    }}
+                    menuSx={{
+                      width: 275,
+                    }}
                   />
                 </div>
               </div>
@@ -380,22 +409,28 @@ function ApplicationFlowPageRegistrationNoModal() {
               <div className='div-wrapper-applicationFlow'>
                 <div className='div-wrapper-child-applicationFlow'>
                   <Dropdown
-                    items={selfieVerification}
-                    label={selfieVerificationValue}
-                    handleChange={handleSelfieVerificationChange}
-                    value={selfieVerificationValue}
+                    icon={DownArrowIcon}
+                    items={applicantData}
+                    label={applicantDataValue}
+                    handleChange={handleApplicantDataChange}
+                    value={applicantDataValue}
                     inputLabel={
-                      selfieVerificationValue
-                        ? selfieVerificationValue
-                        : 'Selfie Verification'
+                      applicantDataValue ? (
+                        applicantDataValue
+                      ) : (
+                        <div style={{ marginTop: -5, fontWeight: 700 }}>
+                          Selfie Verification
+                        </div>
+                      )
                     }
                     sx={{
-                      width: 200,
-                      borderRadius: 2,
+                      width: 275,
+                      borderRadius: 1,
                       background: '""',
+                      height: 40,
                     }}
                     menuSx={{
-                      width: 200,
+                      width: 275,
                     }}
                   />
                 </div>
@@ -446,22 +481,28 @@ function ApplicationFlowPageRegistrationNoModal() {
                 <div className='div-wrapper-applicationFlow'>
                   <div className='div-wrapper-child-applicationFlow'>
                     <Dropdown
-                      items={addressVerification}
-                      label={addressVerificationValue}
-                      handleChange={handleAddressVerificationChange}
-                      value={addressVerificationValue}
+                      icon={DownArrowIcon}
+                      items={applicantData}
+                      label={applicantDataValue}
+                      handleChange={handleApplicantDataChange}
+                      value={applicantDataValue}
                       inputLabel={
-                        addressVerificationValue
-                          ? addressVerificationValue
-                          : 'Address Verification'
+                        applicantDataValue ? (
+                          applicantDataValue
+                        ) : (
+                          <div style={{ marginTop: -5, fontWeight: 700 }}>
+                            Address Verification
+                          </div>
+                        )
                       }
                       sx={{
-                        width: 200,
-                        borderRadius: 2,
+                        width: 275,
+                        borderRadius: 1,
                         background: '""',
+                        height: 40,
                       }}
                       menuSx={{
-                        width: 200,
+                        width: 275,
                       }}
                     />
                   </div>
@@ -627,22 +668,28 @@ function ApplicationFlowPageRegistrationNoModal() {
               <div className='div-wrapper-applicationFlow '>
                 <div className='div-wrapper-child-applicationFlow'>
                   <Dropdown
-                    items={uploadDocuments}
-                    label={uploadDocumentsValue}
-                    handleChange={handleUploadDocumentsChange}
-                    value={uploadDocumentsValue}
+                    icon={DownArrowIcon}
+                    items={applicantData}
+                    label={applicantDataValue}
+                    handleChange={handleApplicantDataChange}
+                    value={applicantDataValue}
                     inputLabel={
-                      uploadDocumentsValue
-                        ? uploadDocumentsValue
-                        : 'Upload Documents'
+                      applicantDataValue ? (
+                        applicantDataValue
+                      ) : (
+                        <div style={{ marginTop: -5, fontWeight: 700 }}>
+                          Upload Documents
+                        </div>
+                      )
                     }
                     sx={{
-                      width: 200,
-                      borderRadius: 2,
+                      width: 275,
+                      borderRadius: 1,
                       background: '""',
+                      height: 40,
                     }}
                     menuSx={{
-                      width: 200,
+                      width: 275,
                     }}
                   />
                 </div>
@@ -701,22 +748,28 @@ function ApplicationFlowPageRegistrationNoModal() {
               <div className='div-wrapper-applicationFlow'>
                 <div className='div-wrapper-child-applicationFlow'>
                   <Dropdown
-                    items={selfieVerification}
-                    label={selfieVerificationValue}
-                    handleChange={handleSelfieVerificationChange}
-                    value={selfieVerificationValue}
+                    icon={DownArrowIcon}
+                    items={applicantData}
+                    label={applicantDataValue}
+                    handleChange={handleApplicantDataChange}
+                    value={applicantDataValue}
                     inputLabel={
-                      selfieVerificationValue
-                        ? selfieVerificationValue
-                        : 'Questionnaire'
+                      applicantDataValue ? (
+                        applicantDataValue
+                      ) : (
+                        <div style={{ marginTop: -5, fontWeight: 700 }}>
+                          Questionnaire
+                        </div>
+                      )
                     }
                     sx={{
-                      width: 200,
-                      borderRadius: 2,
+                      width: 275,
+                      borderRadius: 1,
                       background: '""',
+                      height: 40,
                     }}
                     menuSx={{
-                      width: 200,
+                      width: 275,
                     }}
                   />
                 </div>
@@ -880,22 +933,28 @@ function ApplicationFlowPageRegistrationNoModal() {
               <div className='div-wrapper-applicationFlow'>
                 <div className='div-wrapper-child-applicationFlow'>
                   <Dropdown
-                    items={selfieVerification}
-                    label={selfieVerificationValue}
-                    handleChange={handleSelfieVerificationChange}
-                    value={selfieVerificationValue}
+                    icon={DownArrowIcon}
+                    items={applicantData}
+                    label={applicantDataValue}
+                    handleChange={handleApplicantDataChange}
+                    value={applicantDataValue}
                     inputLabel={
-                      selfieVerificationValue
-                        ? selfieVerificationValue
-                        : 'Create Account'
+                      applicantDataValue ? (
+                        applicantDataValue
+                      ) : (
+                        <div style={{ marginTop: -5, fontWeight: 700 }}>
+                          Create Account
+                        </div>
+                      )
                     }
                     sx={{
-                      width: 200,
-                      borderRadius: 2,
+                      width: 275,
+                      borderRadius: 1,
                       background: '""',
+                      height: 40,
                     }}
                     menuSx={{
-                      width: 200,
+                      width: 275,
                     }}
                   />
                 </div>
@@ -1059,22 +1118,28 @@ function ApplicationFlowPageRegistrationNoModal() {
               <div className='div-wrapper-applicationFlow'>
                 <div className='div-wrapper-child-applicationFlow'>
                   <Dropdown
-                    items={selfieVerification}
-                    label={selfieVerificationValue}
-                    handleChange={handleSelfieVerificationChange}
-                    value={selfieVerificationValue}
+                    icon={DownArrowIcon}
+                    items={applicantData}
+                    label={applicantDataValue}
+                    handleChange={handleApplicantDataChange}
+                    value={applicantDataValue}
                     inputLabel={
-                      selfieVerificationValue
-                        ? selfieVerificationValue
-                        : 'Deposit Money'
+                      applicantDataValue ? (
+                        applicantDataValue
+                      ) : (
+                        <div style={{ marginTop: -5, fontWeight: 700 }}>
+                          Deposit Money
+                        </div>
+                      )
                     }
                     sx={{
-                      width: 200,
-                      borderRadius: 2,
+                      width: 275,
+                      borderRadius: 1,
                       background: '""',
+                      height: 40,
                     }}
                     menuSx={{
-                      width: 200,
+                      width: 275,
                     }}
                   />
                 </div>
