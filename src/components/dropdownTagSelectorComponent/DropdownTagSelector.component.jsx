@@ -57,7 +57,8 @@ function DropdownTagSelector(props) {
           <OutlinedInput
             sx={{
               borderRadius: 2,
-              minWidth: 165,
+
+              minWidth: props.minWidth ? props.minWidth : 165,
               opacity: 1,
               '&:hover,&:focus': {},
             }}
@@ -69,7 +70,6 @@ function DropdownTagSelector(props) {
           <Box
             sx={{
               display: 'flex',
-              flexWrap: 'wrap',
               gap: 0.5,
             }}
           >

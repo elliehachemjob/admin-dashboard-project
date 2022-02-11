@@ -89,6 +89,7 @@ function SpecialFieldsAdd(props) {
               className='button-fieldsAdd-noModal'
               name={
                 <div
+                  onClick={props.onClickAddField}
                   className='wrapper-addIcon-addFields'
                   style={{
                     width: 300,

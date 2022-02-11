@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import Button from '../../../components/FlexibleButtonComponent/FlexibleButton.component';
 import Label from '../../../components/labelComponent/Label.component';
 import Dropdown from '../../../components/dropdownComponent/SpecialDropdown.component';
@@ -26,6 +26,10 @@ function ApplicationFlowPageRegistrationNoModal() {
     useState(true);
   const [addCustomConditionApplicantData, setAddCustomConditionApplicantData] =
     useState(true);
+
+  const handleIsApplicantDataChange1 = () => {};
+
+  const handleIsApplicantDataChange2 = () => {};
 
   const useStyles = makeStyles((theme) => ({
     textField: {
@@ -96,7 +100,11 @@ function ApplicationFlowPageRegistrationNoModal() {
       content: (
         <div className='expandableAccordionWrapper-applicationFlow'>
           <ExpandableAccordion
-            style={{ border: '1px solid hsl(0, 0%, 20%)', borderRadius: 10 }}
+            style={{
+              border: '1px solid hsla(0, 0%, 50%,0.6)',
+              borderRadius: 4,
+              marginBottom: 10,
+            }}
             hideExpandIcon
             width='98%'
             // section1={
@@ -141,7 +149,595 @@ function ApplicationFlowPageRegistrationNoModal() {
                     textFieldStyles={classes.textField}
                   /> */}
                 </div>
+                <AddFields
+                  div1Label='div1-label-applicationFlow'
+                  div2Label='div2-label-applicationFlow'
+                  onClickAddField={handleIsApplicantDataChange1}
+                  sx2={{
+                    backgroundColor: 'rgb(25,188,155)',
+                    borderRadius: '10px',
+                    fontWeight: 600,
+                    marginTop: addConditionApplicantData ? 2.5 : 0,
 
+                    '&:hover': {
+                      backgroundColor: 'hsl(168, 77%, 49%)',
+                      borderRadius: '10px',
+                    },
+                  }}
+                  items={menu}
+                  label={value}
+                  value={value}
+                  field1={
+                    <div
+                      style={{
+                        display: 'flex',
+                      }}
+                    >
+                      {addConditionApplicantData ? (
+                        <>
+                          <Label
+                            margin={135}
+                            textTransform='none'
+                            label='FieldName'
+                          />
+                          <Label textTransform='none' label='Required' />
+                        </>
+                      ) : (
+                        ''
+                      )}
+                    </div>
+                  }
+                  field5={<Label textTransform='none' label='Add field' />}
+                  testComponent1={
+                    <div className='checkBoxLabel-wrapper-applicationFlow-noModal'>
+                      <SearchInput
+                        options={searchList}
+                        label={<Label label='Applicant Data' size={15} />}
+                        className='searchInput-emailTemplate'
+                        sx={{ marginLeft: 0, width: 200 }}
+                        textFieldStyles={classes.textField}
+                      />
+                      <div className='checkBox-wrapper-applicationFlow-noModal'>
+                        <CheckBox />
+                      </div>
+
+                      <DeleteIconOutlinedIcon className='DeleteIconOutlinedIcon-applicationFlow' />
+                    </div>
+                  }
+                />
+                <div className='secondBoxAddCustomFieldsWrapper-applicationFlow'>
+                  <AddFields
+                    div1Label='div1-label-applicationFlow'
+                    div2Label='div2-label-applicationFlow'
+                    onClickAddField={handleIsApplicantDataChange2}
+                    sx2={{
+                      backgroundColor: 'rgb(25,188,155)',
+                      borderRadius: '10px',
+                      fontWeight: 600,
+                      marginTop: addCustomConditionApplicantData ? 2.5 : 0,
+
+                      '&:hover': {
+                        backgroundColor: 'hsl(168, 77%, 49%)',
+                        borderRadius: '10px',
+                      },
+                    }}
+                    items={menu}
+                    label={value}
+                    value={value}
+                    field1={
+                      <div
+                        style={{
+                          display: 'flex',
+                        }}
+                      >
+                        {addCustomConditionApplicantData ? (
+                          <>
+                            <Label
+                              margin={135}
+                              textTransform='none'
+                              label='FieldName'
+                            />
+                            <Label textTransform='none' label='Required' />
+                          </>
+                        ) : (
+                          ''
+                        )}
+                      </div>
+                    }
+                    field5={
+                      <Label textTransform='none' label='Add Custom Field' />
+                    }
+                    testComponent1={
+                      <div className='checkBoxLabel-wrapper-applicationFlow-noModal'>
+                        <SearchInput
+                          options={searchList}
+                          label={<Label label='Applicant Data' size={15} />}
+                          className='searchInput-emailTemplate'
+                          sx={{ marginLeft: 0, width: 200 }}
+                          textFieldStyles={classes.textField}
+                        />
+                        <div className='checkBox-wrapper-applicationFlow-noModal'>
+                          <CheckBox />
+                        </div>
+
+                        <DeleteIconOutlinedIcon className='DeleteIconOutlinedIcon-applicationFlow' />
+                      </div>
+                    }
+                  />
+                </div>
+              </div>
+            }
+          />
+
+          <span className='positionedItem-applicationFlow-registration-noModal'>
+            <DeleteIconOutlinedIcon
+              onClick={handleDeleteStep}
+              className='deleteStep-applicationFlow'
+            />
+          </span>
+        </div>
+      ),
+    },
+    {
+      id: 'item-2',
+      content: (
+        <div className='expandableAccordionWrapper-applicationFlow'>
+          <ExpandableAccordion
+            style={{
+              border: '1px solid hsla(0, 0%, 50%,0.6)',
+              borderRadius: 4,
+              marginBottom: 10,
+            }}
+            hideExpandIcon
+            width='98%'
+            section2={
+              <div className='div-wrapper-applicationFlow'>
+                <div className='div-wrapper-child-applicationFlow'>
+                  <Dropdown
+                    items={smsVerificationMenu}
+                    label={smsVerificationValue}
+                    handleChange={handleSmsVerificationChange}
+                    value={smsVerificationValue}
+                    inputLabel={
+                      smsVerificationValue
+                        ? smsVerificationValue
+                        : 'SMS Verification Data'
+                    }
+                    sx={{
+                      width: 200,
+                      borderRadius: 2,
+                      background: '""',
+                    }}
+                    menuSx={{
+                      width: 200,
+                    }}
+                  />
+                </div>
+              </div>
+            }
+          />
+          <span className='positionedItem-applicationFlow-registration-noModal'>
+            <DeleteIconOutlinedIcon
+              onClick={handleDeleteStep}
+              className='deleteStep-applicationFlow'
+            />
+          </span>
+        </div>
+      ),
+    },
+    {
+      id: 'item-3',
+      content: (
+        <div className='expandableAccordionWrapper-applicationFlow'>
+          <ExpandableAccordion
+            style={{
+              border: '1px solid hsla(0, 0%, 50%,0.6)',
+              borderRadius: 4,
+              marginBottom: 10,
+            }}
+            hideExpandIcon
+            width='98%'
+            section2={
+              <div className='div-wrapper-applicationFlow'>
+                <div className='div-wrapper-child-applicationFlow'>
+                  <Dropdown
+                    items={emailVerificationMenu}
+                    label={emailVerificationValue}
+                    handleChange={handleEmailVerificationChange}
+                    value={emailVerificationValue}
+                    inputLabel={
+                      emailVerificationValue
+                        ? emailVerificationValue
+                        : 'E-mail Verification'
+                    }
+                  />
+                </div>
+              </div>
+            }
+          />
+          <span className='positionedItem-applicationFlow-registration-noModal'>
+            <DeleteIconOutlinedIcon
+              onClick={handleDeleteStep}
+              className='deleteStep-applicationFlow'
+            />
+          </span>
+        </div>
+      ),
+    },
+    {
+      id: 'item-4',
+      content: (
+        <div className='expandableAccordionWrapper-applicationFlow'>
+          <ExpandableAccordion
+            style={{
+              border: '1px solid hsla(0, 0%, 50%,0.6)',
+              borderRadius: 4,
+              marginBottom: 10,
+            }}
+            hideExpandIcon
+            width='98%'
+            section2={
+              <div className='div-wrapper-applicationFlow'>
+                <div className='div-wrapper-child-applicationFlow'>
+                  <Dropdown
+                    items={selfieVerification}
+                    label={selfieVerificationValue}
+                    handleChange={handleSelfieVerificationChange}
+                    value={selfieVerificationValue}
+                    inputLabel={
+                      selfieVerificationValue
+                        ? selfieVerificationValue
+                        : 'Selfie Verification'
+                    }
+                    sx={{
+                      width: 200,
+                      borderRadius: 2,
+                      background: '""',
+                    }}
+                    menuSx={{
+                      width: 200,
+                    }}
+                  />
+                </div>
+                <div className='div-wrapper-child-applicationFlow'>
+                  {/* <Input
+                    label='SumSub Applicant Name'
+                    style={{
+                      border: '',
+                      backgroundColor: '',
+                      borderRadius: '15px',
+                      width: 200,
+                      opacity: 1,
+                      '&:hover,&:focus': {
+                        border: ' ',
+                        backgroundColor: '',
+                        opacity: 1,
+                      },
+                    }}
+                    textFieldStyles={classes.textField}
+                  /> */}
+                </div>
+              </div>
+            }
+          />
+          <span className='positionedItem-applicationFlow-registration-noModal'>
+            <DeleteIconOutlinedIcon
+              onClick={handleDeleteStep}
+              className='deleteStep-applicationFlow'
+            />
+          </span>
+        </div>
+      ),
+    },
+    {
+      id: 'item-5',
+      content: (
+        <div className='expandableAccordionWrapper-applicationFlow'>
+          <ExpandableAccordion
+            style={{
+              border: '1px solid hsla(0, 0%, 50%,0.6)',
+              borderRadius: 4,
+              marginBottom: 10,
+            }}
+            hideExpandIcon
+            width='98%'
+            section2={
+              <>
+                <div className='div-wrapper-applicationFlow'>
+                  <div className='div-wrapper-child-applicationFlow'>
+                    <Dropdown
+                      items={addressVerification}
+                      label={addressVerificationValue}
+                      handleChange={handleAddressVerificationChange}
+                      value={addressVerificationValue}
+                      inputLabel={
+                        addressVerificationValue
+                          ? addressVerificationValue
+                          : 'Address Verification'
+                      }
+                      sx={{
+                        width: 200,
+                        borderRadius: 2,
+                        background: '""',
+                      }}
+                      menuSx={{
+                        width: 200,
+                      }}
+                    />
+                  </div>
+
+                  <div className='div-wrapper-child-applicationFlow'>
+                    {/* <Input
+                      label='SumSub Applicant Name'
+                      style={{
+                        border: '',
+                        backgroundColor: '',
+                        borderRadius: '15px',
+                        width: 200,
+                        opacity: 1,
+                        '&:hover,&:focus': {
+                          border: ' ',
+                          backgroundColor: '',
+                          opacity: 1,
+                        },
+                      }}
+                      textFieldStyles={classes.textField}
+                    /> */}
+                  </div>
+                  <AddFields
+                    div1Label='div1-label-applicationFlow'
+                    div2Label='div2-label-applicationFlow'
+                    sx2={{
+                      backgroundColor: 'rgb(25,188,155)',
+                      borderRadius: '10px',
+                      fontWeight: 600,
+                      marginTop: addConditionApplicantData ? 2.5 : 0,
+
+                      '&:hover': {
+                        backgroundColor: 'hsl(168, 77%, 49%)',
+                        borderRadius: '10px',
+                      },
+                    }}
+                    items={menu}
+                    label={value}
+                    value={value}
+                    field1={
+                      <div
+                        style={{
+                          display: 'flex',
+                        }}
+                      >
+                        {addConditionApplicantData ? (
+                          <>
+                            <Label
+                              margin={135}
+                              textTransform='none'
+                              label='FieldName'
+                            />
+                            <Label textTransform='none' label='Required' />
+                          </>
+                        ) : (
+                          ''
+                        )}
+                      </div>
+                    }
+                    field5={<Label textTransform='none' label='Add field' />}
+                    testComponent1={
+                      <div className='checkBoxLabel-wrapper-applicationFlow-noModal'>
+                        <SearchInput
+                          options={searchList}
+                          label={<Label label='Applicant Data' size={15} />}
+                          className='searchInput-emailTemplate'
+                          sx={{ marginLeft: 0, width: 200 }}
+                          textFieldStyles={classes.textField}
+                        />
+                        <div className='checkBox-wrapper-applicationFlow-noModal'>
+                          <CheckBox />
+                        </div>
+
+                        <DeleteIconOutlinedIcon className='DeleteIconOutlinedIcon-applicationFlow' />
+                      </div>
+                    }
+                  />
+                  <div className='secondBoxAddCustomFieldsWrapper-applicationFlow'>
+                    <AddFields
+                      div1Label='div1-label-applicationFlow'
+                      div2Label='div2-label-applicationFlow'
+                      sx2={{
+                        backgroundColor: 'rgb(25,188,155)',
+                        borderRadius: '10px',
+                        fontWeight: 600,
+                        marginTop: addCustomConditionApplicantData ? 2.5 : 0,
+
+                        '&:hover': {
+                          backgroundColor: 'hsl(168, 77%, 49%)',
+                          borderRadius: '10px',
+                        },
+                      }}
+                      items={menu}
+                      label={value}
+                      value={value}
+                      field1={
+                        <div
+                          style={{
+                            display: 'flex',
+                          }}
+                        >
+                          {addCustomConditionApplicantData ? (
+                            <>
+                              <Label
+                                margin={135}
+                                textTransform='none'
+                                label='FieldName'
+                              />
+                              <Label textTransform='none' label='Required' />
+                            </>
+                          ) : (
+                            ''
+                          )}
+                        </div>
+                      }
+                      field5={
+                        <Label textTransform='none' label='Add Custom Field' />
+                      }
+                      testComponent1={
+                        <div className='checkBoxLabel-wrapper-applicationFlow-noModal'>
+                          <SearchInput
+                            options={searchList}
+                            label={<Label label='Applicant Data' size={15} />}
+                            className='searchInput-emailTemplate'
+                            sx={{ marginLeft: 0, width: 200 }}
+                            textFieldStyles={classes.textField}
+                          />
+                          <div className='checkBox-wrapper-applicationFlow-noModal'>
+                            <CheckBox />
+                          </div>
+
+                          <DeleteIconOutlinedIcon className='DeleteIconOutlinedIcon-applicationFlow' />
+                        </div>
+                      }
+                    />
+                  </div>
+                </div>
+              </>
+            }
+          />
+          <span className='positionedItem-applicationFlow-registration-noModal'>
+            <DeleteIconOutlinedIcon
+              onClick={handleDeleteStep}
+              className='deleteStep-applicationFlow'
+            />
+          </span>
+        </div>
+      ),
+    },
+    {
+      id: 'item-6',
+      content: (
+        <div className='expandableAccordionWrapper-applicationFlow'>
+          <ExpandableAccordion
+            style={{
+              border: '1px solid hsla(0, 0%, 50%,0.6)',
+              borderRadius: 4,
+              marginBottom: 10,
+            }}
+            hideExpandIcon
+            width='98%'
+            section2={
+              <div className='div-wrapper-applicationFlow '>
+                <div className='div-wrapper-child-applicationFlow'>
+                  <Dropdown
+                    items={uploadDocuments}
+                    label={uploadDocumentsValue}
+                    handleChange={handleUploadDocumentsChange}
+                    value={uploadDocumentsValue}
+                    inputLabel={
+                      uploadDocumentsValue
+                        ? uploadDocumentsValue
+                        : 'Upload Documents'
+                    }
+                    sx={{
+                      width: 200,
+                      borderRadius: 2,
+                      background: '""',
+                    }}
+                    menuSx={{
+                      width: 200,
+                    }}
+                  />
+                </div>
+                <div className=''>
+                  {/* <Input
+                    label='SumSub Applicant Name'
+                    style={{
+                      border: '',
+                      backgroundColor: '',
+                      borderRadius: '15px',
+                      width: 200,
+                      opacity: 1,
+                      '&:hover,&:focus': {
+                        border: ' ',
+                        backgroundColor: '',
+                        opacity: 1,
+                      },
+                    }}
+                    textFieldStyles={classes.textField}
+                  /> */}
+                </div>
+                <div className='div-wrapper-child-applicationFlow'>
+                  <DropdownTagSelector
+                    sx={{
+                      width: 200,
+                    }}
+                    minWidth={500}
+                    widthTagSelectorOpened={200}
+                  />
+                </div>
+              </div>
+            }
+          />
+          <span className='positionedItem-applicationFlow-registration-noModal'>
+            <DeleteIconOutlinedIcon
+              onClick={handleDeleteStep}
+              className='deleteStep-applicationFlow'
+            />
+          </span>
+        </div>
+      ),
+    },
+    {
+      id: 'item-7',
+      content: (
+        <div className='expandableAccordionWrapper-applicationFlow'>
+          <ExpandableAccordion
+            style={{
+              border: '1px solid hsla(0, 0%, 50%,0.6)',
+              borderRadius: 4,
+              marginBottom: 10,
+            }}
+            hideExpandIcon
+            width='98%'
+            section2={
+              <div className='div-wrapper-applicationFlow'>
+                <div className='div-wrapper-child-applicationFlow'>
+                  <Dropdown
+                    items={selfieVerification}
+                    label={selfieVerificationValue}
+                    handleChange={handleSelfieVerificationChange}
+                    value={selfieVerificationValue}
+                    inputLabel={
+                      selfieVerificationValue
+                        ? selfieVerificationValue
+                        : 'Questionnaire'
+                    }
+                    sx={{
+                      width: 200,
+                      borderRadius: 2,
+                      background: '""',
+                    }}
+                    menuSx={{
+                      width: 200,
+                    }}
+                  />
+                </div>
+                <div className='div-wrapper-child-applicationFlow'>
+                  {/* <Input
+                    label='SumSub Applicant Name'
+                    style={{
+                      border: '',
+                      backgroundColor: '',
+                      borderRadius: '15px',
+                      width: 200,
+                      opacity: 1,
+                      '&:hover,&:focus': {
+                        border: ' ',
+                        backgroundColor: '',
+                        opacity: 1,
+                      },
+                    }}
+                    textFieldStyles={classes.textField}
+                  /> */}
+                </div>
                 <AddFields
                   div1Label='div1-label-applicationFlow'
                   div2Label='div2-label-applicationFlow'
@@ -259,487 +855,6 @@ function ApplicationFlowPageRegistrationNoModal() {
               </div>
             }
           />
-
-          <span className='positionedItem-applicationFlow-registration-noModal'>
-            <DeleteIconOutlinedIcon
-              onClick={handleDeleteStep}
-              className='deleteStep-applicationFlow'
-            />
-          </span>
-        </div>
-      ),
-    },
-    {
-      id: 'item-2',
-      content: (
-        <div className='expandableAccordionWrapper-applicationFlow'>
-          <ExpandableAccordion
-            hideExpandIcon
-            width='98%'
-            section1={
-              <Label
-                label='SMS Verification Data'
-                className='label-applicationFlow'
-              />
-            }
-            section2={
-              <div className='div-wrapper-applicationFlow'>
-                <div className='div-wrapper-child-applicationFlow'>
-                  <Dropdown
-                    items={smsVerificationMenu}
-                    label={smsVerificationValue}
-                    handleChange={handleSmsVerificationChange}
-                    value={smsVerificationValue}
-                    inputLabel={
-                      smsVerificationValue ? smsVerificationValue : 'Twilio'
-                    }
-                    sx={{
-                      width: 200,
-                      borderRadius: 2,
-                      background: '""',
-                    }}
-                    menuSx={{
-                      width: 200,
-                    }}
-                  />
-                </div>
-              </div>
-            }
-          />
-          <span className='positionedItem-applicationFlow-registration-noModal'>
-            <DeleteIconOutlinedIcon
-              onClick={handleDeleteStep}
-              className='deleteStep-applicationFlow'
-            />
-          </span>
-        </div>
-      ),
-    },
-    {
-      id: 'item-3',
-      content: (
-        <div className='expandableAccordionWrapper-applicationFlow'>
-          <ExpandableAccordion
-            hideExpandIcon
-            width='98%'
-            section1={
-              <Label
-                label='E-mail Verification'
-                className='label-applicationFlow'
-              />
-            }
-            section2={
-              <div className='div-wrapper-applicationFlow'>
-                <div className='div-wrapper-child-applicationFlow'>
-                  <Dropdown
-                    items={emailVerificationMenu}
-                    label={emailVerificationValue}
-                    handleChange={handleEmailVerificationChange}
-                    value={emailVerificationValue}
-                    inputLabel={
-                      emailVerificationValue
-                        ? emailVerificationValue
-                        : 'By Code'
-                    }
-                  />
-                </div>
-              </div>
-            }
-          />
-          <span className='positionedItem-applicationFlow-registration-noModal'>
-            <DeleteIconOutlinedIcon
-              onClick={handleDeleteStep}
-              className='deleteStep-applicationFlow'
-            />
-          </span>
-        </div>
-      ),
-    },
-    {
-      id: 'item-4',
-      content: (
-        <div className='expandableAccordionWrapper-applicationFlow'>
-          <ExpandableAccordion
-            hideExpandIcon
-            width='98%'
-            section1={
-              <Label
-                label='Selfie Verification'
-                className='label-applicationFlow'
-              />
-            }
-            section2={
-              <div className='div-wrapper-applicationFlow'>
-                <div className='div-wrapper-child-applicationFlow'>
-                  <Dropdown
-                    items={selfieVerification}
-                    label={selfieVerificationValue}
-                    handleChange={handleSelfieVerificationChange}
-                    value={selfieVerificationValue}
-                    inputLabel={
-                      selfieVerificationValue ? selfieVerificationValue : 'None'
-                    }
-                    sx={{
-                      width: 200,
-                      borderRadius: 2,
-                      background: '""',
-                    }}
-                    menuSx={{
-                      width: 200,
-                    }}
-                  />
-                </div>
-                <div className='div-wrapper-child-applicationFlow'>
-                  <Input
-                    label='SumSub Applicant Name'
-                    style={{
-                      border: '',
-                      backgroundColor: '',
-                      borderRadius: '15px',
-                      width: 200,
-                      opacity: 1,
-                      '&:hover,&:focus': {
-                        border: ' ',
-                        backgroundColor: '',
-                        opacity: 1,
-                      },
-                    }}
-                    textFieldStyles={classes.textField}
-                  />
-                </div>
-              </div>
-            }
-          />
-          <span className='positionedItem-applicationFlow-registration-noModal'>
-            <DeleteIconOutlinedIcon
-              onClick={handleDeleteStep}
-              className='deleteStep-applicationFlow'
-            />
-          </span>
-        </div>
-      ),
-    },
-    {
-      id: 'item-5',
-      content: (
-        <div className='expandableAccordionWrapper-applicationFlow'>
-          <ExpandableAccordion
-            hideExpandIcon
-            width='98%'
-            section1={
-              <Label
-                label='Address Verification'
-                className='label-applicationFlow'
-              />
-            }
-            section2={
-              <>
-                <div className='div-wrapper-applicationFlow'>
-                  <div className='div-wrapper-child-applicationFlow'>
-                    <Dropdown
-                      items={addressVerification}
-                      label={addressVerificationValue}
-                      handleChange={handleAddressVerificationChange}
-                      value={addressVerificationValue}
-                      inputLabel={
-                        addressVerificationValue
-                          ? addressVerificationValue
-                          : 'None'
-                      }
-                      sx={{
-                        width: 200,
-                        borderRadius: 2,
-                        background: '""',
-                      }}
-                      menuSx={{
-                        width: 200,
-                      }}
-                    />
-                  </div>
-
-                  <div className='div-wrapper-child-applicationFlow'>
-                    <Input
-                      label='SumSub Applicant Name'
-                      style={{
-                        border: '',
-                        backgroundColor: '',
-                        borderRadius: '15px',
-                        width: 200,
-                        opacity: 1,
-                        '&:hover,&:focus': {
-                          border: ' ',
-                          backgroundColor: '',
-                          opacity: 1,
-                        },
-                      }}
-                      textFieldStyles={classes.textField}
-                    />
-                  </div>
-                  <ConditionsModal
-                    content={
-                      <AddFields
-                        div1Label='div1-label-applicationFlow'
-                        div2Label='div2-label-applicationFlow'
-                        div3Label='div3-label-applicationFlow'
-                        div4Label='div4-label-applicationFlow'
-                        sx={{
-                          backgroundColor: 'rgb(25,188,155)',
-                          borderRadius: '10px',
-                          fontWeight: 600,
-
-                          '&:hover': {
-                            backgroundColor: 'hsl(168, 77%, 49%)',
-                            borderRadius: '10px',
-                          },
-                        }}
-                        sx2={{
-                          backgroundColor: 'rgb(25,188,155)',
-                          borderRadius: '10px',
-                          fontWeight: 600,
-                          marginTop: 2.5,
-                          '&:hover': {
-                            backgroundColor: 'hsl(168, 77%, 49%)',
-                            borderRadius: '10px',
-                          },
-                        }}
-                        items={menu}
-                        label={value}
-                        value={value}
-                        field1='FieldName'
-                        field2='IsRequired'
-                        field3='Remove '
-                        field4='Type'
-                        field5='Add Field'
-                        testComponent1={
-                          <SearchInput
-                            options={searchList}
-                            label={<Label label='Applicant Data' size={15} />}
-                            className='searchInput-emailTemplate'
-                            sx={{ marginLeft: 0, width: 200 }}
-                            textFieldStyles={classes.textField}
-                          />
-                        }
-                        testComponent2={
-                          <div className='checkBox-wrapper-applicationFlow'>
-                            <CheckBox />
-                          </div>
-                        }
-                        testComponent3={
-                          <DeleteIconOutlinedIcon className='DeleteIconOutlinedIcon-applicationFlow' />
-                        }
-                        testComponent4={<Label label='Type' className='' />}
-                      />
-                    }
-                  />
-                  <Label
-                    label='Add Conditions'
-                    className='label-nearCondition2-applicationFlow'
-                  />
-                </div>
-              </>
-            }
-          />
-          <span className='positionedItem-applicationFlow-registration-noModal'>
-            <DeleteIconOutlinedIcon
-              onClick={handleDeleteStep}
-              className='deleteStep-applicationFlow'
-            />
-          </span>
-        </div>
-      ),
-    },
-    {
-      id: 'item-6',
-      content: (
-        <div className='expandableAccordionWrapper-applicationFlow'>
-          <ExpandableAccordion
-            hideExpandIcon
-            width='98%'
-            section1={
-              <Label
-                label='Address Verification'
-                className='label-applicationFlow'
-              />
-            }
-            section2={
-              <>
-                <div className='div-wrapper-applicationFlow'>
-                  <div className='div-wrapper-child-applicationFlow'>
-                    <Dropdown
-                      items={addressVerification}
-                      label={addressVerificationValue}
-                      handleChange={handleAddressVerificationChange}
-                      value={addressVerificationValue}
-                      inputLabel={
-                        addressVerificationValue
-                          ? addressVerificationValue
-                          : 'None'
-                      }
-                      sx={{
-                        width: 200,
-                        borderRadius: 2,
-                        background: '""',
-                      }}
-                      menuSx={{
-                        width: 200,
-                      }}
-                    />
-                  </div>
-
-                  <div className='div-wrapper-child-applicationFlow'>
-                    <Input
-                      label='SumSub Applicant Name'
-                      style={{
-                        border: '',
-                        backgroundColor: '',
-                        borderRadius: '15px',
-                        width: 200,
-                        opacity: 1,
-                        '&:hover,&:focus': {
-                          border: ' ',
-                          backgroundColor: '',
-                          opacity: 1,
-                        },
-                      }}
-                      textFieldStyles={classes.textField}
-                    />
-                  </div>
-                  <ConditionsModal
-                    content={
-                      <AddFields
-                        div1Label='div1-label-applicationFlow'
-                        div2Label='div2-label-applicationFlow'
-                        div3Label='div3-label-applicationFlow'
-                        div4Label='div4-label-applicationFlow'
-                        sx={{
-                          backgroundColor: 'rgb(25,188,155)',
-                          borderRadius: '10px',
-                          fontWeight: 600,
-
-                          '&:hover': {
-                            backgroundColor: 'hsl(168, 77%, 49%)',
-                            borderRadius: '10px',
-                          },
-                        }}
-                        sx2={{
-                          backgroundColor: 'rgb(25,188,155)',
-                          borderRadius: '10px',
-                          fontWeight: 600,
-                          marginTop: 2.5,
-                          '&:hover': {
-                            backgroundColor: 'hsl(168, 77%, 49%)',
-                            borderRadius: '10px',
-                          },
-                        }}
-                        items={menu}
-                        label={value}
-                        value={value}
-                        field1='FieldName'
-                        field2='IsRequired'
-                        field3='Remove '
-                        field4='Type'
-                        field5='Add Field'
-                        testComponent1={
-                          <SearchInput
-                            options={searchList}
-                            label={<Label label='Applicant Data' size={15} />}
-                            className='searchInput-emailTemplate'
-                            sx={{ marginLeft: 0, width: 200 }}
-                            textFieldStyles={classes.textField}
-                          />
-                        }
-                        testComponent2={
-                          <div className='checkBox-wrapper-applicationFlow'>
-                            <CheckBox />
-                          </div>
-                        }
-                        testComponent3={
-                          <DeleteIconOutlinedIcon className='DeleteIconOutlinedIcon-applicationFlow' />
-                        }
-                        testComponent4={<Label label='Type' className='' />}
-                      />
-                    }
-                  />
-                  <Label
-                    label='Add Conditions'
-                    className='label-nearCondition2-applicationFlow'
-                  />
-                </div>
-              </>
-            }
-          />
-          <span className='positionedItem-applicationFlow-registration-noModal'>
-            <DeleteIconOutlinedIcon
-              onClick={handleDeleteStep}
-              className='deleteStep-applicationFlow'
-            />
-          </span>
-        </div>
-      ),
-    },
-    {
-      id: 'item-7',
-      content: (
-        <div className='expandableAccordionWrapper-applicationFlow'>
-          <ExpandableAccordion
-            hideExpandIcon
-            width='98%'
-            section1={
-              <Label
-                label='Upload Documents'
-                className='label-applicationFlow'
-              />
-            }
-            section2={
-              <div className='div-wrapper-applicationFlow '>
-                <div className='div-wrapper-child-applicationFlow'>
-                  <Dropdown
-                    items={uploadDocuments}
-                    label={uploadDocumentsValue}
-                    handleChange={handleUploadDocumentsChange}
-                    value={uploadDocumentsValue}
-                    inputLabel={
-                      uploadDocumentsValue ? uploadDocumentsValue : 'None'
-                    }
-                    sx={{
-                      width: 200,
-                      borderRadius: 2,
-                      background: '""',
-                    }}
-                    menuSx={{
-                      width: 200,
-                    }}
-                  />
-                </div>
-                <div className='div-wrapper-child-applicationFlow'>
-                  <Input
-                    label='SumSub Applicant Name'
-                    style={{
-                      border: '',
-                      backgroundColor: '',
-                      borderRadius: '15px',
-                      width: 200,
-                      opacity: 1,
-                      '&:hover,&:focus': {
-                        border: ' ',
-                        backgroundColor: '',
-                        opacity: 1,
-                      },
-                    }}
-                    textFieldStyles={classes.textField}
-                  />
-                </div>
-                <div className='div-wrapper-child-applicationFlow'>
-                  <DropdownTagSelector
-                    sx={{
-                      width: 200,
-                    }}
-                    widthTagSelectorOpened={200}
-                  />
-                </div>
-              </div>
-            }
-          />
           <span className='positionedItem-applicationFlow-registration-noModal'>
             <DeleteIconOutlinedIcon
               onClick={handleDeleteStep}
@@ -754,48 +869,152 @@ function ApplicationFlowPageRegistrationNoModal() {
       content: (
         <div className='expandableAccordionWrapper-applicationFlow'>
           <ExpandableAccordion
+            style={{
+              border: '1px solid hsla(0, 0%, 50%,0.6)',
+              borderRadius: 4,
+              marginBottom: 10,
+            }}
             hideExpandIcon
             width='98%'
-            section1={
-              <Label label='Questionnaire' className='label-applicationFlow' />
-            }
             section2={
-              <div className='wrapper-questioner-applicationFlow '>
-                <ConditionsModalFixed
-                  content={
-                    <AddFields
-                      div1Label='div1-label-applicationFlow'
-                      div2Label='div2-label-applicationFlow'
-                      div3Label='div3-label-applicationFlow'
-                      div4Label='div4-label-applicationFlow'
-                      sx={{
-                        backgroundColor: 'rgb(25,188,155)',
-                        borderRadius: '10px',
-                        fontWeight: 600,
-                        '&:hover': {
-                          backgroundColor: 'hsl(168, 77%, 49%)',
-                          borderRadius: '10px',
-                        },
+              <div className='div-wrapper-applicationFlow'>
+                <div className='div-wrapper-child-applicationFlow'>
+                  <Dropdown
+                    items={selfieVerification}
+                    label={selfieVerificationValue}
+                    handleChange={handleSelfieVerificationChange}
+                    value={selfieVerificationValue}
+                    inputLabel={
+                      selfieVerificationValue
+                        ? selfieVerificationValue
+                        : 'Create Account'
+                    }
+                    sx={{
+                      width: 200,
+                      borderRadius: 2,
+                      background: '""',
+                    }}
+                    menuSx={{
+                      width: 200,
+                    }}
+                  />
+                </div>
+                <div className='div-wrapper-child-applicationFlow'>
+                  {/* <Input
+                    label='SumSub Applicant Name'
+                    style={{
+                      border: '',
+                      backgroundColor: '',
+                      borderRadius: '15px',
+                      width: 200,
+                      opacity: 1,
+                      '&:hover,&:focus': {
+                        border: ' ',
+                        backgroundColor: '',
+                        opacity: 1,
+                      },
+                    }}
+                    textFieldStyles={classes.textField}
+                  /> */}
+                </div>
+                <AddFields
+                  div1Label='div1-label-applicationFlow'
+                  div2Label='div2-label-applicationFlow'
+                  sx2={{
+                    backgroundColor: 'rgb(25,188,155)',
+                    borderRadius: '10px',
+                    fontWeight: 600,
+                    marginTop: addConditionApplicantData ? 2.5 : 0,
+
+                    '&:hover': {
+                      backgroundColor: 'hsl(168, 77%, 49%)',
+                      borderRadius: '10px',
+                    },
+                  }}
+                  items={menu}
+                  label={value}
+                  value={value}
+                  field1={
+                    <div
+                      style={{
+                        display: 'flex',
                       }}
-                      sx2={{
-                        backgroundColor: 'rgb(25,188,155)',
+                    >
+                      {addConditionApplicantData ? (
+                        <>
+                          <Label
+                            margin={135}
+                            textTransform='none'
+                            label='FieldName'
+                          />
+                          <Label textTransform='none' label='Required' />
+                        </>
+                      ) : (
+                        ''
+                      )}
+                    </div>
+                  }
+                  field5={<Label textTransform='none' label='Add field' />}
+                  testComponent1={
+                    <div className='checkBoxLabel-wrapper-applicationFlow-noModal'>
+                      <SearchInput
+                        options={searchList}
+                        label={<Label label='Applicant Data' size={15} />}
+                        className='searchInput-emailTemplate'
+                        sx={{ marginLeft: 0, width: 200 }}
+                        textFieldStyles={classes.textField}
+                      />
+                      <div className='checkBox-wrapper-applicationFlow-noModal'>
+                        <CheckBox />
+                      </div>
+
+                      <DeleteIconOutlinedIcon className='DeleteIconOutlinedIcon-applicationFlow' />
+                    </div>
+                  }
+                />
+                <div className='secondBoxAddCustomFieldsWrapper-applicationFlow'>
+                  <AddFields
+                    div1Label='div1-label-applicationFlow'
+                    div2Label='div2-label-applicationFlow'
+                    sx2={{
+                      backgroundColor: 'rgb(25,188,155)',
+                      borderRadius: '10px',
+                      fontWeight: 600,
+                      marginTop: addCustomConditionApplicantData ? 2.5 : 0,
+
+                      '&:hover': {
+                        backgroundColor: 'hsl(168, 77%, 49%)',
                         borderRadius: '10px',
-                        fontWeight: 600,
-                        marginTop: 2.5,
-                        '&:hover': {
-                          backgroundColor: 'hsl(168, 77%, 49%)',
-                          borderRadius: '10px',
-                        },
-                      }}
-                      items={menu}
-                      label={value}
-                      value={value}
-                      field1='FieldName'
-                      field2='IsRequired'
-                      field3='Remove '
-                      field4='Type'
-                      field5='Add Field'
-                      testComponent1={
+                      },
+                    }}
+                    items={menu}
+                    label={value}
+                    value={value}
+                    field1={
+                      <div
+                        style={{
+                          display: 'flex',
+                        }}
+                      >
+                        {addCustomConditionApplicantData ? (
+                          <>
+                            <Label
+                              margin={135}
+                              textTransform='none'
+                              label='FieldName'
+                            />
+                            <Label textTransform='none' label='Required' />
+                          </>
+                        ) : (
+                          ''
+                        )}
+                      </div>
+                    }
+                    field5={
+                      <Label textTransform='none' label='Add Custom Field' />
+                    }
+                    testComponent1={
+                      <div className='checkBoxLabel-wrapper-applicationFlow-noModal'>
                         <SearchInput
                           options={searchList}
                           label={<Label label='Applicant Data' size={15} />}
@@ -803,23 +1022,15 @@ function ApplicationFlowPageRegistrationNoModal() {
                           sx={{ marginLeft: 0, width: 200 }}
                           textFieldStyles={classes.textField}
                         />
-                      }
-                      testComponent2={
-                        <div className='checkBox-wrapper-applicationFlow'>
+                        <div className='checkBox-wrapper-applicationFlow-noModal'>
                           <CheckBox />
                         </div>
-                      }
-                      testComponent3={
+
                         <DeleteIconOutlinedIcon className='DeleteIconOutlinedIcon-applicationFlow' />
-                      }
-                      testComponent4={<Label label='Type' className='' />}
-                    />
-                  }
-                />
-                <Label
-                  label='Add Conditions'
-                  className='label-nearCondition-applicationFlow'
-                />
+                      </div>
+                    }
+                  />
+                </div>
               </div>
             }
           />
@@ -837,96 +1048,38 @@ function ApplicationFlowPageRegistrationNoModal() {
       content: (
         <div className='expandableAccordionWrapper-applicationFlow'>
           <ExpandableAccordion
+            style={{
+              border: '1px solid hsla(0, 0%, 50%,0.6)',
+              borderRadius: 4,
+              marginBottom: 10,
+            }}
             hideExpandIcon
             width='98%'
-            section1={
-              <Label label='Create Account' className='label-applicationFlow' />
-            }
             section2={
-              <div className='wrapper-questioner-applicationFlow'>
-                <ConditionsModalFixed
-                  content={
-                    <AddFields
-                      div1Label='div1-label-applicationFlow'
-                      div2Label='div2-label-applicationFlow'
-                      div3Label='div3-label-applicationFlow'
-                      div4Label='div4-label-applicationFlow'
-                      sx={{
-                        backgroundColor: 'rgb(25,188,155)',
-                        borderRadius: '10px',
-                        fontWeight: 600,
-
-                        '&:hover': {
-                          backgroundColor: 'hsl(168, 77%, 49%)',
-                          borderRadius: '10px',
-                        },
-                      }}
-                      sx2={{
-                        backgroundColor: 'rgb(25,188,155)',
-                        borderRadius: '10px',
-                        fontWeight: 600,
-                        marginTop: 2.5,
-                        '&:hover': {
-                          backgroundColor: 'hsl(168, 77%, 49%)',
-                          borderRadius: '10px',
-                        },
-                      }}
-                      items={menu}
-                      label={value}
-                      value={value}
-                      field1='FieldName'
-                      field2='IsRequired'
-                      field3='Remove '
-                      field4='Type'
-                      field5='Add Field'
-                      testComponent1={
-                        <SearchInput
-                          options={searchList}
-                          label={<Label label='Applicant Data' size={15} />}
-                          className='searchInput-emailTemplate'
-                          sx={{ marginLeft: 0, width: 200 }}
-                          textFieldStyles={classes.textField}
-                        />
-                      }
-                      testComponent2={
-                        <div className='checkBox-wrapper-applicationFlow'>
-                          <CheckBox />
-                        </div>
-                      }
-                      testComponent3={
-                        <DeleteIconOutlinedIcon className='DeleteIconOutlinedIcon-applicationFlow' />
-                      }
-                      testComponent4={<Label label='Type' className='' />}
-                    />
-                  }
-                />
-                <Label
-                  label='Add Conditions'
-                  className='label-nearCondition-applicationFlow'
-                />
+              <div className='div-wrapper-applicationFlow'>
+                <div className='div-wrapper-child-applicationFlow'>
+                  <Dropdown
+                    items={selfieVerification}
+                    label={selfieVerificationValue}
+                    handleChange={handleSelfieVerificationChange}
+                    value={selfieVerificationValue}
+                    inputLabel={
+                      selfieVerificationValue
+                        ? selfieVerificationValue
+                        : 'Deposit Money'
+                    }
+                    sx={{
+                      width: 200,
+                      borderRadius: 2,
+                      background: '""',
+                    }}
+                    menuSx={{
+                      width: 200,
+                    }}
+                  />
+                </div>
               </div>
             }
-          />
-          <span className='positionedItem-applicationFlow-registration-noModal'>
-            <DeleteIconOutlinedIcon
-              onClick={handleDeleteStep}
-              className='deleteStep-applicationFlow'
-            />
-          </span>
-        </div>
-      ),
-    },
-    {
-      id: 'item-10',
-      content: (
-        <div className='expandableAccordionWrapper-applicationFlow'>
-          <ExpandableAccordion
-            hideExpandIcon
-            width='98%'
-            section1={
-              <Label label='Deposit Money ' className='label-applicationFlow' />
-            }
-            section2=''
           />
           <span className='positionedItem-applicationFlow-registration-noModal'>
             <DeleteIconOutlinedIcon
