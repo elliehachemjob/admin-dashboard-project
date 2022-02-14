@@ -22,6 +22,7 @@ import FlowConfiguration from './pages/miniPages/flowConfigurationPage/flowConfi
 import FlowConfigurationHolder from './pages/flowConfigurationHolderPage/flowConfigurationHolder.page';
 import NewApplicationFlow from './pages/newApplicationFlowPage/newApplicationFlow.page';
 import NewApplicationFlowAlone from './pages/newApplicationFlowAlonePage/newApplicationFlowAlone.page';
+import Practice from './pages/practicePage/practice.page';
 import Dashboard from './components/NewDashboardComponent/DashboardComponent/Dashboard.component';
 import './index.css';
 
@@ -191,6 +192,10 @@ function App() {
                 label='New Application Flow'
               />
             }
+          />
+          <Route
+            path='/practice'
+            element={<Dashboard rightSide={<Practice />} label='Practice' />}
           />
         </Routes>
       </BrowserRouter>
