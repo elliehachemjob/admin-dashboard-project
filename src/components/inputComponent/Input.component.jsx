@@ -9,11 +9,13 @@ function Input(props) {
     <>
       <Box
         component='form'
+        className={props.className}
         sx={props.style ? props.style : { m: 1, width: '25ch' }}
         noValidate
         autoComplete='off'
       >
         <TextField
+          className={props.className}
           multiline={props.multiline}
           rows={props.rows}
           maxRows={props.maxRows}

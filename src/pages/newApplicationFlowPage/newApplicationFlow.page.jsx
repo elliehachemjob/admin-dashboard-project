@@ -361,6 +361,8 @@ function NewApplicationFlow() {
   const handleDepositMoneyChange = () => {
     setDepositMoneyIconOpacity(0);
   };
+
+  const condition = () => {};
   return (
     <div className='parent-newApplicationFlow'>
       {/* 1st left side */}
@@ -377,6 +379,7 @@ function NewApplicationFlow() {
           y2={508}
           setPositionX={750}
           setPositionY={110}
+          condition={condition}
           content={
             <div className='wrapperIconLabel-background-newApplicationFlow'>
               <div
@@ -388,6 +391,7 @@ function NewApplicationFlow() {
             </div>
           }
         /> */}
+
         <div className='parent-stepsWrapper-newApplicationFlow'>
           <div
             className='wrapperIconLabel-background-newApplicationFlow'

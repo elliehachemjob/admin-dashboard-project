@@ -13,6 +13,8 @@ function Label(props) {
         textTransform: props.textTransform,
         marginLeft: props.marginLeft,
         marginTop: props.marginTop,
+        backgroundColor: props.backgroundColor,
+        fontSize: props.fontSize,
       }}
     >
       {props.icon} {props.label}

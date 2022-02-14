@@ -38,6 +38,139 @@ import DeleteOutlineOutlinedIcon from '@mui/icons-material/DeleteOutlineOutlined
 import DoneOutlineIcon from '@mui/icons-material/DoneOutline';
 import SentimentSatisfiedAltIcon from '@mui/icons-material/SentimentSatisfiedAlt';
 import KeyboardArrowDownIcon from '@mui/icons-material/KeyboardArrowDown';
+import MenuIcon from '@mui/icons-material/Menu';
+import SearchIcon from '@mui/icons-material/Search';
+import MicIcon from '@mui/icons-material/Mic';
+import VideoCallOutlinedIcon from '@mui/icons-material/VideoCallOutlined';
+import AppsOutlinedIcon from '@mui/icons-material/AppsOutlined';
+import SubscriptionsOutlinedIcon from '@mui/icons-material/SubscriptionsOutlined';
+import YouTubeIcon from '@mui/icons-material/YouTube';
+import NotificationAddOutlinedIcon from '@mui/icons-material/NotificationAddOutlined';
+import NotificationsNoneOutlinedIcon from '@mui/icons-material/NotificationsNoneOutlined';
+import AccountCircleOutlinedIcon from '@mui/icons-material/AccountCircleOutlined';
+import ExploreOutlinedIcon from '@mui/icons-material/ExploreOutlined';
+import VideoLibraryOutlinedIcon from '@mui/icons-material/VideoLibraryOutlined';
+
+export function VideoLibraryOutlineIcon(props) {
+  return (
+    <VideoLibraryOutlinedIcon
+      style={props.style}
+      className={props.className}
+      onClick={props.onClick}
+    />
+  );
+}
+
+export function ExploreOutlineIcon(props) {
+  return (
+    <ExploreOutlinedIcon
+      style={props.style}
+      className={props.className}
+      onClick={props.onClick}
+    />
+  );
+}
+
+export function CircularProfileOutlineIcon(props) {
+  return (
+    <AccountCircleOutlinedIcon
+      style={props.style}
+      className={props.className}
+      onClick={props.onClick}
+    />
+  );
+}
+
+export function NotificationOutlinedNoPlusSignIcon(props) {
+  return (
+    <NotificationsNoneOutlinedIcon
+      style={props.style}
+      className={props.className}
+      onClick={props.onClick}
+    />
+  );
+}
+
+export function NotificationOutlinedWithPlusSignIcon(props) {
+  return (
+    <NotificationAddOutlinedIcon
+      style={props.style}
+      className={props.className}
+      onClick={props.onClick}
+    />
+  );
+}
+
+export function YoutubeFilledIcon(props) {
+  return (
+    <YouTubeIcon
+      style={props.style}
+      className={props.className}
+      onClick={props.onClick}
+    />
+  );
+}
+
+export function ShowSubscriptionsIcon(props) {
+  return (
+    <SubscriptionsOutlinedIcon
+      style={props.style}
+      className={props.className}
+      onClick={props.onClick}
+    />
+  );
+}
+
+export function DisplayOutlinedIcon(props) {
+  return (
+    <AppsOutlinedIcon
+      style={props.style}
+      className={props.className}
+      onClick={props.onClick}
+    />
+  );
+}
+
+export function VideoUploadOutlinedIcon(props) {
+  return (
+    <VideoCallOutlinedIcon
+      style={props.style}
+      className={props.className}
+      onClick={props.onClick}
+    />
+  );
+}
+
+export function RecordSoundIcon(props) {
+  return (
+    <MicIcon
+      style={props.style}
+      className={props.className}
+      onClick={props.onClick}
+    />
+  );
+}
+
+export function SearchFilledIcon(props) {
+  return (
+    <SearchIcon
+      style={props.style}
+      className={props.className}
+      onClick={props.onClick}
+    />
+  );
+}
+
+export function DrawerIcon(props) {
+  return (
+    <MenuIcon
+      style={props.style}
+      className={props.className}
+      onClick={props.onClick}
+      sx={props.sx}
+    />
+  );
+}
 
 export function DownArrowIcon(props) {
   return (

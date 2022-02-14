@@ -29,6 +29,14 @@ const useStyles = makeStyles((theme) => ({
     backgroundColor: theme.palette.background.paper,
     padding: '50px 0',
   },
+  textField: {
+    border: `1px solid  ""`,
+    minWidth: 400,
+    borderRadius: '5px',
+    opacity: 0.6,
+
+    '&:hover,&:focus': {},
+  },
 }));
 
 export default useStyles;

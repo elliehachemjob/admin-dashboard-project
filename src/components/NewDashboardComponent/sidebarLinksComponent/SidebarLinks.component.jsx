@@ -19,6 +19,7 @@ import BugReportIcon from '@mui/icons-material/BugReport';
 import AirplaneTicketIcon from '@mui/icons-material/AirplaneTicket';
 import DisplaySettingsIcon from '@mui/icons-material/DisplaySettings';
 import AccountTreeIcon from '@mui/icons-material/AccountTree';
+import OndemandVideoIcon from '@mui/icons-material/OndemandVideo';
 
 function SidebarLinks(props) {
   const links = [
@@ -126,6 +127,12 @@ function SidebarLinks(props) {
       path: '/newApplicationFlowAlone',
       name: 'New Application Flow Alone',
       icon: <AccountTreeIcon />,
+    },
+    {
+      id: 21,
+      path: '/Youtube',
+      name: 'Youtube',
+      icon: <OndemandVideoIcon />,
     },
   ];
 

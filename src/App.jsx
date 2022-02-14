@@ -24,6 +24,7 @@ import NewApplicationFlow from './pages/newApplicationFlowPage/newApplicationFlo
 import NewApplicationFlowAlone from './pages/newApplicationFlowAlonePage/newApplicationFlowAlone.page';
 import Practice from './pages/practicePage/practice.page';
 import Dashboard from './components/NewDashboardComponent/DashboardComponent/Dashboard.component';
+import Youtube from './pages/youtubePage/youtube.page';
 import './index.css';
 
 function App() {
@@ -196,6 +197,10 @@ function App() {
           <Route
             path='/practice'
             element={<Dashboard rightSide={<Practice />} label='Practice' />}
+          />
+          <Route
+            path='/youtube'
+            element={<Dashboard rightSide={<Youtube />} label='Youtube' />}
           />
         </Routes>
       </BrowserRouter>
