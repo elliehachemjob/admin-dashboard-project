@@ -12,8 +12,9 @@ import Container from '@mui/material/Container';
 import MenuIcon from '@mui/icons-material/Menu';
 import ChevronLeftIcon from '@mui/icons-material/ChevronLeft';
 import SidebarLinks from '../sidebarLinksComponent/SidebarLinks.component';
-
+import './dashboard.styles.css';
 import Label from '../../labelComponent/Label.component';
+import { red } from '@mui/material/colors';
 
 const drawerWidth = 240;
 
@@ -61,7 +62,20 @@ const Drawer = styled(MuiDrawer, {
   },
 }));
 
-const mdTheme = createTheme();
+const mdTheme = createTheme({
+  // palette: {
+  //   primary: {
+  //     main: 'hsl(210, 79%, 46%)',
+  //   },
+  // },
+  // typography: { fontSize: 40 },
+  // palette: {
+  //   primary: {
+  //     // main: 'hsl(210, 79%, 46%)',
+  //     main: red[900],
+  //   },
+  // },
+});
 
 function DashboardContent(props) {
   const [open, setOpen] = React.useState(false);
@@ -71,14 +85,22 @@ function DashboardContent(props) {
 
   return (
     <ThemeProvider theme={mdTheme}>
-      <Box sx={{ display: 'flex', backgroundColor: 'rgb(237,239,242)' }}>
+      <Box
+        sx={{
+          display: 'flex',
+
+          // backgroundColor: 'rgb(237,239,242)',
+        }}
+      >
         <CssBaseline />
         <AppBar position='absolute' open={open}>
           <Toolbar
             sx={{
               pr: '24px',
-              color: 'black',
-              backgroundColor: 'rgb(255,255,255)', // keep right padding when drawer closed
+              // color: 'black',
+              // backgroundColor: 'rgb(255,255,255)',
+
+              // keep right padding when drawer closed
             }}
           >
             <IconButton
