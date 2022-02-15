@@ -23,8 +23,10 @@ import FlowConfigurationHolder from './pages/flowConfigurationHolderPage/flowCon
 import NewApplicationFlow from './pages/newApplicationFlowPage/newApplicationFlow.page';
 import NewApplicationFlowAlone from './pages/newApplicationFlowAlonePage/newApplicationFlowAlone.page';
 import Practice from './pages/practicePage/practice.page';
-import Dashboard from './components/NewDashboardComponent/DashboardComponent/Dashboard.component';
 import Youtube from './pages/youtubePage/youtube.page';
+import Facebook from './pages/facebookPage/facebook.page';
+
+import Dashboard from './components/NewDashboardComponent/DashboardComponent/Dashboard.component';
 import './index.css';
 
 function App() {
@@ -201,6 +203,10 @@ function App() {
           <Route
             path='/youtube'
             element={<Dashboard rightSide={<Youtube />} label='Youtube' />}
+          />
+          <Route
+            path='/facebook'
+            element={<Dashboard rightSide={<Facebook />} label='Facebook' />}
           />
         </Routes>
       </BrowserRouter>

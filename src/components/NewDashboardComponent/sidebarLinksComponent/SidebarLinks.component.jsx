@@ -20,6 +20,7 @@ import AirplaneTicketIcon from '@mui/icons-material/AirplaneTicket';
 import DisplaySettingsIcon from '@mui/icons-material/DisplaySettings';
 import AccountTreeIcon from '@mui/icons-material/AccountTree';
 import OndemandVideoIcon from '@mui/icons-material/OndemandVideo';
+import FacebookOutlinedIcon from '@mui/icons-material/FacebookOutlined';
 
 function SidebarLinks(props) {
   const links = [
@@ -130,9 +131,15 @@ function SidebarLinks(props) {
     },
     {
       id: 21,
-      path: '/Youtube',
+      path: '/youtube',
       name: 'Youtube',
       icon: <OndemandVideoIcon />,
+    },
+    {
+      id: 22,
+      path: '/facebook',
+      name: 'Facebook',
+      icon: <FacebookOutlinedIcon />,
     },
   ];
 
