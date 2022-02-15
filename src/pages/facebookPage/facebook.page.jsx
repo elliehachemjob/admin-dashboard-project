@@ -41,6 +41,7 @@ function Facebook() {
       borderRadius: '40px',
       backgroundColor: 'hsl(216, 20%, 85%)',
       opacity: 0.7,
+      height: 40,
       '&:hover,&:focus': {},
     },
   }));
@@ -60,28 +61,37 @@ function Facebook() {
         }}
       >
         <div style={{ display: 'flex', alignItems: 'center' }}>
-          <FacebookOutlineIcon />
+          <div style={{ paddingRight: 10, paddingTop: 10 }}>
+            <FacebookOutlineIcon
+              style={{ color: 'rgb(11,132,238)', fontSize: 50 }}
+            />
+          </div>
+
           <div style={{ position: 'relative' }}>
             <SearchFilledIcon
               style={{
                 position: 'absolute',
-                bottom: -15,
-                left: 15,
+                bottom: -14,
+                left: 10,
               }}
             />
           </div>
-          <Input
-            textFieldStyles={classes.textField}
-            label={
-              <Label label='Search Facebook' marginLeft={20} marginTop={3} />
-            }
-          />
+          <div style={{ width: '100%', height: '100%' }}>
+            <Input
+              textFieldStyles={classes.textField}
+              style={{ width: '100%' }}
+              label={
+                <Label label='Search Facebook' marginLeft={20} marginTop={-5} />
+              }
+            />
+          </div>
         </div>
         {/* 2nd */}
         <div style={{ display: 'flex' }}>
           <div style={{ paddingLeft: 30 }}>
-            <AddressVerificationIcon />
+            <AddressVerificationIcon style={{ color: 'rgb(27,116,228)' }} />
           </div>
+
           <div style={{ paddingLeft: 30 }}>
             <PeopleIcon />
           </div>
@@ -115,7 +125,7 @@ function Facebook() {
               paddingRight: 20,
             }}
           >
-            <CircularProfileOutlineIcon />
+            <CircularProfileOutlineIcon style={{ color: 'rgb(27,116,228)' }} />
             <Label label='Ellie' marginLeft={5} />
           </div>
           <div
@@ -193,80 +203,122 @@ function Facebook() {
           >
             <div style={{ display: 'flex' }}>
               <div style={{ paddingRight: 10 }}>
-                <CircularProfileOutlineIcon />
+                <CircularProfileOutlineIcon
+                  style={{ color: 'rgb(11,132,238)', fontSize: 40 }}
+                />
               </div>
-              <Label label='Ellie Hachem' />
+              <Label label='Ellie Hachem' marginTop={10} />
             </div>
             <div style={{ display: 'flex' }}>
               <div style={{ paddingRight: 10 }}>
-                <PeopleIcon />
+                <PeopleIcon
+                  style={{
+                    color: 'rgb(11,132,238)',
+                    fontSize: 40,
+                    fontSize: 40,
+                  }}
+                />
               </div>
-              <Label label='Find Friends' />
+              <Label label='Find Friends' marginTop={10} />
             </div>
             <div style={{ display: 'flex' }}>
               <div style={{ paddingRight: 10 }}>
-                <FacebookOutlineIcon />
+                <FacebookOutlineIcon
+                  style={{ color: 'rgb(11,132,238)', fontSize: 40 }}
+                />
               </div>
-              <Label label='Welcome' />
+              <Label label='Welcome' marginTop={10} />
             </div>
             <div style={{ display: 'flex' }}>
               <div style={{ paddingRight: 10 }}>
-                <GroupsFilledIcon />
+                <GroupsFilledIcon
+                  style={{ color: 'rgb(11,132,238)', fontSize: 40 }}
+                />
               </div>
-              <Label label='Groups' />
+              <Label label='Groups' marginTop={10} />
             </div>
             <div style={{ display: 'flex' }}>
               <div style={{ paddingRight: 10 }}>
-                <StoredFilledIcon />
+                <StoredFilledIcon
+                  style={{ color: 'rgb(11,132,238)', fontSize: 40 }}
+                />
               </div>
 
-              <Label label='Marketplace' />
+              <Label label='Marketplace' marginTop={10} />
             </div>
             <div style={{ display: 'flex' }}>
               <div style={{ paddingRight: 10 }}>
-                <PlayerFilledIcon />
+                <PlayerFilledIcon
+                  style={{ color: 'rgb(11,132,238)', fontSize: 40 }}
+                />
               </div>
-              <Label label='Watch' />
+              <Label label='Watch' marginTop={10} />
             </div>
             <div style={{ display: 'flex' }}>
               <div style={{ paddingRight: 10 }}>
-                <MemoriesIcon />
+                <MemoriesIcon
+                  style={{ color: 'rgb(11,132,238)', fontSize: 40 }}
+                />
               </div>
-              <Label label='Memories' />
+              <Label label='Memories' marginTop={10} />
             </div>
             <div style={{ display: 'flex' }}>
               <div style={{ paddingRight: 10 }}>
-                <PinIcon />
-              </div>
-
-              <Label label='Saved' />
-            </div>
-            <div style={{ display: 'flex' }}>
-              <div style={{ paddingRight: 10 }}>
-                <FlagFilledIcon />
+                <PinIcon style={{ color: 'rgb(180,52,185)', fontSize: 40 }} />
               </div>
 
-              <Label label='Pages' />
+              <Label label='Saved' marginTop={10} />
             </div>
             <div style={{ display: 'flex' }}>
               <div style={{ paddingRight: 10 }}>
-                <EventFilledIcon />
+                <FlagFilledIcon
+                  style={{ color: 'rgb(238,96,43)', fontSize: 40 }}
+                />
               </div>
 
-              <Label label='Events' />
+              <Label label='Pages' marginTop={10} />
             </div>
             <div style={{ display: 'flex' }}>
               <div style={{ paddingRight: 10 }}>
-                <HistoryFilledIcon />
+                <EventFilledIcon
+                  style={{ color: 'rgb(243,80,108)', fontSize: 40 }}
+                />
               </div>
 
-              <Label label='Most Recent' />
+              <Label label='Events' marginTop={10} />
             </div>
             <div style={{ display: 'flex' }}>
               <div style={{ paddingRight: 10 }}>
-                <ForwardOutlinedIcon />
+                <HistoryFilledIcon
+                  style={{ color: 'rgb(11,132,238)', fontSize: 40 }}
+                />
               </div>
-              <Label label='See More' />
+              <Label label='Most Recent' marginTop={10} />
+            </div>
+            <div style={{ display: 'flex' }}>
+              <div
+                style={{
+                  backgroundColor: 'rgb(228,230,235)',
+                  borderRadius: 20,
+                  paddingRight: 15,
+
+                  paddingLeft: 15,
+                  paddingTop: 15,
+                  paddingBottom: 10,
+                }}
+              >
+                <ForwardOutlinedIcon
+                  style={{
+                    color: 'rgb(16,16,16)',
+                    transform: 'rotate(90deg)',
+
+                    fontSize: 15,
+                  }}
+                />
+              </div>
+              <div style={{ padding: 10 }}>
+                <Label label='See More' />
+              </div>
             </div>
           </div>
           {/* 5th */}
@@ -284,16 +336,22 @@ function Facebook() {
                 style={{
                   backgroundColor: 'rgb(231,243,255)',
                   borderRadius: 40,
-                  paddingTop: 10,
-                  paddingLeft: 10,
-                  paddingRight: 10,
+                  paddingRight: 15,
+
+                  paddingLeft: 15,
+                  paddingTop: 15,
+                  paddingBottom: 10,
                 }}
               >
                 <AddItemIcon />
               </div>
               <div style={{ paddingTop: 5 }}>
-                <Label label='Create Story' />
-                <Label label='Share a photo or write something.' />
+                <Label label='Create Story' fontWeight={1000} marginLeft={5} />
+                <Label
+                  label='Share a photo or write something.'
+                  marginLeft={5}
+                  color='rgb(122,143,172)'
+                />
               </div>
             </div>
             {/* 6th */}
@@ -311,11 +369,15 @@ function Facebook() {
                   justifyContent: 'space-between',
                 }}
               >
-                <FacebookOutlineIcon style={{ fontSize: 50 }} />
-                <ScreenFilledIcon style={{ fontSize: 100 }} />
+                <FacebookOutlineIcon
+                  style={{ color: 'rgb(11,132,238)', fontSize: 50 }}
+                />
+                <ScreenFilledIcon
+                  style={{ fontSize: 100, color: 'rgb(64,169,89)' }}
+                />
                 <ClearIconTransparent />
               </div>
-              <Label label='Remember Password' />
+              <Label label='Remember Password' fontWeight={1000} />
               <Label
                 label='Next time you log in on this browser, just click your profile picture
         instead of typing a password.'
@@ -356,17 +418,29 @@ function Facebook() {
               }}
             >
               <div style={{ display: 'flex', alignItems: 'center' }}>
-                <CircularProfileOutlineIcon style={{ fontSize: 50 }} />
+                <CircularProfileOutlineIcon
+                  style={{ fontSize: 50, color: 'rgb(11,132,238)' }}
+                />
                 <div style={{ width: '100%', paddingLeft: 5, paddingRight: 5 }}>
                   <Input
                     textFieldStyles={classes.textField}
                     style={{ width: '100%' }}
-                    label='What is on your mind, Ellie'
+                    label={
+                      <Label
+                        label='What is on your mind, Ellie'
+                        marginTop={-5}
+                      />
+                    }
                   />
                 </div>
               </div>
               <BreakLine
-                style={{ paddingBottom: 10, marginLeft: 10, marginRight: 10 }}
+                style={{
+                  paddingBottom: 10,
+                  marginLeft: 10,
+                  marginRight: 10,
+                  opacity: 0.1,
+                }}
               />
               <div
                 style={{
@@ -377,15 +451,15 @@ function Facebook() {
                 }}
               >
                 <div style={{ display: 'flex' }}>
-                  <VideoAddFilledIcon />
+                  <VideoAddFilledIcon style={{ color: 'rgb(243,66,95)' }} />
                   <Label label='Live Video' />
                 </div>
                 <div style={{ display: 'flex' }}>
-                  <AlbumIcon />
+                  <AlbumIcon style={{ color: 'rgb(69,189,98)' }} />
                   <Label label='Photo/Video' />
                 </div>
                 <div style={{ display: 'flex' }}>
-                  <HappySmileIcon />
+                  <HappySmileIcon style={{ color: 'rgb(247,185,40)' }} />
                   <Label label='Feeling/Activity' />
                 </div>
               </div>
@@ -404,8 +478,15 @@ function Facebook() {
                 padding: 10,
               }}
             >
-              <Label label='No More Posts' />
-              <Label label='Add more friends to see more posts in your News Feed' />
+              <Label
+                label='No More Posts'
+                fontWeight={1000}
+                color='rgb(137,148,161)'
+              />
+              <Label
+                label='Add more friends to see more posts in your News Feed'
+                color='rgb(137,148,161)'
+              />
               <Button
                 name={<Label label='Find Friends' fontWeight={700} />}
                 sx={{
@@ -419,19 +500,28 @@ function Facebook() {
             </div>
           </div>
           {/* 9th */}
-          <div>
-            <Label label='Group Conversations' color='rgb(134,135,139)' />
+          <div style={{ marginRight: 60 }}>
+            <Label
+              label='Group Conversations'
+              color='rgb(134,135,139)'
+              marginTop={10}
+            />
             <div style={{ display: 'flex' }}>
               <div
                 style={{
                   backgroundColor: 'rgb(228,230,235)',
                   borderRadius: 40,
-                  paddingTop: 6,
+                  paddingRight: 15,
+
+                  paddingLeft: 15,
+                  paddingTop: 15,
+                  paddingBottom: 10,
+                  marginLeft: -10,
                 }}
               >
                 <AddItemIcon />
               </div>
-              <div style={{ paddingTop: 5 }}>
+              <div style={{ paddingTop: 15, paddingLeft: 5 }}>
                 <Label label='Create New Group' />
               </div>
             </div>
