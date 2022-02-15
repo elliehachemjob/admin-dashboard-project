@@ -50,8 +50,181 @@ import NotificationsNoneOutlinedIcon from '@mui/icons-material/NotificationsNone
 import AccountCircleOutlinedIcon from '@mui/icons-material/AccountCircleOutlined';
 import ExploreOutlinedIcon from '@mui/icons-material/ExploreOutlined';
 import VideoLibraryOutlinedIcon from '@mui/icons-material/VideoLibraryOutlined';
+import FacebookOutlinedIcon from '@mui/icons-material/FacebookOutlined';
+import GroupsIcon from '@mui/icons-material/Groups';
+import ScreenSearchDesktopIcon from '@mui/icons-material/ScreenSearchDesktop';
+import PeopleAltOutlinedIcon from '@mui/icons-material/PeopleAltOutlined';
+import PushPinIcon from '@mui/icons-material/PushPin';
+import FlagIcon from '@mui/icons-material/Flag';
+import PhotoLibraryIcon from '@mui/icons-material/PhotoLibrary';
+import VideoCallIcon from '@mui/icons-material/VideoCall';
+import EventRepeatIcon from '@mui/icons-material/EventRepeat';
+import EventIcon from '@mui/icons-material/Event';
+import StoreIcon from '@mui/icons-material/Store';
+import AirplayIcon from '@mui/icons-material/Airplay';
+import HistoryToggleOffIcon from '@mui/icons-material/HistoryToggleOff';
+import HistoryIcon from '@mui/icons-material/History';
+import ArrowDropDownIcon from '@mui/icons-material/ArrowDropDown';
+import PlayArrowIcon from '@mui/icons-material/PlayArrow';
 
+export function PlayArrowFilledIcon(props) {
+  return (
+    <PlayArrowIcon
+      style={props.style}
+      className={props.className}
+      onClick={props.onClick}
+    />
+  );
+}
 
+export function DropDownFilledIcon(props) {
+  return (
+    <ArrowDropDownIcon
+      style={props.style}
+      className={props.className}
+      onClick={props.onClick}
+    />
+  );
+}
+
+export function MemoriesIcon(props) {
+  return (
+    <HistoryIcon
+      style={props.style}
+      className={props.className}
+      onClick={props.onClick}
+    />
+  );
+}
+
+export function HistoryFilledIcon(props) {
+  return (
+    <HistoryToggleOffIcon
+      style={props.style}
+      className={props.className}
+      onClick={props.onClick}
+    />
+  );
+}
+
+export function PlayerFilledIcon(props) {
+  return (
+    <AirplayIcon
+      style={props.style}
+      className={props.className}
+      onClick={props.onClick}
+    />
+  );
+}
+
+export function StoredFilledIcon(props) {
+  return (
+    <StoreIcon
+      style={props.style}
+      className={props.className}
+      onClick={props.onClick}
+    />
+  );
+}
+
+export function EventFilledIcon(props) {
+  return (
+    <EventIcon
+      style={props.style}
+      className={props.className}
+      onClick={props.onClick}
+    />
+  );
+}
+export function MemoriedFilledIcon(props) {
+  return (
+    <EventRepeatIcon
+      style={props.style}
+      className={props.className}
+      onClick={props.onClick}
+    />
+  );
+}
+
+export function VideoAddFilledIcon(props) {
+  return (
+    <VideoCallIcon
+      style={props.style}
+      className={props.className}
+      onClick={props.onClick}
+    />
+  );
+}
+
+export function AlbumIcon(props) {
+  return (
+    <PhotoLibraryIcon
+      style={props.style}
+      className={props.className}
+      onClick={props.onClick}
+    />
+  );
+}
+
+export function FlagFilledIcon(props) {
+  return (
+    <FlagIcon
+      style={props.style}
+      className={props.className}
+      onClick={props.onClick}
+    />
+  );
+}
+
+export function PinIcon(props) {
+  return (
+    <PushPinIcon
+      style={props.style}
+      className={props.className}
+      onClick={props.onClick}
+    />
+  );
+}
+
+export function PeopleIcon(props) {
+  return (
+    <PeopleAltOutlinedIcon
+      style={props.style}
+      className={props.className}
+      onClick={props.onClick}
+    />
+  );
+}
+
+export function ScreenFilledIcon(props) {
+  return (
+    <ScreenSearchDesktopIcon
+      style={props.style}
+      className={props.className}
+      onClick={props.onClick}
+    />
+  );
+}
+
+export function GroupsFilledIcon(props) {
+  return (
+    <GroupsIcon
+      style={props.style}
+      className={props.className}
+      onClick={props.onClick}
+    />
+  );
+}
+
+export function FacebookOutlineIcon(props) {
+  return (
+    <FacebookOutlinedIcon
+      style={props.style}
+      className={props.className}
+      onClick={props.onClick}
+    />
+  );
+}
 
 export function VideoLibraryOutlineIcon(props) {
   return (
@@ -67,6 +240,7 @@ export function ExploreOutlineIcon(props) {
   return (
     <ExploreOutlinedIcon
       style={props.style}
+      apps
       className={props.className}
       onClick={props.onClick}
     />
