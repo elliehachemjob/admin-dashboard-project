@@ -66,6 +66,17 @@ import HistoryToggleOffIcon from '@mui/icons-material/HistoryToggleOff';
 import HistoryIcon from '@mui/icons-material/History';
 import ArrowDropDownIcon from '@mui/icons-material/ArrowDropDown';
 import PlayArrowIcon from '@mui/icons-material/PlayArrow';
+import PlayArrowOutlinedIcon from '@mui/icons-material/PlayArrowOutlined';
+
+export function PlayArrowOutlineIcon(props) {
+  return (
+    <PlayArrowOutlinedIcon
+      style={props.style}
+      className={props.className}
+      onClick={props.onClick}
+    />
+  );
+}
 
 export function PlayArrowFilledIcon(props) {
   return (

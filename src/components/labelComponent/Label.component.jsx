@@ -15,6 +15,7 @@ function Label(props) {
         marginTop: props.marginTop,
         backgroundColor: props.backgroundColor,
         fontSize: props.fontSize,
+        color: props.color,
       }}
     >
       {props.icon} {props.label}
