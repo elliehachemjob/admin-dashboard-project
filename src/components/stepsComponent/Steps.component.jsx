@@ -117,7 +117,7 @@ function Steps(props) {
   //last methods
   const steps = [
     {
-      label: 'SMS Verification',
+      label: <Label label='SMS Verification' fontWeight={1000} />,
       description: `  In SMS authentication, the user provides a code that has been
            sent to their phone via SMS as proof of their identity.`,
       content: (
@@ -145,7 +145,8 @@ function Steps(props) {
       ),
     },
     {
-      label: 'E-mail Verification',
+      label: <Label label='E-mail Verification' fontWeight={1000} />,
+
       description:
         'Email address validation is often accomplished by sending an email to the user-provided email address',
       content: (
@@ -166,7 +167,7 @@ function Steps(props) {
       ),
     },
     {
-      label: 'Selfie Verification',
+      label: <Label label='Selfie Verification' fontWeight={1000} />,
       description: `Detects your face in your selfie to generate a unique number.When your selfie template matches the unique number from your profile pictures, we know you're the same person as your profile photos.`,
       content: (
         <div className='div-wrapper-applicationFlow'>
@@ -211,7 +212,7 @@ function Steps(props) {
       ),
     },
     {
-      label: 'Address Verification',
+      label: <Label label='Address Verification' fontWeight={1000} />,
       description: `Address validation helps verify the accuracy of address numbers, street names postal codes.`,
       content: (
         <>
@@ -319,7 +320,7 @@ function Steps(props) {
       ),
     },
     {
-      label: 'Create Account',
+      label: <Label label='Create Account' fontWeight={1000} />,
       description: `                Generates the Email and password provided by the user in
                 server.Having an account also gives you extra abilities and
                 features to which unregistered users do not have access.`,
@@ -429,7 +430,8 @@ function Steps(props) {
       ),
     },
     {
-      label: 'Questionnaire',
+      label: <Label label='Questionnaire' fontWeight={1000} />,
+
       description: `Series of questions used to collect useful information from the Clients.`,
       content: (
         <div className='div-wrapper-applicationFlow '>
@@ -480,11 +482,12 @@ function Steps(props) {
       ),
     },
     {
-      label: 'Deposit Money',
+      label: <Label label='Deposit Money' fontWeight={1000} />,
+
       description: `Deposit is the act of placing money with a party such as a bank.`,
     },
     {
-      label: 'Applicant Data',
+      label: <Label label='Applicant Data' fontWeight={1000} />,
       description: `Applicant Data Data related to the Client such as Nationality,Country,First Name and Last Name`,
       content: (
         <div className='div-wrapper-applicationFlow'>
@@ -587,7 +590,8 @@ function Steps(props) {
       ),
     },
     {
-      label: 'Upload Documents',
+      label: <Label label='Upload Documents' fontWeight={1000} />,
+
       description: `Uploading is the transmission of a file from your computer to the server.`,
       content: (
         <div className='div-wrapper-applicationFlow '>
