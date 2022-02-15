@@ -21,7 +21,7 @@ import DisplaySettingsIcon from '@mui/icons-material/DisplaySettings';
 import AccountTreeIcon from '@mui/icons-material/AccountTree';
 import OndemandVideoIcon from '@mui/icons-material/OndemandVideo';
 import FacebookOutlinedIcon from '@mui/icons-material/FacebookOutlined';
-
+import AppSettingsAltIcon from '@mui/icons-material/AppSettingsAlt';
 function SidebarLinks(props) {
   const links = [
     {
@@ -140,6 +140,12 @@ function SidebarLinks(props) {
       path: '/facebook',
       name: 'Facebook',
       icon: <FacebookOutlinedIcon />,
+    },
+    {
+      id: 23,
+      path: '/applicationFlowSpecialEdition',
+      name: 'Application Flow Special Edition',
+      icon: <AppSettingsAltIcon />,
     },
   ];
 

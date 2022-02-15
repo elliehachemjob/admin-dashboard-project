@@ -89,14 +89,16 @@ function Facebook() {
         {/* 2nd */}
         <div style={{ display: 'flex' }}>
           <div style={{ paddingLeft: 30 }}>
-            <AddressVerificationIcon style={{ color: 'rgb(27,116,228)' }} />
+            <AddressVerificationIcon
+              style={{ color: 'rgb(27,116,228)', fontSize: 30 }}
+            />
           </div>
 
           <div style={{ paddingLeft: 30 }}>
-            <PeopleIcon />
+            <PeopleIcon style={{ fontSize: 30 }} />
           </div>
           <div style={{ paddingLeft: 30 }}>
-            <GroupsFilledIcon />
+            <GroupsFilledIcon style={{ fontSize: 30 }} />
           </div>
         </div>
         {/* 3rd */}

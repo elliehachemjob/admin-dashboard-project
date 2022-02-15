@@ -25,7 +25,7 @@ import NewApplicationFlowAlone from './pages/newApplicationFlowAlonePage/newAppl
 import Practice from './pages/practicePage/practice.page';
 import Youtube from './pages/youtubePage/youtube.page';
 import Facebook from './pages/facebookPage/facebook.page';
-
+import ApplicationFlowSpecialEdition from './pages/applicationFlowSpecialEditionPage/applicationFlowSpecialEdition.page';
 import Dashboard from './components/NewDashboardComponent/DashboardComponent/Dashboard.component';
 import './index.css';
 
@@ -207,6 +207,15 @@ function App() {
           <Route
             path='/facebook'
             element={<Dashboard rightSide={<Facebook />} label='Facebook' />}
+          />
+          <Route
+            path='/applicationFlowSpecialEdition'
+            element={
+              <Dashboard
+                rightSide={<ApplicationFlowSpecialEdition />}
+                label='Facebook'
+              />
+            }
           />
         </Routes>
       </BrowserRouter>
