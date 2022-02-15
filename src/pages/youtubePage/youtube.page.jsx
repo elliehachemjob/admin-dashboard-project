@@ -19,6 +19,7 @@ import Label from '../../components/labelComponent/Label.component';
 import Input from '../../components/inputComponent/Input.component';
 import CardContainer from '../../components/cardComponent/CardContainer.component';
 import Image from '../../components/imageComponent/Image.component';
+import BreakLine from '../../components/breakLineComponent/BreakLine.component';
 import useStyles from '../../styles';
 
 import './youtube.styles.css';
@@ -161,6 +162,8 @@ function Youtube() {
       </div>
 
       {/* 2nd */}
+      <BreakLine className='breakLine-row2-youtube' />
+
       <div style={{ display: 'flex', marginLeft: 200 }}>
         <div className='labelWrapper-main-row2-youtube'>
           <Label label='All' />
@@ -195,13 +198,7 @@ function Youtube() {
         <div className='labelWrapper-row2-youtube'>
           <Label label='Website' />
         </div>
-        <div className='labelWrapper-row2-youtube'>
-          <Label label='Courses' />
-        </div>
-        <div className='labelWrapper-row2-youtube'>
-          <Label label='test' />
-        </div>
-        <ForwardOutlinedIcon />
+        <ForwardOutlinedIcon className='forwardIcon-row2-youtube' />
       </div>
 
       {/* 3rd */}
@@ -230,7 +227,7 @@ function Youtube() {
           </div>
         </div>
         <div className='div2-row3-youtube'>
-          <div style={{ display: 'flex', flexWrap: 'wrap' }}>
+          <div style={{ display: 'flex', flexWrap: 'wrap', padding: 20 }}>
             {itemsMap.map((item) => {
               return (
                 <div
@@ -242,21 +239,33 @@ function Youtube() {
                       <div>
                         <Image
                           src={item.src}
-                          style={{ width: 360, height: 120 }}
+                          style={{ width: 360, height: 100, paddingRight: 100 }}
                         />
-                        <Label label={item.header} />
-                        <Label label={item.label1} />
-                        <div
-                          style={{
-                            display: 'flex',
-                          }}
-                        >
-                          <Label label={item.label2} />
-                          <Label
-                            label={item.divider}
-                            className='divider-cardContainer-div2-row3-youtube'
+                        <div style={{ display: 'flex', paddingTop: 10 }}>
+                          <Image
+                            src={item.src}
+                            style={{
+                              width: 30,
+                              height: 30,
+                              borderRadius: 50,
+                            }}
                           />
-                          <Label label={item.label3} />
+                          <div style={{ paddingLeft: 10 }}>
+                            <Label label={item.header} />
+                            <Label label={item.label1} />
+                            <div
+                              style={{
+                                display: 'flex',
+                              }}
+                            >
+                              <Label label={item.label2} />
+                              <Label
+                                label={item.divider}
+                                className='divider-cardContainer-div2-row3-youtube'
+                              />
+                              <Label label={item.label3} />
+                            </div>
+                          </div>
                         </div>
                       </div>
                     }

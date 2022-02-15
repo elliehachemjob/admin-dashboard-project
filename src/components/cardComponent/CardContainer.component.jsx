@@ -8,8 +8,8 @@ function CardContainer(props) {
   return (
     <Card
       sx={{
-        width: props.width ? props.width : 300,
-        height: props.height ? props.height : 202,
+        width: props.width ? props.width : 290,
+        height: props.height ? props.height : 200,
       }}
     >
       <CardContent style={props.cardContentStyle}>
