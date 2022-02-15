@@ -56,7 +56,7 @@ function Steps(props) {
       outline: 'none',
       fontSize: 'inherit',
       borderRadius: 4,
-      height: '50px',
+      // height: '50px',
       display: 'flex',
       justifyContent: 'center',
       alignItems: 'center',
@@ -118,7 +118,7 @@ function Steps(props) {
   const steps = [
     {
       label: 'SMS Verification',
-      description: `                In SMS authentication, the user provides a code that has been
+      description: `  In SMS authentication, the user provides a code that has been
            sent to their phone via SMS as proof of their identity.`,
       content: (
         <div className='div-wrapper-applicationFlow'>
@@ -152,6 +152,7 @@ function Steps(props) {
         <div className='div-wrapper-applicationFlow'>
           <div className='div-wrapper-child-applicationFlow'>
             <Dropdown
+              sx={{ marginRight: 4, width: 189.9 }}
               items={emailVerificationMenu}
               label={emailVerificationValue}
               handleChange={handleEmailVerificationChange}
@@ -468,12 +469,12 @@ function Steps(props) {
             />
           </div>
           <div className='div-wrapper-child-applicationFlow'>
-            <DropdownTagSelector
+            {/* <DropdownTagSelector
               sx={{
                 width: 200,
               }}
               widthTagSelectorOpened={200}
-            />
+            /> */}
           </div>
         </div>
       ),
@@ -481,69 +482,6 @@ function Steps(props) {
     {
       label: 'Deposit Money',
       description: `Deposit is the act of placing money with a party such as a bank.`,
-      content: (
-        <div className='wrapper-questioner-applicationFlow '>
-          <ConditionsModalFixed
-            content={
-              <AddFields
-                div1Label='div1-label-applicationFlow'
-                div2Label='div2-label-applicationFlow'
-                div3Label='div3-label-applicationFlow'
-                div4Label='div4-label-applicationFlow'
-                sx={{
-                  backgroundColor: '#04724D',
-                  borderRadius: '10px',
-                  fontWeight: 600,
-                  '&:hover': {
-                    backgroundColor: '#5E807F',
-                    borderRadius: '10px',
-                  },
-                }}
-                sx2={{
-                  backgroundColor: '#04724D',
-                  borderRadius: '10px',
-                  fontWeight: 600,
-                  marginTop: 2.5,
-                  '&:hover': {
-                    backgroundColor: '#5E807F',
-                    borderRadius: '10px',
-                  },
-                }}
-                items={menu}
-                label={value}
-                value={value}
-                field1='FieldName'
-                field2='IsRequired'
-                field3='Remove '
-                field4='Type'
-                field5='Add Field'
-                testComponent1={
-                  <SearchInput
-                    options={searchList}
-                    label={<Label label='Applicant Data' size={15} />}
-                    className='searchInput-emailTemplate'
-                    sx={{ marginLeft: 0, width: 200 }}
-                    textFieldStyles={classes.textField}
-                  />
-                }
-                testComponent2={
-                  <div className='checkBox-wrapper-applicationFlow'>
-                    <CheckBox />
-                  </div>
-                }
-                testComponent3={
-                  <DeleteItemIcon className='deleteItemIcon-applicationFlow' />
-                }
-                testComponent4={<Label label='Type' className='' />}
-              />
-            }
-          />
-          <Label
-            label='Add Conditions'
-            className='label-nearCondition-applicationFlow'
-          />
-        </div>
-      ),
     },
     {
       label: 'Applicant Data',
@@ -689,12 +627,12 @@ function Steps(props) {
             />
           </div>
           <div className='div-wrapper-child-applicationFlow'>
-            <DropdownTagSelector
+            {/* <DropdownTagSelector
               sx={{
                 width: 200,
               }}
               widthTagSelectorOpened={200}
-            />
+            /> */}
           </div>
         </div>
       ),
@@ -717,7 +655,7 @@ function Steps(props) {
             </StepLabel>
             <StepContent>
               <Typography>{step.description}</Typography>
-              {step.content}
+              <div style={{ marginLeft: -15 }}>{step.content}</div>
 
               <Box sx={{ mb: 2 }}>
                 <div>
