@@ -26,6 +26,7 @@ import Practice from './pages/practicePage/practice.page';
 import Youtube from './pages/youtubePage/youtube.page';
 import Facebook from './pages/facebookPage/facebook.page';
 import ApplicationFlowSpecialEdition from './pages/applicationFlowSpecialEditionPage/applicationFlowSpecialEdition.page';
+import Amazon from './pages/amazonPage/amazon.page';
 import Dashboard from './components/NewDashboardComponent/DashboardComponent/Dashboard.component';
 import './index.css';
 
@@ -216,6 +217,10 @@ function App() {
                 label='Facebook'
               />
             }
+          />
+          <Route
+            path='/amazon'
+            element={<Dashboard rightSide={<Amazon />} label='Amazon' />}
           />
         </Routes>
       </BrowserRouter>

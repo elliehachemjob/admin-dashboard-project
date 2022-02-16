@@ -22,6 +22,8 @@ import AccountTreeIcon from '@mui/icons-material/AccountTree';
 import OndemandVideoIcon from '@mui/icons-material/OndemandVideo';
 import FacebookOutlinedIcon from '@mui/icons-material/FacebookOutlined';
 import AppSettingsAltIcon from '@mui/icons-material/AppSettingsAlt';
+import AddBusinessOutlinedIcon from '@mui/icons-material/AddBusinessOutlined';
+
 function SidebarLinks(props) {
   const links = [
     {
@@ -146,6 +148,12 @@ function SidebarLinks(props) {
       path: '/applicationFlowSpecialEdition',
       name: 'Application Flow Special Edition',
       icon: <AppSettingsAltIcon />,
+    },
+    {
+      id: 24,
+      path: '/amazon',
+      name: 'Amazon',
+      icon: <AddBusinessOutlinedIcon />,
     },
   ];
 
